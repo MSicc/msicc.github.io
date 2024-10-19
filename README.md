@@ -1,3 +1,6 @@
+This is my forked version of the Chirpy Starter template, please go to the original source and use the template from there.
+
+
 # Chirpy Starter
 
 [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
@@ -14,13 +17,14 @@ able to enjoy the out-of-the-box experience when using feature-rich themes.
 To fully use all the features of **Chirpy**, you need to copy the other critical files from the theme's gem to your
 Jekyll site. The following is a list of targets:
 
-```shell
+``` shell
 .
 ├── _config.yml
 ├── _plugins
 ├── _tabs
 └── index.html
 ```
+ 
 
 To save you time, and also in case you lose some files while copying, we extract those files/configurations of the
 latest version of the **Chirpy** theme and the [CD][CD] workflow to here, so that you can start writing in minutes.
