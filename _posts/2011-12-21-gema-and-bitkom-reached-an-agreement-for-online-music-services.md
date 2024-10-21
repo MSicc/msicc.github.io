@@ -5,12 +5,6 @@ date: '2011-12-21T17:22:43+01:00'
 author: 'Marco Siccardi'
 layout: post
 permalink: /gema-and-bitkom-reached-an-agreement-for-online-music-services/
-bitly_url:
-    - 'http://bit.ly/2qJwila'
-bitly_hash:
-    - 2qJwila
-bitly_long_url:
-    - 'https://msicc.net/gema-and-bitkom-reached-an-agreement-for-online-music-services/'
 categories:
     - Archive
 tags:
@@ -18,9 +12,7 @@ tags:
     - Zune
 ---
 
-![gemabitkom](/assets/img/2011/12/gemabitkom.png "gemabitkom")
-
-Just a few weeks ago I wrote about [how the GEMA cuts the user experience in Germany.](http://msicc.net/?p=910)
+Just a few weeks ago I wrote about [how the GEMA cuts the user experience in Germany.]({% post_url 2011-11-19-how-the-gema-user-experience-in-germany %})
 
 Today, the GEMA and BITKOM announced that they finally reached an agreement for internet music services. The Federal Association for information technology, telecommunications and new media e.V. (BITKOM) is the Trade Association of the German information and telecommunications industry.
 

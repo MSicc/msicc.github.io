@@ -47,9 +47,9 @@ To get there, I had to learn a lot about Android – and I will share it all wit
 My series will cover the following topics:
 
 - installing Xamarin and getting started (this post)
-- [Setting up an Android device for debugging and deployment](http://wp.me/p3Qd8S-10u)
-- [Resources (Layouts, Strings, etc.)](http://msicc.net/?p=3893 "Xamarin: Resources of an Android app project")
-- [Activities and Views](http://msicc.net/?p=3978 "Xamarin: Android Activities, Context, Intents and Views")
+- [Setting up an Android device for debugging and deployment]
+- Resources (Layouts, Strings, etc.)
+- Activities and Views
 - states of an Android app
 - Fragments
 - show and hide keyboard on Android
@@ -63,7 +63,7 @@ My series will cover the following topics:
 
 ### Installing Xamarin
 
-Installing Xamarin is pretty easy – but will take some time. Click on this [link](http://xamarin.com/studio) to download the Xamarin IDE. The IDE will ask you for which platform you want to develop for (let’s choose only Android for the moment) and then download a huge amount of additional SDKs like the Java and the Android SDK (Android apps are Java based, if you didn’t knew).
+Installing Xamarin is pretty easy – but will take some time. Click on this [link](https://xamarin.com/studio) to download the Xamarin IDE. The IDE will ask you for which platform you want to develop for (let’s choose only Android for the moment) and then download a huge amount of additional SDKs like the Java and the Android SDK (Android apps are Java based, if you didn’t knew).
 
 ![Screenshot (267)](/assets/img/2013/12/Screenshot-267.png "Screenshot (267)")
 
@@ -118,7 +118,7 @@ To get something displayed in our app, we need to load a Layout or create the vi
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="https://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -136,13 +136,13 @@ The button counts then the clicks on it and changes the text based on the number
 
 To understand more about the structure of an Android App, I highly recommend to read the documentation. For me, especially these links were helpful:
 
-- [Hello, Android](http://docs.xamarin.com/guides/android/getting_started/hello,_world/)
-- [Hello, Multiscreen Applications](http://docs.xamarin.com/guides/android/getting_started/hello,_multi-screen_applications/)
-- [Activity Lifecycle](http://docs.xamarin.com/guides/android/application_fundamentals/activity_lifecycle/)
-- [Android Resources](http://docs.xamarin.com/guides/android/application_fundamentals/resources_in_android/)
+- [Hello, Android](https://docs.xamarin.com/guides/android/getting_started/hello,_world/)
+- [Hello, Multiscreen Applications](https://docs.xamarin.com/guides/android/getting_started/hello,_multi-screen_applications/)
+- [Activity Lifecycle](https://docs.xamarin.com/guides/android/application_fundamentals/activity_lifecycle/)
+- [Android Resources](https://docs.xamarin.com/guides/android/application_fundamentals/resources_in_android/)
 
 There are some more resources that are helpful, but for getting started those four links should be enough. I will cover some of the topics above also with my upcoming posts and link additional resources as well.
 
-As with the Windows Phone development, also [StackOverflow](http://stackoverflow.com/search?q=xamarin) is a big help as well as the [Xamarin Android forums](http://forums.xamarin.com/categories/android).
+As with the Windows Phone development, also [StackOverflow](https://stackoverflow.com/search?q=xamarin) is a big help as well as the [Xamarin Android forums](https://forums.xamarin.com/categories/android).
 
 Until the next post, happy coding!

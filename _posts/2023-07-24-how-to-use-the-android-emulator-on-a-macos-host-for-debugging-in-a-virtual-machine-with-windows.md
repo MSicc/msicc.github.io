@@ -61,7 +61,8 @@ Now that we are there, let’s see which emulators we have already configured:
  
 You should see something like this:
 
-<figure class="wp-block-image size-full is-resized">![terminal-showing-avd-devices](https://msicc.net/assets/img/2023/07/terminal-showing-avd-devices.png)</figure>Now start your desired emulator:
+<figure class="wp-block-image size-full is-resized">![terminal-showing-avd-devices](/assets/img/2023/07/terminal-showing-avd-devices.png)
+</figure>Now start your desired emulator:
 
 ``` shell
  ./emulator -avd pixel_5_-_api_33
@@ -69,7 +70,8 @@ You should see something like this:
  
 The emulator should now be started after some info and warning messages appear in the Terminal:
 
-<div class="wp-block-image is-style-default"><figure class="aligncenter size-large">![emulator-running-alongside-terminal](https://msicc.net/assets/img/2023/07/emulator-running-alongside-terminal-1024x681.png)</figure></div>Last but not least, we need to kill the Android Debug Bridge (adb) server on the mac, as we want Windows to control the emulator. Open up a new terminal (window/tab, as you prefer) and open the platform-tools directory:
+![emulator-running-alongside-terminal](/assets/img/2023/07/emulator-running-alongside-terminal.png)
+Last but not least, we need to kill the Android Debug Bridge (adb) server on the mac, as we want Windows to control the emulator. Open up a new terminal (window/tab, as you prefer) and open the platform-tools directory:
 
 ``` shell
  cd /Users/YOURUSERNAME/Library/Developer/Xamarin/android-sdk-macosx/platform-tools
@@ -87,7 +89,8 @@ If there is no server running, you will receive a Connection refused error messa
 
 If you haven’t done so already, activate Remote Login on your Mac. Open Settings, General, Sharing. In this menu, select “*Remote Login*” and turn the switch on. After that, click on the “*i*” and verify that your user is in the list of allowed users. If it is not, add your user from the “+” – menu:
 
-<div class="wp-block-image"><figure class="aligncenter size-full">![](https://msicc.net/assets/img/2023/07/activate-remote-login-mac-1.png)</figure></div>If you want, you can already copy and save the ssh-url from the top of the dialog, as we need that one in the next step.
+![](/assets/img/2023/07/activate-remote-login-mac-1.png)
+If you want, you can already copy and save the ssh-url from the top of the dialog, as we need that one in the next step.
 
 ### Verifying the ports 
 
@@ -109,7 +112,8 @@ Open am new command line window in your Windows VM. Then type the following comm
  
  If all goes well, you should be asked for your macOS password. Enter the password to start the connection to the Mac. Keep this open until you finish debugging on Android. You should see something similar to this:
 
-<div class="wp-block-image"><figure class="aligncenter size-large">![win-cli-logged-in-via-ssh](https://msicc.net/assets/img/2023/07/win-cli-logged-in-via-ssh-1024x261.png)</figure></div>By adding just a ‘*1*‘ in front of the uneven Mac port of the emulator, you can reroute the port very easily in Windows and have a common scheme for all emulators. Feel free to adapt another scheme if needed/wanted.
+![win-cli-logged-in-via-ssh](/assets/img/2023/07/win-cli-logged-in-via-ssh.png)
+By adding just a ‘*1*‘ in front of the uneven Mac port of the emulator, you can reroute the port very easily in Windows and have a common scheme for all emulators. Feel free to adapt another scheme if needed/wanted.
 
 ### Connect adb on Windows to the emulator on your Mac, finally!
 
@@ -145,9 +149,11 @@ Now let’s check if there are any devices mapped already:
  
 You should now see your device with the mapped port from above:
 
-<div class="wp-block-image"><figure class="alignleft size-large">![win-cli-adb-mapped](https://msicc.net/assets/img/2023/07/win-cli-adb-mapped-1024x337.png)</figure></div>If you haven’t already, it is now a good time to open Visual Studio in your VM and verify that you can see the device there as well:
+![win-cli-adb-mapped](/assets/img/2023/07/win-cli-adb-mapped.png)
+If you haven’t already, it is now a good time to open Visual Studio in your VM and verify that you can see the device there as well:
 
-<div class="wp-block-image"><figure class="aligncenter size-large">![win-vs2022-android-emu](https://msicc.net/assets/img/2023/07/win-vs2022-android-emu-1024x355.png)</figure></div>Of course, you want to hit that debug button. If all goes well, you should see the app running in the emulator, like the title image of this post does.
+![win-vs2022-android-emu](/assets/img/2023/07/win-vs2022-android-emu.png)
+Of course, you want to hit that debug button. If all goes well, you should see the app running in the emulator, like the title image of this post does.
 
 ### Shutting down 
 
@@ -159,7 +165,10 @@ Next, head over to your Mac and find the terminal that started your emulator. Hi
 
 If you need to compile for the iOS simulator, you should now be able to pair to the Mac like always in the Visual Studio dialog:
 
-<div class="wp-block-image"><figure class="aligncenter size-full">![](https://msicc.net/assets/img/2023/07/win-vs2022-pair-to-mac-dialog.png)</figure></div>### Conclusion
+![](/assets/img/2023/07/win-vs2022-pair-to-mac-dialog.png)
+
+
+### Conclusion
 
 As I was very unsatisfied with the performance and the problems of VS4Mac/Rider, I decided to give the Parallels construct with Windows another try on my private dev machine. As it turned out, this was a good decision – except for the Android emulator part. However, with the solution above, also that problem is now solved.
 

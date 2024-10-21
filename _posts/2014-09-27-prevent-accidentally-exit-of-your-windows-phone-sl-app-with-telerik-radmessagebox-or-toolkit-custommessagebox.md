@@ -23,7 +23,7 @@ tags:
 
 ![preventExit](/assets/img/2014/09/preventExit.png "preventExit")
 
-After finally being able to use my dev center account again after three long weeks, I am back into [UniShare](http://www.windowsphone.com/s?appid=ee42cb1d-8a68-41c6-9c0c-d3e3fc61d6ea) development. One of the most requested fixes was to not exit the app when users are not at the compose pivot.
+After finally being able to use my dev center account again after three long weeks, I am back into [UniShare](https://www.windowsphone.com/s?appid=ee42cb1d-8a68-41c6-9c0c-d3e3fc61d6ea) development. One of the most requested fixes was to not exit the app when users are not at the compose pivot.
 
 Of course I am listening and I found a solution that should fit nearly all possible scenarios. Here is what I did:
 

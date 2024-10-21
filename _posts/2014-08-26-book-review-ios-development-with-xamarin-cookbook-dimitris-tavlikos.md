@@ -27,6 +27,7 @@ tags:
 
 ![](/assets/img/2014/08/SavedPicture-2014826112825.png)
 
+
 I love to learn and expand my knowledge. Because of this, I was absolutely happy when I was asked for a book review about Dimitris’ iOS book.
 
 The book is a huge collection of iOS recipes using Xamarin. The first three chapters are going deeply into the UI of an iOS application, looking on a lot (almost all) possible aspects of UI elements. What I like very much is that the author shows the code, usually with a step by step guide, and after that delivers a detailed explanation why something works in the way it does.
@@ -57,6 +58,6 @@ The final chapter contains some additional recipes that can make your app more v
 
 I only began with Xamarin.iOS a few month ago. This book provides a great insight into development for iOS using the Xamarin IDE. As I said already, I like the approach of showing code first and then explaining what it does exactly and provide additional info if suitable. This book is absolutely worth every single cent if you want to start with iOS and Xamarin.
 
-If you’re interested in the book, you’re just a click away: <http://bit.ly/1tnxmGX>
+If you’re interested in the book, you’re just a click away: <https://bit.ly/1tnxmGX>
 
 *Note: This post was completely written on my phone. If you find typos, you can keep them ;-).*

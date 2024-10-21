@@ -31,63 +31,63 @@ However, if you want to get a list of all tickets from a specific user, we need 
 Let’s have a look on how to log in as owner:
 
 ``` csharp
-         private void LoginAsOwner()
-        {
-            string loginAsOwnerPath = "/api/v1/users/login_as_owner";
-            var client = new RestClient(BaseUrl)
-            {
-                Authenticator = OAuth1Authenticator.ForRequestToken(ConsumerKey, ConsumerSecret, oAuthCallBackUri)
-            };
+private void LoginAsOwner()
+{
+    string loginAsOwnerPath = "/api/v1/users/login_as_owner";
+    var client = new RestClient(BaseUrl)
+    {
+        Authenticator = OAuth1Authenticator.ForRequestToken(ConsumerKey, ConsumerSecret, oAuthCallBackUri)
+    };
 
-            //works only with POST!
-            var request = new RestRequest(loginAsOwnerPath, Method.POST);
-            request.AddHeader("Accept", "application/json");
+    //works only with POST!
+    var request = new RestRequest(loginAsOwnerPath, Method.POST);
+    request.AddHeader("Accept", "application/json");
 
-            var response = client.ExecuteAsync(request, HandleLoginAsOwnerResponse);
-        }
+    var response = client.ExecuteAsync(request, HandleLoginAsOwnerResponse);
+}
 
-        private void HandleLoginAsOwnerResponse(IRestResponse restResponse)
-        {
-            var response = restResponse;
-            var ownerTokens = JsonConvert.DeserializeObject<UserViaMailClass.Token>(response.Content);
+private void HandleLoginAsOwnerResponse(IRestResponse restResponse)
+{
+    var response = restResponse;
+    var ownerTokens = JsonConvert.DeserializeObject<UserViaMailClass.Token>(response.Content);
 
-            OwnerAccesToken = ownerTokens.oauth_token;
-            OwnerAccesTokenSecret = ownerTokens.oauth_token_secret;
+    OwnerAccesToken = ownerTokens.oauth_token;
+    OwnerAccesTokenSecret = ownerTokens.oauth_token_secret;
 
-        }
+}
 ```
  
 The authorization request is pretty similar to the user’s authentication request. However, if we log in as owner, we are getting another AccessToken and another AccessTokenSecret. That’s why we are using the ‘ForRequestToken’-method with our RestClient.
 
 Important to know is that the request itself works only with the HTTP-method ‘POST’, otherwise the login would be denied.
 
-We are getting back the JSON string of our owner account, which can be deserialized with [JSON.net](http://james.newtonking.com/json) to get our AccessToken and AccessTokenSecret. I attached my ‘[UserViaMailClass](/assets/img/2014/01/UserViaMailClass.zip)‘ for easy deserialization (yes, it looks similar to the user class [from my authentication post](http://msicc.net/?p=3944), but has some differences in there).
+We are getting back the JSON string of our owner account, which can be deserialized with [JSON.net](https://james.newtonking.com/json) to get our AccessToken and AccessTokenSecret. 
 
 Now that we have our OwnerAccesToken and OwnerAccessTokenSecret, we are able to search for all tickets from a specific user:
 
 ``` csharp
-         public void GetAllTicketsFromUser()
-        {
-            string mailaddress = "<usersmailaddress>";
-            string getSearchTicketsPath = "/api/v1/tickets/search.json";
-            var client = new RestClient(BaseUrl)
-            {
-                Authenticator = OAuth1Authenticator.ForProtectedResource(ConsumerKey, ConsumerSecret, OwnerAccesToken, OwnerAccesTokenSecret)
-            };
+public void GetAllTicketsFromUser()
+{
+    string mailaddress = "<usersmailaddress>";
+    string getSearchTicketsPath = "/api/v1/tickets/search.json";
+    var client = new RestClient(BaseUrl)
+    {
+        Authenticator = OAuth1Authenticator.ForProtectedResource(ConsumerKey, ConsumerSecret, OwnerAccesToken, OwnerAccesTokenSecret)
+    };
 
-            var request = new RestRequest(getSearchTicketsPath, Method.GET);
+    var request = new RestRequest(getSearchTicketsPath, Method.GET);
 
-            request.AddParameter("query", mailaddress);
+    request.AddParameter("query", mailaddress);
 
-            var response = client.ExecuteAsync(request, HandleGetAllTicketsFromUserResponse);
-        }
+    var response = client.ExecuteAsync(request, HandleGetAllTicketsFromUserResponse);
+}
 
-        private void HandleGetAllTicketsFromUserResponse(IRestResponse restResponse)
-        {
-            var response = restResponse;
+private void HandleGetAllTicketsFromUserResponse(IRestResponse restResponse)
+{
+    var response = restResponse;
 
-            var tickets = JsonConvert.DeserializeObject<TicketDataClass.TicketData>(response.Content);
-        }
+    var tickets = JsonConvert.DeserializeObject<TicketDataClass.TicketData>(response.Content);
+}
 ```
  
 This request is again pretty similar to what we did to get a list of all suggestions. Please find attached my ‘[TicketDataClass](/assets/img/2014/01/TicketDataClass.zip)‘ for easy deserialization.
@@ -95,25 +95,25 @@ This request is again pretty similar to what we did to get a list of all suggest
 Of course, users want to be able to submit new tickets/support requests from our app, too. I will show you how to do that:
 
 ``` csharp
-         public void CreateNewTicketAsUser()
-        {
-            string ticketsPath = "/api/v1/tickets.json";
-            var client = new RestClient(BaseUrl)
-            {
-                Authenticator = OAuth1Authenticator.ForProtectedResource(ConsumerKey, ConsumerSecret, AccessToken, AccessTokenSecret)
-            };
+public void CreateNewTicketAsUser()
+{
+    string ticketsPath = "/api/v1/tickets.json";
+    var client = new RestClient(BaseUrl)
+    {
+        Authenticator = OAuth1Authenticator.ForProtectedResource(ConsumerKey, ConsumerSecret, AccessToken, AccessTokenSecret)
+    };
 
-            var request = new RestRequest(ticketsPath, Method.POST);
-            request.AddParameter("ticket[subject]", "testing the uservoice API");
-            request.AddParameter("ticket[message]", "hi there, \n\nwe are just testing the creation of a new uservoice ticket.");
+    var request = new RestRequest(ticketsPath, Method.POST);
+    request.AddParameter("ticket[subject]", "testing the uservoice API");
+    request.AddParameter("ticket[message]", "hi there, \n\nwe are just testing the creation of a new uservoice ticket.");
 
-            var response = client.ExecuteAsync(request, HandleCreateNewTicketAsUserResponse);
-        }
+    var response = client.ExecuteAsync(request, HandleCreateNewTicketAsUserResponse);
+}
 
-        private void HandleCreateNewTicketAsUserResponse(IRestResponse restResponse)
-        {
-            var response = restResponse;
-        }
+private void HandleCreateNewTicketAsUserResponse(IRestResponse restResponse)
+{
+    var response = restResponse;
+}
 ```
  
 To submit a new ticket, we are using the user’s AccessToken and AccessTokenSecret. This way, the ticket gets automatically assigned to the ticket. We then need to pass the ‘ticket\[subject\]’ and ‘ticket\[message\]’ parameters to the request to make it being accepted by the uservoice API.

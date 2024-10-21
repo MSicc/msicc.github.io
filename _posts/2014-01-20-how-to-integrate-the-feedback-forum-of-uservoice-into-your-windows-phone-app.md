@@ -22,37 +22,37 @@ tags:
     - wpdev
 ---
 
-As I described in my [first blog post](http://msicc.net/?p=3916) about uservoice, uservoice has a feedback forum where users are able to submit and vote for ideas.
+As I described in my [first blog post]({% post_url 2014-01-06-experiment-using-uservoice-com-for-support-feedback-and-faq %}) about uservoice, uservoice has a feedback forum where users are able to submit and vote for ideas.
 
-This post is about how to get those ideas into your app. On the API side, the ideas are called suggestions. Now that we know [how to authenticate our users for the API](http://msicc.net/?p=3944), we are able to get a list of suggestions into our app:
+This post is about how to get those ideas into your app. On the API side, the ideas are called suggestions. Now that we know [how to authenticate our users for the API]({% post_url 2014-01-19-how-to-authenticate-users-with-the-uservoice-api-on-windows-phone%}), we are able to get a list of suggestions into our app:
 
 ``` csharp
-         public void GetSuggestions()
-        {
 
-            string suggestionsPath = "api/v1/forums/<yourforumid>/suggestions.json";
-            var client = new RestClient(BaseUrl)
-            {
-                Authenticator = OAuth1Authenticator.ForProtectedResource(ConsumerKey, ConsumerSecret, AccessToken, AccessTokenSecret)
-            };
+string suggestionsPath = "api/v1/forums/<yourforumid>/suggestions.json";
+public void GetSuggestions()
+{
+    var client = new RestClient(BaseUrl)
+    {
+        Authenticator = OAuth1Authenticator.ForProtectedResource(ConsumerKey, ConsumerSecret, AccessToken, AccessTokenSecret)
+    };
 
-            var request = new RestRequest(suggestionsPath, Method.GET);
-            var response = client.ExecuteAsync(request, HandleGetSuggestionResponse);
-        }</yourforumid>
+    var request = new RestRequest(suggestionsPath, Method.GET);
+    var response = client.ExecuteAsync(request, HandleGetSuggestionResponse);
+}
 ```
  
 This is pretty straight forward. We are using the oAuth1Authenticator with our saved tokens as parameter to call the suggestions endpoint of the uservoice API. The result is a JSON string that holds all suggestions as a list.
 
-In our response handler, we are able to deserialize our List of suggestions (best with [JSON.net](http://james.newtonking.com/json)):
+In our response handler, we are able to deserialize our List of suggestions (best with [JSON.net](https://james.newtonking.com/json)):
 
 ``` csharp
  private void HandleGetSuggestionResponse(IRestResponse restResponse)
-        {
-            var response = restResponse;
+{
+    var response = restResponse;
 
-            var suggestionslist = JsonConvert.DeserializeObject<SuggestionsDataClass.SuggestionsData>(response.Content);
-            suggestionsListBox.ItemsSource = suggestionslist.suggestions;
-        }
+    var suggestionslist = JsonConvert.DeserializeObject<SuggestionsDataClass.SuggestionsData>(response.Content);
+    suggestionsListBox.ItemsSource = suggestionslist.suggestions;
+}
 ```
  
 To get the SuggestionsDataClass items, just go to json2csharp.com and pass in the json string we received with response.Content or download it from here: [SuggestionsDataClass](/assets/img/2014/01/SuggestionsDataClass.zip "SuggestionsDataClass download link").
@@ -61,31 +61,31 @@ Now let’s have a look on how to submit a new idea on behalf of our user. To su
 
 ``` csharp
  public void PostSuggestion()
-        {
-            string suggestionsPath = "api/v1/forums/<yourforumid>/suggestions.json";
-            var client = new RestClient(BaseUrl)
-            {
-                Authenticator = OAuth1Authenticator.ForProtectedResource(ConsumerKey, ConsumerSecret, AccessToken, AccessTokenSecret)
-            };
+{
+    string suggestionsPath = "api/v1/forums/<yourforumid>/suggestions.json";
+    var client = new RestClient(BaseUrl)
+    {
+        Authenticator = OAuth1Authenticator.ForProtectedResource(ConsumerKey, ConsumerSecret, AccessToken, AccessTokenSecret)
+    };
 
-            var request = new RestRequest(suggestionsPath, Method.POST);
-            request.AddHeader("Accept", "application/json");
-            request.Parameters.Clear();
-            request.RequestFormat = DataFormat.Json;
+    var request = new RestRequest(suggestionsPath, Method.POST);
+    request.AddHeader("Accept", "application/json");
+    request.Parameters.Clear();
+    request.RequestFormat = DataFormat.Json;
 
-            var newSuggestion = new SuggestionsDataClass.Suggestion();
-            newSuggestion.title = "test suggestion number 2 from app development";
-            newSuggestion.text = "please ignore this suggestion as we are testing integration of ideas into our apps";
-            newSuggestion.vote_count = 3;
+    var newSuggestion = new SuggestionsDataClass.Suggestion();
+    newSuggestion.title = "test suggestion number 2 from app development";
+    newSuggestion.text = "please ignore this suggestion as we are testing integration of ideas into our apps";
+    newSuggestion.vote_count = 3;
 
-            request.AddParameter("suggestion[title]", newSuggestion.title);
-            request.AddParameter("suggestion[text]", newSuggestion.text);
-            request.AddParameter("suggestion[votes]", newSuggestion.vote_count);
-            request.AddParameter("suggestion[referrer]", "uservoice test app");            
+    request.AddParameter("suggestion[title]", newSuggestion.title);
+    request.AddParameter("suggestion[text]", newSuggestion.text);
+    request.AddParameter("suggestion[votes]", newSuggestion.vote_count);
+    request.AddParameter("suggestion[referrer]", "uservoice test app");            
 
-            var response = client.ExecuteAsync(request, HandlePostSuggestionResponse);
+    var response = client.ExecuteAsync(request, HandlePostSuggestionResponse);
 
-        }</yourforumid>
+}
 ```
  
 This call is a bit different from the previous one. We need to pass the idea data to as parameters to our request. The parameter “suggestion\[title\]” is the main one and always required. As you can see, “suggestion\[text\]” and “suggestion\[votes\]” are additional parameters that make the idea complete. All other date is generated by the uservoice server (like posted at, connect to the user who posted that, etc..). The parameter “suggestion\[referrer\]” is only visible in our admin console and can help you to track from where the suggestion was submitted.
@@ -93,12 +93,12 @@ This call is a bit different from the previous one. We need to pass the idea dat
 In our response handler, we are receiving a complete set of suggestion data as a JSON string that we can use display to our users and enable sharing of this idea for example:
 
 ``` csharp
-         private void HandlePostSuggestionResponse(IRestResponse restResponse)
-        {
-            var response = restResponse;
+private void HandlePostSuggestionResponse(IRestResponse restResponse)
+{
+    var response = restResponse;
 
-            //tbd: do something with the result (e.g. checking response.StatusCode)
-        }
+     //tbd: do something with the result (e.g. checking response.StatusCode)
+}
 ```
  
 ![Screenshot (305)](/assets/img/2014/01/Screenshot-305.png "Screenshot (305)")
@@ -106,25 +106,25 @@ In our response handler, we are receiving a complete set of suggestion data as a
 The last important point I want to show you is how to let a user vote for an idea.
 
 ``` csharp
-         public void VoteOnSuggestion()
-        {
-            string postUserVotesPath = "/api/v1/forums/<yourforumid>/suggestions/{0}/votes.json";
-            string suggestionId = "<yoursuggestionid>";
-            var client = new RestClient(BaseUrl)
-            {
-                Authenticator = OAuth1Authenticator.ForProtectedResource(ConsumerKey, ConsumerSecret, AccessToken, AccessTokenSecret)
-            };
+    public void VoteOnSuggestion()
+{
+    string postUserVotesPath = "/api/v1/forums/<yourforumid>/suggestions/{0}/votes.json";
+    string suggestionId = "<yoursuggestionid>";
+    var client = new RestClient(BaseUrl)
+    {
+        Authenticator = OAuth1Authenticator.ForProtectedResource(ConsumerKey, ConsumerSecret, AccessToken, AccessTokenSecret)
+    };
 
-            var request = new RestRequest(string.Format(postUserVotesPath, suggestionId), Method.POST);
-            request.AddHeader("Accept", "application/json");
-            request.Parameters.Clear();
-            request.RequestFormat = DataFormat.Json;
+    var request = new RestRequest(string.Format(postUserVotesPath, suggestionId), Method.POST);
+    request.AddHeader("Accept", "application/json");
+    request.Parameters.Clear();
+    request.RequestFormat = DataFormat.Json;
 
-            request.AddParameter("to", 3);
+    request.AddParameter("to", 3);
 
-            var response = client.ExecuteAsync(request, HandleVotingResponse);
+    var response = client.ExecuteAsync(request, HandleVotingResponse);
 
-        }</yoursuggestionid></yourforumid>
+}
 ```
  
 Of course we need to authenticate our user again. We need to pass the suggestion id to the request path (which is part of the Suggestion class). This call accepts only one parameter (“to”). The value can be between 1 and 3 (tip: only offer this three options from your code already to avoid erroneous responses).
@@ -132,12 +132,12 @@ Of course we need to authenticate our user again. We need to pass the suggestion
 The response handler returns the suggestion’s JSON string the user voted on again:
 
 ``` csharp
-         private void HandleVotingResponse(IRestResponse restResponse)
-        {
-            var response = restResponse;
+private void HandleVotingResponse(IRestResponse restResponse)
+{
+    var response = restResponse;
 
-            //tbd: do something with the result (e.g. checking response.StatusCode)
-        }
+    //tbd: do something with the result (e.g. checking response.StatusCode)
+}
 ```
  
 This was all about how to integrate the feedback forum of your uservoice account into your app. As always, I hope this will be useful for some of you.

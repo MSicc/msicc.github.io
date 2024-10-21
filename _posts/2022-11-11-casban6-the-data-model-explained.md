@@ -32,7 +32,8 @@ Initially, this post should have been about the direct implementation and design
 
 A picture is worth a thousand words, they say. So here is a complete picture of the data model:
 
-<div class="wp-block-image is-style-default"><figure class="aligncenter size-large is-resized">![CASBAN6 data model](https://msicc.net/assets/img/2022/11/ServerlessBlogDBSchema_final-1024x775.png "ServerlessBlogDBSchema.png")</figure></div>I will go through the model table by table and tell you a sentence or two on each of it for the rest of this post.
+![CASBAN6 data model](/assets/img/2022/11/ServerlessBlogDBSchema_final.png)
+I will go through the model table by table and tell you a sentence or two on each of it for the rest of this post.
 
 ### The tables
 

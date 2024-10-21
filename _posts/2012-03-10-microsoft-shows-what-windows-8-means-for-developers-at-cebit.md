@@ -5,12 +5,6 @@ date: '2012-03-10T22:42:26+01:00'
 author: 'Marco Siccardi'
 layout: post
 permalink: /microsoft-shows-what-windows-8-means-for-developers-at-cebit/
-bitly_url:
-    - 'http://bit.ly/2rXcu1r'
-bitly_hash:
-    - 2rXcu1r
-bitly_long_url:
-    - 'https://msicc.net/microsoft-shows-what-windows-8-means-for-developers-at-cebit/'
 image: /assets/img/2012/03/WP_000425.jpg
 categories:
     - Archive

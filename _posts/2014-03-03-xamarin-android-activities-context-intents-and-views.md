@@ -41,7 +41,7 @@ The ‘Label’ attribute is what you will see in the Title bar when launching t
 
 Every Activity has its own OnCreate event, where you can put all your starting, button handlers, stylings etc. in.
 
-But an Activity still has more. It has events like OnStart(), OnPause(), OnRresume() and OnStop() and OnDestroy() and OnRestart(). I won’t get into deep this time, as the Xamarin documentation has already a very good overview of those events: [http://docs.xamarin.com/guides/android/application\_fundamentals/activity\_lifecycle/](http://docs.xamarin.com/guides/android/application_fundamentals/activity_lifecycle/ "http://docs.xamarin.com/guides/android/application_fundamentals/activity_lifecycle/").
+But an Activity still has more. It has events like OnStart(), OnPause(), OnRresume() and OnStop() and OnDestroy() and OnRestart(). I won’t get into deep this time, as the Xamarin documentation has already a very good overview of those events: [https://docs.xamarin.com/guides/android/application\_fundamentals/activity\_lifecycle/](https://docs.xamarin.com/guides/android/application_fundamentals/activity_lifecycle/ "https://docs.xamarin.com/guides/android/application_fundamentals/activity_lifecycle/").
 
 Those events are important to understand for a lot of your application logic, like:
 
@@ -108,7 +108,7 @@ Views can be very different, too. Let’s start with the simple View. In our get
 
 ``` xml
  <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="https://schemas.android.com/apk/res/android"
 android:orientation="vertical"
 android:layout_width="fill_parent"
 android:layout_height="fill_parent">
@@ -120,7 +120,7 @@ android:text="@string/hello" />
 </LinearLayout>
 ```
  
-The View has a main LinearLayout which is acts as ContentPanel. All other controls like Buttons, TextViews etc. are going into this. There are a lot of properties that can be set, we’ll leave it this easy for now. If you want to know more about those properties, you can have a look at the Android documentation here: [http://developer.android.com/guide/topics/ui/declaring-layout.html](http://developer.android.com/guide/topics/ui/declaring-layout.html "http://developer.android.com/guide/topics/ui/declaring-layout.html")
+The View has a main LinearLayout which is acts as ContentPanel. All other controls like Buttons, TextViews etc. are going into this. There are a lot of properties that can be set, we’ll leave it this easy for now. If you want to know more about those properties, you can have a look at the Android documentation here: [https://developer.android.com/guide/topics/ui/declaring-layout.html](https://developer.android.com/guide/topics/ui/declaring-layout.html "https://developer.android.com/guide/topics/ui/declaring-layout.html")
 
 This part is totally the same as with the one matching part in the Android SDK, so you will need to get familiar with the Android documentation as well.
 

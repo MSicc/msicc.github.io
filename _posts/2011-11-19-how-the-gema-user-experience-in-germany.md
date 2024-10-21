@@ -5,12 +5,6 @@ date: '2011-11-19T09:59:42+01:00'
 author: 'Marco Siccardi'
 layout: post
 permalink: /how-the-gema-user-experience-in-germany/
-bitly_url:
-    - 'http://bit.ly/2rZl8wm'
-bitly_hash:
-    - 2rZl8wm
-bitly_long_url:
-    - 'https://msicc.net/how-the-gema-user-experience-in-germany/'
 categories:
     - Archive
 tags:
@@ -19,6 +13,8 @@ tags:
 ---
 
 ![100px-Gema_logo_svg](/assets/img/2011/11/100px-Gema_logo_svg.png "100px-Gema_logo_svg")  
+
+
 I struggled with myself to write about this for a while. But now I can´t hold back any longer.
 
 The society for musical performance and mechanical reproduction rights (GEMA) is a collecting society which represents the rights of the copyright of those composers, musical, and publishers of musical works in Germany. It is similar to the Harry Fox Agency. Until here there is still no problem.

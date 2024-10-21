@@ -100,7 +100,8 @@ This will be your manual switch between deploying to the simulator and deploying
 
 The next step is to locate the `info.plist` files in your iOS (and Mac Catalyst) projects in the `Platforms` folder. Open **both of them** with by double click. At the bottom of the editor window, select ‘*Text*‘:
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![Jetbrains Rider Plist Editor / Text Switch](https://msicc.net/assets/img/2023/04/Screenshot-2023-04-09-at-08.00.13-1024x329.png)</figure></div>Add these lines to before the closing before the last closing `dict` tag:
+![Jetbrains Rider Plist Editor / Text Switch](/assets/img/2023/04/Screenshot-2023-04-09-at-08.00.13.png)
+Add these lines to before the closing before the last closing `dict` tag:
 
 ``` xml
  <key>CFBundleIdentifier</key>
@@ -115,7 +116,10 @@ Save all of your modifications and close the solution. I recommend to manually d
 
 When you hit the debug button, your Debug Console will still be full of red messages like those below, but you will be able to deploy (and debug) on your iOS device again.
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![Jetbrains Rider Debug Console with a lot of errors.](https://msicc.net/assets/img/2023/04/Screenshot-2023-04-09-at-08.12.44-1024x288.png)</figure></div>## Conclusion
+![Jetbrains Rider Debug Console with a lot of errors.](/assets/img/2023/04/Screenshot-2023-04-09-at-08.12.44.png)
+
+
+## Conclusion
 
 Visual Studio for Mac does all these steps for you. If you try and debug the app with VS4Mac, you will notice the same error messages also there, but they are not blocking you from debugging. If you want to deploy and debug with Rider, you’ll have to perform these extra steps to get it working.
 

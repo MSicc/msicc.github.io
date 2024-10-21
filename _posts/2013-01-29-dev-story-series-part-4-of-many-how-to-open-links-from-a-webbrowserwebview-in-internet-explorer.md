@@ -17,7 +17,9 @@ tags:
     - wpdev
 ---
 
-[![XAMLWebView](/assets/img/2013/01/Screenshot-87-300x174.png)](/assets/img/2013/01/Screenshot-87.png)
+[![XAMLWebView](/assets/img/2013/01/Screenshot-87.png)
+](/assets/img/2013/01/Screenshot-87.png)
+
 
 Today I will share my solution of how to open links from a WebBrowser or WebView on Windows Phone and Windows 8 (as I did in my app for msicc.net).
 

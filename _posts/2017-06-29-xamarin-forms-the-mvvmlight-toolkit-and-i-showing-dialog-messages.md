@@ -28,7 +28,7 @@ tags:
     - 'xamarin forms'
 ---
 
-In this post, I will show you how to display dialog messages (also known as message box). This time, we will use again native implementations ([like in the second post about Dependency Injection](https://msicc.net/xamarin-forms-the-mvvmlight-toolkit-and-i-dependecy-injection/)) to get the job done. I could have used the Xamarin.Forms `Page.DisplayAlert`method, but that one does not allow a lot of customization, so I went down to implement it my way.
+In this post, I will show you how to display dialog messages (also known as message box). This time, we will use again native implementations ([like in the second post about Dependency Injection]({% post_url 2017-06-02-xamarin-forms-the-mvvmlight-toolkit-and-i-dependecy-injection %}/)) to get the job done. I could have used the Xamarin.Forms `Page.DisplayAlert`method, but that one does not allow a lot of customization, so I went down to implement it my way.
 
 ## Like always, the interface dictates functionality
 
@@ -340,7 +340,7 @@ The additional parameters `cancelableOnTouchOutside`and `cancelable`are not used
 
 ## Updating our ViewModelLocator
 
-If you have read [my post on Dependency Injection](https://msicc.net/xamarin-forms-the-mvvmlight-toolkit-and-i-dependecy-injection/), you might remember that we are able to combine the power of MVVMLight with `Xamarin.Forms` own `DependencyService`. This is what we will do once again in our `ViewModelLocator` in the `RegisterServices` method:
+If you have read [my post on Dependency Injection]({% post_url 2017-06-02-xamarin-forms-the-mvvmlight-toolkit-and-i-dependecy-injection %}/), you might remember that we are able to combine the power of MVVMLight with `Xamarin.Forms` own `DependencyService`. This is what we will do once again in our `ViewModelLocator` in the `RegisterServices` method:
 
 ``` csharp
  var dialogService = DependencyService.Get<IDialogService>();

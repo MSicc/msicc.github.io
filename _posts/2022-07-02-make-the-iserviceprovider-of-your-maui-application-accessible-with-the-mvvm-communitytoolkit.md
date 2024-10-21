@@ -6,7 +6,7 @@ author: 'Marco Siccardi'
 excerpt: 'In this post, I will show you how you can make the default IServiceProvider  of your MAUI application accessible via the MVVM CommunityToolkit''s Ioc.Default implementation.'
 layout: post
 permalink: /make-the-iserviceprovider-of-your-maui-application-accessible-with-the-mvvm-communitytoolkit/
-image: /assets/img/2022/07/IServiceProviderMAUITitle-scaled.jpeg
+image: /assets/img/2022/07/IServiceProviderMAUITitle.jpeg
 categories:
     - 'Dev Stories'
     - MAUI

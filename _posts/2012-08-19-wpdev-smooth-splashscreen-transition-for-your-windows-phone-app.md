@@ -17,7 +17,7 @@ tags:
 
 Today I finished an update for one of my apps with adding a CustomControl as SplashScreen. I had to do it this way because my app is localized in English, German and Italian. Most annoying at this part was that there is no smooth transition between the SplashScreen and the MainPage. By the way, there is also no smooth transition with the “normal” SplashScreenImage.jpg that is included in all app templates of Visual Studio 2010.
 
-I often use the transitions that are built into the Silverlight for Windows Phone Toolkit (download [here](http://silverlight.codeplex.com/releases/view/60291) or use the Nuget-installer of Visual Studio). These transitions can be modified and used for custom transitions. I will show you how to create a fade out effect for your custom SplashScreen control.
+I often use the transitions that are built into the Silverlight for Windows Phone Toolkit (download [here](https://silverlight.codeplex.com/releases/view/60291) or use the Nuget-installer of Visual Studio). These transitions can be modified and used for custom transitions. I will show you how to create a fade out effect for your custom SplashScreen control.
 
 First we have to create a project. I called the sample SplashScreenTransition.
 
@@ -215,4 +215,4 @@ The result of the work done above will look like this:
 
 <div class="embed-vimeo" style="text-align: center;"><iframe allowfullscreen="" frameborder="0" height="675" loading="lazy" mozallowfullscreen="" src="https://player.vimeo.com/video/63092366" webkitallowfullscreen="" width="1200"></iframe></div>I hope this article was helpful for creating a smooth transition of your SplashScreen.
 
-Download the sample code [here](http://sdrv.ms/ON2ej5).
+Download the sample code [here](https://sdrv.ms/ON2ej5).

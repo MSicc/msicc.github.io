@@ -183,11 +183,12 @@ namespace [YOURNAMESPACEHERE]
 
 ### The `ResourceDictionary`
 
-As I prefer defining my UI in XAML in `Xamarin.Forms,` I naturally want those colors to be available there as well. This can be done by loading the colors into a `ResourceDictionary`. [As you might remember](https://msicc.net/xfqad-compile-xaml-without-code-behind-in-xamarin-forms/), I prefer codeless `ResourceDictionary` implementations. This time, however, we need the code-behind file to make the `ResourceDictionary` work for us.
+As I prefer defining my UI in XAML in `Xamarin.Forms,` I naturally want those colors to be available there as well. This can be done by loading the colors into a `ResourceDictionary`. [As you might remember]({% post_url 2021-11-30-xfqad-compile-xaml-without-code-behind-in-xamarin-forms  %}), I prefer codeless `ResourceDictionary` implementations. This time, however, we need the code-behind file to make the `ResourceDictionary` work for us.
 
 First, add a new `ResourceDictionary`:
 
-<div class="wp-block-image"><figure class="aligncenter size-full">![Add_ResourceDictionary_XAML](https://msicc.net/assets/img/2021/11/Add_ResourceDictionary_XAML.png)</figure></div>Then, in the code-behind file, we are using the `DependencyService` of `Xamarin.Forms` to add the colors to the `ResourceDictionary`:
+![Add_ResourceDictionary_XAML](/assets/img/2021/11/Add_ResourceDictionary_XAML.png)
+Then, in the code-behind file, we are using the `DependencyService` of `Xamarin.Forms` to add the colors to the `ResourceDictionary`:
 
 ``` csharp
  using Xamarin.Forms;

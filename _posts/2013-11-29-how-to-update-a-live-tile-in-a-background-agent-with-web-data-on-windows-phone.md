@@ -27,9 +27,9 @@ In one of my recent projects, I needed to update the live tile of the app via a 
 
 I found tons of example on how to update the live tile periodically, but non of them told me how I can use the data from the web site or where I need to put it in.
 
-In the end, it was [Jay Bennet](https://twitter.com/JayTBennett), developer of the fantatsic [WPcentral](http://wpcentral.com) Windows Phone app, who gave me the last hint I needed – where do I start the request for the data I need. Thanks to him for that!
+In the end, it was [Jay Bennet](https://twitter.com/JayTBennett), developer of the fantatsic [WPcentral](https://wpcentral.com) Windows Phone app, who gave me the last hint I needed – where do I start the request for the data I need. Thanks to him for that!
 
-Ok, but let’s start in the beginning. When it comes to web based services, you first need a class (or ViewModel) that can hold your data you receive from your service. I explained that already pretty well [here](http://msicc.net/?p=3398). No matter if you are running your request within your app project or in a PCL, it pretty much always works like this.
+Ok, but let’s start in the beginning. When it comes to web based services, you first need a class (or ViewModel) that can hold your data you receive from your service. I explained that already pretty well [here]({% post_url 2013-01-12-dev-story-series-part-2-of-many-getting-recent-posts-from-wordpress-into-your-windows-phone-and-windows-8-app %}). No matter if you are running your request within your app project or in a PCL, it pretty much always works like this.
 
 After stripping of our class out of the JSON string, we are now able to create our request as well as our Background Agent.
 
@@ -52,8 +52,8 @@ And thanks to Jay, I know that this is where all the action (not only updating t
 - your task will run every 30 minutes, no way to change that
 - scheduled tasks need to be restarted within 14 days after the current start
 - Battery saver and the OS/the user can deactivate the agent
-- there is a long list of what you are not able to do in here ([check MSDN](http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh202962(v=vs.105).aspx))
-- there are memory limits ([check MSDN](http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh202942(v=vs.105).aspx#BKMK_ConstraintsforallScheduledTaskTypes))
+- there is a long list of what you are not able to do in here ([check MSDN](https://msdn.microsoft.com/en-us/library/windowsphone/develop/hh202962(v=vs.105).aspx))
+- there are memory limits ([check MSDN](https://msdn.microsoft.com/en-us/library/windowsphone/develop/hh202942(v=vs.105).aspx#BKMK_ConstraintsforallScheduledTaskTypes))
 
 
 all action needs to be finished before NotifyComplete() is called
@@ -61,48 +61,48 @@ all action needs to be finished before NotifyComplete() is called
 Based on this information, I created my task as following:
 
 ``` csharp
-        protected async override void OnInvoke(ScheduledTask task)
+    protected async override void OnInvoke(ScheduledTask task)
+    {
+    //performing an async request to get the JSON data string        
+        PostsFetcher postfetcher = new PostsFetcher();
+        Constants.latestPostsForLiveTileFromWordPressDotComResultString = await postfetcher.GetLatestPostFromWordPressDotComForLiveTileOnPhone();
+
+    //deserialize all data
+        var lifetileBaseData = JsonConvert.DeserializeObject<json_data_class_Posts.Posts>(Constants.latestPostsForLiveTileFromWordPressDotComResultString);
+
+        Deployment.Current.Dispatcher.BeginInvoke(() =>
         {
-        //performing an async request to get the JSON data string        
-            PostsFetcher postfetcher = new PostsFetcher();
-            Constants.latestPostsForLiveTileFromWordPressDotComResultString = await postfetcher.GetLatestPostFromWordPressDotComForLiveTileOnPhone();
+    //using Telerik's LiveTileHelper here
+            Uri launchUri = new Uri("Mainpage.xaml", UriKind.Relative);
+            RadFlipTileData fliptileData = new RadFlipTileData();
+            fliptileData.BackContent = lifetileBaseData.posts[0].title;
+            fliptileData.WideBackContent = lifetileBaseData.posts[0].title;
+            fliptileData.BackTitle = string.Format("{0} {1}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString());
+            fliptileData.Title = "LiveTileTitle";               
 
-        //deserialize all data
-            var lifetileBaseData = JsonConvert.DeserializeObject<json_data_class_Posts.Posts>(Constants.latestPostsForLiveTileFromWordPressDotComResultString);
-
-            Deployment.Current.Dispatcher.BeginInvoke(() =>
+            if (lifetileBaseData.posts[0].featured_image != string.Empty)
             {
-        //using Telerik's LiveTileHelper here
-                Uri launchUri = new Uri("Mainpage.xaml", UriKind.Relative);
-                RadFlipTileData fliptileData = new RadFlipTileData();
-                fliptileData.BackContent = lifetileBaseData.posts[0].title;
-                fliptileData.WideBackContent = lifetileBaseData.posts[0].title;
-                fliptileData.BackTitle = string.Format("{0} {1}", DateTime.Now.ToShortDateString(), DateTime.Now.ToShortTimeString());
-                fliptileData.Title = "LiveTileTitle";               
+                fliptileData.BackgroundImage = new Uri(lifetileBaseData.posts[0].featured_image, UriKind.RelativeOrAbsolute);
+                fliptileData.WideBackgroundImage = new Uri(lifetileBaseData.posts[0].featured_image, UriKind.RelativeOrAbsolute);
+                fliptileData.BackBackgroundImage = new Uri("Images/BackBackground.png", UriKind.RelativeOrAbsolute);
+                fliptileData.WideBackBackgroundImage = new Uri("Images/WideBackBackground.png", UriKind.RelativeOrAbsolute);
+            }
+            else
+            {
+                fliptileData.BackgroundImage = new Uri("Images/PlaceholderBackgroundImage.png", UriKind.RelativeOrAbsolute);
+                fliptileData.WideBackgroundImage = new Uri("Images/PlaceholderWideBackgroundImage.png", UriKind.RelativeOrAbsolute);
+                fliptileData.BackBackgroundImage = new Uri("Images/BackBackground.png", UriKind.RelativeOrAbsolute);
+                fliptileData.WideBackBackgroundImage = new Uri("Images/WideBackBackground.png", UriKind.RelativeOrAbsolute);
+            }
 
-                if (lifetileBaseData.posts[0].featured_image != string.Empty)
-                {
-                    fliptileData.BackgroundImage = new Uri(lifetileBaseData.posts[0].featured_image, UriKind.RelativeOrAbsolute);
-                    fliptileData.WideBackgroundImage = new Uri(lifetileBaseData.posts[0].featured_image, UriKind.RelativeOrAbsolute);
-                    fliptileData.BackBackgroundImage = new Uri("Images/BackBackground.png", UriKind.RelativeOrAbsolute);
-                    fliptileData.WideBackBackgroundImage = new Uri("Images/WideBackBackground.png", UriKind.RelativeOrAbsolute);
-                }
-                else
-                {
-                    fliptileData.BackgroundImage = new Uri("Images/PlaceholderBackgroundImage.png", UriKind.RelativeOrAbsolute);
-                    fliptileData.WideBackgroundImage = new Uri("Images/PlaceholderWideBackgroundImage.png", UriKind.RelativeOrAbsolute);
-                    fliptileData.BackBackgroundImage = new Uri("Images/BackBackground.png", UriKind.RelativeOrAbsolute);
-                    fliptileData.WideBackBackgroundImage = new Uri("Images/WideBackBackground.png", UriKind.RelativeOrAbsolute);
-                }
+            foreach (ShellTile tile in ShellTile.ActiveTiles)
+            {
+                LiveTileHelper.UpdateTile(tile, fliptileData);
+            }
+        });
 
-                foreach (ShellTile tile in ShellTile.ActiveTiles)
-                {
-                    LiveTileHelper.UpdateTile(tile, fliptileData);
-                }
-            });
-
-            NotifyComplete();
-        }
+        NotifyComplete();
+    }
 ```
  
 
@@ -124,56 +124,56 @@ public static string LiveTileUpdaterPeriodicTaskNameString = "LiveTileUpdaterPer
 Now we need to generate a method that handles everything for our background task:
 
 ``` csharp
-       public static void StartLiveTileUpdaterPeriodicTaskAgent()
+public static void StartLiveTileUpdaterPeriodicTaskAgent()
+{
+//declare the task and find the already running agent
+    LiveTileUpdaterPeriodicTask = ScheduledActionService.Find(LiveTileUpdaterPeriodicTaskNameString) as PeriodicTask;
+
+    if (LiveTileUpdaterPeriodicTask != null)
+    {
+//separate method, because we need to stop the agent when the user switches the Toggle to 'Off'
+        StopLiveTileUpdaterPeriodicTaskAgent();
+//contains:
+//try
+        //{
+        //  ScheduledActionService.Remove(App.LiveTileUpdaterPeriodicTaskNameString);
+        //}
+        //catch { }
+    }
+
+//generate a new background task 
+    LiveTileUpdaterPeriodicTask = new PeriodicTask(LiveTileUpdaterPeriodicTaskNameString);
+
+//provide a description. if not, your agent and your app may crash without even noticing you while debugging
+    LiveTileUpdaterPeriodicTask.Description = "This background agent checks every 30 minutes if there is a new blog post.";
+
+//start the agent and error handling
+    try
+    {
+        ScheduledActionService.Add(LiveTileUpdaterPeriodicTask);
+    }
+catch (InvalidOperationException exception)
+    {
+//user deactivated or blocked the agent in phone settings/background tasks. Ask him to re-activate or unblock it
+        if (exception.Message.Contains("BNS Error: The action is disabled"))
         {
-        //declare the task and find the already running agent
-            LiveTileUpdaterPeriodicTask = ScheduledActionService.Find(LiveTileUpdaterPeriodicTaskNameString) as PeriodicTask;
-
-            if (LiveTileUpdaterPeriodicTask != null)
-            {
-        //separate method, because we need to stop the agent when the user switches the Toggle to 'Off'
-                StopLiveTileUpdaterPeriodicTaskAgent();
-        //contains:
-        //try
-                //{
-                //  ScheduledActionService.Remove(App.LiveTileUpdaterPeriodicTaskNameString);
-                //}
-                //catch { }
-            }
-
-        //generate a new background task 
-            LiveTileUpdaterPeriodicTask = new PeriodicTask(LiveTileUpdaterPeriodicTaskNameString);
-
-        //provide a description. if not, your agent and your app may crash without even noticing you while debugging
-            LiveTileUpdaterPeriodicTask.Description = "This background agent checks every 30 minutes if there is a new blog post.";
-
-        //start the agent and error handling
-            try
-            {
-                ScheduledActionService.Add(LiveTileUpdaterPeriodicTask);
-            }
-        catch (InvalidOperationException exception)
-            {
-        //user deactivated or blocked the agent in phone settings/background tasks. Ask him to re-activate or unblock it
-                if (exception.Message.Contains("BNS Error: The action is disabled"))
-                {
-                    RadMessageBox.ShowAsync("it seems you deactivated our Background Agent for the Live Tiles. Please go to settings/background tasks to activate our app again.", "Whoops!", MessageBoxButtons.OK);
-                }
-
-        //the maximum of running background agents is reached. No further notification to the user required, as this is handled by the OS
-                if (exception.Message.Contains("BNS Error: The maximum number of ScheduledActions of this type have already been added."))
-                {
-                    //changing the Boolean to false, because the OS does not allow any new taks
-                    isLiveTileActivated = false;
-                }
-            }
-            catch (SchedulerServiceException)
-            {
-                //if there is a problem with the service, changing the Boolean to false. 
-        //feel free to inform the user about the exception and provide additional info
-                isLiveTileActivated = false;
-            }
+            RadMessageBox.ShowAsync("it seems you deactivated our Background Agent for the Live Tiles. Please go to settings/background tasks to activate our app again.", "Whoops!", MessageBoxButtons.OK);
         }
+
+//the maximum of running background agents is reached. No further notification to the user required, as this is handled by the OS
+        if (exception.Message.Contains("BNS Error: The maximum number of ScheduledActions of this type have already been added."))
+        {
+            //changing the Boolean to false, because the OS does not allow any new taks
+            isLiveTileActivated = false;
+        }
+    }
+    catch (SchedulerServiceException)
+    {
+        //if there is a problem with the service, changing the Boolean to false. 
+//feel free to inform the user about the exception and provide additional info
+        isLiveTileActivated = false;
+    }
+}
 ```
  
 In Application.Launching() and in ToggleSwitch\_Checked event, call this method. In ToggleSwitch\_UnChecked event, call ‘StopLiveTileUpdaterPeriodicTaskAgent()’ instead to stop the agent.

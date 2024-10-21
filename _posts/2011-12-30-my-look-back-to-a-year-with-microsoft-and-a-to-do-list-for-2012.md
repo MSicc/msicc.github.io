@@ -5,13 +5,7 @@ date: '2011-12-30T12:43:27+01:00'
 author: 'Marco Siccardi'
 layout: post
 permalink: /my-look-back-to-a-year-with-microsoft-and-a-to-do-list-for-2012/
-bitly_url:
-    - 'http://bit.ly/2qE6re5'
-bitly_hash:
-    - 2qE6re5
-bitly_long_url:
-    - 'https://msicc.net/my-look-back-to-a-year-with-microsoft-and-a-to-do-list-for-2012/'
-image: /assets/img/2011/12/iluvallMS-529x372.png
+image: /assets/img/2011/12/iluvallMS.png
 categories:
     - Archive
 tags:
@@ -20,8 +14,6 @@ tags:
     - wpdev
     - xbox
 ---
-
-[![iluvallMS](/assets/img/2011/12/iluvallMS.png "iluvallMS")](/assets/img/2011/12/iluvallMS.png)
 
 With the end of the year just around the corner, I want to take a look back to an amazing year for me as a Microsoft fan. There were certainly ups and downs, but over all it was a great year – as user and also as developer.
 
@@ -41,13 +33,16 @@ At the same time I made my fishing license. After I got approved for it, I wante
 
 [![248d30bf-8674-434f-9841-f376d8221ab9](/assets/img/2012/01/248d30bf-8674-434f-9841-f376d8221ab91.png "248d30bf-8674-434f-9841-f376d8221ab9")](/assets/img/2012/01/248d30bf-8674-434f-9841-f376d8221ab91.png)
 
+
 Back at home, downloaded the tools, and found out that at Channel 9 is a Beginner series for Windows Phone Development. I stepped through to all the videos, and after 2 month or so (due to my primary work it took that long) I started to develop my fishing knots application. I learned a lot more while I was coding this application, but the basics I learned helped me a lot to get started.
 
 [![mix11](/assets/img/2012/01/mix11.png "mix11")](/assets/img/2012/01/mix11.png)
 
+
 While I started with my own WPDev-Story, in April Microsoft held his annual MIX-conference. This was the first time for me, that it was not only from a user part from interest, but also from a developer part. We received an updated SDK, which was an huge step towards Windows Phone Mango. Microsoft announced 1500 new features which we developers can take advantage from with the new Windows Phone Mango release. User will get over 500 new features. The Kinect SDK expanded to Windows, with some really cool projects to use with. And last but not least Microsoft released the final Beta of Silverlight.
 
 [![Skype_Logo](/assets/img/2012/01/Skype_Logo.png "Skype_Logo")](/assets/img/2012/01/Skype_Logo.png)
+
 
 The rumours were also going wild for Microsoft to buy Skype. Well, finally in may Microsoft and Skype announced that the rumours were true.
 
@@ -57,9 +52,11 @@ Until now, a awesome first half of the year. Then in June, the annual E3-Games c
 
 [![wpmango](/assets/img/2012/01/wpmango.png "wpmango")](/assets/img/2012/01/wpmango.png)
 
+
 In July Windows Phone Mango got RTM-status, followed by a special developer beta. I enjoyed the beta, and all on my primary work were jealous about the fact I had mango before them.
 
 [![threescreens](/assets/img/2011/12/threescreens.png "threescreens")](/assets/img/2011/12/threescreens.png)
+
 
 After a calm summer, in September Microsoft revealed Windows 8 and released to Windows Phone Mango Update. Together with the new Xbox Dashboard, Microsoft revealed its “3-Screens”-Strategy.
 
@@ -68,6 +65,7 @@ After a calm summer, in September Microsoft revealed Windows 8 and released to W
 With new Windows Phone Hardware it steps forward, Nokia launched also finally their first Windows Phones. More and More must-have Smartphone-apps came to Windows Phone, such as Navigon or Whatsapp. Microsoft´s own advertising system launched in other countries like Germany and some other European countries.
 
 [![image](/assets/img/2012/01/image.png "image")](/assets/img/2012/01/image.png)
+
 
 Well, also my Blog made a change. With all that Metro-stuff around me, I am now addicted to this design. A hosted blog on WordPress was no longer good for me, so I registered msicc.net and host it on my own. I found a good designer who has experience with themes for WordPress, and he made this fantastic metro design for me. It is currently still a work in progress, as there will be a mobile metro theme as well as some other features.
 

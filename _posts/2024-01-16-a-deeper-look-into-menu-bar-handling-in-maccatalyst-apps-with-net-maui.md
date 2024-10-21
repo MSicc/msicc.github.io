@@ -40,7 +40,8 @@ Before you start following along, take a moment to [read Microsoft’s documenta
 
 When you create a new MacCatalyst app, it will come with a default menu bar:
 
-<div class="wp-block-image is-style-default"><figure class="aligncenter size-full is-resized">![MacCatalyst default application menu bar](https://msicc.net/assets/img/2024/01/image.png)</figure></div>There are several options that aren’t needed in every app, like the *Services* entry in the application item or the *Format* menu. To avoid confusion amongst your users, you can easily disable items you do not need. In your `AppDelegate` class, use the `BuildMenu(IUIMenuBuilder builder)` override to disable the items not needed, like in this snippet:
+![MacCatalyst default application menu bar](/assets/img/2024/01/image.png)
+There are several options that aren’t needed in every app, like the *Services* entry in the application item or the *Format* menu. To avoid confusion amongst your users, you can easily disable items you do not need. In your `AppDelegate` class, use the `BuildMenu(IUIMenuBuilder builder)` override to disable the items not needed, like in this snippet:
 
 ``` csharp
  public override void BuildMenu(IUIMenuBuilder builder)
@@ -87,7 +88,8 @@ After studying the source code on GitHub, I realized that the MAUI handlers are 
  
 This will add the items on top of the *File* menu bar item:
 
-<div class="wp-block-image"><figure class="aligncenter size-full is-resized">![MacCatalyst menu bar items with added entries via MAUI](https://msicc.net/assets/img/2024/01/image-1.png)</figure></div>Sadly, there is no way to directly override existing items. We also cannot control the position where the items get added. New entries will always be added on top of the system menu.
+![MacCatalyst menu bar items with added entries via MAUI](/assets/img/2024/01/image-1.png)
+Sadly, there is no way to directly override existing items. We also cannot control the position where the items get added. New entries will always be added on top of the system menu.
 
 A good example where this isn’t ideal is the *Settings* menu entry. Apple has reserved the second option in the application menu for *Settings/Preferences*. If you used [the `Settings.bundle` approach](https://developer.apple.com/documentation/uikit/mac_catalyst/displaying_a_preferences_window?language=objc), the entry for *Preferences* would get added right there. This has the disadvantage of not being able to use a custom UI for our settings page, though. To get rid of that, we want to add our own item via the MAUI API:
 
@@ -117,7 +119,8 @@ Using this approach will add the *Settings* menu on top of the *Application* men
  
 With the above code, we will get the *About* item back into place, and the *Settings* item at its desired and expected position:
 
-<div class="wp-block-image"><figure class="aligncenter size-full is-resized">![MacCatalyst application menu with Settings option added](https://msicc.net/assets/img/2024/01/image-2.png)</figure></div>Using this approach, we can add functionality that is hosted in all system menu entries, like the *Undo/Redo* items in the *Edit* menu as well.
+![MacCatalyst application menu with Settings option added](/assets/img/2024/01/image-2.png)
+Using this approach, we can add functionality that is hosted in all system menu entries, like the *Undo/Redo* items in the *Edit* menu as well.
 
 Now that we understand how to manipulate the menu bar, let’s take a look at how we can change the menu while our app is running.
 
@@ -421,7 +424,8 @@ Last but not least, we need to set the MenuHostingPage on the IMenuService regis
 
 Let’s try to add and insert an item into the demo application’s List menu:
 
-<div class="wp-block-image"><figure class="aligncenter size-full is-resized">![Demo application's List menu](https://msicc.net/assets/img/2024/01/image-3.png)</figure></div>The demo application uses a command that handles both cases with this method:
+![Demo application's List menu](/assets/img/2024/01/image-3.png)
+The demo application uses a command that handles both cases with this method:
 
 ``` csharp
  private void HandleListMenuBarItem(int number)
@@ -457,13 +461,15 @@ Let’s try to add and insert an item into the demo application’s List menu:
  
 Clicking the *FirstItem* will insert an item between those two, while hitting the *LastItem* will add the item at the end of the `MenuBarItem`‘s children:
 
-<div class="wp-block-image"><figure class="aligncenter size-full is-resized">![Demo application's list menu with inserted and added item](https://msicc.net/assets/img/2024/01/image-4.png)</figure></div>Hitting both options again will remove the items once again.
+![Demo application's list menu with inserted and added item](/assets/img/2024/01/image-4.png)
+Hitting both options again will remove the items once again.
 
 #### Add and remove items from a MenuFlyoutSubItem
 
 Let’s take a look at the sample application’s *Accounts* menu:
 
-<div class="wp-block-image"><figure class="aligncenter size-full is-resized">![Demo application's Accounts menu](https://msicc.net/assets/img/2024/01/image-5.png)</figure></div>Clicking on the *Login* button, the demo app will perform a fake login with the *Login* option being removed and an item with the account’s name being added. At the end, there will be also a *Logout* button in the submenu. Here is the code for the faked login:
+![Demo application's Accounts menu](/assets/img/2024/01/image-5.png)
+Clicking on the *Login* button, the demo app will perform a fake login with the *Login* option being removed and an item with the account’s name being added. At the end, there will be also a *Logout* button in the submenu. Here is the code for the faked login:
 
 ``` csharp
  private void FakeAccountLogin(int id)
@@ -486,7 +492,8 @@ Let’s take a look at the sample application’s *Accounts* menu:
  
 This is the result of hitting the Login button on either account:
 
-<div class="wp-block-image"><figure class="aligncenter size-full is-resized">![Demo application with logged in Account 2](https://msicc.net/assets/img/2024/01/image-6.png)</figure></div>### Some more gotcha’s
+![Demo application with logged in Account 2](/assets/img/2024/01/image-6.png)
+### Some more gotcha’s
 
 - You may have noticed the missing separator line after the about menu. As of writing this blog post, `MenuFlyoutSeparator` is not working on MacCatalyst. I already reported the error [on GitHub](https://github.com/dotnet/maui/issues/19870)
 - Don’t get tricked into trying to use your application’s name to access the application menu. It will add a new menu bar item into the bar instead of merging with the existing application menu. Use the word ’*Application*‘ instead.

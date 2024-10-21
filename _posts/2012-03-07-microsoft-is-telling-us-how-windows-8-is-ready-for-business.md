@@ -5,12 +5,6 @@ date: '2012-03-07T06:31:07+01:00'
 author: 'Marco Siccardi'
 layout: post
 permalink: /microsoft-is-telling-us-how-windows-8-is-ready-for-business/
-bitly_url:
-    - 'http://bit.ly/2qEi0SO'
-bitly_hash:
-    - 2qEi0SO
-bitly_long_url:
-    - 'https://msicc.net/microsoft-is-telling-us-how-windows-8-is-ready-for-business/'
 categories:
     - Archive
 tags:
@@ -42,4 +36,4 @@ This is one of the goals of Microsoft in business use. To reach this goal, Micro
 
 So this is a short overview of the features coming to businesses. A good amount will also focus on apps/software and their integration as well as their backwards compatibility. The time will tell, how the new concept of Microsoft will be adopted also by IT pros for their daily business.
 
-If you want to read more about this and watch a video about the possibilities, you can read a [blog post of Erwin Visser](http://windowsteamblog.com/windows/b/business/archive/2012/03/06/windows-8-reimagined-for-business.aspx), who has demonstrated some of the above points at the CeBIT.
+If you want to read more about this and watch a video about the possibilities, you can read a [blog post of Erwin Visser](https://windowsteamblog.com/windows/b/business/archive/2012/03/06/windows-8-reimagined-for-business.aspx), who has demonstrated some of the above points at the CeBIT.

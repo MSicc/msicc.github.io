@@ -67,7 +67,8 @@ The next step is to use to change the Border related properties of the `UITextFi
 
 By handling the native control’s `EditingDidBegin` and `EditingDidEnd` events, we are able to switch between the default color and our application’s primary (or whatever) color. This will look like this:
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![.NET MAUI entry in focused and unfocused state without padding for the placeholder and input text](https://msicc.net/assets/img/2024/06/maui-entry-modifyied-border-2-1024x502.png)</figure></div>As you can see, the coloring part is now working as intended. But the text (both placeholder and input text), is not aligned well within the control.
+![.NET MAUI entry in focused and unfocused state without padding for the placeholder and input text](/assets/img/2024/06/maui-entry-modifyied-border-2.png)
+As you can see, the coloring part is now working as intended. But the text (both placeholder and input text), is not aligned well within the control.
 
 ## Fixing text alignment
 
@@ -83,7 +84,10 @@ handler.PlatformView.RightViewMode = UITextFieldViewMode.Always;
  
 Inserting this code after setting the Border properties will add a nice margin to both sides of the Entry and makes the control finally look like we wanted:
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![.NET MAUI entry in focused and unfocused state with padding for the placeholder and input text](https://msicc.net/assets/img/2024/06/maui-entry-modifyied-border-1024x499.png)</figure></div>## Conclusion
+![.NET MAUI entry in focused and unfocused state with padding for the placeholder and input text](/assets/img/2024/06/maui-entry-modifyied-border.png)
+
+
+## Conclusion
 
 Even with .NET MAUI, we sometimes need to touch the underlying native implementation to modify the controls to our needs. The [handler architecture of .NET MAUI ](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/handlers/?view=net-maui-8.0)makes this pretty easy. With a bit of a good search-foo, we can easily find the native solutions and adapt them in our apps. If you want to make the code above reusable, just [create your own custom version of an Entry as described in the docs](https://learn.microsoft.com/en-us/dotnet/maui/user-interface/handlers/customize?view=net-maui-8.0).
 
@@ -93,4 +97,4 @@ As always, I hope this post will be helpful for some of you.
 
 ---
 
-[Title image generated with AI](http://net-maui-entry-border-title)
+[Title image generated with AI](https://net-maui-entry-border-title)

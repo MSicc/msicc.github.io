@@ -5,12 +5,6 @@ date: '2011-10-03T05:48:00+02:00'
 author: 'Marco Siccardi'
 layout: post
 permalink: /important-news-internet-sharing-on-windows-phone-mango/
-bitly_url:
-    - 'http://bit.ly/2s0C6uc'
-bitly_hash:
-    - 2s0C6uc
-bitly_long_url:
-    - 'https://msicc.net/important-news-internet-sharing-on-windows-phone-mango/'
 image: /assets/img/2011/10/WP-Placeholderblog.png
 categories:
     - Archive
@@ -32,7 +26,7 @@ Here is what he responded:
 
 So let´s hope that all OEM´s will soon update their drivers…
 
-\[Update\] According to the German Site [wp7app.de](http://wp7app.de/2802/news/htc-news-2.html#more-2802), HTC will publish a firmware update by mid of October, which will enable the mobile Hotspot feature. For Samsung devices exists a workaround to get the Internet Sharing activated – however this is no official way.
+\[Update\] According to the German Site [wp7app.de](https://wp7app.de/2802/news/htc-news-2.html#more-2802), HTC will publish a firmware update by mid of October, which will enable the mobile Hotspot feature. For Samsung devices exists a workaround to get the Internet Sharing activated – however this is no official way.
 
 So it seems that almost HTC is caring about their existing devices. Good news so far.
 

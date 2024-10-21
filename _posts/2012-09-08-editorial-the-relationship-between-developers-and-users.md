@@ -5,7 +5,7 @@ date: '2012-09-08T07:50:50+02:00'
 author: 'Marco Siccardi'
 layout: post
 permalink: /editorial-the-relationship-between-developers-and-users/
-image: /assets/img/2012/09/File1_thumb-548x372.jpg
+image: /assets/img/2012/09/File1.jpg
 categories:
     - Editorials
 tags:
@@ -19,7 +19,7 @@ I did not plan this post, but as I received an email yesterday from another deve
 
 Users and developers do have a problem. Users have expectations for our apps. We developers have to fulfill these expectations. Here is an image I found on the web, that describes the situation quite well:
 
-![](/assets/img/2012/09/File1_thumb.jpg)
+![](/assets/img/2012/09/File1.jpg)
 
 Of course, this is a funny Picture. But in the last few weeks sadly this image turned out to be kind of true. I talked also to other developers, and they made similar experiences. I will try to explain why feedback is important to us developers.
 
@@ -46,7 +46,7 @@ Now that we have done this, our app at some point reaches the state of being sub
 
 To achieve this, you should offer a way to give feedback within your application. Here is my attempt that I have in every of my apps:
 
-![](/assets/img/2012/09/Screen-Capture-13_thumb.jpg)
+![](/assets/img/2012/09/Screen-Capture-13.jpg)
 
 As you can see, I integrated a few ways to obtain feedback. I created a twitter handle, where users can give feedback and follow for actual announcements for my apps. Nowadays a Facebook page is also an advantage, and then users have the ability to send me an email to provide more detailed feedback. And one thing you never should miss: a direct link from your app to the review section of your app in Marketplace.
 

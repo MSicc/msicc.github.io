@@ -31,7 +31,7 @@ tags:
     - XAML
 ---
 
-This is the third and last post of this series. In the first two posts I showed you how to [start the preview](http://msicc.net/?p=4199) of MediaCapture and [some modifications](http://msicc.net/?p=4208) we can apply to it. In this post, we are finally capturing and saving the photo – including the modifications we made before.
+This is the third and last post of this series. In the first two posts I showed you how to [start the preview]({% post_url 2014-11-14-how-to-capture-a-photo-in-your-windows-phone-8-1-runtime-apppart-i-the-preview-of-the-photo-to-capture %}) of MediaCapture and [some modifications]({% post_url 2014-11-15-how-to-capture-a-photo-in-your-windows-phone-8-1-runtime-app-part-ii-some-common-modifications %}) we can apply to it. In this post, we are finally capturing and saving the photo – including the modifications we made before.
 
 #### The easiest way – capture as is:
 
@@ -59,11 +59,11 @@ This way however does not respect any modifications we made to the preview. The 
 
 In our ongoing sample, we are using a 90 degree rotation to display the preview element in portrait mode. Naturally, we want to port over this orientation in our captured image.
 
-There are two ways to achieve this. We could capture the photo to a WriteableBitmap and manipulate it, or we could manipulate the image stream directly with the [BitmapDecoder](http://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.imaging.bitmapdecoder.aspx) and [BitmapEncoder](http://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.imaging.bitmapencoder.aspx) classes. We will do the latter one.
+There are two ways to achieve this. We could capture the photo to a WriteableBitmap and manipulate it, or we could manipulate the image stream directly with the [BitmapDecoder](https://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.imaging.bitmapdecoder.aspx) and [BitmapEncoder](https://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.imaging.bitmapencoder.aspx) classes. We will do the latter one.
 
-First, we need to open an [InMemoryRandomAccessStream](http://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.streams.inmemoryrandomaccessstream.aspx) for our the captured photo. We are capturing the photo to the stream with MediaCapture’s [CapturePhotoToStreamAsync()](http://msdn.microsoft.com/en-us/library/windows/apps/Hh700840.aspx) method, specifing the stream name and the image format.
+First, we need to open an [InMemoryRandomAccessStream](https://msdn.microsoft.com/en-us/library/windows/apps/windows.storage.streams.inmemoryrandomaccessstream.aspx) for our the captured photo. We are capturing the photo to the stream with MediaCapture’s [CapturePhotoToStreamAsync()](https://msdn.microsoft.com/en-us/library/windows/apps/Hh700840.aspx) method, specifing the stream name and the image format.
 
-The next step is to decode the stream with our BitmapDecoder. If we are performing only rotation, we can directly re-encode the InMemoryRandomAccessStream we are using. Rotating the captured photo is very simple with just setting the [BitmapTransform.Rotation](http://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.imaging.bitmaptransform.rotation.aspx) property to be rotated by 90 degrees, pretty much as easy as rotating the preview.
+The next step is to decode the stream with our BitmapDecoder. If we are performing only rotation, we can directly re-encode the InMemoryRandomAccessStream we are using. Rotating the captured photo is very simple with just setting the [BitmapTransform.Rotation](https://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.imaging.bitmaptransform.rotation.aspx) property to be rotated by 90 degrees, pretty much as easy as rotating the preview.
 
 The last steps are generating a file in the storage, followed by copying the transcoded image stream into the file stream. Here is the complete code that does all this:
 
@@ -180,7 +180,7 @@ As with getting the right camera solution, I generated an Enumeration that holds
             <border borderbrush="Red" borderthickness="2" horizontalalignment="Left" verticalalignment="Top" visibility="Collapsed" x:name="finalPhotoAreaBorder"></border>
 ```
 
-<p>When we are cropping our photo, we need to treaten the BitmapEncoder and the BitmapDecoder separately. To crop an image, we  need to set the Bounds and the new Width and Height of the photo via the <a href="http://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.imaging.bitmaptransform.bounds.aspx" rel="noopener noreferrer" target="_blank">BitmapTransform.Bounds</a> property. We also need to read the PixelData via the <a href="http://msdn.microsoft.com/en-us/library/windows/apps/br226193.aspx" rel="noopener noreferrer" target="_blank">GetPixelDataAsync()</a> method, apply the changed Bounds to it and pass them to BitmapEncoder via the <a href="http://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.imaging.bitmapencoder.setpixeldata.aspx" rel="noopener noreferrer" target="_blank">SetPixelData()</a> method.</p>
+<p>When we are cropping our photo, we need to treaten the BitmapEncoder and the BitmapDecoder separately. To crop an image, we  need to set the Bounds and the new Width and Height of the photo via the <a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.imaging.bitmaptransform.bounds.aspx" rel="noopener noreferrer" target="_blank">BitmapTransform.Bounds</a> property. We also need to read the PixelData via the <a href="https://msdn.microsoft.com/en-us/library/windows/apps/br226193.aspx" rel="noopener noreferrer" target="_blank">GetPixelDataAsync()</a> method, apply the changed Bounds to it and pass them to BitmapEncoder via the <a href="https://msdn.microsoft.com/en-us/library/windows/apps/windows.graphics.imaging.bitmapencoder.setpixeldata.aspx" rel="noopener noreferrer" target="_blank">SetPixelData()</a> method.</p>
 <p>At the end, we are flushing the changed stream data directly into the file stream of our StorageFile. Here is how:</p>
 
 ``` csharp

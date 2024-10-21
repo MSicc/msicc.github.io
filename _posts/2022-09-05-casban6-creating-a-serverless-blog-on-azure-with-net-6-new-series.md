@@ -43,7 +43,10 @@ I was planning to run my blog without WordPress for quite some time. For one, be
 
 Now that the ‘why’ is clear, let’s have a look at the ‘how’:
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![](https://msicc.net/assets/img/2022/09/ServerlessBlogAzure-1024x728.png)</figure></div>There are several layers in my concept. The data layer consists of a serverless MS SQL instance on Azure, on which I will work with the help of Entity Framework Core and Azure Functions for all the CRUD operations of the blog. I will use the powers of Azure API Management, which will allow me to provide a secure layer for the clients – of course, an ASP.NET CORE Website with RazorPages, flanked by a .NET MAUI admin client (no web administration). Once the former two are done, I will also add a mobile client for this blog. It will be the next major update for my existing blog reader that is already in the app stores.
+![](/assets/img/2022/09/ServerlessBlogAzure.png)
+
+
+There are several layers in my concept. The data layer consists of a serverless MS SQL instance on Azure, on which I will work with the help of Entity Framework Core and Azure Functions for all the CRUD operations of the blog. I will use the powers of Azure API Management, which will allow me to provide a secure layer for the clients – of course, an ASP.NET CORE Website with RazorPages, flanked by a .NET MAUI admin client (no web administration). Once the former two are done, I will also add a mobile client for this blog. It will be the next major update for my existing blog reader that is already in the app stores.
 
 For comments, I will use Disqus. This way, I have a proven comment system where anyone can use his/her favorite account to participate in discussions. They also have an API, so there is a good chance that I will be able to implement Disqus in the Desktop and Mobile clients.
 
@@ -58,12 +61,12 @@ Most of the software I will write and blog about in this series will be availabl
 I will update this blog post regularly with a link new entries of the series.
 
 - \#CASBAN6: Creating A Serverless Blog on Azure with .NET 6 (new series) (this post)
-- [\#CASBAN6: How to set up a local Microsoft SQL database on macOS](https://msicc.net/casban6-how-to-set-up-a-local-microsoft-sql-database-on-macos/)
-- [\#CASBAN6: the data model explained](https://msicc.net/casban6-the-data-model-explained/)
-- [\#CASBAN6: Implementing the data model using EntityFramework Core (separate libraries)](https://msicc.net/casban6-implementing-the-data-model-using-entityframework-core-separate-libraries/)
-- [\#CASBAN6: the DTOs and mappings](https://msicc.net/casban6-the-dtos-and-mappings/)
-- [\#CASBAN6: Setting up an Azure Functions project for the API](https://msicc.net/casban6-setting-up-an-azure-functions-project-for-the-api/)
-- [\#CASBAN6: Function base class (and an update to the DTO models)](https://msicc.net/casban6-function-base-class-and-an-update-to-the-dto-models/)
+- [\#CASBAN6: How to set up a local Microsoft SQL database on macOS]({% post_url 2022-09-12-casban6-how-to-set-up-a-local-microsoft-sql-database-on-macos %})
+- [\#CASBAN6: the data model explained]({% post_url 2022-09-12-casban6-how-to-set-up-a-local-microsoft-sql-database-on-macos %})
+- [\#CASBAN6: Implementing the data model using EntityFramework Core (separate libraries)]({% post_url 2022-11-19-casban6-implementing-the-data-model-using-entityframework-core-separate-libraries %})
+- [\#CASBAN6: the DTOs and mappings]({% post_url 2022-12-11-casban6-the-dtos-and-mappings %})
+- [\#CASBAN6: Setting up an Azure Functions project for the API]({% post_url 2023-01-07-casban6-setting-up-an-azure-functions-project-for-the-api %})
+- [\#CASBAN6: Function base class (and an update to the DTO models)]({% post_url 2023-01-20-casban6-function-base-class-and-an-update-to-the-dto-models %})
 - \#CASBAN6: tbd
 
 *Additional note*

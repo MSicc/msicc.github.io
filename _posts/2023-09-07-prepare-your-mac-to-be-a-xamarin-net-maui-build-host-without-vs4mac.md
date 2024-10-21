@@ -54,7 +54,7 @@ Download and install the version that matches your Windows installation. In case
 
 ### Xamarin.Android
 
-If you want to use a [local Android emulator installed on your Mac, like I described here](https://msicc.net/how-to-use-the-android-emulator-on-a-macos-host-for-debugging-in-a-virtual-machine-with-windows/), you will need to install the Xamarin.Android package as well. The installer is on GitHub as well:
+If you want to use a [local Android emulator installed on your Mac, like I described here]({% post_url 2023-07-24-how-to-use-the-android-emulator-on-a-macos-host-for-debugging-in-a-virtual-machine-with-windows %}), you will need to install the Xamarin.Android package as well. The installer is on GitHub as well:
 
 <https://aka.ms/xamarin-android-commercial-d17-5-macos>
 
@@ -72,7 +72,9 @@ If you want to compile .NET MAUI apps for the App Store, you will need to instal
 
 Once you have installed all the packages above, you should be able to connect with your Mac for compiling iOS applications:
 
-<div class="wp-block-image"><figure class="aligncenter size-large">![VS2022 connected to a build host in the Pair to Mac dialog.](https://msicc.net/assets/img/2023/09/Mac-Build-Host-Connected-1024x446.jpg)</figure></div>## Conclusion
+![VS2022 connected to a build host in the Pair to Mac dialog.](/assets/img/2023/09/Mac-Build-Host-Connected.jpg)
+
+## Conclusion
 
 Even though Microsoft is killing VS4Mac, we still are able to connect from Windows machines to a Mac build host. The process is done in less than an hour and just involves some package installations. Of course, there is always the alternative of using other IDEs like Rider or VS Code (.NET MAUI support is still beta as of writing this post). I recommend keeping the downloaded packages in a save place (just in case). As always, I hope this post is helpful for some of you.
 

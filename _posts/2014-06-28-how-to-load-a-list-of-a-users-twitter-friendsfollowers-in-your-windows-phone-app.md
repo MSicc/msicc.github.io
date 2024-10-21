@@ -25,7 +25,7 @@ tags:
     - wpdev
 ---
 
-![TwitterFriendsList_WP_Blog](/assets/img/2014/06/TwitterFriendsList_WP_Blog.png "TwitterFriendsList_WP_Blog") During the last days, I was adding a new function to [UniShare](http://www.windowsphone.com/s?appid=ee42cb1d-8a68-41c6-9c0c-d3e3fc61d6ea) that suggests users the Twitter handles while typing in some text. The base of this new function is a list of the user’s twitter friends. In this post, I am going to show you how to generate this list and save it for further use. First thing I need to talk about: you can only load a maximum of 3000 friends at once due to the rate limit on Twitter’s part. At the end of the post, I’ll give you also an idea how to continue this after the first 3000 users were loaded. For the most scenarios, 3000 should be enough to cover the major part of your users. To be able to load all friends we first create a Task that fetches 200 entries of our user’s friends list. To be able to perform paging through all entries, Twitter uses so called cursors, which are 64-bit signed integers (long). You can read more about that here on Twitter’s [API documentation](https://dev.twitter.com/docs/misc/cursoring). Let’s have a look on this Task:
+![TwitterFriendsList_WP_Blog](/assets/img/2014/06/TwitterFriendsList_WP_Blog.png "TwitterFriendsList_WP_Blog") During the last days, I was adding a new function to [UniShare](https://www.windowsphone.com/s?appid=ee42cb1d-8a68-41c6-9c0c-d3e3fc61d6ea) that suggests users the Twitter handles while typing in some text. The base of this new function is a list of the user’s twitter friends. In this post, I am going to show you how to generate this list and save it for further use. First thing I need to talk about: you can only load a maximum of 3000 friends at once due to the rate limit on Twitter’s part. At the end of the post, I’ll give you also an idea how to continue this after the first 3000 users were loaded. For the most scenarios, 3000 should be enough to cover the major part of your users. To be able to load all friends we first create a Task that fetches 200 entries of our user’s friends list. To be able to perform paging through all entries, Twitter uses so called cursors, which are 64-bit signed integers (long). You can read more about that here on Twitter’s [API documentation](https://dev.twitter.com/docs/misc/cursoring). Let’s have a look on this Task:
 
 ``` csharp
          private async Task<string> TwitterFriendsListString(long twitterCursor)
@@ -81,7 +81,7 @@ tags:
         }
 ```
  
-As you can see, we need to create our signature based on the url parameters we are requesting. Twitter demands them to be sorted alphabetically. If you would not sort them this way, the Signature is wrong and your request gets denied by Twitter. We are overloading this Task with the above mentioned cursor to get the next page of our user’s friends list. If you need the GetNonce() and GetSignature() methods, [take a look at this post](http://msicc.net/?p=4054), I am using them for all requests to Twitter. Now that we have this Task ready to make our requests, lets load the complete list. First, declare these objects in your page/model:
+As you can see, we need to create our signature based on the url parameters we are requesting. Twitter demands them to be sorted alphabetically. If you would not sort them this way, the Signature is wrong and your request gets denied by Twitter. We are overloading this Task with the above mentioned cursor to get the next page of our user’s friends list. If you need the GetNonce() and GetSignature() methods, [take a look at this post]({% post_url 2014-04-19-how-to-use-the-webauthenticationbroker-for-oauth-in-a-windows-phone-runtime-wp8-1-app %}), I am using them for all requests to Twitter. Now that we have this Task ready to make our requests, lets load the complete list. First, declare these objects in your page/model:
 
 ``` csharp
          public List<TwitterMentionSuggestionBase> twitterMentionSuggestionsList;
@@ -128,7 +128,7 @@ Then we need to create a loop to go through all pages Twitter allows us until we
             while (nextfriendlistCursor != 0);
 ```
  
-As long as the cursor is not 0, the loop will load the json string with 200 entries. The class you’ll need for deserializing can be easily generated. Just set a breakpoint after the call of our Task, copy the whole response string and go to <http://json2csharp.com> to get your class. The TwitterMentionSuggestionBase class only contains a string property for the name and can be extended for you needs:
+As long as the cursor is not 0, the loop will load the json string with 200 entries. The class you’ll need for deserializing can be easily generated. Just set a breakpoint after the call of our Task, copy the whole response string and go to <https://json2csharp.com> to get your class. The TwitterMentionSuggestionBase class only contains a string property for the name and can be extended for you needs:
 
 ``` csharp
      public class TwitterMentionSuggestionBase

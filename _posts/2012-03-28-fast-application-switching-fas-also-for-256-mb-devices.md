@@ -17,8 +17,9 @@ tags:
 
 [![fast-app-switching](/assets/img/2012/03/fast-app-switching.png "fast-app-switching")](/assets/img/2012/03/fast-app-switching.png)
 
+
 Andreas Hammar, developer and author on jayway.com, discovered that Fast Application Switching is still available on 256 MB devices.
 
-As he discovered, [the MSDN documentation has been updated recently](http://msdn.microsoft.com/en-us/library/hh202866(v=vs.92).aspx "the MSDN documentation has been updated recently"). Microsoft confirms the availability to use the FAS.
+As he discovered, [the MSDN documentation has been updated recently](https://msdn.microsoft.com/en-us/library/hh202866(v=vs.92).aspx "the MSDN documentation has been updated recently"). Microsoft confirms the availability to use the FAS.
 
-Read my full post at [1800PocketPC.com](http://www.1800pocketpc.com/fast-application-switching-fas-also-for-256-mb-devices/29545/#more-29545 "1800PocketPC.com").
+Read my full post at [1800PocketPC.com](https://www.1800pocketpc.com/fast-application-switching-fas-also-for-256-mb-devices/29545/#more-29545 "1800PocketPC.com").

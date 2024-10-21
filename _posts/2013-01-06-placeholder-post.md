@@ -9,7 +9,8 @@ categories:
     - Archive
 ---
 
-![MSiccsBlogHeader](/assets/img/2013/01/postheaderimg-300x105.png)
+![MSiccsBlogHeader](/assets/img/2013/01/postheaderimg.png)
+
 
 Some of you know that the dedicated Windows Phone app for msicc.net is ready for nearly a month now. Sadly Microsoft does not allow fan sites to use any kind of their logo(s). So the app got rejected a few times just because of the logo.
 
@@ -34,22 +35,28 @@ Here are some screenshots for you:
 
  ![ScreenShots](/assets/img/2013/01/ScreenShotSeries.png)
 
+
 You can download the app by clicking or scanning the QR code below:
 
- [![msiccsblogbarcode](/assets/img/2013/01/msiccsblogbarcode-300x300.png)](http://www.windowsphone.com/s?appid=bd468c53-b05b-4d8f-bcdd-9d3f033fc4fe)
+ [![msiccsblogbarcode](/assets/img/2013/01/msiccsblogbarcode.png)
+](https://www.windowsphone.com/s?appid=bd468c53-b05b-4d8f-bcdd-9d3f033fc4fe)
 
 (Update) MSicc’s Blog for Windows 8 v1 now available!
 
 Today I got notified by Microsoft that MSicc’s Blog for Windows 8 is certified! It provides similar functionality like the Windows Phone app, and will also be under constant development.
 
-You can download the Windows 8 app here: <http://w8dev.so/msiccsblog>.
+You can download the Windows 8 app here: <https://w8dev.so/msiccsblog>.
 
-![Win8StartScreen](/assets/img/2013/01/Screenshot-55-1024x576.png)
+![Win8StartScreen](/assets/img/2013/01/Screenshot-55.png)
 
-![Articleview](/assets/img/2013/01/Screenshot-56-1024x576.png)
 
-![comments](/assets/img/2013/01/Screenshot-60-1024x576.png)
+![Articleview](/assets/img/2013/01/Screenshot-56.png)
 
-![SharingWin8](/assets/img/2013/01/Screenshot-61-1024x576.png)
+
+![comments](/assets/img/2013/01/Screenshot-60.png)
+
+
+![SharingWin8](/assets/img/2013/01/Screenshot-61.png)
+
 
 Have fun, MSicc.

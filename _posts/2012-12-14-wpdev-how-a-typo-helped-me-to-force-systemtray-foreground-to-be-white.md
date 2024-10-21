@@ -22,7 +22,7 @@ One theming problem was remaining, no matter what I tried.
 
 My app has its own theme, the ForegroundColor is White. As I use the SystemTray to display the ProgressBar while loading data from the internet, I want it to be white, too (of course).
 
-![](/assets/img/2012/12/SystemTrayLightwithRGBerror-300x212.jpg "SystemTrayLightwithRGBerror")
+![](/assets/img/2012/12/SystemTrayLightwithRGBerror.jpg "SystemTrayLightwithRGBerror")
 
 All was running good until I switched the phone’s background to light. The SystemTray was always black.
 
@@ -51,7 +51,7 @@ Finally, I tried to set it via the RGB code for white (255,255,255), but I made 
 
 And the most funny thing is, it just worked!
 
-![](/assets/img/2012/12/SystemTrayLightwithRGBcorrect-300x211.jpg "SystemTrayLightwithRGBcorrect")
+![](/assets/img/2012/12/SystemTrayLightwithRGBcorrect.jpg "SystemTrayLightwithRGBcorrect")
 
 Summary: Windows Phone seems to not like “White” in SystemTray. If you want to force it, just use the code above, and it will work!
 

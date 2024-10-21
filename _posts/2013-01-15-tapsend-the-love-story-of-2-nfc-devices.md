@@ -19,7 +19,8 @@ tags:
     - WP8
 ---
 
-![NFC1](/assets/img/2013/01/nfccartoon-214x300.png)
+![NFC1](/assets/img/2013/01/nfccartoon.png)
+
 
 Innovation in technology is hit and miss for a number of reasons. To prognosticate what advances in technology will be accepted by the general public is by no means, an exact science. There’s a constant barrage of new expensive toys with exclusive features that are “sure” to turn the world upside down, only to hit the market and fade into oblivion as a “niche market” concept. There are more than a handful of these types of advancements in the devices we all use on a day-to-day basis now, regardless of preferred OS. Yet for all intent and purpose, most don’t get utilized because of a lack of end users with similar features. NFC is one of those exclusive features and having 2 devices with it, I’ll explain why I see this being a feature that is here to stay.
 
@@ -33,6 +34,7 @@ My wife and I both have Nokia Lumia 920’s which has led to a unique experience
 
 ![Share1](/assets/img/2013/01/wp_ss_20130114_0001.png)
 
+
 My wife and I use the Tap+Send feature frequently. We’re constantly sharing pictures and with Tap+Send, it’s always much faster and a sure bet the recipient gets the file! I’ve found that we’re both more likely to share pics when it’s as simple as Tap+Send. Send 1 or send multiple, it doesn’t matter. Honestly, I’m finding myself impatient now when I know someone is sending me a file and I have to wait for it to arrive in my inbox and still have to download it! Another added benefit to sharing your pics or videos via NFC is the data aspect. I avoid having to use up my allotted data both with my carrier and at home on WiFi, for those of you with shared family plans or have data limits because of satellite internet, you understand.
 
 ![App](/assets/img/2013/01/nfc-receive-02.jpg)
@@ -41,6 +43,7 @@ A close 2nd in utilization when it comes to Tap+Send: App Sharing, we do this at
 
 ![sharing](/assets/img/2013/01/sharing.png)
 
+
 We also share music via Tap+Send. I’m going to start by saying that neither of us has a music pass of any sort. When we see something we like we purchase it, so I’m not sure how sharing music on a pass will work. My experience with music and Tap+Share has been sending and receiving music from my computer or music purchased from Zune and Xbox Music, all which has transferred and played without a hitch! It’s a relatively quick process, taking about 30 seconds from share to play!
 
 ![Contacts1](/assets/img/2013/01/nfc-receive-01.jpg)
@@ -48,6 +51,7 @@ We also share music via Tap+Send. I’m going to start by saying that neither of
 My wife and I have busy schedules between our marriage, kids, friends, activities, and work. We have many people who are friends in common and some aren’t for one reason or another, thus our people hubs are similar but not an exact match. There are many apps that help share contacts and WP does a pretty good job at giving you ways to share contacts as well, however none come close to the efficiency and speed with which you can do it when shared using Tap+Share! 2 taps and a phone “high-five” and the info is waiting to be saved.
 
 ![Ready-for-enterprise](/assets/img/2013/01/Ready-for-enterprise.png)
+
 
 The last way I’ll look at is actually tied into the “Gold Mine” Microsoft sees in enterprise, sharing your documents via Tap+Send. The ways I’ve talked about using Tap+Send have been for the average user, but we all know that Microsoft is targeting businesses globally with WP8. The ability to share documents as simply as touching phones can be a game changer. Running late and can’t wait for that file to get to your inbox…need it now…phone “high five” and off you go! Not a gimmick, time is money and that makes dollars and sense!
 

@@ -38,7 +38,7 @@ After choosing whether you want the new Style to be available only on one page o
 To do this, I added the beloved metro arrow in a circle (go for the “ContentPresenter with the name “PART\_Indicator””) – done:
 
 ``` xml
- <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+ <Viewbox xmlns="https://schemas.microsoft.com/winfx/2006/xaml/presentation">
 <Grid>
  <Grid Name="backgroundGrid" Width="48" Height="48" Visibility="Visible">
    <Path Data="M50.5,4.7500001C25.232973,4.75 4.75,25.232973 4.7500001,50.5 4.75,75.767029 25.232973,96.25 50.5,96.25 75.767029,96.25 96.25,75.767029 96.25,50.5 96.25,25.232973 75.767029,4.75 50.5,4.7500001z M50.5,0C78.390381,0 101,22.609621 101,50.5 101,78.390381 78.390381,101 50.5,101 22.609621,101 0,78.390381 0,50.5 0,22.609621 22.609621,0 50.5,0z" Stretch="Fill" Fill="#FFF4F4F4" Name="Stroke" Visibility="Visible" />
@@ -63,7 +63,7 @@ No we are going to remove the time stamp. If you simply delete the TextBlock, yo
 
 Now we have our style ready to be used, right? Let’s have a look how it looks when we are using our control right now:
 
-<div class="embed-vimeo" style="text-align: center;"><iframe allowfullscreen="" frameborder="0" height="675" loading="lazy" mozallowfullscreen="" src="https://player.vimeo.com/video/68892157" webkitallowfullscreen="" width="1200"></iframe></div>[(link for app users)](https://vimeo.com/m/68892157)
+[(link for app users)](https://vimeo.com/m/68892157)
 
 As you can see, the behavior of the Pull to refresh – control is not like expected. In this state, we have to throw it up first, then it will recognize the pull gesture. To get rid of this, we need to adjust two additional things.
 
@@ -77,7 +77,7 @@ Second, after setting the ItemsSource of the RadDataBoundListBox, we need to bri
  
 After that, we have finally a customized and smooth Pull to refresh function on our RadDataBoundListBox:
 
-<div class="embed-vimeo" style="text-align: center;"><iframe allowfullscreen="" frameborder="0" height="675" loading="lazy" mozallowfullscreen="" src="https://player.vimeo.com/video/68892156" webkitallowfullscreen="" width="1200"></iframe></div>[(link for app users)](https://vimeo.com/m/68892156)
+[(link for app users)](https://vimeo.com/m/68892156)
 
 At this point I want to give a special thanks to Lance and Deyan from Telerik for their awesome support on this case.
 

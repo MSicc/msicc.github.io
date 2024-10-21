@@ -22,7 +22,7 @@ tags:
     - 'Windows Phone 8.1'
 ---
 
-Some of you might have noticed that [UniShare](http://www.windowsphone.com/s?appid=ee42cb1d-8a68-41c6-9c0c-d3e3fc61d6ea) has its own folder in your devices picture library. Also some other apps like WhatsApp or Tweetium have it. The advantages of your app’s own folder are clear:
+Some of you might have noticed that [UniShare](https://www.windowsphone.com/s?appid=ee42cb1d-8a68-41c6-9c0c-d3e3fc61d6ea) has its own folder in your devices picture library. Also some other apps like WhatsApp or Tweetium have it. The advantages of your app’s own folder are clear:
 
 - easier to get images into your app
 - user can always reflect which pictures come from your app
@@ -56,7 +56,7 @@ Then we are already able to generate our folder with this single line of code (c
  StorageFolder appFolder= await KnownFolders.PicturesLibrary.CreateFolderAsync("myCustomAppFolder", CreationCollisionOption.OpenIfExists);
 ```
  
-You should always use the CreateFolderAsync method together with the CollisionOption ‘OpenIfExists’. This way, your app will open it every time you are going to save a file, but creates the folder if it does not exist yet. If you now go to your pictures library, you will not see your folder yet, although it is there (use a [File Manager app](http://www.windowsphone.com/s?appid=762e837f-461d-4847-8399-3526f54fc25e) to check it if you want). Folders do only get populated when they have content. This is what the next step is about.
+You should always use the CreateFolderAsync method together with the CollisionOption ‘OpenIfExists’. This way, your app will open it every time you are going to save a file, but creates the folder if it does not exist yet. If you now go to your pictures library, you will not see your folder yet, although it is there (use a [File Manager app](https://www.windowsphone.com/s?appid=762e837f-461d-4847-8399-3526f54fc25e) to check it if you want). Folders do only get populated when they have content. This is what the next step is about.
 
 #### Save an image file
 
@@ -104,7 +104,7 @@ img.SetSource(stream);
 //todo: work with the image
 ```
  
-To get our generated folder, we need to fetch a list of folders in the library using the StorageFolder.GetFoldersAsync() method. We then query this list for our app’s folder. If you want to get a list of all pictures in your folder, you can use the [StorageFile.GetFilesAsync()](http://msdn.microsoft.com/en-us/library/windows/apps/br227276.aspx) method. What I have done above is to load our saved single file. Finally, I opened a stream from this file and assigned it to a new BitmapImage, which can be used in our app.
+To get our generated folder, we need to fetch a list of folders in the library using the StorageFolder.GetFoldersAsync() method. We then query this list for our app’s folder. If you want to get a list of all pictures in your folder, you can use the [StorageFile.GetFilesAsync()](https://msdn.microsoft.com/en-us/library/windows/apps/br227276.aspx) method. What I have done above is to load our saved single file. Finally, I opened a stream from this file and assigned it to a new BitmapImage, which can be used in our app.
 
 There are also a lot of other options one can do with these folders and files, this is a very common scenario.
 

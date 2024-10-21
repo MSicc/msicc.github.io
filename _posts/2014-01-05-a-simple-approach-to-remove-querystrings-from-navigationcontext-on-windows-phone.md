@@ -22,7 +22,7 @@ tags:
 
 ![QuerystringsRemove](/assets/img/2014/01/QuerystringsRemove.png "QuerystringsRemove")
 
-Like most of you know, I am currently adding a lot of new features to my [NFC Toolkit](http://www.windowsphone.com/s?appid=2c33cb7d-c97b-4204-aa8b-1e8712718519) for Windows Phone.
+Like most of you know, I am currently adding a lot of new features to my [NFC Toolkit](https://www.windowsphone.com/s?appid=2c33cb7d-c97b-4204-aa8b-1e8712718519) for Windows Phone.
 
 Today, my coding session is all about uri schemes again. I successfully added some new uri schemes that you will be able to use soon.
 
@@ -36,8 +36,8 @@ I found some examples that are using the method in the OnNavigatedTo() event. I 
 
 Add this lines of code for every QueryString you want to remove (depending on your method structure, it is ok to remove only the QueryString you rely on in your further code, additional parameters can be still there ):
 
-```
- protected override void OnNavigatedFrom(NavigationEventArgs e)
+``` csharp
+protected override void OnNavigatedFrom(NavigationEventArgs e)
 {
    if (NavigationContext.QueryString.ContainsKey("key1"))
    {
@@ -55,8 +55,8 @@ This way, if you are navigating to another page in your app or even if the user 
 
 However, that’s not all. When your app get’s Tombstoned, the UriMapper will map the uri scheme again on Activation – not what you might want. To get around this, I use a simple Boolean, set it to true when I am coming back from Tombstoning:
 
-```
- private void Application_Activated(object sender, ActivatedEventArgs e)
+``` csharp
+private void Application_Activated(object sender, ActivatedEventArgs e)
 {
     if (!e.IsApplicationInstancePreserved)
     {
@@ -67,7 +67,7 @@ However, that’s not all. When your app get’s Tombstoned, the UriMapper will 
  
 Now the only thing you will need to to is to add
 
-```
+``` csharp
  && App.wasTombstoned == false
 ```
  

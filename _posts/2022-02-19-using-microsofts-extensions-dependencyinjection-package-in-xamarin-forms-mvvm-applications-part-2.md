@@ -87,7 +87,7 @@ this.ServiceDescriptors.AddSingleton<KeyedViewModel>(new KeyedViewModel("Key4"))
 this.ServiceDescriptors.AddSingleton<KeyedViewModel>(new KeyedViewModel("Key5"));
 ```
  
-If you know the keyed ViewModels already at the time of your app startup, you can add them right away and create the `IServiceProvider` instance as shown [in my first post](https://msicc.net/using-microsofts-extensions-dependencyinjection-package-in-xamarin-forms-mvvm-applications-part-1/). In most cases, however, you will know the information of the keyed instances only at runtime. Luckily, my `Xamarin.Forms` implementation already has the solution built in. Here is a short reminder:
+If you know the keyed ViewModels already at the time of your app startup, you can add them right away and create the `IServiceProvider` instance as shown [in my first post]({% post_url 2022-02-08-using-microsofts-extensions-dependencyinjection-package-in-xamarin-forms-mvvm-applications-part-1 %}). In most cases, however, you will know the information of the keyed instances only at runtime. Luckily, my `Xamarin.Forms` implementation already has the solution built in. Here is a short reminder:
 
 ``` csharp
  public ServiceCollection? ServiceDescriptors { get; private set; }

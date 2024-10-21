@@ -45,7 +45,7 @@ First I want to show you two panoramas that I have taken outside (first is HTC, 
 
 [![HTC-Panorama-outside](/assets/img/2012/04/HTC-Panorama-outside3.jpg "HTC-Panorama-outside")](/assets/img/2012/04/HTC-Panorama-outside3.jpg)
 
-[![Nokia-Panorama-outside](/assets/img/2012/04/Nokia-Panorama-outside2-1024x256.jpg "Nokia-Panorama-outside")](/assets/img/2012/04/Nokia-Panorama-outside2.jpg)
+[![Nokia-Panorama-outside](/assets/img/2012/04/Nokia-Panorama-outside2.jpg "Nokia-Panorama-outside")](/assets/img/2012/04/Nokia-Panorama-outside2.jpg)
 
 The HTC panorama is not as wide as the Nokia panorama. Of course this is due to the difference of taking three vs. four pictures. The HTC camera has made the sun flair too lightening, which disturbs a little bit in my eyes. The Nokia panorama looks more natural, even with this difficult painting. Both panoramas are acceptable, but there is room for improvements on both sides.
 

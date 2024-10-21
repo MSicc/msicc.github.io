@@ -35,15 +35,17 @@ Writing (or copy and pasting) the same code over and over again is one of those 
 
 ### Getting started
 
-Even if I repeat some of the steps of James’ post, I’ll start from scratch on the setup part here. I hope to make the whole process straight forward for everyone – that’s why I think it makes sense to show each and every step. Please make sure you are using the new .csproj type. If you need a refresh on that, you can [check my post about migrating to it (if needed)](https://msicc.net/xamarin-forms-the-mvvmlight-toolkit-and-i-migrating-the-forms-project-and-mvvmlight-to-net-standard/).
+Even if I repeat some of the steps of James’ post, I’ll start from scratch on the setup part here. I hope to make the whole process straight forward for everyone – that’s why I think it makes sense to show each and every step. Please make sure you are using the new .csproj type. If you need a refresh on that, you can [check my post about migrating to it (if needed)]({% post_url 2018-06-28-xamarin-forms-the-mvvmlight-toolkit-and-i-migrating-the-forms-project-and-mvvmlight-to-net-standard %}).
 
 #### MSBuild.Sdk.Extras
 
 The first step is pulling in [MSBuild.Sdk.Extras](https://github.com/onovotny/MSBuildSdkExtras#msbuildsdkextras), which will enable us to target multiple platforms in one single library. For this, we need a global.json file in the solution folder. Right click on the solution name and select ‘*Open Folder in File Explorer*‘, then just add a new text file and name it appropriately.
 
-<div class="wp-block-image"><figure class="aligncenter">![](https://msicc.net/assets/img/2019/02/add-global-json.png)</figure></div>The next step is to define the version of the MSBuild.SDK.Extras library we want to use. The current version is 1.6.65, so let’s define it in the file. Just click the ‘*Solution and Folders*‘ button to find the file in Visual Studio:
+![](/assets/img/2019/02/add-global-json.png)
+The next step is to define the version of the MSBuild.SDK.Extras library we want to use. The current version is 1.6.65, so let’s define it in the file. Just click the ‘*Solution and Folders*‘ button to find the file in Visual Studio:
 
-<div class="wp-block-image"><figure class="aligncenter">![switch to folder view](https://msicc.net/assets/img/2019/02/switch-sln-view-open-global-json.png)</figure></div>Add these lines into the file and save it:
+![switch to folder view](/assets/img/2019/02/switch-sln-view-open-global-json.png)
+Add these lines into the file and save it:
 
 ``` json
  {
@@ -153,7 +155,8 @@ Two side notes:
 
 If you have followed along, hit the save button and close the `.csproj` file. Verifying everything went well is pretty easy – your solution structure should look like this:
 
-<div class="wp-block-image"><figure class="aligncenter">![multi-targeting-project](https://msicc.net/assets/img/2019/02/multi-platform-project.png)</figure></div>Before we’ll have a look at the NuGet creation part of this post, let’s add some sample code. Just insert this into static partial classes with the appropriate naming scheme for every platform and edit the code to match the platform. The .shared version of this should be empty (for this sample).
+![multi-targeting-project](/assets/img/2019/02/multi-platform-project.png)
+Before we’ll have a look at the NuGet creation part of this post, let’s add some sample code. Just insert this into static partial classes with the appropriate naming scheme for every platform and edit the code to match the platform. The .shared version of this should be empty (for this sample).
 
 ``` csharp
       public static partial class Hello
@@ -182,13 +185,17 @@ We will now prepare our solution to automatically generate NuGet packages both f
 
 One thing we want to make sure is that we are not going to push packages on every compilation of our library. That’s why we need to separate configurations. To add new configurations, open the *Configuration Manager* in *Visual Studio*:
 
-<div class="wp-block-image"><figure class="aligncenter">![](https://msicc.net/assets/img/2019/02/open-configuration-manager.png)</figure></div>In the *Configuration Manager* dialog, select the ‘*&lt;New…&gt;*‘ option from the ‘*Active solution configuration*‘ ComboBox:
+![](/assets/img/2019/02/open-configuration-manager.png)
+In the *Configuration Manager* dialog, select the ‘*&lt;New…&gt;*‘ option from the ‘*Active solution configuration*‘ ComboBox:
 
-<div class="wp-block-image"><figure class="aligncenter">![](https://msicc.net/assets/img/2019/02/configmanager-add-new.png)</figure></div>Name the new config to fit your needs, I just use <g class="gr_ gr_4 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling ins-del multiReplace" data-gr-id="4" id="4">*DebugNuget*</g> which will signal that we are pushing the NuGet package for distribution. I am copying the settings from the *Debug* configuration and let Visual Studio add the configurations to project files within the solution. Repeat the same for Release configuration.
+![](/assets/img/2019/02/configmanager-add-new.png)
+Name the new config to fit your needs, I just use <g class="gr_ gr_4 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling ins-del multiReplace" data-gr-id="4" id="4">*DebugNuget*</g> which will signal that we are pushing the NuGet package for distribution. I am copying the settings from the *Debug* configuration and let Visual Studio add the configurations to project files within the solution. Repeat the same for Release configuration.
 
-<div class="wp-block-image"><figure class="aligncenter">![](https://msicc.net/assets/img/2019/02/create-nuget-copy-from.png)</figure></div>The result should look like this:
+![](/assets/img/2019/02/create-nuget-copy-from.png)
+The result should look like this:
 
-<div class="wp-block-image"><figure class="aligncenter">![](https://msicc.net/assets/img/2019/02/configmanager-with-new-config.png)</figure></div>#### Modifying the project file (again)
+![](/assets/img/2019/02/configmanager-with-new-config.png)
+#### Modifying the project file (again)
 
 If you head over to your project file, you will see the `Configurations` tag has new entries:
 
@@ -339,11 +346,14 @@ If you’re running a full NuGet server (as often happens in Enterprise environm
 
 If we now select the *DebugNuget/ReleaseNuget* configuration, Visual Studio will create our NuGet package and push it to our Nuget folder/server:
 
-<div class="wp-block-image"><figure class="aligncenter">![](https://msicc.net/assets/img/2019/02/Nuget-created-and-pushed.png)</figure></div>Let’s have a look into the NuGet package as well. Open your file location defined above and search your package:
+![](/assets/img/2019/02/Nuget-created-and-pushed.png)
+Let’s have a look into the NuGet package as well. Open your file location defined above and search your package:
 
-<div class="wp-block-image"><figure class="aligncenter">![](https://msicc.net/assets/img/2019/02/nuget-folder-created-package.png)</figure></div>As you can see, the `Copy` command executed successfully. To inspect NuGet packages, you need the [NuGet Package Explorer app](https://www.microsoft.com/store/productId/9WZDNCRDMDM3). Once installed, just double click the package to view its contents. Your result should be similar to this for the *DebugNuGet* package:
+![](/assets/img/2019/02/nuget-folder-created-package.png)
+As you can see, the `Copy` command executed successfully. To inspect NuGet packages, you need the [NuGet Package Explorer app](https://www.microsoft.com/store/productId/9WZDNCRDMDM3). Once installed, just double click the package to view its contents. Your result should be similar to this for the *DebugNuGet* package:
 
-<div class="wp-block-image"><figure class="aligncenter">![](https://msicc.net/assets/img/2019/02/nuget-with-symbols-and-source.png)</figure></div>As you can see, we have both the .pdb files as well as the source in our package as intended.
+![](/assets/img/2019/02/nuget-with-symbols-and-source.png)
+As you can see, we have both the .pdb files as well as the source in our package as intended.
 
 ### Conclusion
 

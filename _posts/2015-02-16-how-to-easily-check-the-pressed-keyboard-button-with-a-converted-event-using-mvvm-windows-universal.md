@@ -92,7 +92,7 @@ As I am quite new to MVVM, I am not entirely sure if this way is the “best” 
 
 Useful links that helped me on my way to find this solution:
 
-[http://blog.galasoft.ch/posts/2014/01/using-the-eventargsconverter-in-mvvm-light-and-why-is-there-no-eventtocommand-in-the-windows-8-1-version/](http://blog.galasoft.ch/posts/2014/01/using-the-eventargsconverter-in-mvvm-light-and-why-is-there-no-eventtocommand-in-the-windows-8-1-version/ "http://blog.galasoft.ch/posts/2014/01/using-the-eventargsconverter-in-mvvm-light-and-why-is-there-no-eventtocommand-in-the-windows-8-1-version/")
+[https://blog.galasoft.ch/posts/2014/01/using-the-eventargsconverter-in-mvvm-light-and-why-is-there-no-eventtocommand-in-the-windows-8-1-version/](https://blog.galasoft.ch/posts/2014/01/using-the-eventargsconverter-in-mvvm-light-and-why-is-there-no-eventtocommand-in-the-windows-8-1-version/ "https://blog.galasoft.ch/posts/2014/01/using-the-eventargsconverter-in-mvvm-light-and-why-is-there-no-eventtocommand-in-the-windows-8-1-version/")
 
 [https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh868246.aspx](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh868246.aspx "https://msdn.microsoft.com/en-us/library/windows/apps/xaml/hh868246.aspx")
 

@@ -21,6 +21,7 @@ tags:
 
 ![Screenshot (23)](/assets/img/2015/03/Screenshot-23.png)
 
+
 Now that I am on a good way to understand and use the MVVM pattern, I am also finding that there are some times rather simple solutions for every day problems. One of these problems is that we don’t have a global progress indicator for Windows Universal apps. That is a little bit annoying, and so I wrote my own solution. I don’t know if this is good or bad practice, but my solution is making it globally available in a Windows Universal app. The best thing is, you just need to bind to a Boolean property to use it. No Behaviors, just the one base implementation and Binding (Yes, I am a bit excited about it). For your convenience, I attached a demo project at the end of this post.
 
 To get the main work for this done, we are implementing our own class, inherited from the Page class. The latter one is available for Windows as well as Windows Phone, so we can define it in the shared project of our Universal app. To do so, add a new class in the shared project. I named it PageBase (as it is quite common for this scenario, as I found out).
@@ -204,6 +205,7 @@ In the Loaded event, we are calling again our main method to show the progress i
 As we need to reflect changes on the UI thread, I am using the DispatcherHelper of the MvvmLight Toolkit. You can use your own preferred method as well for that. That’s all, If you now test it with setting the IsProgressIndicatorNeeded property in your page directly to ‘True’ in XAML, you will see the loading dots right from the start.
 
 ![Screenshot (21)](/assets/img/2015/03/Screenshot-21-300x200.png)
+
 
 Like always, I hope this is helpful for some of you.
 

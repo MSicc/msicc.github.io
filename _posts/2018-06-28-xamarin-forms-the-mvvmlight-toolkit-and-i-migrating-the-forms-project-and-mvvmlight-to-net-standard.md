@@ -28,19 +28,22 @@ I have done the necessary conversion steps already quite a few times, and to get
 
 #### Step 1
 
-![step1_unload project](https://msicc.net/assets/img/2018/06/step1_unload-project.png)
+![step1_unload project](/assets/img/2018/06/step1_unload-project.png)
+
 
 The first step is to unload the project file. To do so, select your Xamarin Forms project in Solution Explorer and right click again on it bring up the context menu. From there, select “*Unload Project*“.
 
 #### Step 2
 
-![step2_edit_csproj](https://msicc.net/assets/img/2018/06/step2_edit_csproj.png)
+![step2_edit_csproj](/assets/img/2018/06/step2_edit_csproj.png)
+
 
 Next, right-click the selected Xamarin.Forms project again to make the context menu visible once again. From there select “*Edit \[PROJECTNAME\]*.*csproj*” to open up the file.
 
 #### Step 3
 
-![step3_replace_all](https://msicc.net/assets/img/2018/06/step3_replace_all.png)
+![step3_replace_all](/assets/img/2018/06/step3_replace_all.png)
+
 
 Now that the file is open, press “CTRL + A”, followed by “DEL”. Seriously, just do it. Once the file is empty, copy these lines and paste them into your now empty file:
 
@@ -56,13 +59,15 @@ Now that the file is open, press “CTRL + A”, followed by “DEL”. Seriousl
  
 #### Step 4
 
-![step4_open_packages_config](https://msicc.net/assets/img/2018/06/step4_open_packages_config.png)
+![step4_open_packages_config](/assets/img/2018/06/step4_open_packages_config.png)
+
 
 This step is not really necessary, but I want to point one thing out. The old PCL-project type has listed quite a bunch of libraries in the *packages.config* file. These are all NuGet packages necessary to make the app actually run (they get pulled in during the install of a NuGet package as dependencies). Now that we are converting, we are getting rid of the *packages.config* file. You can delete right away in the Solution Explorer. We will “install” the needed packages (marked with the arrows) in
 
 #### Step 5
 
-![step5_changed_csproj](https://msicc.net/assets/img/2018/06/step5_changed_csproj.png)
+![step5_changed_csproj](/assets/img/2018/06/step5_changed_csproj.png)
+
 
 For “installing” NuGet packages into the converted project, we are adding a new ItemGroup to the XML-File. The Package *System.ValueTuple* is referenced – because in this series’ sample project we have some code in there that uses it. The absolute minimum you need to get it running is:
 
@@ -84,7 +89,7 @@ Template for Nuget Packages:
  
 If you have other NuGet packages, just add them into this item group. They will get installed in the correct version if you follow this tutorial until the end.
 
-You might have noticed that the MVVMLight package I am inserting here is not the same as before. This is absolutely true, but for a reason. Laurent Bugnion has published the .NET Standard version quite some time ago. If you want to read his blog post, [you can find it here](http://blog.galasoft.ch/posts/2018/02/publishing-mvvmlight-v5-4-1-with-net-standard-support/).
+You might have noticed that the MVVMLight package I am inserting here is not the same as before. This is absolutely true, but for a reason. Laurent Bugnion has published the .NET Standard version quite some time ago. If you want to read his blog post, [you can find it here](https://blog.galasoft.ch/posts/2018/02/publishing-mvvmlight-v5-4-1-with-net-standard-support/).
 
 The second change I want to outline is `DebugType`settings. These are also not set in that way if you create a new project that is already .NET Standard. In order to enable debugging of your Xamarin.Forms code, however, you absolutely should also add these lines:
 
@@ -105,55 +110,64 @@ These properties provide the debug symbols and the pdb-files a lot of analytic s
 
 #### Step 6
 
-![step6_delete_obj](https://msicc.net/assets/img/2018/06/step6_delete_obj.png)
+![step6_delete_obj](/assets/img/2018/06/step6_delete_obj.png)
+
 
 Now that we have changed the project file, our already downloaded packages and created dll-files are no longer valid. To make sure we are able to compile, we need to delete the content of the obj folder in the *Folder View* of the *Solution Explorer* in Visual Studio.
 
 #### Step 7
 
-![step7_delete_bin](https://msicc.net/assets/img/2018/06/step7_delete_bin.png)
+![step7_delete_bin](/assets/img/2018/06/step7_delete_bin.png)
+
 
 Do the same to the content of the bin folder and switch back to the *Solution View* by hitting the *Folder View*-Button again
 
 #### Step 8
 
-![step8_reload_project](https://msicc.net/assets/img/2018/06/step8_reload_project.png)
+![step8_reload_project](/assets/img/2018/06/step8_reload_project.png)
+
 
 Now we are finally able to reload the project as the base conversion is already done.
 
 #### Step 9
 
-![step9_fix errors](https://msicc.net/assets/img/2018/06/step9_fix-errors.png)
+![step9_fix errors](/assets/img/2018/06/step9_fix-errors.png)
+
 
 Trying to be optimistic and hit the Rebuild button will result in these (and maybe even more) errors. The first one is one that we can solve very fast, while the second one is only the first in a row of errors.
 
 #### Step 10
 
-![step10_delete_properties_folder](https://msicc.net/assets/img/2018/06/step10_delete_properties_folder.png)
+![step10_delete_properties_folder](/assets/img/2018/06/step10_delete_properties_folder.png)
+
 
 To solve the assembly attributes error, just go to the *Folder View* again and select the *Properties* folder. Bring up the context menu by right-clicking on it and select the delete option. Confirm the deletion to get rid of the folder. The new project style creates the assembly information based on the project file during build, which is causing the errors.
 
 #### Step 11
 
-![step11_unneeded_reference](https://msicc.net/assets/img/2018/06/step11_unneeded_reference.png)
+![step11_unneeded_reference](/assets/img/2018/06/step11_unneeded_reference.png)
+
 
 Now let’s face the next error. As the MVVMLight .NET Standard version does no longer rely on the `CommonServiceLocator`like before, we are able to remove this reference from <span style="display: inline !important; float: none; background-color: transparent; color: #333333; cursor: text; font-family: Georgia,'Times New Roman','Bitstream Charter',Times,serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">our </span>`ViewModelLocator`.
 
 #### Step 12
 
-![step12_unneeded_instantiation](https://msicc.net/assets/img/2018/06/step12_unneeded_instantiation.png)
+![step12_unneeded_instantiation](/assets/img/2018/06/step12_unneeded_instantiation.png)
+
 
 Of course, we now can also remove the instantiation call for the removed `ServiceLocator`.
 
 ### Step 13
 
-![step13_replace_servicelocator_calls](https://msicc.net/assets/img/2018/06/step13_replace_servicelocator_calls.png)
+![step13_replace_servicelocator_calls](/assets/img/2018/06/step13_replace_servicelocator_calls.png)
+
 
 In the ViewModel instance reference, replace `ServiceLocator.Current` with `SimpleIoc.Default`. Hit the save button again. You might have more errors to fix. Do so, and finally save your ViewModelLocator.
 
 #### Step 14
 
-![step14_rebuild_succeeded](https://msicc.net/assets/img/2018/06/step14_rebuild_succeeded.png)
+![step14_rebuild_succeeded](/assets/img/2018/06/step14_rebuild_succeeded.png)
+
 
 After all the work is done, we are now able to compile the .NET Standard version of our Xamarin.Forms project. If you fixed all of your errors in the step before, you should achieve a similar result like me and get a success message.
 

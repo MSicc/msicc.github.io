@@ -21,7 +21,7 @@ tags:
     - wpdev
 ---
 
-Recently, I started to create a real world app to demonstrate the usage of my [WordPressUniversal library](http://bit.ly/WordPressUniversal). While I was working on it, I also decided to extend the Splahscreen which is mandatory for universal apps.There are several reasons to extend the splash screen, the most obvious is to hide initial data loading.
+Recently, I started to create a real world app to demonstrate the usage of my [WordPressUniversal library](https://bit.ly/WordPressUniversal). While I was working on it, I also decided to extend the Splahscreen which is mandatory for universal apps.There are several reasons to extend the splash screen, the most obvious is to hide initial data loading.
 
 The only sample I found had a separate solution for the Windows and the Windows Phone application, and I decided to put them together to use the advantages of the Shared project that comes with every universal app.
 

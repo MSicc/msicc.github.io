@@ -5,12 +5,6 @@ date: '2012-03-05T22:51:06+01:00'
 author: 'Marco Siccardi'
 layout: post
 permalink: /microsoft-of-cebit-2012-microsoft-heartbeat-the-power-of-design/
-bitly_url:
-    - 'http://bit.ly/2qDHboE'
-bitly_hash:
-    - 2qDHboE
-bitly_long_url:
-    - 'https://msicc.net/microsoft-of-cebit-2012-microsoft-heartbeat-the-power-of-design/'
 categories:
     - Archive
 tags:
@@ -25,7 +19,9 @@ tags:
 
 This was the motto today on Microsoft´s CeBit opening press conference.
 
-[![](/assets/img/2012/03/walloftiles.png)](/assets/img/2012/03/walloftiles.png)
+[![](/assets/img/2012/03/walloftiles.png)
+](/assets/img/2012/03/walloftiles.png)
+
 
 It was all about Metro. Ralph Haupter, General Manager at Microsoft Germany, explained what this means for Microsoft:
 
@@ -47,7 +43,7 @@ The result is shown through the Metro Design. With the consumer preview been dow
 
 The new experience will be available in 231 different markets, while using more than 100 languages. This opportunities are only given on Microsoft´s upcoming OS.
 
-Tomorrow there will be a keynote of Kevin Turner, Microsoft´s Chief Operating Officer, at 10 am (EST). He will talk about „What’s Next: IT trends, business opportunity and Windows 8”. You can watch the keynote [live at the CeBIT Global Conferences 2012](http://stream4.messe.de/dmag/popup/cebit2012/cgc2012/cgc06032012/index.html).
+Tomorrow there will be a keynote of Kevin Turner, Microsoft´s Chief Operating Officer, at 10 am (EST). He will talk about „What’s Next: IT trends, business opportunity and Windows 8”. You can watch the keynote [live at the CeBIT Global Conferences 2012](https://stream4.messe.de/dmag/popup/cebit2012/cgc2012/cgc06032012/index.html).
 
 **Interesting words at the end:**
 
@@ -55,4 +51,4 @@ Tomorrow there will be a keynote of Kevin Turner, Microsoft´s Chief Operating O
 
 I find interesting that Microsoft says “PCs, tablets **and other devices**”. Maybe this is also another hint of merging the Windows 8 kernel into Windows Phone, or even another Xbox Dashboard upgrade?
 
-If you want to find out more about the CeBIT-News from Microsoft, head over to [Microsoft´s official CeBIT site](http://www.microsoft.com/de-de/business/cebit/en/default.aspx) (also fully designed in Metro).
+If you want to find out more about the CeBIT-News from Microsoft, head over to [Microsoft´s official CeBIT site](https://www.microsoft.com/de-de/business/cebit/en/default.aspx) (also fully designed in Metro).

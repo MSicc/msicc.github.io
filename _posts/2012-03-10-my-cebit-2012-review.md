@@ -5,12 +5,6 @@ date: '2012-03-10T10:55:56+01:00'
 author: 'Marco Siccardi'
 layout: post
 permalink: /my-cebit-2012-review/
-bitly_url:
-    - 'http://bit.ly/2rXpXGz'
-bitly_hash:
-    - 2rXpXGz
-bitly_long_url:
-    - 'https://msicc.net/my-cebit-2012-review/'
 image: /assets/img/2012/03/WP_000424.jpg
 categories:
     - Archive
@@ -59,9 +53,12 @@ At the Windows Phone part, I had to wait a couple of minutes to get my hands on.
 
 [![Screenshot (35)](/assets/img/2012/03/Screenshot-352.png "Screenshot (35)")](/assets/img/2012/03/Screenshot-352.png)
 
+
 [![Screenshot (37)](/assets/img/2012/03/Screenshot-372.png "Screenshot (37)")](/assets/img/2012/03/Screenshot-372.png)
 
+
 [![Screenshot (39)](/assets/img/2012/03/Screenshot-392.png "Screenshot (39)")](/assets/img/2012/03/Screenshot-392.png)
+
 
 The device has similar specs to the HTC Titan, it is only slightly smaller in screen size and has the equal good haptic of the Lumia 800. Paired with the fact that Nokia offers a bunch of very useful apps with its Windows Phones for free, I am really thinking about swapping my Titan into a Lumia 900. With this Nokia device it is really hard to stay on the Titan.
 

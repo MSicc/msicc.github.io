@@ -28,13 +28,8 @@ tags:
 
 *Please see also this post for upgrading the project to .netStandard:*
 
-> [Xamarin Forms, the MVVMLight Toolkit and I: migrating the Forms project and MVVMLight to .NET Standard](https://msicc.net/xamarin-forms-the-mvvmlight-toolkit-and-i-migrating-the-forms-project-and-mvvmlight-to-net-standard/)
+[Xamarin Forms, the MVVMLight Toolkit and I: migrating the Forms project and MVVMLight to .NET Standard]({% post_url 2018-06-28-xamarin-forms-the-mvvmlight-toolkit-and-i-migrating-the-forms-project-and-mvvmlight-to-net-standard %})
 
-<iframe class="wp-embedded-content" data-secret="uXenxZvNfC" frameborder="0" height="338" loading="lazy" marginheight="0" marginwidth="0" sandbox="allow-scripts" scrolling="no" security="restricted" src="https://msicc.net/xamarin-forms-the-mvvmlight-toolkit-and-i-migrating-the-forms-project-and-mvvmlight-to-net-standard/embed/#?secret=OBkxzPi8Na#?secret=uXenxZvNfC" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" title="“Xamarin Forms, the MVVMLight Toolkit and I: migrating the Forms project and MVVMLight to .NET Standard” — MSicc's Blog" width="600"></iframe>
-
----
-
----
 
 Like some of you may have already registered, I have been doing the next step and went cross platform with my personal projects. I am primarily using Xamarin Forms, because I eventually like XAML a little too much. I took a break from round about 2 years on my Xamarin usage, and I am happy to see that it has improved a lot in the meantime. While Xamarin Forms still has room for improvementes, one can do already real and serious projects with it. As I like the lightweight MVVMLight toolkit as much as I like XAML, it was a no-brainer for me to start also my recent Xamarin projects with it.
 
@@ -46,9 +41,11 @@ Of course, we will start with a new Xamarin Forms project. After selecting the t
 
 ![](/assets/img/2017/02/image.png)
 
+
 Select Xamarin Forms as UI Technology and PCL as Code Sharing Strategy to start the solution creation. As it creates several projects, this may take some time, so you may be able to refill your coffee cup in the meantime. Once the project is created, you’ll see 4 projects:
 
 ![](/assets/img/2017/02/image-1.png)
+
 
 Before we are going to write some code, we will update and add the additional packages from within the NuGet Package Manager. If your are not targeting the Android versions 7.x , Xamarin Forms is not able to use the latest Android Support libraries, so you’ll have to stick with version 23.3.0 of them ([see release notes of Xamarin Forms](https://forums.xamarin.com/discussion/77854/xamarin-forms-2-3-3-193#latest)). Since it makes sense for a new app to target the newest Android version, we’ll be updating the Android Support packages for our sample app as well.
 
@@ -58,9 +55,13 @@ If all goes well, let’s make sure we are using the right UWP compiler version 
 
 Once the packages are up to date, we’ll finally download and install MVVMLight. As we will host all of our ViewModel Logic in Xamarin Forms, together with their Views, we just need to install it into the Portable library and into the UWP project:
 
-<div class="gallery galleryid-4511 gallery-columns-1 gallery-size-large" id="gallery-1"><figure class="gallery-item"><div class="gallery-icon landscape"> [![](https://msicc.net/assets/img/2017/02/mvvmlight-nuget-xamarin-forms-1024x475.png)](https://msicc.net/xamarin-forms-the-mvvmlight-toolkit-and-i-new-series/mvvmlight-nuget-xamarin-forms/) </div></figure> </div>There will be no changes to the project except adding the reference. We need to set up the structure ourselves. First, create two new folders, View and ViewModel:
+![](/assets/img/2017/02/mvvmlight-nuget-xamarin-forms.png)
+
+
+There will be no changes to the project except adding the reference. We need to set up the structure ourselves. First, create two new folders, View and ViewModel:
 
 ![](/assets/img/2017/02/image-5.png)
+
 
 Move the MainPage into the View Folder and adjust the Namespace accordingly. The next step is to setup a ViewModelLocator class, which takes a central part of our MVVM structure. Here is what you need for the base structure:
 
@@ -94,6 +95,7 @@ You may notice some things. First, I am using the singleton pattern for the View
 
 ![](/assets/img/2017/02/image-6.png)
 
+
 ``` csharp
          public void Initialize()
         {
@@ -118,17 +120,17 @@ The next step is to get the App.xaml file code right, it should look like this:
 
 ``` xml
  <?xml version="1.0" encoding="utf-8"?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+<Application xmlns="https://xamarin.com/schemas/2014/forms" 
+             xmlns:x="https://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="XfMvvmLight.App" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="https://schemas.microsoft.com/expression/blend/2008" 
              d1p1:Ignorable="d" 
-             xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:forms="http://xamarin.com/schemas/2014/forms" 
+             xmlns:d1p1="https://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="https://xamarin.com/schemas/2014/forms" 
              xmlns:vm="clr-namespace:XfMvvmLight.ViewModel" >
   <Application.Resources>
     <!-- Application resource dictionary -->
-    <forms:ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <forms:ResourceDictionary xmlns="https://schemas.microsoft.com/winfx/2006/xaml/presentation">
       <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
     </forms:ResourceDictionary>
   </Application.Resources>
@@ -265,11 +267,11 @@ Before we are able to test our code, we need to make sure our ViewModelLocator i
  
 Let’s test our app on all platforms by building and deploying them:
 
-<figure aria-describedby="caption-attachment-4523" class="wp-caption aligncenter" id="attachment_4523" style="width: 400px">![](/assets/img/2017/02/photo_2017-02-25_08-04-29-576x1024.jpg)<figcaption class="wp-caption-text" id="caption-attachment-4523">Android</figcaption></figure>
+![](/assets/img/2017/02/photo_2017-02-25_08-04-29.jpg)
 
 *iOS Screenshot – post will be updated*
 
-<figure aria-describedby="caption-attachment-4520" class="wp-caption aligncenter" id="attachment_4520" style="width: 550px">![](/assets/img/2017/02/image-7.png)<figcaption class="wp-caption-text" id="caption-attachment-4520">UWP</figcaption></figure>
+![](/assets/img/2017/02/image-7.png)
 
 If you get the same screens, you are all set up to use Xamarin Forms with MVVMLight.
 

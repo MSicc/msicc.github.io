@@ -42,7 +42,7 @@ Last but not least, we also need to set up an environment variable for our stora
 
 ### Authentication
 
-If you have read [my last post](https://msicc.net/casban6-how-to-configure-azurite-to-use-defaultazurecredential-with-docker-on-macos/), you might already know that we are going to use the `AzureDefaultCredential` to authenticate our requests against the Blob storage API internally. This leads to the first method we implement to create an authenticated `BlobServiceClient`:
+If you have read [my last post]({% post_url 2023-07-07-casban6-how-to-configure-azurite-to-use-defaultazurecredential-with-docker-on-macos %}), you might already know that we are going to use the `AzureDefaultCredential` to authenticate our requests against the Blob storage API internally. This leads to the first method we implement to create an authenticated `BlobServiceClient`:
 
 ``` csharp
  private BlobServiceClient? GetBlobServiceClient()

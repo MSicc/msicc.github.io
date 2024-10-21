@@ -37,9 +37,9 @@ Choosing the “right” solution for sending push notifications isn’t easy if
 
 The app implementations are very platform-specific, but it is quite easy to integrate the post notifications in a Xamarin.Forms app (which will be the last post in this series). If you want to see the whole integration already in action, feel free to download my blog reader app:
 
-<figure class="wp-block-embed-wordpress wp-block-embed is-type-wp-embed is-provider-msicc-039-s-blog"><div class="wp-block-embed__wrapper">> [MSicc’s Blog version 1.6.0 out now for Android and iOS](https://msicc.net/msiccs-blog-version-1-6-0-out-now-for-android-and-ios/)
+[MSicc’s Blog version 1.6.0 out now for Android and iOS]({% post_url  2020-02-14-msiccs-blog-version-1-6-0-out-now-for-android-and-ios %})
 
-<iframe class="wp-embedded-content" data-secret="kTPZmWpHyh" frameborder="0" height="338" loading="lazy" marginheight="0" marginwidth="0" sandbox="allow-scripts" scrolling="no" security="restricted" src="https://msicc.net/msiccs-blog-version-1-6-0-out-now-for-android-and-ios/embed/#?secret=JdgZp72vSa#?secret=kTPZmWpHyh" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" title="“MSicc’s Blog version 1.6.0 out now for Android and iOS” — MSicc's Blog" width="600"></iframe></div></figure>### WordPress plugins for the win
+>### WordPress plugins for the win
 
 If you have a self-hosted blog like I do, you may know that the plugin ecosystem is there to help you with a lot of things that WordPress hasn’t out of the box. While a WordPress-hosted site as Webhook integration without an additional plugin, we need one to create such a Webhook on a self-hosted WordPress blog. The plugin I am using is simply called “Notification” and [can be found here](https://wordpress.org/plugins/notification/).
 
@@ -63,33 +63,58 @@ Once you have installed and activated the plugin, you will have a new option in 
 
 On the Settings page, select the “CARRIERS” option. The plugin uses so-called carriers to send out the notifications. By default, the Email carrier is active. I do not need this one for the moment, so I deactivated it an activated the Webhook carrier instead:
 
-<figure class="wp-block-image size-large is-style-default">[![](https://msicc.net/assets/img/2020/02/Notification-Enable-Webhook-1024x493.png)](https://msicc.net/assets/img/2020/02/Notification-Enable-Webhook.png)</figure>### Setting Post Triggers
+[![](/assets/img/2020/02/Notification-Enable-Webhook.png)
+](/assets/img/2020/02/Notification-Enable-Webhook.png)
+### Setting Post Triggers
 
 The next step is to verify we have the trigger for posts active:
 
-<figure class="wp-block-image size-large is-style-default">[![](https://i2.wp.com/msicc.net/assets/img/2020/02/Notification-Triggers.png?fit=1024%2C477&ssl=1)](https://msicc.net/assets/img/2020/02/Notification-Triggers.png)</figure>You can modify the other triggers as well, but for the moment, I am focusing just on posts. I am thinking about integrating comments in the future, which will allow even more interaction from within my app.
+[![](/assets/img/2020/02/Notification-Triggers.png)
+](/assets/img/2020/02/Notification-Triggers.png)
+You can modify the other triggers as well, but for the moment, I am focusing just on posts. I am thinking about integrating comments in the future, which will allow even more interaction from within my app.
 
 ### Add a new notification
 
 Let’s create our first notification. Select the “Add New Notification” action, which will bring up this page:
 
-<figure class="wp-block-image size-large is-style-default">[![](https://i2.wp.com/msicc.net/assets/img/2020/02/Notification-Add-New.png?fit=1024%2C243&ssl=1)](https://msicc.net/assets/img/2020/02/Notification-Add-New.png)</figure>Select the “Add New Carrier” option and add the Webhook carrier:
+[![](/assets/img/2020/02/Notification-Add-New.png)
+](/assets/img/2020/02/Notification-Add-New.png)
 
-<figure class="wp-block-image size-large is-style-default">[![](https://i1.wp.com/msicc.net/assets/img/2020/02/Notification-Add-New-Carrier.png?fit=1024%2C364&ssl=1)](https://msicc.net/assets/img/2020/02/Notification-Add-New-Carrier.png)</figure>Next, select the Trigger for the Webhook. During development, I am using the saving draft option as it allows me to easily trigger a notification without annoying anyone:
+Select the “Add New Carrier” option and add the Webhook carrier:
 
-<figure class="wp-block-image size-large is-style-default">[![](https://i0.wp.com/msicc.net/assets/img/2020/02/Notification-Webhook-Trigger.png?fit=1024%2C234&ssl=1)](https://msicc.net/assets/img/2020/02/Notification-Webhook-Trigger.png)</figure>This will enable the “Merge Tags” list on the right-hand side. To create the Webhook payload, we need to add some arguments (using the “Add argument” button). Tip: you can copy the merge tag by just clicking on it and paste it into the “Value” box:
+[![](/assets/img/2020/02/Notification-Add-New-Carrier.png)
+](/assets/img/2020/02/Notification-Add-New-Carrier.png)
 
-<figure class="wp-block-image size-large is-style-default">[![](https://i0.wp.com/msicc.net/assets/img/2020/02/Notification-Webhook-Arguments.png?fit=1024%2C541&ssl=1)](https://msicc.net/assets/img/2020/02/Notification-Webhook-Arguments.png)</figure>Don’t forget to activate the JSON format – we do not want it to be sent as XML. Make sure the Carrier is enabled and hit the save button on the upper right.
+Next, select the Trigger for the Webhook. During development, I am using the saving draft option as it allows me to easily trigger a notification without annoying anyone:
+
+[![](/assets/img/2020/02/Notification-Webhook-Trigger.png)
+](/assets/img/2020/02/Notification-Webhook-Trigger.png)
+
+This will enable the “Merge Tags” list on the right-hand side. To create the Webhook payload, we need to add some arguments (using the “Add argument” button). Tip: you can copy the merge tag by just clicking on it and paste it into the “Value” box:
+
+[![](/assets/img/2020/02/Notification-Webhook-Arguments.png)
+](/assets/img/2020/02/Notification-Webhook-Arguments.png)
+
+Don’t forget to activate the JSON format – we do not want it to be sent as XML. Make sure the Carrier is enabled and hit the save button on the upper right.
 
 ### Testing the Webhook
 
 Now that we finished the setup of our Webhook, let’s test it. To do so, go to the “Settings” page again and select “DEBUGGING”. Check the “Enable Notification logging” box and click the “Save Changes” button:
 
-<figure class="wp-block-image size-large is-style-default">[![](https://i1.wp.com/msicc.net/assets/img/2020/02/Notification-Webhook-Debugging.png?fit=1024%2C446&ssl=1)](https://msicc.net/assets/img/2020/02/Notification-Webhook-Debugging.png)</figure>To test the notification, just create a new blog post and save the draft. Go back to the “DEBUGGING” setting, where you will be presented a new Notification log entry. Expanding this log entry, you will see some common data about the notification:
+[![](/assets/img/2020/02/Notification-Webhook-Debugging.png)
+](/assets/img/2020/02/Notification-Webhook-Debugging.png)
 
-<figure class="wp-block-image size-large is-style-default">[![](https://i1.wp.com/msicc.net/assets/img/2020/02/Notification-Webhook-Debugging-Log-Common.png?fit=1024%2C417&ssl=1)](https://msicc.net/assets/img/2020/02/Notification-Webhook-Debugging-Log-Common.png)</figure>If you scroll a bit further down, you will see the payload of the Webhook. Sadly, you won’t get the raw JSON string, but a structured overview of the payload:
+To test the notification, just create a new blog post and save the draft. Go back to the “DEBUGGING” setting, where you will be presented a new Notification log entry. Expanding this log entry, you will see some common data about the notification:
 
-<figure class="wp-block-image size-large is-style-default">[![](https://i0.wp.com/msicc.net/assets/img/2020/02/Notification-Webhook-Debugging-Log-Payload.png?fit=1024%2C370&ssl=1)](https://msicc.net/assets/img/2020/02/Notification-Webhook-Debugging-Log-Payload.png)</figure>Verify that the payload contains all the data you need and adjust the settings if necessary. Once that is done, we are ready to go to the next blog post (coming soon).
+[![](/assets/img/2020/02/Notification-Webhook-Debugging-Log-Common.png)
+](/assets/img/2020/02/Notification-Webhook-Debugging-Log-Common.png)
+
+If you scroll a bit further down, you will see the payload of the Webhook. Sadly, you won’t get the raw JSON string, but a structured overview of the payload:
+
+[![](/assets/img/2020/02/Notification-Webhook-Debugging-Log-Payload.png)
+](/assets/img/2020/02/Notification-Webhook-Debugging-Log-Payload.png)
+
+Verify that the payload contains all the data you need and adjust the settings if necessary. Once that is done, we are ready to go to the next blog post (coming soon).
 
 ### Conclusion
 

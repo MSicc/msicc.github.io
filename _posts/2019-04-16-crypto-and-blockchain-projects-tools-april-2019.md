@@ -55,7 +55,9 @@ Presearch is a decentralized search engine that has [more than 1 million users](
 
 I have been using Presearch for a few months now as my personal gate to the internet, and I enjoy the aggregation of my preferred search engines. If you look at my start page, you can see all the search providers I have chosen. From Bing, Google to Github as well as iTunes and Spotify, everything gets searched with a click. If you open a new Tab with Presearch, you can filter the search once more. I often use the Presearch engine search, which just delivers the best results for me. I am helping the product to evolve with this behavior, as a little bonus, I get 0.25 PRE(search token) for the searches I perform.
 
-<div class="wp-block-image"><figure class="aligncenter is-resized">![Presearch](https://msicc.net/assets/img/2019/04/Presearch-1024x607.png)</figure></div>Presearch has protection against cheaters (AI powered) in place. I am obviously not cheating to help the product, and my honesty is rewarded with an account level of 9. They have a Chrome extension which sets the current search engine (Desktop) just by installing it. Presearch even has a mobile app (beta, iOS), which is currently not able to connect to your account which I use from time to time. However, as happened with Bing and Google before, I am using their mobile website most of the time on my iPhone.
+![Presearch](/assets/img/2019/04/Presearch.png)
+
+Presearch has protection against cheaters (AI powered) in place. I am obviously not cheating to help the product, and my honesty is rewarded with an account level of 9. They have a Chrome extension which sets the current search engine (Desktop) just by installing it. Presearch even has a mobile app (beta, iOS), which is currently not able to connect to your account which I use from time to time. However, as happened with Bing and Google before, I am using their mobile website most of the time on my iPhone.
 
 - Project site: [https://www.presearch.io/](https://www.presearch.io/#what)
 - Signup/Referral: <https://www.presearch.org/signup?rid=477088> (I get 25 PRE once you finsihed 400 reward-eligable searches)
@@ -69,11 +71,17 @@ I have been using Presearch for a few months now as my personal gate to the inte
 
 If you have been following me for some time, you know that I am a fan of Microsoft. Recently, however, Microsoft turned into a more business-oriented company, leaving the consumer to just go with the products of other providers. This led me to search for alternatives of my personal browser – so I ended up with Brave Browser.
 
-<div class="wp-block-image"><figure class="aligncenter is-resized">![](https://msicc.net/assets/img/2019/04/Brave_shields_sample_youtube.png)</figure></div>Brave aims to be faster and more private than the default choices users have. Websites store all kind of data in cookies and use trackers to collect data from a user while the later one is browsing the web. With Brave, you get back a good amount of control of the data you are willing to share. Over time, your privacy level will grow again just by using Brave. The browser shows you how many trackers, cookies and scripts were blocked while you are browsing.
+![](/assets/img/2019/04/Brave_shields_sample_youtube.png)
 
-<div class="wp-block-image"><figure class="aligncenter is-resized">![](https://msicc.net/assets/img/2019/04/Brave_rewards_earn_bat.png)</figure></div>Since a few weeks, user can receive rewards for watching ads. Users will be prompted to view ads (mostly short videos), and receive some BAT, the native currency of Brave – which they can use again to reward content creators. This is an opt-in feature, so users always have the choice.
+Brave aims to be faster and more private than the default choices users have. Websites store all kind of data in cookies and use trackers to collect data from a user while the later one is browsing the web. With Brave, you get back a good amount of control of the data you are willing to share. Over time, your privacy level will grow again just by using Brave. The browser shows you how many trackers, cookies and scripts were blocked while you are browsing.
 
-<div class="wp-block-image"><figure class="aligncenter">![](https://msicc.net/assets/img/2019/04/Brave_rewards_msicc_net_sample.png)</figure></div>If you have a blog, website or YouTube channel, you can help the project to grow. Register your site/channel as a creator, and use your BAT rewards to tip others and invite them to join, too. This way, knowledge about Brave will spread across the web from all sides.
+![](/assets/img/2019/04/Brave_rewards_earn_bat.png)
+
+Since a few weeks, user can receive rewards for watching ads. Users will be prompted to view ads (mostly short videos), and receive some BAT, the native currency of Brave – which they can use again to reward content creators. This is an opt-in feature, so users always have the choice.
+
+![](/assets/img/2019/04/Brave_rewards_msicc_net_sample.png)
+
+If you have a blog, website or YouTube channel, you can help the project to grow. Register your site/channel as a creator, and use your BAT rewards to tip others and invite them to join, too. This way, knowledge about Brave will spread across the web from all sides.
 
 - Project site: [https://brave.com/](https://brave.com/features/)
 - Signup/Referral: <https://brave.com/msi278> (for content creators/publishers)
@@ -88,7 +96,9 @@ If you have been following me for some time, you know that I am a fan of Microso
 
 [CoinPaprika](https://coinpaprika.com/)is a market analysis tool, and it is a powerful one. I discovered the project last summer (shortly after they started). I like it “hot and spicy”, so the name alone immediately called my attention. As I have two or three app ideas that need a service like CoinPaprika, I was happy to learn they have an [open API ](https://coinpaprika.com/api/)as well, with really generous API rate limits. I am contributing to the project in the form of [maintaining a .NET library](https://github.com/MSiccDev/CoinpaprikaAPI).
 
-<div class="wp-block-image"><figure class="aligncenter is-resized">![coinpaprika_client](https://msicc.net/assets/img/2018/10/coinpaprika_client-1024x768.png)</figure></div>CoinPaprika is somewhat different to other providers, as they do not rely on data of CoinMarketCap (which a lot of services in this area do). Instead, they are pulling in data of more than 250 exchanges on their own, resulting in over 2000 currencies they track. On top, they provide a great oversight on each project (click the coin stats links above to see some samples).
+![coinpaprika_client](/assets/img/2018/10/coinpaprika_client.png)
+
+CoinPaprika is somewhat different to other providers, as they do not rely on data of CoinMarketCap (which a lot of services in this area do). Instead, they are pulling in data of more than 250 exchanges on their own, resulting in over 2000 currencies they track. On top, they provide a great oversight on each project (click the coin stats links above to see some samples).
 
 They are also working on a mobile app, which will combine their analysis tools with a non-custodial wallet (based on Trust Wallet’s core). You can get a short overview and register for beta notification at   
 <https://coins.coinpaprika.com/>.
@@ -103,9 +113,11 @@ They are also working on a mobile app, which will combine their analysis tools w
 
 AtomicPay is a non-custodial payment service provider. While there are quite some providers of such services floating around, AtomicPay holds the flag of decentralization pretty high. The service just provides the invoicing infrastructure, while the payment itself is only tracked by the system. The effective payment is a direct customer to merchant transaction – the funds move directly into the merchant’s wallet. The whole infrastructure is built around Electrum and its derivations for other currencies.
 
-<div class="wp-block-image"><figure class="aligncenter is-resized">![atomicpay-title-image](https://msicc.net/assets/img/2019/01/photo_2019-01-10_15-00-41-1024x690.jpg)</figure></div>By using common implementations like SegWit and HD (Hierarchical Deterministic) wallets as well as no address re-use, AtomicPay ensures security and privacy on a high level with a reasonable amount of initial administrative work. AtomicPay provides several integrations into already existing online shopping systems, an open Rest-API, payment buttons for websites and more.
+![](/assets/img/2019/01/photo_2019-01-10_15-00-41.jpg)
 
-I am also involved in this project and currently working on the official native apps for Android and iOS. We have already published [a .NET SDK](https://msicc.net/integrate-crypto-payments-into-your-net-applications-with-atomicpay/), which enables you already today to implement crypto payments into your apps. On our roadmap, we have a Xamarin.Forms ready plugin and SDKs for other programming languages as well.
+By using common implementations like SegWit and HD (Hierarchical Deterministic) wallets as well as no address re-use, AtomicPay ensures security and privacy on a high level with a reasonable amount of initial administrative work. AtomicPay provides several integrations into already existing online shopping systems, an open Rest-API, payment buttons for websites and more.
+
+I am also involved in this project and currently working on the official native apps for Android and iOS. We have already published a .NET SDK, which enables you already today to implement crypto payments into your apps. On our roadmap, we have a Xamarin.Forms ready plugin and SDKs for other programming languages as well.
 
 - Website: <https://atomicpay.io/global/en>
 - Twitter: <https://twitter.com/AtomicPay>
@@ -161,15 +173,20 @@ Transactions are executed as fast as possible, if something goes wrong and you p
 
 If you want to perform advanced operations (like cleaning pending transactions or getting your \*.eth address), there is a big chance that you will be able to do it with [MyEtherwallet](https://www.myetherwallet.com/).
 
-<div class="wp-block-image"><figure class="aligncenter is-resized">![](https://msicc.net/assets/img/2019/04/MEW_new_ui.png)</figure></div>They recently launched a newer version of their website. However, not all functionality has been ported over (yet). If you cannot find an option on the new site, you will find it for sure [at their vintage site](https://vintage.myetherwallet.com/). The most secure way to connect to MyEtherWallet is their MEWConnect app (available for [iOS](https://itunes.apple.com/us/app/mewconnect/id1391097156) and [Android](http://play.google.com/store/apps/details?id=com.myetherwallet.mewconnect)), which transforms your phone into a hardware wallet-like device. You need to confirm transactions on the device before you can move on in the browser, adding in an additional security layer.
+![](/assets/img/2019/04/MEW_new_ui.png)
+
+They recently launched a newer version of their website. However, not all functionality has been ported over (yet). If you cannot find an option on the new site, you will find it for sure [at their vintage site](https://vintage.myetherwallet.com/). The most secure way to connect to MyEtherWallet is their MEWConnect app (available for [iOS](https://itunes.apple.com/us/app/mewconnect/id1391097156) and [Android](https://play.google.com/store/apps/details?id=com.myetherwallet.mewconnect)), which transforms your phone into a hardware wallet-like device. You need to confirm transactions on the device before you can move on in the browser, adding in an additional security layer.
 
 #### Etherscan
 
 Etherscan is the best known Ethereum blockchain explorer around. It has tons of features, from viewing transactions or contracts to token details and ENS-Lookup. Whenever I need to verify or search something related to the Ethereum blockchain, this is my first goto-address.
 
-<div class="wp-block-image"><figure class="aligncenter is-resized">![](https://msicc.net/assets/img/2019/04/ENS_etherscan.png)</figure></div>#### O3 Wallet (NEO)
+![](/assets/img/2019/04/ENS_etherscan.png)
 
-If you are searching for blockchains built with .NET, sooner or later you will run into [NEO](http://neo.org). I only recently began to explore the possibilities of the NEO blockchain and its native currency. NEO has a token ecosystem as well. IF you need a cross-platform wallet, I would give the [O3 wallet](https://o3.network/#) a try. It integrates with Switcheo (another decentralized exchange) and quite a few other dApps (like registering your .neo address via NNS) running on NEO.
+
+#### O3 Wallet (NEO)
+
+If you are searching for blockchains built with .NET, sooner or later you will run into [NEO](https://neo.org). I only recently began to explore the possibilities of the NEO blockchain and its native currency. NEO has a token ecosystem as well. IF you need a cross-platform wallet, I would give the [O3 wallet](https://o3.network/#) a try. It integrates with Switcheo (another decentralized exchange) and quite a few other dApps (like registering your .neo address via NNS) running on NEO.
 
 ## New projects
 
@@ -185,9 +202,9 @@ The crypto space never stand still. New projects are showing up almost every day
 It is always good to know what is going on in the crypto space. Here are some reliable news sources I use:
 
 - [CryptoCoinsNews](https://www.cryptocoinsnews.com/)
-- [CoinTelegraph](http://cointelegraph.com/)
-- [CoinDesk](http://www.coindesk.com/)
-- [NEWSBTC](http://newsbtc.com/)
+- [CoinTelegraph](https://cointelegraph.com/)
+- [CoinDesk](https://www.coindesk.com/)
+- [NEWSBTC](https://newsbtc.com/)
 - [CryptoSlate](https://cryptoslate.com/)
 - [Ethereum World News](https://ethereumworldnews.com/)
 - [AMBCrypto](https://ambcrypto.com/)

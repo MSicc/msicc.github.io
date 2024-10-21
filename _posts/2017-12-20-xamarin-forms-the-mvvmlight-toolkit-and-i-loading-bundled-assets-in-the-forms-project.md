@@ -69,7 +69,7 @@ The only thing left to do is to register the interface in our `ViewModelLocator`
 SimpleIoc.Default.Register(()=> assetPathHelper);
 ```
  
-We are getting the platform implementation via the built in `DependecyService` and assign in to our `Xamarin.Forms` interface ([like we have done already before](https://msicc.net/xamarin-forms-the-mvvmlight-toolkit-and-i-dependecy-injection/)). By registering it with our `SimpleIoc` instance, we can now use it wherever we want in our `Xamarin.Forms` project.
+We are getting the platform implementation via the built in `DependecyService` and assign in to our `Xamarin.Forms` interface ([like we have done already before]({% post_url 2017-06-02-xamarin-forms-the-mvvmlight-toolkit-and-i-dependecy-injection %}/)). By registering it with our `SimpleIoc` instance, we can now use it wherever we want in our `Xamarin.Forms` project.
 
 ## Platform implementations
 

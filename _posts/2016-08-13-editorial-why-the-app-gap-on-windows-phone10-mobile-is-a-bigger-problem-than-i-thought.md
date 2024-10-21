@@ -29,13 +29,16 @@ Take the Facebook app for example. Animations are smooth like butter, almost all
 
 ![](/assets/img/2016/08/wp-1471112068972.png)
 
+
 Another example is the Path app. Never been updated since its launch on Windows Phone, I was truly surprised when I opened It on Android. It is an app that really is fun to use on Android. I bet they would have a lot more users on Windows if they align the app… sadly, they abanonded the platform completely a few month ago.
 
 ![](/assets/img/2016/08/wp-1471112104434.png)
 
+
 The last example is the WordPress app. It exists on Windows (Phone) for existing users, but the experience on Android is galaxies away from the one the one in Windows (Phone) has/had. I am even writting this post with it, because it feels just right to do this (I only did that once on Windows Phone).
 
 ![](/assets/img/2016/08/wp-1471115476863.png)
+
 
 These were only three examples, but they show pretty much how different official apps can be between platforms (and how they are supported). And they all show, that Windows really has no priority anywhere (sadly).  
 The quality of apps that are available on Windows is not all, though. Of course, I downloaded also some apps that aren’t available for my Lumia 950 XL as well. And it does make a difference.

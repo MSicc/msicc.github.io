@@ -26,7 +26,7 @@ tags:
     - XfQaD
 ---
 
-All of my apps, no matter on which platform, need to know their version number (for displaying in app) and their package identifier (for opening them in their store). If you are following around for some time, you know I prefer own solutions in a lot of use cases – that’s why I created another #[XfQaD](https://msicc.net/tag/xfqad/) for this task, even if there are plugins around for that.
+All of my apps, no matter on which platform, need to know their version number (for displaying in app) and their package identifier (for opening them in their store). If you are following around for some time, you know I prefer own solutions in a lot of use cases – that’s why I created another [XfQaD]({{ site.baseurl }}{/tags/xfqad/}) for this task, even if there are plugins around for that.
 
 ## The concept
 

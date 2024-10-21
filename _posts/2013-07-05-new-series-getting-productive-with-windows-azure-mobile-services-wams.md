@@ -25,16 +25,16 @@ I will cover some interesting topics in this series, which are not really docume
 
 These topics are (list is subject to be updated if needed):
 
-- [Updating data in a data table from your app](http://msicc.net/?p=3652)
-- [How to use WAMS to pull date from twitter with their new API 1.1](http://msicc.net/?p=3760)
-- [using the MPNS object to update Live Tiles and send Toast notifications](http://msicc.net/?p=3695)
-- [getting time zone offset from local to WAMS and back again](http://msicc.net/?p=3663)
-- [how to set up a timeout before running code in an interval](http://msicc.net/?p=3678 "Permalink to Getting productive with WAMS: how to set up a timeout before running code in an interval")
+- [Updating data in a data table from your app]({% post_url 2013-07-13-getting-productive-with-wams-how-to-update-data-for-a-specific-user-in-a-table %})
+- [How to use WAMS to pull date from twitter with their new API 1.1]({% post_url 2013-08-27-getting-productive-with-wams-how-to-call-twitter-rest-api-1-1-from-a-scheduled-script %})
+- [using the MPNS object to update Live Tiles and send Toast notifications]({% post_url 2013-08-14-getting-productive-with-wams-about-the-mpns-object-push-data-to-the-users-windows-phone %})
+- [getting time zone offset from local to WAMS and back again]({% post_url 2013-07-14-getting-productive-with-wams-respect-time-zone-offset-for-every-single-user %})
+- [how to set up a timeout before running code in an interval]({% post_url 2013-08-07-getting-productive-with-wams-how-to-set-up-a-timeout-before-running-code-in-an-interval %})
 - how to make sure users are using the trial version only once
 - a simple promotion code solution
 - and more
 
-First, if you want to get started, you should check out this link: [http://www.windowsazure.com/en-us/develop/mobile/tutorials/get-started-wp8/](http://www.windowsazure.com/en-us/develop/mobile/tutorials/get-started-wp8/ "http://www.windowsazure.com/en-us/develop/mobile/tutorials/get-started-wp8/")
+First, if you want to get started, you should check out this link: [https://www.windowsazure.com/en-us/develop/mobile/tutorials/get-started-wp8/](https://www.windowsazure.com/en-us/develop/mobile/tutorials/get-started-wp8/ "https://www.windowsazure.com/en-us/develop/mobile/tutorials/get-started-wp8/")
 
 The tutorial makes you very easy and fast using WAMS.
 

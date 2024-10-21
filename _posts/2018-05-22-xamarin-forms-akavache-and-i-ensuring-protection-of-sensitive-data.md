@@ -37,23 +37,18 @@ tags:
 
 Some of you might remember my posts about encryption for Android, iOS and Windows 10. If not, take a look here:
 
-> [Xamarin Android: asymmetric encryption without any user input or hardcoded values](https://msicc.net/xamarin-android-asymmetric-encryption-without-any-user-input-or-hardcoded-values/)
+> [Xamarin Android: asymmetric encryption without any user input or hardcoded values]({% post_url 2018-04-19-xamarin-android-asymmetric-encryption-without-any-user-input-or-hardcoded-values %})
 
-<iframe class="wp-embedded-content" data-secret="TVnfOXk5J0" frameborder="0" height="338" loading="lazy" marginheight="0" marginwidth="0" sandbox="allow-scripts" scrolling="no" security="restricted" src="https://msicc.net/xamarin-android-asymmetric-encryption-without-any-user-input-or-hardcoded-values/embed/#?secret=82byWdeXKC#?secret=TVnfOXk5J0" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" title="“Xamarin Android: asymmetric encryption without any user input or hardcoded values” — MSicc's Blog" width="600"></iframe>
 
-> [How to perform asymmetric encryption without user input/hardcoded values with Xamarin iOS](https://msicc.net/how-to-perform-asymmetric-encryption-without-user-input-hardcoded-values-with-xamarin-ios/)
+> [How to perform asymmetric encryption without user input/hardcoded values with Xamarin iOS]({% post_url 2018-04-27-how-to-perform-asymmetric-encryption-without-user-input-hardcoded-values-with-xamarin-ios %})
 
-<iframe class="wp-embedded-content" data-secret="G6zzgBfCsd" frameborder="0" height="338" loading="lazy" marginheight="0" marginwidth="0" sandbox="allow-scripts" scrolling="no" security="restricted" src="https://msicc.net/how-to-perform-asymmetric-encryption-without-user-input-hardcoded-values-with-xamarin-ios/embed/#?secret=TxyGt27Sdt#?secret=G6zzgBfCsd" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" title="“How to perform asymmetric encryption without user input/hardcoded values with Xamarin iOS” — MSicc's Blog" width="600"></iframe>
-
-> [Using the built-in UWP data protection for data encryption](https://msicc.net/using-the-built-in-uwp-data-protection-for-data-encryption/)
-
-<iframe class="wp-embedded-content" data-secret="AZiCz6k5iC" frameborder="0" height="338" loading="lazy" marginheight="0" marginwidth="0" sandbox="allow-scripts" scrolling="no" security="restricted" src="https://msicc.net/using-the-built-in-uwp-data-protection-for-data-encryption/embed/#?secret=bZsNatx5Gv#?secret=AZiCz6k5iC" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" title="“Using the built-in UWP data protection for data encryption” — MSicc's Blog" width="600"></iframe>
+> [Using the built-in UWP data protection for data encryption]({% post_url  2018-05-01-using-the-built-in-uwp-data-protection-for-data-encryption %})
 
 It is no coincidence that I wrote these three posts before starting with this Akavache series, as we’ll use those techniques to protect sensitive data with Akavache. So you might have a look first before you read on.
 
 ## Creating a secure blob cache in Akavache
 
-Akavache has a special type for saving sensitive data – based on the interface `ISecureBlobCache`. The first step is to extend the `IBlobCacheInstanceHelper`interface we implemented [in the first post of this series](https://msicc.net/xamarin-forms-akavache-and-i-initial-setup-new-series/):
+Akavache has a special type for saving sensitive data – based on the interface `ISecureBlobCache`. The first step is to extend the `IBlobCacheInstanceHelper`interface we implemented [in the first post of this series]({% post_url 2018-05-06-xamarin-forms-akavache-and-i-initial-setup-new-series %}):
 
 ``` csharp
      public interface IBlobCacheInstanceHelper
@@ -74,10 +69,10 @@ Of course, all three platform implementations of the `IBlobCacheInstanceHelper`i
 private void GetSecretLocalMachineCache()
 {
     var secretCache = new Lazy<ISecureBlobCache>(() =>
-                                                 {
-                                                     _filesystemProvider.CreateRecursive(_filesystemProvider.GetDefaultSecretCacheDirectory()).SubscribeOn(BlobCache.TaskpoolScheduler).Wait();
-                                                     return new SQLiteEncryptedBlobCache(Path.Combine(_filesystemProvider.GetDefaultSecretCacheDirectory(), "secret.db"), new PlatformCustomAkavacheEncryptionProvider(), BlobCache.TaskpoolScheduler);
-                                                 });
+    {
+        _filesystemProvider.CreateRecursive(_filesystemProvider.GetDefaultSecretCacheDirectory()).SubscribeOn(BlobCache.TaskpoolScheduler).Wait();
+        return new SQLiteEncryptedBlobCache(Path.Combine(_filesystemProvider.GetDefaultSecretCacheDirectory(), "secret.db"), new PlatformCustomAkavacheEncryptionProvider(), BlobCache.TaskpoolScheduler);
+    });
 
     this.SecretLocalMachineCache = secretCache.Value;
 }
@@ -187,7 +182,7 @@ namespace XfAkavacheAndI.Android.PlatformImplementations
     }
 ```
  
-As you can see, I am getting Akavache’s internal `TaskpoolScheduler`in the constructor, like initial stated. Then, for this sample, I am using RSA encryption. The helper methods pretty much implement the same code like in the [post about my KeyStore implementation](https://msicc.net/xamarin-android-asymmetric-encryption-without-any-user-input-or-hardcoded-values/). The only thing to do is to use these methods in the EncryptBlock and DecyrptBlock method implementations, which is done asynchronously via [Observable.Start](https://msdn.microsoft.com/en-us/library/hh211971(v=vs.103).aspx).
+As you can see, I am getting Akavache’s internal `TaskpoolScheduler`in the constructor, like initial stated. Then, for this sample, I am using RSA encryption. The helper methods pretty much implement the same code like in the [post about my KeyStore implementation]({% post_url 2018-04-19-xamarin-android-asymmetric-encryption-without-any-user-input-or-hardcoded-values %}). The only thing to do is to use these methods in the EncryptBlock and DecyrptBlock method implementations, which is done asynchronously via [Observable.Start](https://msdn.microsoft.com/en-us/library/hh211971(v=vs.103).aspx).
 
 ### iOS
 
@@ -272,7 +267,7 @@ namespace XfAkavacheAndI.iOS.PlatformImplementations
 }
 ```
  
-The iOS implementation follows the same schema as the Android implementation. However, [iOS uses the KeyChain](https://msicc.net/how-to-perform-asymmetric-encryption-without-user-input-hardcoded-values-with-xamarin-ios/), which makes the encryption helper methods itself different.
+The iOS implementation follows the same schema as the Android implementation. However, [iOS uses the KeyChain]({% post_url 2018-04-27-how-to-perform-asymmetric-encryption-without-user-input-hardcoded-values-with-xamarin-ios %}), which makes the encryption helper methods itself different.
 
 ### UWP
 
@@ -388,13 +383,13 @@ namespace XfAkavacheAndI.UWP.PlatformImplementations
 }
 ```
  
-Last but not least, we have also an implementation for Windows applications. It is using the DataProtection API, [which does handle all that key stuff](https://msicc.net/using-the-built-in-uwp-data-protection-for-data-encryption/) and let’s us focus on the encryption itself. As the API is asynchronously, I am using `.GetAwaiter().GetResult()`Task extensions to make it compatible with `Observable.Start`.
+Last but not least, we have also an implementation for Windows applications. It is using the DataProtection API, [which does handle all that key stuff]({% post_url  2018-05-01-using-the-built-in-uwp-data-protection-for-data-encryption %}) and let’s us focus on the encryption itself. As the API is asynchronously, I am using `.GetAwaiter().GetResult()`Task extensions to make it compatible with `Observable.Start`.
 
 ### Conclusion
 
 Using the implementations above paired with our instance helper makes it easy to protect data in our apps. With all those data breach scandals and law changes around, this is *one possible way* secure way to handle sensitive data, as we do not have hardcoded values or any user interaction involved.
 
-For better understanding of all that code, [I made a sample project available](https://github.com/MSiccDev/XfAkavacheAndISample) that has all the referenced and mentioned classes implemented. Feel free to fork it and play with it (or even give me some feedback). For using the implementations, [please refer to my post about common usages I wrote a few days ago](https://msicc.net/xamarin-forms-akavache-and-i-storing-retrieving-and-deleting-data/). The only difference is that you would use `SecretLocalMachineCache`instead of `LocalMachineCache` for sensitive data.
+For better understanding of all that code, [I made a sample project available](https://github.com/MSiccDev/XfAkavacheAndISample) that has all the referenced and mentioned classes implemented. Feel free to fork it and play with it (or even give me some feedback). For using the implementations, [please refer to my post about common usages I wrote a few days ago]({% post_url  2018-05-21-xamarin-forms-akavache-and-i-storing-retrieving-and-deleting-data %}). The only difference is that you would use `SecretLocalMachineCache`instead of `LocalMachineCache` for sensitive data.
 
 As always, I hope this post is helpful for some of you.
 

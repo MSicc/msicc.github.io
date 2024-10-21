@@ -200,7 +200,7 @@ The only thing left is to handle the positioning of the tabs if we are swiping t
  
 The result of this setup looks like this:
 
-<div class="wp-block-image"><figure class="aligncenter size-full">![](https://msicc.net/assets/img/2020/07/ScrollableTabsXFiOS.gif)</figure></div>### Conclusion
+![](/assets/img/2020/07/ScrollableTabsXFiOS.gif)### Conclusion
 
 `Xamarin.Forms` provides a lot of solutions out of the box. Sometimes, however, these are not enough. Luckily, we can combine some of the solutions the framework provides to create fresh solutions within our apps. This post showed one of these. The additional bonus you get with this implementation is the ability to style the tabs in whatever way you want. As always, I hope this post will be helpful for some of you.
 

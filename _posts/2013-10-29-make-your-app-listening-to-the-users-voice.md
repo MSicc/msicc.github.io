@@ -37,7 +37,7 @@ Let’s have a look at a VCD with two different launch arguments:
 ``` xml
  <?xml version="1.0" encoding="utf-8"?>
 
-<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.0">
+<VoiceCommands xmlns="https://schemas.microsoft.com/voicecommands/1.0">
  <CommandSet xml:lang="en-US">
  <CommandPrefix>speech test app</CommandPrefix>
  <Example> speech test app</Example>
@@ -118,52 +118,51 @@ First of all, using the Windows button does not work in app. You will need to ad
 
 Let’s start with a List&lt;string&gt; or string\[\] array, and launch the SpeechRecognizerUI:
 
-```
-  csharp
-           try
-            {
-                //initalize speech recognition
-                SpeechRecognizerUI speech = new SpeechRecognizerUI();
+``` csharp
+try
+{
+    //initalize speech recognition
+    SpeechRecognizerUI speech = new SpeechRecognizerUI();
 
-                List<string> InAppCommandList = new List<string>
-                {
-                       "goto home",
-                       "goto settings",
-                        "set name",
-                        "set age",
-                        //add more to that list as you need
-                };
+    List<string> InAppCommandList = new List<string>
+    {
+            "goto home",
+            "goto settings",
+            "set name",
+            "set age",
+            //add more to that list as you need
+    };
 
-                //load the List as a Grammar
-                speech.Recognizer.Grammars.AddGrammarFromList("InAppCommandList", InAppCommandList);
+    //load the List as a Grammar
+    speech.Recognizer.Grammars.AddGrammarFromList("InAppCommandList", InAppCommandList);
 
-                //show some examples what the user can say:
-                speech.Settings.ExampleText = " goto home, goto settings, set name, set age ";
+    //show some examples what the user can say:
+    speech.Settings.ExampleText = " goto home, goto settings, set name, set age ";
 
-                //get the result
-                SpeechRecognitionUIResult result = await speech.RecognizeWithUIAsync();
+    //get the result
+    SpeechRecognitionUIResult result = await speech.RecognizeWithUIAsync();
 
-                //delegate the results
-                switch (result.RecognitionResult.Text)
-                {
-                    case "goto home":
-                        //your code here
-                        break;
-                    case "goto settings":
-                        //your code here
-                        break;
-                    case "set name":
-                        //your code here
-                        break;
-                    case "set age":
-                        //your code here
-                        break;
-                }
-            }
-            catch (System.NullReferenceException)
-            {
-                //do something with the Exception
-            }
+    //delegate the results
+    switch (result.RecognitionResult.Text)
+    {
+        case "goto home":
+            //your code here
+            break;
+        case "goto settings":
+            //your code here
+            break;
+        case "set name":
+            //your code here
+            break;
+        case "set age":
+            //your code here
+            break;
+    }
+}
+catch (System.NullReferenceException)
+{
+    //do something with the Exception
+}
 ```
  
 As you can see, there are only a few steps needed:
@@ -185,8 +184,8 @@ In this case, I wanted the SpeechRecognizerUI to only accept numbers as input. T
  <?xml version="1.0" encoding="utf-8" ?>
 
 <grammar version="1.0" xml:lang="en-US" root="Command" tag-format="semantics/1.0"
- xmlns="http://www.w3.org/2001/06/grammar"
- xmlns:sapi="http://schemas.microsoft.com/Speech/2002/06/SRGSExtensions">
+ xmlns="https://www.w3.org/2001/06/grammar"
+ xmlns:sapi="https://schemas.microsoft.com/Speech/2002/06/SRGSExtensions">
 
 <rule id="Command" scope="public">
  <item repeat="1-20">
@@ -221,22 +220,22 @@ To make the SpeechRecognitionUI only accepting numbers, I defined another rule t
 Now let’s have a look on how to implement this Grammar into our app and connect it to our SpeechRecognizerUI:
 
 ``` csharp
-  SpeechRecognizerUI speech = new SpeechRecognizerUI();
+SpeechRecognizerUI speech = new SpeechRecognizerUI();
 
-            //generate a Numberonly Input Scope based on a SRGS file
-            //the ms-appx:/// prefix will not work here and return a FileNotFoundException!
-            Uri NumberGrammarUriPath = new Uri("file://" + Windows.ApplicationModel.Package.Current.InstalledLocation.Path + @"/NumberOnlyGrammar.xml", UriKind.RelativeOrAbsolute);
+//generate a Numberonly Input Scope based on a SRGS file
+//the ms-appx:/// prefix will not work here and return a FileNotFoundException!
+Uri NumberGrammarUriPath = new Uri("file://" + Windows.ApplicationModel.Package.Current.InstalledLocation.Path + @"/NumberOnlyGrammar.xml", UriKind.RelativeOrAbsolute);
 
-            speech.Recognizer.Grammars.AddGrammarFromUri("NumberGrammarUriPath", NumberGrammarUriPath);
+speech.Recognizer.Grammars.AddGrammarFromUri("NumberGrammarUriPath", NumberGrammarUriPath);
 
-            SpeechRecognitionUIResult speechRecognitionResult = await speech.RecognizeWithUIAsync();
+SpeechRecognitionUIResult speechRecognitionResult = await speech.RecognizeWithUIAsync();
 
-            if (speechRecognitionResult.ResultStatus == SpeechRecognitionUIStatus.Succeeded)
-            {
-                //using Regex to remove all whitespaces
-                string NumberInputString = Regex.Replace(speechRecognitionResult.RecognitionResult.Text, @"\s+", "");
-                // do somethin with the string
-            }
+if (speechRecognitionResult.ResultStatus == SpeechRecognitionUIStatus.Succeeded)
+{
+    //using Regex to remove all whitespaces
+    string NumberInputString = Regex.Replace(speechRecognitionResult.RecognitionResult.Text, @"\s+", "");
+    // do somethin with the string
+}
 ```
  
 We are again calling the SpeechRecognizerUI, but this time we are loading our XML formatted SRGS file as Grammar. Notice that loading the file only works with the way above. Using the “ms-appx:///” prefix will return a FileNotFoundException and crash your app.
@@ -253,6 +252,6 @@ By checking the SpeechRecognitionUIStatus, we are performing actions only if the
 
 As you can see, basic speech recognition is fast to implement. As always, I hope this post is helpful for some of you.
 
-I also recommend to read these pages on MSDN about speech for Windows Phone: [http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj207021(v=vs.105).aspx](http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj207021(v=vs.105).aspx "http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj207021(v=vs.105).aspx")
+I also recommend to read these pages on MSDN about speech for Windows Phone: [https://msdn.microsoft.com/en-us/library/windowsphone/develop/jj207021(v=vs.105).aspx](https://msdn.microsoft.com/en-us/library/windowsphone/develop/jj207021(v=vs.105).aspx "https://msdn.microsoft.com/en-us/library/windowsphone/develop/jj207021(v=vs.105).aspx")
 
 Happy coding everyone!

@@ -27,7 +27,7 @@ While working on my current project, I needed a solution for a running code with
 
 The challenge at this point was to find a way to keep it cancelable at any time. And so the fun started.
 
-After digging a bit deeper into the MSDN documentation, the [BackgroundWorker](http://msdn.microsoft.com/en-us/library/System.ComponentModel.BackgroundWorker(v=vs.110).aspx) class already have a bunch of methods and properties that are very helpful for this case.
+After digging a bit deeper into the MSDN documentation, the [BackgroundWorker](https://msdn.microsoft.com/en-us/library/System.ComponentModel.BackgroundWorker(v=vs.110).aspx) class already have a bunch of methods and properties that are very helpful for this case.
 
 As it is always the case when you work with multiple threads, it can cause some headache. But I got around it and thought it might be helpful for some of you.
 
@@ -46,37 +46,37 @@ Now, let’s add two very important properties: WorkerSupportsCancellation and W
 In my case, I created a separate method to start the BackgroundWorker and hook up to all important events:
 
 ``` csharp
-         private void RunBackgroundWorker()
+private void RunBackgroundWorker()
+{
+    worker.RunWorkerCompleted += worker_RunBackgroundWorkerCompleted;
+
+    //delegating the DoWork event
+    worker.DoWork += ((s, args) =>
+    {
+        //generating a loop
+        for (int i = 0; i < 100; i++)
         {
-            worker.RunWorkerCompleted += worker_RunBackgroundWorkerCompleted;
 
-            //delegating the DoWork event
-            worker.DoWork += ((s, args) =>
+            if (worker.CancellationPending == true)
             {
-                //generating a loop
-                for (int i = 0; i < 100; i++)
-                {
-
-                    if (worker.CancellationPending == true)
-                    {
-                        //set cancel to true to finish the cancellation on the next run in the loop
-                        args.Cancel = true;
-                    }
-                    else
-                    {
-                        //calculate your time: seconds * 1000 / 100
-                        Thread.Sleep(50);
-                        worker.ReportProgress(i);
-                    }
-                }
-            });
-
-            //can be used to fill a progress bar/show percentage
-            worker.ProgressChanged += worker_ProgressChanged;
-
-            //start the BackgroundWorker
-            worker.RunWorkerAsync();
+                //set cancel to true to finish the cancellation on the next run in the loop
+                args.Cancel = true;
+            }
+            else
+            {
+                //calculate your time: seconds * 1000 / 100
+                Thread.Sleep(50);
+                worker.ReportProgress(i);
+            }
         }
+    });
+
+    //can be used to fill a progress bar/show percentage
+    worker.ProgressChanged += worker_ProgressChanged;
+
+    //start the BackgroundWorker
+    worker.RunWorkerAsync();
+}
 ```
  
 You might notice that I created a loop that runs up to 100. This is necessary for my solution, as this is the key to make the BackgroundWorker cancelable in my solution. Every 50 milliseconds, the CancellationPending property gets checked as I am looping through until the count reaches 100. I am setting an offset of 50 milliseconds, as I want to have a total offset of 5 seconds.

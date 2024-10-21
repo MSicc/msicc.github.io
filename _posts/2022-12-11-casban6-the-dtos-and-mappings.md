@@ -25,7 +25,7 @@ tags:
     - Mappings
 ---
 
-[We already have created our database and our entities](https://msicc.net/casban6-implementing-the-data-model-using-entityframework-core-separate-libraries/), so let’s have a look at how we bring the data to our API consuming applications.
+[We already have created our database and our entities]({% post_url 2022-11-19-casban6-implementing-the-data-model-using-entityframework-core-separate-libraries %}), so let’s have a look at how we bring the data to our API consuming applications.
 
 If we recap, our entity models contain all the relations and identifiers. This could lead to some issues like circular references during serialization and unnecessary data repetition. Luckily for us, there is already a solution for this—it’s called data transfer object (DTO). The main purposes of a DTO is to serve data while being serializable ([see also Wikipedia](https://en.wikipedia.org/wiki/Data_transfer_object)).
 
@@ -185,6 +185,6 @@ Once again, there should be no surprise in the implementation. If you have a loo
 
 ### Conclusion
 
-In this post, I explained why we need DTOs and showed you how I implemented them. We also had a look at the mapping extensions to convert the entities to data transfer objects and vice versa. Now that we have them in place, we are able to start implementing our Azure Functions, which is where we are heading to next in [the #CASBAN6 blog series](https://msicc.net/casban6-creating-a-serverless-blog-on-azure-with-net-6-new-series/).
+In this post, I explained why we need DTOs and showed you how I implemented them. We also had a look at the mapping extensions to convert the entities to data transfer objects and vice versa. Now that we have them in place, we are able to start implementing our Azure Functions, which is where we are heading to next in [the #CASBAN6 blog series]({% post_url 2022-09-05-casban6-creating-a-serverless-blog-on-azure-with-net-6-new-series %}).
 
 #### Until the next post, happy coding, everyone!

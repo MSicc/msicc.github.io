@@ -29,19 +29,19 @@ I recommend to set it up as a trusted client, as you will have more rights with 
 
 ![uservoice_api_client](/assets/img/2014/01/uservoice_api_client1.png "uservoice_api_client")
 
-Now we have everything set up on the uservoice part. Let’s go to our app. I am using the [RestSharp](http://restsharp.org/) library that makes it a little easier to authenticate users. You should do the same if you want to follow along this post. In Visual Studio, right click the project name and select ‘Manage NuGet packages’, and search for RestSharp in the ‘Online’ section.
+Now we have everything set up on the uservoice part. Let’s go to our app. I am using the [RestSharp](https://restsharp.org/) library that makes it a little easier to authenticate users. You should do the same if you want to follow along this post. In Visual Studio, right click the project name and select ‘Manage NuGet packages’, and search for RestSharp in the ‘Online’ section.
 
 After we have integrated the RestSharp library in our app, we are going to set up some objects for authentication:
 
 ``` csharp
-  const string ConsumerKey = "<yourkey>";
+const string ConsumerKey = "<yourkey>";
  const string ConsumerSecret = "<yoursecret>";
  static string oAuthToken = "";
  static string oAuthTokenSecret = "";
  static string oAuthVerifier = "";
  static string AccessToken = "";
  static string AccessTokenSecret = "";
- const string BaseUrl = "http://<yourname>.uservoice.com";
+ const string BaseUrl = "https://<yourname>.uservoice.com";
  const string oAuthCallBackUri = "<yourcallbackUrl>";
  const string requestTokenPath = "oauth/request_token";
  const string authorizePath = "/oauth/authorize?";

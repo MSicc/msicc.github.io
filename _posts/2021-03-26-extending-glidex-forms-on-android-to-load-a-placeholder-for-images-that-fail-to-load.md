@@ -24,7 +24,7 @@ tags:
 
 #### What is glidex.forms?
 
-The` glidex.forms` library is a `Xamarin.Forms` implementation of [Glide](https://github.com/bumptech/glide), which is one of the quasi standards for imaging on Android (it is even recommended by Google). Luckily, [Jonathan Peppers](https://github.com/jonathanpeppers) from Microsoft has a passion to improve `Xamarin.Android`, and `Xamarin.Forms` takes a big advantage from that as well. He made the `Xamarin.Android` Binding library as well as the `Xamarin.Forms` implementation. [Like before with Xamarin.Forms.Nuke](https://msicc.net/extending-xamarin-forms-nuke-to-load-a-placeholder-for-images-that-fail-to-load/), I learned about that library because I am substituting my former image caching solution with Akavache.
+The` glidex.forms` library is a `Xamarin.Forms` implementation of [Glide](https://github.com/bumptech/glide), which is one of the quasi standards for imaging on Android (it is even recommended by Google). Luckily, [Jonathan Peppers](https://github.com/jonathanpeppers) from Microsoft has a passion to improve `Xamarin.Android`, and `Xamarin.Forms` takes a big advantage from that as well. He made the `Xamarin.Android` Binding library as well as the `Xamarin.Forms` implementation. [Like before with Xamarin.Forms.Nuke]({% post_url 2021-03-15-extending-xamarin-forms-nuke-to-load-a-placeholder-for-images-that-fail-to-load  %}), I learned about that library because I am substituting my former image caching solution with Akavache.
 
 #### Why do we need to extend the library?
 
@@ -173,7 +173,8 @@ The Glide library needs to be initialized. Depending on the method you are using
 
 If you followed along (or downloaded the sample), you should see similar result to this:
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![Placeholder_Sample_Android_Title](https://msicc.net/assets/img/2021/03/Placeholder_Sample_Android_Title-1024x737.png)<figcaption>Left: Single image with placeholder, Right: CollectionView placeholder</figcaption></figure></div>#### Conclusion
+![Placeholder_Sample_Android_Title](/assets/img/2021/03/Placeholder_Sample_Android_Title.png)
+<figcaption>Left: Single image with placeholder, Right: CollectionView placeholder</figcaption>#### Conclusion
 
 As we did on iOS, we now also use native caching and image handling on Android. It took me quite some time to get it up and running, but it was worth the effort. The sample has more than five hundred remote images loaded into a `CollectionView`. Check how smooth the scrolling is (even with DataBinding!).
 

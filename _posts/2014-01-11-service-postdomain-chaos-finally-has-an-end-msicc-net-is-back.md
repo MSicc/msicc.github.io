@@ -19,9 +19,9 @@ tags:
     - url
 ---
 
-[![moving_chaos](/assets/img/2014/01/moving_chaos_thumb.jpg "moving_chaos")](/assets/img/2014/01/moving_chaos.jpg)
+[![moving_chaos](/assets/img/2014/01/moving_chaos.jpg "moving_chaos")](/assets/img/2014/01/moving_chaos.jpg)
 
-Some of you might have noticed that a lot of chaos was going on with my domain [msicc.net](http://msicc.net/) in the last few months.
+Some of you might have noticed that a lot of chaos was going on with my domain [msicc.net](https://msicc.net/) in the last few months.
 
 The reason were some serious issues with my old hoster – that would be a evil long post to describe.
 

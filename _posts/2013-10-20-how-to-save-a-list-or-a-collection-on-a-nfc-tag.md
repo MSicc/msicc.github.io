@@ -19,11 +19,11 @@ tags:
 
 ![WP8_NFC_PostLogo](/assets/img/2013/10/WP8_NFC_PostLogo.png "WP8_NFC_PostLogo")
 
-As I am currently working again on my [NFC app](http://www.windowsphone.com/s?appid=2c33cb7d-c97b-4204-aa8b-1e8712718519), I needed to save an ObservableCollection to a tag. My first attempts resulted in a heavily overlong string that I wasn’t able to save.
+As I am currently working again on my [NFC app](https://www.windowsphone.com/s?appid=2c33cb7d-c97b-4204-aa8b-1e8712718519), I needed to save an ObservableCollection to a tag. My first attempts resulted in a heavily overlong string that I wasn’t able to save.
 
 Anyways, after a short convo on Twitter, I went for the right way – serialize to JSON.
 
-The first thing you’ll need for that is the JSON.NET library, [which you can get here](http://james.newtonking.com/json) or via the NuGet package manager in Visual Studio.
+The first thing you’ll need for that is the JSON.NET library, [which you can get here](https://james.newtonking.com/json) or via the NuGet package manager in Visual Studio.
 
 After that, you will be able to save your List or ObservableCollection in a few easy steps.
 

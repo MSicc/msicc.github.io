@@ -19,11 +19,11 @@ tags:
     - wpdev
 ---
 
-As you may have noticed, I am currently working on an NFC app. Development goes pretty well at the moment, thanks to the absolutely awesome and easy to use [NDEF library](http://ndef.codeplex.com/) by Andreas Jakl.
+As you may have noticed, I am currently working on an NFC app. Development goes pretty well at the moment, thanks to the absolutely awesome and easy to use [NDEF library](https://ndef.codeplex.com/) by Andreas Jakl.
 
 If you want to open apps from your app or from an NFC tag, you will need to use the AppId of the desired app. If you have an installed app from the Windows Phone Store, this is pretty easy. You can go to the application list on your phone, long tap and hit “send”. If you now choose mail or SMS, you can obtain the AppId very easy, as it is the last part behind “appId=” on the web address.
 
-With the built in apps, it is a bit more difficult. Luckily, the app [NFC interactor for Windows Phone 8](http://www.windowsphone.com/s?appid=4e1598fe-4885-4e2b-9c69-8d3f882c545b), which is aimed at developers, has a solution. The app is written also by Andreas Jakl, who provides a huge tool with this app to support you on developing your own app and it is worth every cent.
+With the built in apps, it is a bit more difficult. Luckily, the app [NFC interactor for Windows Phone 8](https://www.windowsphone.com/s?appid=4e1598fe-4885-4e2b-9c69-8d3f882c545b), which is aimed at developers, has a solution. The app is written also by Andreas Jakl, who provides a huge tool with this app to support you on developing your own app and it is worth every cent.
 
 I made it through all records for built in apps and extracted the following list, which might come handy for some of you:
 

@@ -21,4 +21,4 @@ Microsoft and Nokia are teaming up again to push the Windows Phone OS. This time
 
 Over the next three years, both companies are investing the amount of 18 million euros into a newly founded developer program.
 
-Read my full post at [1800PocketPC.com](http://1800pocketpc.com/microsoft-lures-developers-with-million-deal "1800PocketPC.com").
+Read my full post at [1800PocketPC.com](https://1800pocketpc.com/microsoft-lures-developers-with-million-deal "1800PocketPC.com").

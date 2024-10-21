@@ -19,9 +19,10 @@ tags:
     - 'Windows Runtime'
 ---
 
-[![screenshot_07042015_152814](/assets/img/2015/07/screenshot_07042015_152814_thumb.png "screenshot_07042015_152814")](/assets/img/2015/07/screenshot_07042015_152814.png)
+[![screenshot_07042015_152814](/assets/img/2015/07/screenshot_07042015_152814.png "screenshot_07042015_152814")](/assets/img/2015/07/screenshot_07042015_152814.png)
 
-If your app performs actions, you most probably want to add also some confirmation if an action has finished. There are some ways to do this, like using local toast notifications or MessageDialogs. While I was working on Voices Admin v2, which is a universal app, I came along with a [helper to simplify using local toast notifications](http://msicc.net/?p=4310). However, there came the point, where I got annoyed by the sound of these, and I looked into possible ways to replace them. My solution is a simple notification system, that uses the MVVM Light Messenger.
+
+If your app performs actions, you most probably want to add also some confirmation if an action has finished. There are some ways to do this, like using local toast notifications or MessageDialogs. While I was working on Voices Admin v2, which is a universal app, I came along with a [helper to simplify using local toast notifications]({% post_url 2015-02-26-helper-class-to-easily-display-local-toast-notifications-windows-universal-app %}). However, there came the point, where I got annoyed by the sound of these, and I looked into possible ways to replace them. My solution is a simple notification system, that uses the MVVM Light Messenger.
 
 The first thing I did was adding a new property that broadcasts its PropertyChangedMessage to my ExtendedViewModelBase (which inherits from the MVVM Light ViewModelBase). This simplifies setting the notification text across multiple ViewModels as I don’t need to create a property in every ViewModel of my app:
 

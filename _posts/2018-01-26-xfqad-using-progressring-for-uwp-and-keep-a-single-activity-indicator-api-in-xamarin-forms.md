@@ -23,13 +23,14 @@ tags:
     - XfQaD
 ---
 
-I recently recognized that I have written quite a few “Quick-and-Dirty”-solutions <span style="display: inline !important; float: none; background-color: transparent; color: #333333; cursor: text; font-family: Georgia,'Times New Roman','Bitstream Charter',Times,serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-decoration: none; text-indent: 0px; text-transform: none; -webkit-text-stroke-width: 0px; white-space: normal; word-spacing: 0px;">for Xamarin Forms that run well f</span>or most scenarios. There is a chance they will not work in all and every scenario, and therefore may need some more work at a later point. I am sharing them to bring the ideas to the community, and often these “QaDs” are enough one needs to solve one particular problem. As they do not fit well into my other series I am writing (“[Xamarin Forms, the MVVMLight toolkit and I](https://msicc.net/?s=Xamarin+Forms%2C+the+MVVMLight+toolkit+and+I)” for example), I gave them their own tag: #[XfQaD](https://msicc.net/tag/xfqad/).
+I recently recognized that I have written quite a few “Quick-and-Dirty”-solutions for Xamarin Forms that run well for most scenarios. There is a chance they will not work in all and every scenario, and therefore may need some more work at a later point. I am sharing them to bring the ideas to the community, and often these “QaDs” are enough one needs to solve one particular problem. As they do not fit well into my other series I am writing, I gave them their own tag: [\#XfQaD]({{ site.baseurl }}{/tags/xfqad/}).
 
 ## The scenario
 
 The first scenario may not be important to a lot of people, but I wanted to solve this rather small one quickly for me. The UWP implementation of Xamarin Forms’ `ActivityIndicator`uses the `ProgressBar`instead of a ring indicator like Android and iOS:
 
-<figure aria-describedby="caption-attachment-5471" class="wp-caption aligncenter" id="attachment_5471" style="width: 1000px">[![default activity indicator screenshots](https://msicc.net/assets/img/2018/01/xfactivitindicator.png)](https://developer.xamarin.com/api/type/Xamarin.Forms.ActivityIndicator/)<figcaption class="wp-caption-text" id="caption-attachment-5471">image credits: [Xamarin](https://developer.xamarin.com/api/type/Xamarin.Forms.ActivityIndicator/)</figcaption></figure>
+![default activity indicator screenshots](/assets/img/2018/01/xfactivitindicator.png)
+](https://developer.xamarin.com/api/type/Xamarin.Forms.ActivityIndicator/)
 
 While this will be fine in most cases, I had the problem of limited space, and I wanted a similar UI on all three platforms for that app. The UWP has a perfect matching native control, so I implemented my own `ActivityIndicator`implementation called `LoadingRing`. It uses the `ProgressRing`control on UWP and keeps the default `ActivityIndicator`on all other platforms. I also wanted to keep a single API I can use throughout my app without always thinking about the platform usings.
 

@@ -5,13 +5,6 @@ date: '2011-12-22T18:14:00+01:00'
 author: 'Marco Siccardi'
 layout: post
 permalink: /merry-christmas/
-bitly_url:
-    - 'http://bit.ly/2s2TBdl'
-bitly_hash:
-    - 2s2TBdl
-bitly_long_url:
-    - 'https://msicc.net/merry-christmas/'
-
 categories:
     - Archive
 tags:
@@ -22,7 +15,8 @@ First I want to excuse for not posting in the last few days. I have catched an u
 
 # I want to wish all of you a Merry, Merry Christmas.
 
-![christmas-tree-illustration-widescreen-399115](/assets/img/2011/12/christmas-tree-illustration-widescreen-399115.jpg "christmas-tree-illustration-widescreen-399115")
+
+![christmas-tree-illustration-widescreen-399115](/assets/img/2011/12/christmas-tree-illustration-widescreen-3991151.jpg)
 
 I wish that all your gadget wishes will come true and hope you will be enjoying a couple of time with your families over the next view days.
 

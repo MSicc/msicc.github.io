@@ -56,7 +56,7 @@ I have also started development of a Windows 8 app for MSicc’s Blog, which I w
 
 ![Screenshot (53)](/assets/img/2012/12/Screenshot-53.png "Screenshot (53)")
 
-My personal highlight this year was to [attend a keynote of Steve Ballmer himself](http://msicc.net/?p=3015), which was absolutely motivating as user and even more as developer. He really knows how to keep the crowd attending, and I really have to thank Microsoft Germany for this unique experience.
+My personal highlight this year was to [attend a keynote of Steve Ballmer himself]({% post_url 2012-11-20-meet-steve-at-berlin %}), which was absolutely motivating as user and even more as developer. He really knows how to keep the crowd attending, and I really have to thank Microsoft Germany for this unique experience.
 
 I want to thank Mark and Sean for joining me here on MSicc.net to entertain and inform you all, I bet we will see some awesome articles of both next year!
 

@@ -15,6 +15,7 @@ tags:
 
 [![msicc1800b](/assets/img/2012/03/msicc1800b.png "msicc1800b")](/assets/img/2012/03/msicc1800b.png)
 
+
 Yesterday Saijo George, owner of 1800PocketPC.com, asked me to join the team. As I love this site, of course I accepted the offer.
 
 **How will this affect my blog?**
@@ -25,4 +26,4 @@ It is a huge step for me, so I hope you all understand this move.
 
 I will still run this blog, as I cover Windows Phone news for 1800PocketPC, and my Blog is all about Microsoft.
 
-You can read my introduction post on [1800PocketPC.com](http://www.1800pocketpc.com/new-to-the-team-msicc/29272/ "1800PocketPC.com").
+You can read my introduction post on [1800PocketPC.com](https://www.1800pocketpc.com/new-to-the-team-msicc/29272/ "1800PocketPC.com").

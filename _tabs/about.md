@@ -19,7 +19,7 @@ I am also a .NET developer (currently working on approaching the full stack) and
 
 I live in a combined ecosystem of Apple, Microsoft and Nintendo products where I try to squeeze the most out of their products for me and my family.
 
-[Show my blog Posts](https://msicc.net/posts/)
+[Show my blog Posts]({ {site.baseurl }})
 
 ## Other spaces to find me
 

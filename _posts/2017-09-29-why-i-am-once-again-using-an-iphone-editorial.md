@@ -6,7 +6,7 @@ author: 'Marco Siccardi'
 excerpt: 'In this editorial I sum up the reasons that brought me back to the iPhone as my daily driver.'
 layout: post
 permalink: /why-i-am-once-again-using-an-iphone-editorial/
-image: /assets/img/2017/09/IMG_20170929_084726-1-e1506709310145.jpg
+image: /assets/img/2017/09/IMG_20170929_084726-1.jpg
 categories:
     - Editorials
 tags:
@@ -29,9 +29,8 @@ The Microsoft a lot of us used to love is gone. It all started to become really 
 
 To sum it up, times have changed. The first steps outside the Microsoft ecosystem happened quite some time ago, you can read more on that topic right here:
 
-> [Editorial: Why the app gap on Windows Phone/10 Mobile is a bigger problem than I thought](https://msicc.net/editorial-why-the-app-gap-on-windows-phone10-mobile-is-a-bigger-problem-than-i-thought/)
+[Editorial: Why the app gap on Windows Phone/10 Mobile is a bigger problem than I thought]({% post_url 2016-08-13-editorial-why-the-app-gap-on-windows-phone10-mobile-is-a-bigger-problem-than-i-thought %})
 
-<iframe class="wp-embedded-content" data-secret="kCTb8Tctpw" frameborder="0" height="338" loading="lazy" marginheight="0" marginwidth="0" sandbox="allow-scripts" scrolling="no" security="restricted" src="https://msicc.net/editorial-why-the-app-gap-on-windows-phone10-mobile-is-a-bigger-problem-than-i-thought/embed/#?secret=1eUcPgVXIt#?secret=kCTb8Tctpw" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" title="“Editorial: Why the app gap on Windows Phone/10 Mobile is a bigger problem than I thought” — MSicc's Blog" width="600"></iframe>
 
 After that, I used and reviewed some Android devices for a German news site, and got back into the Android ecosystem by putting some apps (at least as beta) into the Play Store. After more than one year on Android, I see that fragmentation is still the biggest problem out there. It makes developing apps for it a mess, as there are tons of devices that do not behave like you expect when developing with a Nexus or any other plain Google device.
 

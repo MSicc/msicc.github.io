@@ -5,23 +5,13 @@ date: '2011-07-11T20:49:00+02:00'
 author: 'Marco Siccardi'
 layout: post
 permalink: /microsoft-worldwide-partner-conference-2011/
-jabber_published:
-    - '1310399928'
-    - '1310399928'
-tagazine-media:
-    - 'a:7:{s:7:"primary";s:62:"http://msicc.files.wordpress.com/2011/07/onuxtorulethemall.png";s:6:"images";a:2:{s:51:"http://msicc.files.wordpress.com/2011/07/image2.png";a:6:{s:8:"file_url";s:51:"http://msicc.files.wordpress.com/2011/07/image2.png";s:5:"width";s:3:"131";s:6:"height";s:3:"132";s:4:"type";s:5:"image";s:4:"area";s:5:"17292";s:9:"file_path";s:0:"";}s:62:"http://msicc.files.wordpress.com/2011/07/onuxtorulethemall.png";a:6:{s:8:"file_url";s:62:"http://msicc.files.wordpress.com/2011/07/onuxtorulethemall.png";s:5:"width";s:3:"655";s:6:"height";s:3:"341";s:4:"type";s:5:"image";s:4:"area";s:6:"223355";s:9:"file_path";s:0:"";}}s:6:"videos";a:0:{}s:11:"image_count";s:1:"2";s:6:"author";s:8:"19075421";s:7:"blog_id";s:8:"18470284";s:9:"mod_stamp";s:19:"2011-07-11 19:20:20";}'
-    - 'a:7:{s:7:"primary";s:62:"http://msicc.files.wordpress.com/2011/07/onuxtorulethemall.png";s:6:"images";a:2:{s:51:"http://msicc.files.wordpress.com/2011/07/image2.png";a:6:{s:8:"file_url";s:51:"http://msicc.files.wordpress.com/2011/07/image2.png";s:5:"width";s:3:"131";s:6:"height";s:3:"132";s:4:"type";s:5:"image";s:4:"area";s:5:"17292";s:9:"file_path";s:0:"";}s:62:"http://msicc.files.wordpress.com/2011/07/onuxtorulethemall.png";a:6:{s:8:"file_url";s:62:"http://msicc.files.wordpress.com/2011/07/onuxtorulethemall.png";s:5:"width";s:3:"655";s:6:"height";s:3:"341";s:4:"type";s:5:"image";s:4:"area";s:6:"223355";s:9:"file_path";s:0:"";}}s:6:"videos";a:0:{}s:11:"image_count";s:1:"2";s:6:"author";s:8:"19075421";s:7:"blog_id";s:8:"18470284";s:9:"mod_stamp";s:19:"2011-07-11 19:20:20";}'
-bitly_url:
-    - 'http://bit.ly/2s322p4'
-bitly_hash:
-    - 2s322p4
-bitly_long_url:
-    - 'https://msicc.net/microsoft-worldwide-partner-conference-2011/'
 categories:
     - Archive
 ---
 
-![image](/assets/img/2011/07/image2.png "image")So now Steve Ballmers WPC keynote has finished.
+![image](/assets/img/2011/07/image2.png "image")
+
+So now Steve Ballmers WPC keynote has finished.
 
 The Keynote started of with a video about an app for WP7, based on Windows Azure technology.
 

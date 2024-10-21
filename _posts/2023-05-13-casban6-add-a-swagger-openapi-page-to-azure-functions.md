@@ -80,7 +80,8 @@ On Azure, the API gets redirected to https, anyway, so this should not be much o
 
 If you are now debugging your Function app, you will see new endpoints in the console:
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![OpenAPI-endpoint-Azure-function-console](https://msicc.net/assets/img/2023/05/OpenAPI-endpoint-Azure-function-console-1024x256.png)</figure></div>Opening the `RenderSwaggerUI` URL will lead you to your newly created Swagger page.
+![OpenAPI-endpoint-Azure-function-console](/assets/img/2023/05/OpenAPI-endpoint-Azure-function-console.png)
+Opening the `RenderSwaggerUI` URL will lead you to your newly created Swagger page.
 
 ### Attributing the Function methods
 
@@ -104,7 +105,10 @@ At the end, we are also describing the output of our function by using the `Open
 
 This is the result of the attribution shown above:
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![Swagger-UI-Sample-Post](https://msicc.net/assets/img/2023/05/Swagger-UI-Sample-899x1024.png)</figure></div>### Conclusion
+![Swagger-UI-Sample-Post](/assets/img/2023/05/Swagger-UI-Sample.png)
+
+
+### Conclusion
 
 By investing some time into attributing all your functions, you will have a fully blown API documentation ready for yourself and your API consumers. I recommend studying the samples found in the [GitHub repo](https://github.com/Azure/azure-functions-openapi-extension/tree/main/samples), which helped me a lot to understand all the attributes and how to implement the Swagger page. As always, I hope this post will be helpful for some of you.
 

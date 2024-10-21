@@ -26,13 +26,13 @@ tags:
     - XAML
 ---
 
-Like promised [in my first post about photo capturing](http://msicc.net/?p=4199 "How to capture a photo in your Windows Phone 8.1 Runtime app–Part I: the preview of the photo to capture"), I will provide some common modification scenarios when using the MediaCapture API. This is what this post is about.
+Like promised [in my first post about photo capturing]( "How to capture a photo in your Windows Phone 8.1 Runtime app–Part I: the preview of the photo to capture"), I will provide some common modification scenarios when using the MediaCapture API. This is what this post is about.
 
 #### Choosing a camera
 
 If you read my first post, you probably remember that the MediaCapture API automatically selected the front camera of my Lumia 1020. Like often, we have to write some additional code to switch between the cameras.
 
-The cameras are listed in the Panels in the [Windows.Devices.Enumeration Namespace](http://msdn.microsoft.com/de-de/library/windows/apps/windows.devices.enumeration.aspx). This namespace contains all “devices” that are connected to the phone and has different properties to detect the correct panel. We are going to use the [DeviceClass](http://msdn.microsoft.com/de-de/library/windows/apps/windows.devices.enumeration.deviceclass.aspx) to detect all video capture devices (which are normally also the photo capture devices on Windows Phone, but can be different on a PC/Tablet). As we want to switch between Front and Back, we are also detecting the [EnclosureLocation](http://msdn.microsoft.com/de-de/library/windows/apps/windows.devices.enumeration.enclosurelocation.aspx). Here is how I implemented it:
+The cameras are listed in the Panels in the [Windows.Devices.Enumeration Namespace](https://msdn.microsoft.com/de-de/library/windows/apps/windows.devices.enumeration.aspx). This namespace contains all “devices” that are connected to the phone and has different properties to detect the correct panel. We are going to use the [DeviceClass](https://msdn.microsoft.com/de-de/library/windows/apps/windows.devices.enumeration.deviceclass.aspx) to detect all video capture devices (which are normally also the photo capture devices on Windows Phone, but can be different on a PC/Tablet). As we want to switch between Front and Back, we are also detecting the [EnclosureLocation](https://msdn.microsoft.com/de-de/library/windows/apps/windows.devices.enumeration.enclosurelocation.aspx). Here is how I implemented it:
 
 ``` csharp
          private static async Task<DeviceInformation> GetCameraID(Windows.Devices.Enumeration.Panel camera)
@@ -65,7 +65,7 @@ To make this Task actually useful, we are also updating the InitializePreview() 
         }
 ```
  
-In this case, we selected the back camera. To make the MediaCapture API actually use this device, we need to generate a new instance of [MediaCaptureInitializationSettings](http://msdn.microsoft.com/en-us/library/windows/apps/windows.media.capture.mediacaptureinitializationsettings.aspx), where we select the cameras Id as VideDeviceId. If you now start capturing, this is an exemplary result:
+In this case, we selected the back camera. To make the MediaCapture API actually use this device, we need to generate a new instance of [MediaCaptureInitializationSettings](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.capture.mediacaptureinitializationsettings.aspx), where we select the cameras Id as VideDeviceId. If you now start capturing, this is an exemplary result:
 
 ![wp_ss_20141115_0001](/assets/img/2014/11/wp_ss_20141115_0001.png "wp_ss_20141115_0001")
 
@@ -121,7 +121,7 @@ And this is my helper to match the screen format (which is always wide screen on
         }
 ```
  
-We could easily extend the calculation to 15:9, too. However, as the most camera resolutions are 4:3 or 16:9, this makes no sense in our use case (as 15:9 is still a widescreen format). The next thing we need to add is another helper to get the highest possible resolution for our photo and the preview. We are achieving this by generating a new object of type [VideoEncodingProperties](http://msdn.microsoft.com/en-us/library/windows/apps/windows.media.mediaproperties.videoencodingproperties.aspx):
+We could easily extend the calculation to 15:9, too. However, as the most camera resolutions are 4:3 or 16:9, this makes no sense in our use case (as 15:9 is still a widescreen format). The next thing we need to add is another helper to get the highest possible resolution for our photo and the preview. We are achieving this by generating a new object of type [VideoEncodingProperties](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.mediaproperties.videoencodingproperties.aspx):
 
 ``` csharp
          private VideoEncodingProperties maxResolution()
@@ -258,6 +258,6 @@ Now every move of the slider will change the focus of the preview and of course 
 
 Disclaimer: I do not know if this follows best practices, but it works. If you have feedback for the above mentioned code snippets, feel free to leave a comment below.
 
-[In the third and last post ](http://msicc.net/?p=4224 "How to capture a photo in your Windows Phone 8.1 Runtime – Part III: capturing and saving the photo")I’ll show you how to save the images (also in different folders or only within the app).
+[In the third and last post ]({% post_url 2014-11-18-how-to-capture-a-photo-in-your-windows-phone-8-1-runtime-part-iii-capturing-and-saving-the-photo %} "How to capture a photo in your Windows Phone 8.1 Runtime – Part III: capturing and saving the photo")I’ll show you how to save the images (also in different folders or only within the app).
 
 Until then, happy coding!

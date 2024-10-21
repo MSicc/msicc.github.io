@@ -144,9 +144,9 @@ var decryptedString = Encoding.UTF8.GetString(decrypted);
  
 ## Conclusion
 
-Using the built in `DataProtection `API makes it very easy to protect sensitive data within an UWP app. You can use it on both a string or a stream, it is up to you if you follow my way to use always a stream or make it dependent on your scenario. If you want to have more control over the key size, the encryption method used or any other detail, I wrote a post about doing everything on my own a while back ([find it here](https://msicc.net/string-encryption-in-windows-8-1-universal-apps/)). Even if it is from 2015 and based on WINRT (Win8.1), the APIs are still alive and the post should help you to get started.
+Using the built in `DataProtection `API makes it very easy to protect sensitive data within an UWP app. You can use it on both a string or a stream, it is up to you if you follow my way to use always a stream or make it dependent on your scenario. If you want to have more control over the key size, the encryption method used or any other detail, I wrote a post about doing everything on my own a while back ([find it here]({% post_url 2015-05-20-string-encryption-in-windows-8-1-universal-apps %})). Even if it is from 2015 and based on WINRT (Win8.1), the APIs are still alive and the post should help you to get started.
 
-You can have a look on Android encryption [here](https://msicc.net/xamarin-android-asymmetric-encryption-without-any-user-input-or-hardcoded-values/), while you’ll find the iOS post [here](https://msicc.net/how-to-perform-asymmetric-encryption-without-user-input-hardcoded-values-with-xamarin-ios/).
+You can have a look on Android encryption [here]({% post_url 2018-04-19-xamarin-android-asymmetric-encryption-without-any-user-input-or-hardcoded-values %}), while you’ll find the iOS post [here]({% post_url 2018-04-27-how-to-perform-asymmetric-encryption-without-user-input-hardcoded-values-with-xamarin-ios %}).
 
 As always, I hope this post will be helpful for some of you. If you have any questions/feedback, feel free to comment below or connect with me via my social networks.
 

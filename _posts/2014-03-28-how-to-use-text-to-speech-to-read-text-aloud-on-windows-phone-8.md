@@ -22,7 +22,7 @@ tags:
 
 ![tts](/assets/img/2014/03/tts.png "tts")
 
-Today I started to update my [very first app](http://www.windowsphone.com/s?appid=ec3a70c1-6802-4197-918f-3506798ead93) I ever wrote to Windows Phone 8. The app has a read aloud feature that uses the Bing translation service (as TTS was not available on Windows Phone **7).**
+Today I started to update my [very first app](https://www.windowsphone.com/s?appid=ec3a70c1-6802-4197-918f-3506798ead93) I ever wrote to Windows Phone 8. The app has a read aloud feature that uses the Bing translation service (as TTS was not available on Windows Phone **7).**
 
 Of course I am now using the new Windows Phone 8 API, but I had some trouble figuring out how to handle text to speech with different languages and if no language speech pack is installed on a device. I finally found a solution and want to share it with you.
 

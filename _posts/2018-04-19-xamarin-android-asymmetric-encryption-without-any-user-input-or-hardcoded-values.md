@@ -220,6 +220,6 @@ I did not create a sample project this time. However, the full helper class is [
 
 The security of your user’s data should always be something you are concerned about. With this little helper, we are using the OS (and in some cases also the device) to secure data in your Xamarin.Android app. Sadly, a lot of samples require user interaction or even use some hardcoded values. This should not be used in a production app. Feel free to use my helper class as a starting point.
 
-As always, I hope this post is helpful for some of you. [In the next post](https://msicc.net/how-to-perform-asymmetric-encryption-without-user-input-hardcoded-values-with-xamarin-ios/), I will show you how to use a similar mechanism in your Xamarin.iOS app.
+As always, I hope this post is helpful for some of you. [In the next post]({% post_url 2018-04-27-how-to-perform-asymmetric-encryption-without-user-input-hardcoded-values-with-xamarin-ios %}), I will show you how to use a similar mechanism in your Xamarin.iOS app.
 
 #### Until then, happy coding, everyone!

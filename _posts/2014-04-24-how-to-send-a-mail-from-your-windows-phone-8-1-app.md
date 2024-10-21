@@ -36,7 +36,7 @@ This way was pretty straight forward. It will work in a Windows Phone 8.1 Silver
 
 ### The new way
 
-I looked around and found the [EmailManager](http://msdn.microsoft.com/en-us/library/windowsphone/develop/windows.applicationmodel.email.emailmanager.aspx) class, which is also pretty easy to use. Let’s go through the code. First, we need to declare the [EmailRecipient](http://msdn.microsoft.com/en-us/library/windowsphone/develop/windows.applicationmodel.email.emailrecipient.aspx)(s):
+I looked around and found the [EmailManager](https://msdn.microsoft.com/en-us/library/windowsphone/develop/windows.applicationmodel.email.emailmanager.aspx) class, which is also pretty easy to use. Let’s go through the code. First, we need to declare the [EmailRecipient](https://msdn.microsoft.com/en-us/library/windowsphone/develop/windows.applicationmodel.email.emailrecipient.aspx)(s):
 
 ``` csharp
  EmailRecipient sendTo = new EmailRecipient()
@@ -45,7 +45,7 @@ I looked around and found the [EmailManager](http://msdn.microsoft.com/en-us/lib
 };
 ```
  
-After that, we are now able to set up our [EmailMessage](http://msdn.microsoft.com/en-us/library/windowsphone/develop/windows.applicationmodel.email.emailmessage.aspx), which works in a similar way like the old EmailComposeTask:
+After that, we are now able to set up our [EmailMessage](https://msdn.microsoft.com/en-us/library/windowsphone/develop/windows.applicationmodel.email.emailmessage.aspx), which works in a similar way like the old EmailComposeTask:
 
 ``` csharp
  EmailMessage mail = new EmailMessage();
@@ -61,7 +61,7 @@ After setting up the Subject and the Body, we need to add our recipients to the 
 //mail.CC.Add(sendTo);
 ```
  
-Last but not least, we are calling the [ShowComposeNewEmailAsync()](http://msdn.microsoft.com/en-us/library/windowsphone/develop/windows.applicationmodel.email.emailmanager.showcomposenewemailasync.aspx) method of the EmailManager class, which will open the Share contract with mail only:
+Last but not least, we are calling the [ShowComposeNewEmailAsync()](https://msdn.microsoft.com/en-us/library/windowsphone/develop/windows.applicationmodel.email.emailmanager.showcomposenewemailasync.aspx) method of the EmailManager class, which will open the Share contract with mail only:
 
 ``` csharp
  await EmailManager.ShowComposeNewEmailAsync(mail);

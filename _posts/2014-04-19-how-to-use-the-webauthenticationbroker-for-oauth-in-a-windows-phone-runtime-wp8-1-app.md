@@ -28,7 +28,7 @@ I used it before with Windows 8 for my TweeCoMinder app, but that’s a few mont
 
 Before we continue: This is a pretty huge topic. Be prepared that it may take you more than one time to read and understand what is going on.
 
-Let’s dive into it. Unlike the Windows WebAuthenticationBroker, the Phone version does not use the [AuthenticateAsync](http://msdn.microsoft.com/en-us/library/windows/apps/windows.security.authentication.web.webauthenticationbroker.authenticateasync.aspx "AuthenticateAsync authenticateAsync methods") method. It uses [AuthenticateAndContinue](http://msdn.microsoft.com/en-us/library/windows/apps/windows.security.authentication.web.webauthenticationbroker.authenticateandcontinue.aspx "AuthenticateAndContinue authenticateAndContinue methods") instead. This is related to the lifecycle on phone, as it is more likely that an WINPRT app is suspended than on Windows (at least that’s the official reason).
+Let’s dive into it. Unlike the Windows WebAuthenticationBroker, the Phone version does not use the [AuthenticateAsync](https://msdn.microsoft.com/en-us/library/windows/apps/windows.security.authentication.web.webauthenticationbroker.authenticateasync.aspx "AuthenticateAsync authenticateAsync methods") method. It uses [AuthenticateAndContinue](https://msdn.microsoft.com/en-us/library/windows/apps/windows.security.authentication.web.webauthenticationbroker.authenticateandcontinue.aspx "AuthenticateAndContinue authenticateAndContinue methods") instead. This is related to the lifecycle on phone, as it is more likely that an WINPRT app is suspended than on Windows (at least that’s the official reason).
 
 ### Preparing our App
 
@@ -272,7 +272,7 @@ First, we need a RequestToken that authenticates our request for the oAuthToken,
         }
 ```
  
-After receiving the RequestToken, we are able to call the the [AuthenticateAndContinue(Uri, Uri, ValueSet, WebAuthenticationOptions)](http://msdn.microsoft.com/en-us/library/windows/apps/dn608116.aspx "AuthenticateAndContinue(Uri, Uri, ValueSet, WebAuthenticationOptions)") method. The WebAuthenticationBroker opens and the user needs to login. After finishing, the user will get redirected back into our app.
+After receiving the RequestToken, we are able to call the the [AuthenticateAndContinue(Uri, Uri, ValueSet, WebAuthenticationOptions)](https://msdn.microsoft.com/en-us/library/windows/apps/dn608116.aspx "AuthenticateAndContinue(Uri, Uri, ValueSet, WebAuthenticationOptions)") method. The WebAuthenticationBroker opens and the user needs to login. After finishing, the user will get redirected back into our app.
 
 If you think that’s all of our code, I need to disappoint you. The fun goes on. We prepared our app to be recognized as continued app. To effectifely continue our app, we need to use the ContinueWebAuthentication(WebAuthenticationBrokerContinuationEventArgs args) event from our ContinuationManager class:
 
@@ -395,10 +395,10 @@ The whole oAuth process is a pretty huge thing as you can see. I hope this blog 
 
 Here are some useful links to the MSDN, if you want to dive deeper:
 
-- [Quickstart: Connecting to an online identity provider (Windows Store apps using C#/VB/C++ and XAML)](http://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn448945.aspx "http://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn448945.aspx")
-- [How to continue your Windows Phone app after calling a file picker (Windows Phone Store apps using C#/VB/C++ and XAML)](http://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn614994.aspx)
-- [How to continue your Windows Phone Store app after calling an AndContinue method](http://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn631755.aspx)
-- [Web authentication broker sample](http://code.msdn.microsoft.com/windowsapps/Web-Authentication-d0485122)
+- [Quickstart: Connecting to an online identity provider (Windows Store apps using C#/VB/C++ and XAML)](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn448945.aspx "https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn448945.aspx")
+- [How to continue your Windows Phone app after calling a file picker (Windows Phone Store apps using C#/VB/C++ and XAML)](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn614994.aspx)
+- [How to continue your Windows Phone Store app after calling an AndContinue method](https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn631755.aspx)
+- [Web authentication broker sample](https://code.msdn.microsoft.com/windowsapps/Web-Authentication-d0485122)
 
 As always, this covers my experience. If anyone has tips or tricks to make this all easier (except of using already existing libraries), feel free to add a comment below.
 

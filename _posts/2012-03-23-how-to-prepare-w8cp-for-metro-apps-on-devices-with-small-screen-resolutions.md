@@ -22,7 +22,7 @@ There are certain netbooks out there, which can be run in 800\*600 max. screen r
 
 **There is a solution.**
 
-Paul Thurrott posted a solution to this on his [supersite for Windows](http://www.winsupersite.com). OK, it seems more than a hack, but it will lead to target.
+Paul Thurrott posted a solution to this on his [supersite for Windows](https://www.winsupersite.com). OK, it seems more than a hack, but it will lead to target.
 
 Here is how to get the Metro part working through changing your screen resolution settings:
 
@@ -39,7 +39,7 @@ I will try to do this on my colleague´s netbook, and will update this post.
 
 **Update 2: Nokia Booklet loves W8CP!**
 
-So my colleague was playing around with his netbook and installed the device graphics driver. He had do install it with the Windows device manager. He simply downloaded the driver ([here](http://europe.nokia.com/support/product-support/booklet-3g/software "here")), and pointed the device manager to use this file. So he is now enjoying the Metro apps on his netbook.
+So my colleague was playing around with his netbook and installed the device graphics driver. He had do install it with the Windows device manager. He simply downloaded the driver ([here](https://europe.nokia.com/support/product-support/booklet-3g/software "here")), and pointed the device manager to use this file. So he is now enjoying the Metro apps on his netbook.
 
 Until then, feel free to use the steps above and leave some comments. Most important thing:
 

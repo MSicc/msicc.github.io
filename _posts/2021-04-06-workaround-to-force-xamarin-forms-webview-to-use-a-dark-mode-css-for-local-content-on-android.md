@@ -36,7 +36,8 @@ I am not sure if this problem will ever get solved by the `Xamarin.Forms` team. 
 
 Shipping the CSS files is easy, we just need to add them to the Assets folder and set the Build action to `AndroidAsset`. This results in the following structure within the Android project:
 
-<div class="wp-block-image"><figure class="aligncenter size-full is-resized">![](https://msicc.net/assets/img/2021/04/android_webview_asst_structure.png)</figure></div>All files that are shipped that way are accessible via the `android_asset` file uri:
+![](/assets/img/2021/04/android_webview_asst_structure.png)
+All files that are shipped that way are accessible via the `android_asset` file uri:
 
 ``` html
  <link rel="stylesheet" href="file:///android_asset/dummycss_light.css">

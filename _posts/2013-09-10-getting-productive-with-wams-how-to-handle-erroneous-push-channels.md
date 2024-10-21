@@ -26,7 +26,7 @@ tags:
 
 ![WAMS](/assets/img/2013/09/WAMS.png "WAMS")
 
-As I wrote already in my former article [‘Getting productive with WAMS- about the mpns object (push data to the user’s Windows Phone)’](http://msicc.net/?p=3695 "Permalink to Getting productive with WAMS- about the mpns object (push data to the user’s Window"), I needed to add some more detailed error handling to the mpns object on my Mobile Service.
+As I wrote already in my former article [‘Getting productive with WAMS- about the mpns object (push data to the user’s Windows Phone)’]({% post_url 2013-08-14-getting-productive-with-wams-about-the-mpns-object-push-data-to-the-users-windows-phone %}), I needed to add some more detailed error handling to the mpns object on my Mobile Service.
 
 There are two error codes that appear frequently: 404 (Not Found) and 412 (Precondition Failed).
 
@@ -76,8 +76,7 @@ if (error.statusCode === 412)
  
 Now if my script runs the next time over this push channel, I need to check if the push channel is within the delay phase. Here’s the code:
 
-```
-  js
+``` js
 if (channel.IsPushDelayed === true)
 {
 	var t = new Date();
@@ -105,8 +104,7 @@ The script will now check if the push channel is still a 412 or turned in to a 4
 
 There might be other error codes as well. I did not see any other than those two in my logs, but for the case there would be another, I simply added this code to report them:
 
-```
-js
+```js
 else
 {
  console.error("error in Toast Push Channel: " + channel.twitterScreenName, channel.id, error)
@@ -115,7 +113,7 @@ else
  
 This way, you can easily handle push channel errors in your Mobile Service.
 
-If you have other error codes in your logs, check this list from Microsoft to determine what you should do: [http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff941100(v=vs.105).aspx#BKMK\_PushNotificationServiceResponseCodes](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff941100(v=vs.105).aspx#BKMK_PushNotificationServiceResponseCodes "http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff941100(v=vs.105).aspx#BKMK_PushNotificationServiceResponseCodes")
+If you have other error codes in your logs, check this list from Microsoft to determine what you should do: [https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff941100(v=vs.105).aspx#BKMK\_PushNotificationServiceResponseCodes](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff941100(v=vs.105).aspx#BKMK_PushNotificationServiceResponseCodes "https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff941100(v=vs.105).aspx#BKMK_PushNotificationServiceResponseCodes")
 
 Note: there might be better ways to handle those errors. If you are using such a way, feel free to leave a comment with your approach.
 

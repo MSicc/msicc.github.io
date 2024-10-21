@@ -153,7 +153,7 @@ Once you have that class in place, update your` Info.plist` file by adding these
 </dict>
 ```
  
-Please note that setting `UIApplicationSupportsMultipleScenes` to true would enable multi-window support ([see more on my post about handling windows on MacCatalyst](https://msicc.net/dealing-with-application-windows-on-macos-with-net-maui/)).
+Please note that setting `UIApplicationSupportsMultipleScenes` to true would enable multi-window support ([see more on my post about handling windows on MacCatalyst]({% post_url 2023-11-03-dealing-with-application-windows-on-macos-with-net-maui %})).
 
 ### Handle the Scene’s events
 

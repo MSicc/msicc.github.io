@@ -16,13 +16,13 @@ tags:
     - wpdev
 ---
 
-Like a lot of other apps, also [UniShare](http://www.windowsphone.com/s?appid=ee42cb1d-8a68-41c6-9c0c-d3e3fc61d6ea) got hit by an outage in the licensing system of the Windows Phone Store recently.
+Like a lot of other apps, also [UniShare](https://www.windowsphone.com/s?appid=ee42cb1d-8a68-41c6-9c0c-d3e3fc61d6ea) got hit by an outage in the licensing system of the Windows Phone Store recently.
 
-There was a workaround to get the licenses back from the store, but even with that, users have left negative votes (even [after I posted the workaround](http://apps.msicc.net/2014/09/22/how-to-get-the-already-paid-premium-features-back-in-unishare/) and also [wpcentral wrote about it a few days later](https://www.google.com/url?q=http://www.wpcentral.com/fix-windows-phone-store-iap-breakage-close&sa=U&ei=S-4uVI_GLMvfPYyOgeAK&ved=0CA0QFjAE&client=internal-uds-cse&usg=AFQjCNHN3l9pHnh2SSwRIpYqXBeJu57Mlg)).
+There was a workaround to get the licenses back from the store, but even with that, users have left negative votes (even [after I posted the workaround](https://apps.msicc.net/2014/09/22/how-to-get-the-already-paid-premium-features-back-in-unishare/) and also [wpcentral wrote about it a few days later](https://www.google.com/url?q=https://www.wpcentral.com/fix-windows-phone-store-iap-breakage-close&sa=U&ei=S-4uVI_GLMvfPYyOgeAK&ved=0CA0QFjAE&client=internal-uds-cse&usg=AFQjCNHN3l9pHnh2SSwRIpYqXBeJu57Mlg)).
 
 The problem with those negative reviews: they tend to remain, even after responding to them (if possible) or having conversation with the users via mail. I totally understand users that are annoyed by such facts – I got hit by it as well with other apps I am using regularly. So I was thinking about a better solution as the recommended way by Microsoft, which says you should check it on every app start.
 
-[Rob Irving](https://twitter.com/robwirving) posted about his solution [at the same day wpcentral wrote about it](http://robwirving.com/2014/09/25/dont-lose-customers-durable-iaps-back-app-settings/), which is one possible solution. His motive was the same as my solution – improving the user experience with the IAP’s.
+[Rob Irving](https://twitter.com/robwirving) posted about his solution [at the same day wpcentral wrote about it](https://robwirving.com/2014/09/25/dont-lose-customers-durable-iaps-back-app-settings/), which is one possible solution. His motive was the same as my solution – improving the user experience with the IAP’s.
 
 However, I am preferring to check the licenses against the Store from time to time to make sure that the licenses are still correct.
 

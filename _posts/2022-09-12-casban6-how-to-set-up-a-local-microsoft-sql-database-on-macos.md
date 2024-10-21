@@ -49,7 +49,10 @@ Microsoft makes it quite easy to create a server instance, we just need to copy 
  
 Once you run this command without any error, type in `docker ps` to verify the image is up and running. If all goes well, you should see something like this:
 
-<div class="wp-block-image"><figure class="aligncenter size-large">![](https://msicc.net/assets/img/2022/09/docker_ps_result-1024x34.png)</figure></div>### Create a database
+![](/assets/img/2022/09/docker_ps_result.png)
+
+
+### Create a database
 
 Now that we have a running server instance, we can finally create a database for our purposes. We are using this terminal command to achieve our goal:
 
@@ -64,14 +67,17 @@ We are logging into our server with this and send the command to create our data
 There are several ways to connect to this database. The one we are going to use with Entity Framework Core is the good old connection string:
 
 ``` xml
- //template: Data Source=localhost;Initial Catalog=<database>;User ID=sa;Password=<password>
+//template: Data Source=localhost;Initial Catalog=<database>;User ID=sa;Password=<password>
 
 Data Source=localhost;Initial Catalog=localDB;User ID=sa;Password=thisShouldB3Stronger!
 ```
  
-If you want to access your database with a GUI, I recommend [using either Visual Studio Code ](https://docs.microsoft.com/en-us/azure/azure-sql/database/connect-query-vscode?view=azuresql)with the Azure and SQL workload installed or the [Community Edition of DBeaver](https://dbeaver.io/download/).
+If you want to access your database with a GUI, I recommend [using either Visual Studio Code ](https://docs.microsoft.com/en-us/azure/azure-sql/database/connect-query-vscode?view=azuresql) with the Azure and SQL workload installed or the [Community Edition of DBeaver](https://dbeaver.io/download/).
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![DBeaver Community screenshot](https://msicc.net/assets/img/2022/09/dbeaver_screenshot-1024x659.png)</figure></div>Visual Studio allows connecting on a database level, while DBeaver can be used to connect at server level as well. Both of them also support access to Azure SQL databases, which will be helpful later on.
+![DBeaver Community screenshot](/assets/img/2022/09/dbeaver_screenshot.png)
+
+
+Visual Studio allows connecting on a database level, while DBeaver can be used to connect at server level as well. Both of them also support access to Azure SQL databases, which will be helpful later on.
 
 ### Conclusion
 

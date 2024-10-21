@@ -19,9 +19,10 @@ tags:
 
 ![WAMS.png](/assets/img/2013/08/WAMS.png)
 
+
 Like I promised in my first post about Windows Azure Mobile Services, I will show you how to call the Twitter Rest API 1.1 from a scheduled script. The documentation of the http request object does only use Twitter API 1.0 (which is no longer available).
 
-First, you will need a Consumer key and a Consumer secret for your app. Just go to [dev.twitter.com](http://dev.twitter.com), register with your Twitter account and then add a new application.
+First, you will need a Consumer key and a Consumer secret for your app. Just go to [dev.twitter.com](https://dev.twitter.com), register with your Twitter account and then add a new application.
 
 The second thing you will need, is the so called Access token and Access token secret. Both are user dependent, without them Twitter will give you an error that your app is not authorized to use this account for anything on Twitter.
 
@@ -40,7 +41,8 @@ Let’s start with the “simple” things:
 
 **generate Timestamp:**
 
-``` js //generating the timestamp for the OAuth Header and signature string
+``` js 
+//generating the timestamp for the OAuth Header and signature string
 var timestamp  = new Date() / 1000;
 timestamp = Math.round(timestamp);
 ```
@@ -104,8 +106,7 @@ function hashString(key, str, encoding) {
  
 Now we have prepared all of these functions, we are well prepared to call the Twitter API. In this example we are calling the user’s profile data:
 
-```
-js
+``` js
 function requestToTwitter()
 {
 
@@ -160,7 +161,7 @@ var callback = function(err, response, body) {
  
 You may have noticed that there are several variables that are not declared within these functions. Just declare them globally in your scheduled script.
 
-You can read more about the oAuth authorization process at [http://oauth.net/](http://oauth.net/ "http://oauth.net/").
+You can read more about the oAuth authorization process at [https://oauth.net/](https://oauth.net/ "https://oauth.net/").
 
 There are more services out there that use the oAuth process, so you should be able to convert this for other requests, like getPocket.com (formerly Read It later) and others.
 

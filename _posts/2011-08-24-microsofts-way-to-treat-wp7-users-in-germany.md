@@ -5,18 +5,6 @@ date: '2011-08-24T11:25:00+02:00'
 author: 'Marco Siccardi'
 layout: post
 permalink: /microsofts-way-to-treat-wp7-users-in-germany/
-jabber_published:
-    - '1313050786'
-    - '1313050786'
-tagazine-media:
-    - 'a:7:{s:7:"primary";s:0:"";s:6:"images";a:0:{}s:6:"videos";a:0:{}s:11:"image_count";s:1:"0";s:6:"author";s:8:"19075421";s:7:"blog_id";s:8:"18470284";s:9:"mod_stamp";s:19:"2011-08-11 08:19:46";}'
-    - 'a:7:{s:7:"primary";s:0:"";s:6:"images";a:0:{}s:6:"videos";a:0:{}s:11:"image_count";s:1:"0";s:6:"author";s:8:"19075421";s:7:"blog_id";s:8:"18470284";s:9:"mod_stamp";s:19:"2011-08-11 08:19:46";}'
-bitly_url:
-    - 'http://bit.ly/2s0Oevq'
-bitly_hash:
-    - 2s0Oevq
-bitly_long_url:
-    - 'https://msicc.net/microsofts-way-to-treat-wp7-users-in-germany/'
 categories:
     - Archive
 ---
@@ -49,7 +37,7 @@ As posted in comments, we got similar other offers here in Germany, but without 
 
  \[Update 3:\] MS did it again. While it seems that in the rest of the world this weeks Xbox live game IonballEX is available, German users have still to wait. How long this time?
 
-Check the Marketplace [here.](http://social.zune.net/redirect?type=phoneApp&id=3985dd4b-8e05-4e2d-8f88-d7d9e4e69721) Let’s hope the game will be available soon…
+Check the Marketplace [here.](https://social.zune.net/redirect?type=phoneApp&id=3985dd4b-8e05-4e2d-8f88-d7d9e4e69721) Let’s hope the game will be available soon…
 
  \[Update 4:\] This Morning while making my usual marketplace check, I was able to download this weeks Xbox live game IonBallEX.
 
@@ -63,7 +51,7 @@ I really hope that with the official release of Mango these things will change i
 
 As I mentioned yesterday on Twitter, Microsoft launches Minesweeper to the rest of the world. I honestly thought that we users in Germany again will have to wait much longer than the rest of the non-US-world.
 
-But this time I was able to download it once I clicked to the following [this Deep-Link to the Marketplace.](http://windowsphone.com/s?appid=0b00c4a3-eda9-e011-a53c-78e7d1fa76f8)
+But this time I was able to download it once I clicked to the following [this Deep-Link to the Marketplace.](https://windowsphone.com/s?appid=0b00c4a3-eda9-e011-a53c-78e7d1fa76f8)
 
 I don’t know whether this is because the game was released last week in the US or if MS has changed its way to publish apps and games to Germany. We will see next week.
 

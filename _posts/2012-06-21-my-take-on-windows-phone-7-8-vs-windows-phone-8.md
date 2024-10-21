@@ -15,7 +15,8 @@ tags:
     - WP8
 ---
 
-[![Windows Phone 7.8 and 8 Start Screen](/assets/img/2012/06/7633_StartScreen_James30opt2_5AA9741C-180x300.png "Windows Phone 7.8 and 8 Start Screen")](/assets/img/2012/06/7633_StartScreen_James30opt2_5AA9741C.png)
+[![Windows Phone 7.8 and 8 Start Screen](/assets/img/2012/06/7633_StartScreen_James30opt2_5AA9741C.png "Windows Phone 7.8 and 8 Start Screen")](/assets/img/2012/06/7633_StartScreen_James30opt2_5AA9741C.png)
+
 
 Windows Phone 8 Developer Summit is finally over and has many early adopters who recently purchased a second generation device left unsatisfied, to say the least. As an early adopter myself who bought a Nokia Lumia 900 about 8 days ago I can fully understand the rage that is going through the community. But I still have some common sense left that tries to find explanations for why Microsoft chose to take the decision the way they did.
 

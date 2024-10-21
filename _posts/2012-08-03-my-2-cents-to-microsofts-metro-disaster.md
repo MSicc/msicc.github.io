@@ -9,7 +9,7 @@ categories:
     - Archive
 ---
 
-[![real_metro_icons](/assets/img/2012/08/real_metro_icons-300x225.jpg "real_metro_icons")](/assets/img/2012/08/real_metro_icons.jpg)
+[![real_metro_icons](/assets/img/2012/08/real_metro_icons.jpg "real_metro_icons")](/assets/img/2012/08/real_metro_icons.jpg)
 
 It has been very long that I blog from mobile now.
 

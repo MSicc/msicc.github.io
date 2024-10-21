@@ -53,7 +53,7 @@ Next step is to add a proper UriMapper:
 }
 ```
  
-If you want to learn more about uri schemes, you can read [my blog post here](http://msicc.net/?p=3834).
+If you want to learn more about uri schemes, you can read [my blog post here]({% post_url 2013-12-08-why-windows-phone-apps-deserve-a-custom-uri-scheme-and-how-to-add-a-simple-launch-uri %}).
 
 The third step is to generate your app on Yammer to get your Tokens. Open [https://www.yammer.com/client\_applications](https://www.yammer.com/client_applications), click on ‘Register New App’ and fill in the form:
 

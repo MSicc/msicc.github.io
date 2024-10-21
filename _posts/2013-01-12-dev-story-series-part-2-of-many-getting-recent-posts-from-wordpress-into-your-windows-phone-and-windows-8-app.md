@@ -18,7 +18,7 @@ tags:
     - XAML
 ---
 
-Now that we have a [full WordPress JSON class](http://msicc.net/?p=2929), we are able to download our recent posts from WordPress into our apps for Windows Phone and Windows 8. I am still not using MVVM to keep it simple (and because I have to dive into it more deeply).
+Now that we have a [full WordPress JSON class]({% post_url 2012-10-18-dev-story-series-part-1-of-many-creating-a-data-class-for-both-windows-8-and-windows-phone-app %}), we are able to download our recent posts from WordPress into our apps for Windows Phone and Windows 8. I am still not using MVVM to keep it simple (and because I have to dive into it more deeply).
 
 The first thing we need to do is to download the JSON string for the recent posts. The Uri scheme is pretty simple: *{yourblogadresshere}?json=get\_recent\_posts*
 
@@ -29,10 +29,10 @@ The second thing we are going to do is to download the JSON string into the app.
 For Windows Phone I used a WebClient, as I want to keep it compatible with the Windows Phone 7 OS. I will update the App with an dedicated WP8 version later, for the moment it is working on both OS versions. Add this code to you Page\_Loaded event:
 
 ``` csharp
-              WebClient GetPostsClient = new WebClient();
-                GetPostsClient.Headers[HttpRequestHeader.IfModifiedSince] = DateTime.Now.ToString();
-                GetPostsClient.DownloadStringCompleted += new DownloadStringCompletedEventHandler(GetPostsClient_DownloadStringCompleted);
-                GetPostsClient.DownloadStringAsync(new Uri(RecentPostJsonUri));
+WebClient GetPostsClient = new WebClient();
+GetPostsClient.Headers[HttpRequestHeader.IfModifiedSince] = DateTime.Now.ToString();
+GetPostsClient.DownloadStringCompleted += new DownloadStringCompletedEventHandler(GetPostsClient_DownloadStringCompleted);
+GetPostsClient.DownloadStringAsync(new Uri(RecentPostJsonUri));
 ```
  
 
@@ -40,18 +40,18 @@ We will also have to add the Handler for GetPostsClient\_DownloadStringCompleted
 
 ``` csharp
  void GetPostsClient_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
-        {
-            App.jsonString_result = e.Result;
-        }
+{
+    App.jsonString_result = e.Result;
+}
 ```
  
 
 In Windows 8 there is no WebClient, so I used an HttpClient:
 
 ``` csharp
-                         HttpClient getJsonStringClient = new HttpClient();
-                        getJsonStringClient.DefaultRequestHeaders.IfModifiedSince = DateTime.UtcNow;
-                        App.jsonString_result = await getJsonStringClient.GetStringAsync(RecentPostJsonUri);
+HttpClient getJsonStringClient = new HttpClient();
+getJsonStringClient.DefaultRequestHeaders.IfModifiedSince = DateTime.UtcNow;
+App.jsonString_result = await getJsonStringClient.GetStringAsync(RecentPostJsonUri);
 ```
  
 
@@ -67,7 +67,7 @@ Until now we have only downloaded our JSON String, which looks like this:
 
 Back to our topic. Off course this is not a good format for users. They want to see only the content, without all the formatting and structuring code around.
 
-What we need to do, is to deserialize our JSON String. This is possible with Windows Phone and Windows 8 own API, but I highly recommend to use the JSON.net library. You can download and learn more about it [here](http://json.codeplex.com/). To install the library, just go to Tools&gt;Library Package Manager&gt;Manage NuGet Packages for Solution, search for JSON.net, and install it.
+What we need to do, is to deserialize our JSON String. This is possible with Windows Phone and Windows 8 own API, but I highly recommend to use the JSON.net library. You can download and learn more about it [here](https://json.codeplex.com/). To install the library, just go to Tools&gt;Library Package Manager&gt;Manage NuGet Packages for Solution, search for JSON.net, and install it.
 
 After installing the package, we are able to use only one line of code to deserialize our JSON String to our data members:
 
@@ -104,46 +104,46 @@ As you can see, we have set some Bindings in the code above. This Bindings rely 
 ``` csharp
  [DataContract]
 public class Post
-    {
-        [DataMember]
-        public int id { get; set; }
-        [DataMember]
-        public string type { get; set; }
-        [DataMember]
-        public string slug { get; set; }
-        [DataMember]
-        public string url { get; set; }
-        [DataMember]
-        public string status { get; set; }
-        [DataMember]
-        public string title { get; set; }
-        [DataMember]
-        public string title_plain { get; set; }
-        [DataMember]
-        public string content { get; set; }
-        [DataMember]
-        public string excerpt { get; set; }
-        [DataMember]
-        public string date { get; set; }
-        [DataMember]
-        public string modified { get; set; }
-        [DataMember]
-        public List<Category> categories { get; set; }
-        [DataMember]
-        public List<object> tags { get; set; }
-        [DataMember]
-        public Author author { get; set; }
-        [DataMember]
-        public List<comment> comments { get; set; }
-        [DataMember]
-        public List<Attachment> attachments { get; set; }
-        [DataMember]
-        public int comment_count { get; set; }
-        [DataMember]
-        public string comment_status { get; set; }
-        [DataMember]
-        public string thumbnail { get; set; }
-    }
+{
+    [DataMember]
+    public int id { get; set; }
+    [DataMember]
+    public string type { get; set; }
+    [DataMember]
+    public string slug { get; set; }
+    [DataMember]
+    public string url { get; set; }
+    [DataMember]
+    public string status { get; set; }
+    [DataMember]
+    public string title { get; set; }
+    [DataMember]
+    public string title_plain { get; set; }
+    [DataMember]
+    public string content { get; set; }
+    [DataMember]
+    public string excerpt { get; set; }
+    [DataMember]
+    public string date { get; set; }
+    [DataMember]
+    public string modified { get; set; }
+    [DataMember]
+    public List<Category> categories { get; set; }
+    [DataMember]
+    public List<object> tags { get; set; }
+    [DataMember]
+    public Author author { get; set; }
+    [DataMember]
+    public List<comment> comments { get; set; }
+    [DataMember]
+    public List<Attachment> attachments { get; set; }
+    [DataMember]
+    public int comment_count { get; set; }
+    [DataMember]
+    public string comment_status { get; set; }
+    [DataMember]
+    public string thumbnail { get; set; }
+}
 ```
  
 
@@ -161,19 +161,18 @@ If you now hit F5 on your keyboard, the app should be built and the device/emula
 The thumbnails from the our DataContract Post are looking really ugly sometimes. To get a better looking result in your ListBox/ListView, I recommend to use the attached images. To do this, you will need the following code:
 
 ``` csharp
-          foreach (var item in postList.posts)
-            {
-                var postImagefromAttachement = item.attachments.FirstOrDefault();
-                if (postImagefromAttachement == null)
-                {
-                    item.thumbnail = placeholderImage; //add your own placeholderimage here
-                }
-                else
-                {
-                    item.thumbnail = postImagefromAttachement.images.medium.url;
-                }
-
-            }
+foreach (var item in postList.posts)
+{
+    var postImagefromAttachement = item.attachments.FirstOrDefault();
+    if (postImagefromAttachement == null)
+    {
+        item.thumbnail = placeholderImage; //add your own placeholderimage here
+    }
+    else
+    {
+        item.thumbnail = postImagefromAttachement.images.medium.url;
+    }
+}
 ```
  
 

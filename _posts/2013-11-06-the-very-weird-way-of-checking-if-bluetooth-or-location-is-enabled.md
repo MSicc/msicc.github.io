@@ -24,7 +24,7 @@ tags:
 
 ![BT_GPS_WP_Blog](/assets/img/2013/11/BT_GPS_WP_Blog.png "BT_GPS_WP_Blog")
 
-As I am in constant development of new features for my [NFC Toolkit](http://www.windowsphone.com/s?appid=2c33cb7d-c97b-4204-aa8b-1e8712718519), I came to the point where I needed to detect if Bluetooth and Location is enabled or not.
+As I am in constant development of new features for my [NFC Toolkit](https://www.windowsphone.com/s?appid=2c33cb7d-c97b-4204-aa8b-1e8712718519), I came to the point where I needed to detect if Bluetooth and Location is enabled or not.
 
 I searched about an hour across the internet, searched all well known WPDev sites as well as the MSDN Windows Phone documentation.
 
@@ -59,7 +59,7 @@ As I change the opacitiy of an Image depending on the stauts (on/off), I created
  }
 ```
  
-As you can see above, we are searching for already paired devices with the [Proximity API](http://msdn.microsoft.com/en-us/library/windowsphone/develop/windows.networking.proximity.aspx) of Windows Phone. If we don’t have any of our already paired devices reachable, and we don’t throw an exception with the HResult of “0x8007048F”, Bluetooth is on. If the exception is raised, Bluetooth is off.
+As you can see above, we are searching for already paired devices with the [Proximity API](https://msdn.microsoft.com/en-us/library/windowsphone/develop/windows.networking.proximity.aspx) of Windows Phone. If we don’t have any of our already paired devices reachable, and we don’t throw an exception with the HResult of “0x8007048F”, Bluetooth is on. If the exception is raised, Bluetooth is off.
 
 In a very similar way we need to check if the location setting is on:
 
@@ -103,12 +103,11 @@ For the location services, the HResult is “0x80004004”. We are trying to get
 
 On Twitter, I got for the later one also another suggestion to detect if the location settings is enabled or not, by [Kunal Chowdhury](https://twitter.com/kunal2383) (=&gt;follow him!):
 
-```
- chsarp
+``` chsarp
 geoLocator.LocationStatus == PositionStatus.Disabled;
 ```
  
-This would work technically, but PositionStatus has 6 enumarations. Also, as stated here in the [Nokia Developer Wiki](http://developer.nokia.com/Community/Wiki/Get_Phone_Location_with_Windows_Phone_8), this can be a battery intese call (depends on the implementation). I leave it to you which one you want to use.
+This would work technically, but PositionStatus has 6 enumarations. Also, as stated here in the [Nokia Developer Wiki](https://developer.nokia.com/Community/Wiki/Get_Phone_Location_with_Windows_Phone_8), this can be a battery intese call (depends on the implementation). I leave it to you which one you want to use.
 
 Back to the header of this post. Catching an exception to determine the Status of wireless connections just seems wrong to me. I know this is a working “solution” and we can use that. But it could have been better implemented (for example like the networking API).
 

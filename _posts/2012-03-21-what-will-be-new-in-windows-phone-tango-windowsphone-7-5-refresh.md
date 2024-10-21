@@ -15,6 +15,7 @@ tags:
 
 [![Tango-Update](/assets/img/2012/03/Tango-Update.png "Tango-Update")](/assets/img/2012/03/Tango-Update.png)
 
+
 In the last days several news about Tango where made public, where some new screen shots from an Windows Phone Tango (although Microsoft does not call it like this) ROM are imaged. The images are originally from xda-developers and WP7forum.ru.
 
 So here is what is new in short:
@@ -23,7 +24,7 @@ So here is what is new in short:
 
 [![Tango Multitasking](/assets/img/2012/03/Tango-Multitasking2.jpg "Tango Multitasking")](/assets/img/2012/03/Tango-Multitasking2.jpg)
 
-Yesterday I reported about the leaked news that Tango will have an increased task ability of 8 apps. [As stated by HD2Owner on xda](http://forum.xda-developers.com/showpost.php?p=23839418&postcount=22), this is a cooked in feature, not a real one. Sorry for the confusion.
+Yesterday I reported about the leaked news that Tango will have an increased task ability of 8 apps. [As stated by HD2Owner on xda](https://forum.xda-developers.com/showpost.php?p=23839418&postcount=22), this is a cooked in feature, not a real one. Sorry for the confusion.
 
 **Far less memory usage**
 
@@ -49,4 +50,4 @@ If an app is not able to run on a 256 MB-device, the marketplace tells you that 
 
 I will update this post as soon as new information are showing up.
 
-Sources: [xda-developers](http://forum.xda-developers.com/showthread.php?t=1549831), [WP7forum.ru](http://wp7forum.ru/utechka-chto-novenkogo-v-windows-phone-7-tango/), [WP7forum.ru](http://wp7forum.ru/o-byudzhetnikax-s-256mb-ozu-i-windows-phone-7-tango/)
+Sources: [xda-developers](https://forum.xda-developers.com/showthread.php?t=1549831), [WP7forum.ru](https://wp7forum.ru/utechka-chto-novenkogo-v-windows-phone-7-tango/), [WP7forum.ru](https://wp7forum.ru/o-byudzhetnikax-s-256mb-ozu-i-windows-phone-7-tango/)

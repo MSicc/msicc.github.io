@@ -168,4 +168,4 @@ Helpful links:
 
 ---
 
-[Title Image created via Bing Create with AI](http://ios16_orientation_lock_title_bing_create)
+[Title Image created via Bing Create with AI](https://ios16_orientation_lock_title_bing_create)

@@ -20,7 +20,7 @@ tags:
     - wpdev
 ---
 
-This one is a short follow up to my [post from yesterday about speech recognition](http://msicc.net/?p=3787) in Windows Phone 8 apps.
+This one is a short follow up to my [post from yesterday about speech recognition]({% post_url 2013-10-29-make-your-app-listening-to-the-users-voice %}) in Windows Phone 8 apps.
 
 I made the first steps with speech recognition in the last few days with speech recognition, coming to the point where I had to select Items from a (Rad)ListPicker control (tried both, the Windows Phone Toolkit one as well as the Telerik one).
 

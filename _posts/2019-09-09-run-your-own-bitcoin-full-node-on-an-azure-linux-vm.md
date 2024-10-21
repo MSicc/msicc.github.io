@@ -35,11 +35,14 @@ The second prerequisite is a program to generate SSH keys. You can use either th
 
 Once you have installed the CLI and your SSH keys are created, log into your [Azure account](https://portal.azure.com). Go to the marketplace, and search for ‘*ubuntu*‘. Choose *Ubuntu Server 18.04 LTS* and hit the ‘*Create*‘ button in the next window.
 
-<div class="wp-block-image"><figure class="aligncenter size-large">![](https://msicc.net/assets/img/2019/09/Add-Ubuntu.png)</figure></div>Fill in the details of your Azure VM on the first page of the creation module:
+![](/assets/img/2019/09/Add-Ubuntu.png)
+Fill in the details of your Azure VM on the first page of the creation module:
 
-<div class="wp-block-image"><figure class="aligncenter size-large">![](https://msicc.net/assets/img/2019/09/Create-VM-Start.png)</figure></div>Do not forget to set the SSH admin user, as adding one afterward is not as easy as it seems and it often also fails (I had a hard time to learn that). Also, we need to allow traffic through the default HTTP (80) and SSH (22) ports. Once you configured everything, go to disks.
+![](/assets/img/2019/09/Create-VM-Start.png)
+Do not forget to set the SSH admin user, as adding one afterward is not as easy as it seems and it often also fails (I had a hard time to learn that). Also, we need to allow traffic through the default HTTP (80) and SSH (22) ports. Once you configured everything, go to disks.
 
-<div class="wp-block-image"><figure class="aligncenter size-large">![](https://msicc.net/assets/img/2019/09/Create-VM-Disks.png)</figure></div>I did not select premium disks but instead went with a Standard HDD to save some money. You can change that to your needs. The important part here is to NOT use managed disks as we will need to resize the OS disk after the creation of the VM. Follow the rest of the steps in the creation wizard and create your virtual machine. Once the machine is created, you should create a DNS label (hit the ‘Configure’ link at the VM’s overview page to get to the IP settings).
+![](/assets/img/2019/09/Create-VM-Disks.png)
+I did not select premium disks but instead went with a Standard HDD to save some money. You can change that to your needs. The important part here is to NOT use managed disks as we will need to resize the OS disk after the creation of the VM. Follow the rest of the steps in the creation wizard and create your virtual machine. Once the machine is created, you should create a DNS label (hit the ‘Configure’ link at the VM’s overview page to get to the IP settings).
 
 #### Log in via SSH
 
@@ -51,9 +54,11 @@ Let’s try if we can log in to our Linux VM via the Azure CLI. Open the ‘*Mic
  
 This will open a new browser tab, where you need to log in to your account again. After that, we will be redirected back to the CLI. Once that happened, go back to the overview page of your VM and click on ‘Connect’. This will open a pane where we will see the RDP and SSH connection option. Select SSH and copy the text below ‘*Login using VM local account*‘:
 
-<div class="wp-block-image"><figure class="aligncenter size-large">![](https://msicc.net/assets/img/2019/09/Connect-Azure-VM-SSH.png)</figure></div>Paste it into the Azure Command Prompt window and provide your password (you should never use a password-less SSH key). If your screen looks now similar to this, you have successfully logged in:
+![](/assets/img/2019/09/Connect-Azure-VM-SSH.png)
+Paste it into the Azure Command Prompt window and provide your password (you should never use a password-less SSH key). If your screen looks now similar to this, you have successfully logged in:
 
-<div class="wp-block-image"><figure class="aligncenter size-large">![](https://msicc.net/assets/img/2019/09/Azure-CLI-SSH-loggedin.png)</figure></div>Now that we have verified that we are able to log in via SSH, type `exit` to log out again as we have one step left to perform on the virtual machine.
+![](/assets/img/2019/09/Azure-CLI-SSH-loggedin.png)
+Now that we have verified that we are able to log in via SSH, type `exit` to log out again as we have one step left to perform on the virtual machine.
 
 #### Resizing the OS disk
 
@@ -148,7 +153,8 @@ Now let’s verify the downloaded files:
 sha256sum --ignore-missing -c SHA256SUMS.asc
 ```
  
-<div class="wp-block-image"><figure class="aligncenter size-large">![](https://msicc.net/assets/img/2019/09/gpg-verification-bitcoin-core.png)</figure></div>If the command tells you that the signature is good and indeed from Mr. van der Laan, everything is fine with the hash file. The second command verifies the archive we downloaded earlier and should result in ‘OK’. If not, you should immediately delete those files as they might contain malware.
+![](/assets/img/2019/09/gpg-verification-bitcoin-core.png)
+If the command tells you that the signature is good and indeed from Mr. van der Laan, everything is fine with the hash file. The second command verifies the archive we downloaded earlier and should result in ‘OK’. If not, you should immediately delete those files as they might contain malware.
 
 *Note: I have read quite a few comments on reddit and other sites that we can safely ignore those warnings …*
 
@@ -280,7 +286,7 @@ This is just the first post about my journey with Bitcoin and my own node. Make 
 
 ### Helpful links
 
-- <http://cheatsheetworld.com/programming/unix-linux-cheat-sheet/>
+- <https://cheatsheetworld.com/programming/unix-linux-cheat-sheet/>
 - <https://bitcoin.org/en/full-node#what-is-a-full-node>
 - <https://github.com/bitcoin/bitcoin>
 - <https://docs.microsoft.com/en-us/cli/azure/vm?view=azure-cli-latest#commands>

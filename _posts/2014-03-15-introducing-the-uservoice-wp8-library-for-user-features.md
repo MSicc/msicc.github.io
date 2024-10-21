@@ -36,7 +36,7 @@ As some of you know, I am working at the hardware support team of a German phone
 
 Many of us have set up a twitter account, a separate mail address, maybe an extra online form to catch all requests from users up. But users tend to not use them for one reason: they are not integrated in our apps. So I spend some time “googling with Bing” (Thanks to [@robwirving](https://twitter.com/robwirving) for that awesome phrase!) on possible solutions.
 
-Uservoice as the best value if using a free subscription, and they have an API that we can use ([see also this post](http://msicc.net/?p=3916) on how to get started with uservoice). I made it a very slim library and concentrated on the features we really need in our app on the user side.
+Uservoice as the best value if using a free subscription, and they have an API that we can use ([see also this post]({% post_url 2014-01-06-experiment-using-uservoice-com-for-support-feedback-and-faq %}) on how to get started with uservoice). I made it a very slim library and concentrated on the features we really need in our app on the user side.
 
 ### The Library!
 
@@ -44,7 +44,7 @@ You can get the library easily via [NuGet](https://www.nuget.org/packages/uservo
 
 ![uservoice_lib_nuget](/assets/img/2014/01/uservoice_lib_nuget.png "uservoice_lib_nuget")
 
-The library also needs [RestSharp](http://restsharp.org/), which gets automatically added to your project if you install the library.
+The library also needs [RestSharp](https://restsharp.org/), which gets automatically added to your project if you install the library.
 
 After you installed it, you need to declare some variables that we need over and over again while using the library:
 
@@ -142,20 +142,20 @@ In the current version, you will need to manual send the request again after the
 - EmojiDetector
 
 ``` csharp
-   string text = "here would be the string from your textboxes that contain emojis";
+string text = "here would be the string from your textboxes that contain emojis";
 
-            //check if Emojis are in text:
-            if (EmojiDetector.HasEmojis(text) == true)
-            {
-                //your code here
-            }
-            //remove Emojis in text:
-            text = EmojiDetector.RemoveEmojis(text);
+//check if Emojis are in text:
+if (EmojiDetector.HasEmojis(text) == true)
+{
+    //your code here
+}
+//remove Emojis in text:
+text = EmojiDetector.RemoveEmojis(text);
 ```
  
 The UserVoice API does not support Emojis, that’s why I wrote this little helper that you can easily use to remove them with only one line of code or to display a message to your users.
 
-One last point: I don’t use RestSharp’s serializer – all request return the corresponding JSON string. This way, everyone of you can use the serializer of choice (I absolutely recommend [JSON.net](http://james.newtonking.com/json), though).
+One last point: I don’t use RestSharp’s serializer – all request return the corresponding JSON string. This way, everyone of you can use the serializer of choice (I absolutely recommend [JSON.net](https://james.newtonking.com/json), though).
 
 Please consider the current version as beta release, and report any issues with that to me via [Twitter](https://twitter.com/msicc) or [mail](mailto:msiccdev@hotmail.com).
 

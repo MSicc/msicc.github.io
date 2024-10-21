@@ -42,7 +42,7 @@ tags:
 
 #### The basics
 
-Effects work in a similar way to Renderers. You implement the definition in the `Xamarin.Forms` project, which attaches it to the control that needs the change. The `PlatformEffect` implementation needs to be exported to be compiled into the application. Like in a Renderer, the platform implementation also supports property changes. In this new series [\#XfEffects](https://msicc.net/tag/XfEffects/), I am going to show you some `Effects` that have been useful for me.
+Effects work in a similar way to Renderers. You implement the definition in the `Xamarin.Forms` project, which attaches it to the control that needs the change. The `PlatformEffect` implementation needs to be exported to be compiled into the application. Like in a Renderer, the platform implementation also supports property changes. In this new series [\#XfEffects]({{ site.baseurl }}{/tags/XfEffects/}), I am going to show you some `Effects` that have been useful for me.
 
 #### Effect declaration
 
@@ -205,7 +205,7 @@ Last but not least, we need to set the composition mode. If you want to get a de
 
 The result based on the sample I created looks like this:
 
-<div class="wp-block-image"><figure class="aligncenter size-large">![](https://msicc.net/assets/img/2019/09/tint-android.jpg)</figure></div>#### iOS implementation
+![](/assets/img/2019/09/tint-android.jpg)#### iOS implementation
 
 Of course, also on iOS, we have to attribute the class, similar to the Android version:
 
@@ -271,7 +271,7 @@ Of course, also here we need to call this method in the `OnAttached` override as
 
 The result should look similar to this one:
 
-<div class="wp-block-image"><figure class="aligncenter size-large">![](https://msicc.net/assets/img/2019/09/tint-ios.jpg)</figure></div>#### Conclusion
+![](/assets/img/2019/09/tint-ios.jpg)#### Conclusion
 
 It is pretty easy to implement extended functionality with a Xamarin.Forms Effect. The process is similar to the one of creating a custom renderer. By using attached properties you can fine-tune the usage of this code and also pass property values to the platform implementations.
 

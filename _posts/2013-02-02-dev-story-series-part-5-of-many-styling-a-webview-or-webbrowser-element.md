@@ -23,7 +23,8 @@ tags:
 
 This post is about styling our WebView or WebBrowser in our app. Until now, we only got the HTML string that we are displaying in our WebView or WebBrowser. It looks like this:
 
-![image.png](/assets/img/2013/01/image1-300x250.png)
+![image.png](/assets/img/2013/01/image1.png)
+
 
 The content we receive from our WordPress post content includes already all kind of HTML tags like paragraphs, lists, links, images. That is the advantage for this solution: no parsing is needed, the string can be displayed as is. Both the WebView and the WebBrowser framework element (no, they are not controls) are able to read and render CSS code. And this is how we can match the whole element for our app.
 
@@ -31,8 +32,7 @@ HTML Pages can be styled by using a so called cascading style sheet (CSS), which
 
 Here is a sample CSS String:
 
-```
- html
+``` html
 <STYLE type="text/css">
 body{background:#034786; width:450px; }
 p{font-family:'Segoe UI';color: white;font-size:medium;}
@@ -73,6 +73,7 @@ WebBrowser.NavigateToString(CSSString + ContentString);
 After navigating to this both strings, our content is now displayed like native:
 
  ![styledNativeWebView](/assets/img/2013/02/styledNativeWebView.png)
+
 
 ### One last tip:
 

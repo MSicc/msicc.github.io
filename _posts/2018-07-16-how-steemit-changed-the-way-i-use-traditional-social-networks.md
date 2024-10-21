@@ -44,7 +44,7 @@ As soon as my account was created, I started to explore Steemit more deeply. A m
 - [Steemworld.org](https://steemworld.org) (by [@steemchiller](https://steemit.com/@steemchiller)) to get more insights of my account
 - [steemd.com](https://steemd.com/) to get more insights into the blocks of the blockchain
 - [SteepShot](https://alpha.steepshot.io/browse/new) ([@steepshot](https://steemit.com/@steepshot))as an Instagram replacement<u></u>
-- [bSteem](http://bsteem.com/) on my iPhone
+- [bSteem](https://bsteem.com/) on my iPhone
 - [Steemify](https://blockbrothers.io/) by [@blockbrothers](https://busy.org/@blockbrothers) on my iPhone
 - [SteemPress for posting from WordPress to Steemit](https://wordpress.org/plugins/steempress/) (for non-code blog posts, they haven’t fully implemented code conversion until recently)
 

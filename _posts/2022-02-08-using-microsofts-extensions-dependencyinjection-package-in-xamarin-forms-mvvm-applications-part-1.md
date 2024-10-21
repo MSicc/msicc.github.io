@@ -28,7 +28,10 @@ As stated in the documentation of the new Toolkit, one could now use the Microso
 
 Please note that while the toolkit’s source is now separated from the `Windows CommunityToolkit`, the documentation isn’t. This can be confusing (as it was for me). On top of that, there are now two Toolkit MVVM packages:
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![](https://msicc.net/assets/img/2022/02/Toolkit-MVVM-Nugets-1024x280.png)</figure></div>I thought I got it right when writing this blog post initially. After [Brandon Minnick](https://twitter.com/thecodetraveler) from Microsoft pointed me to [the right package](https://www.nuget.org/packages/CommunityToolkit.Mvvm/), I realized I was not. Up on further research, I found also [this discussion in the GitHub repo](https://github.com/CommunityToolkit/dotnet/discussions/52), stating the one and only will be the `CommunityToolkit` package. Please use only this one if you are following my tutorials here. I updated all mentions of the Toolkit in this post accordingly.
+![](/assets/img/2022/02/Toolkit-MVVM-Nugets.png)
+
+
+I thought I got it right when writing this blog post initially. After [Brandon Minnick](https://twitter.com/thecodetraveler) from Microsoft pointed me to [the right package](https://www.nuget.org/packages/CommunityToolkit.Mvvm/), I realized I was not. Up on further research, I found also [this discussion in the GitHub repo](https://github.com/CommunityToolkit/dotnet/discussions/52), stating the one and only will be the `CommunityToolkit` package. Please use only this one if you are following my tutorials here. I updated all mentions of the Toolkit in this post accordingly.
 
 ### Default IServiceProvider implementation
 

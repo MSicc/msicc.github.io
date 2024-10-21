@@ -76,8 +76,8 @@ That’s all you need to get it working. A few line of codes that will give you 
 
 Once again, if you use RadControls for Windows Phone, then use RadDiagnostics to let users help you finding bugs. You will not get better and more helpful feedback other than this!
 
-You can find the complete documentation of RadDiagnostics here: [http://www.telerik.com/help/windows-phone/diagnostics-gettingstarted.html](http://www.telerik.com/help/windows-phone/diagnostics-gettingstarted.html "http://www.telerik.com/help/windows-phone/diagnostics-gettingstarted.html")
+You can find the complete documentation of RadDiagnostics here: [https://www.telerik.com/help/windows-phone/diagnostics-gettingstarted.html](https://www.telerik.com/help/windows-phone/diagnostics-gettingstarted.html "https://www.telerik.com/help/windows-phone/diagnostics-gettingstarted.html")
 
-Another great article that helps you to deeply understand how RadDiagnostics work is over at [Kunal Chowdhury’s blog](http://www.kunal-chowdhury.com/2012/05/learn-about-raddiagnostics-for.html).
+Another great article that helps you to deeply understand how RadDiagnostics work is over at [Kunal Chowdhury’s blog](https://www.kunal-chowdhury.com/2012/05/learn-about-raddiagnostics-for.html).
 
 Feel free to discuss your sight below in comments. Until then, Happy coding!

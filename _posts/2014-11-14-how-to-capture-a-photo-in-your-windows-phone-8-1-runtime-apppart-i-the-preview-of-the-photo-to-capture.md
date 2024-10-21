@@ -20,19 +20,19 @@ tags:
     - XAML
 ---
 
-With the recent release of the public beta of [RandR](http://apps.msicc.net/betalabs/), I also learned a lot about taking photos from within an Windows Phone 8.1 app. There are several differences to Windows Phone 8, so I decided to start this three part series on how to capture a photo in your app (it would be too much for one single post).
+With the recent release of the public beta of [RandR](https://apps.msicc.net/betalabs/), I also learned a lot about taking photos from within an Windows Phone 8.1 app. There are several differences to Windows Phone 8, so I decided to start this three part series on how to capture a photo in your app (it would be too much for one single post).
 
 The series will contain following topics:
 
 - Part I (this one): the preview of the photo to capture
-- Part II: [quick look on some common modifications for the preview](http://msicc.net/?p=4208)
-- Part III: [capturing and saving the photo](http://msicc.net/?p=4224)
+- Part II: [quick look on some common modifications for the preview]({% post_url 2014-11-15-how-to-capture-a-photo-in-your-windows-phone-8-1-runtime-app-part-ii-some-common-modifications %})
+- Part III: [capturing and saving the photo]({% post_url 2014-11-18-how-to-capture-a-photo-in-your-windows-phone-8-1-runtime-part-iii-capturing-and-saving-the-photo %})
 
 The series concentrates on basic features to enable you to get started. I am adding relevant links to those posts, and at the end of the series, I will also attach a sample project.
 
 #### Let’s start
 
-Before we can use MediaCapture, please make sure that you enable Webcam and Microphone in your app’s Package.appxmanifest file. Then, we need is an Element that shows us the preview of the content we want to capture. In a Runtime app, we are using a [CaptureElement](http://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.captureelement.aspx) for this. We also need to buttons, one to start/cancel the preview operation, and one to save the photo. Of course we want to show the photo we have taken, so we need also an image element.
+Before we can use MediaCapture, please make sure that you enable Webcam and Microphone in your app’s Package.appxmanifest file. Then, we need is an Element that shows us the preview of the content we want to capture. In a Runtime app, we are using a [CaptureElement](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.controls.captureelement.aspx) for this. We also need to buttons, one to start/cancel the preview operation, and one to save the photo. Of course we want to show the photo we have taken, so we need also an image element.
 
 Add this code to your XAML page:
 
@@ -61,11 +61,11 @@ Before we’ll have a look at the preview code, we need to enable our app to obt
 appView.SetDesiredBoundsMode(ApplicationViewBoundsMode.UseCoreWindow);
 ```
  
-The [ApplicationViewBoundsMode](http://msdn.microsoft.com/en-us/library/windows.ui.viewmanagement.applicationviewboundsmode.aspx) enumeration has two values (UseVisible and UseCoreWindow). The later one uses the whole screen (even behind the SystemTray and also behind the BottomAppBar) and suits our needs. Only one thing to remember for your app: You need to set the Margins in this case to get your UI right.
+The [ApplicationViewBoundsMode](https://msdn.microsoft.com/en-us/library/windows.ui.viewmanagement.applicationviewboundsmode.aspx) enumeration has two values (UseVisible and UseCoreWindow). The later one uses the whole screen (even behind the SystemTray and also behind the BottomAppBar) and suits our needs. Only one thing to remember for your app: You need to set the Margins in this case to get your UI right.
 
 #### The preview code
 
-Windows Runtime apps use the [MediaCapture](http://msdn.microsoft.com/en-us/library/windows/apps/windows.media.capture.mediacapture.aspx) class for all photo and video capturing.
+Windows Runtime apps use the [MediaCapture](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.capture.mediacapture.aspx) class for all photo and video capturing.
 
 To enable your app to preview the things you want to capture, we first need to initialize the MediaCapture. We are doing this by a helper method, as we will need it in the next post to create some options for our MediaCapture. After declaring a page wide variable for the MediaCapture, add the following code to your code behind file:
 
@@ -138,7 +138,7 @@ Now we are already able to start previewing (without any options) on our phone:
 
 You might get similar strange results if you start capturing. For example, the preview on my Lumia 1020 is flipped upside down and the front camera is used.
 
-How we are going to change this, [is topic of the second part](http://msicc.net/?p=4208 "How to capture a photo in your Windows Phone 8.1 Runtime app-Part II: some common modifications").
+How we are going to change this, [is topic of the second part]({% post_url 2014-11-15-how-to-capture-a-photo-in-your-windows-phone-8-1-runtime-app-part-ii-some-common-modifications %} "How to capture a photo in your Windows Phone 8.1 Runtime app-Part II: some common modifications").
 
 Until then, happy coding!
 

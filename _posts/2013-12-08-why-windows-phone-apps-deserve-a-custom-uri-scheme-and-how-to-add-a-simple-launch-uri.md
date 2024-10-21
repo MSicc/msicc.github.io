@@ -45,11 +45,11 @@ There are more use cases, but I am leaving you with these three for the moment.
 
 Back to the conversations I had with my users. They want and deserve a great user experience. This blog post is part of my efforts to provide users their deserved user experience.
 
-Sadly, for a handful of developers it is not as easy to gain some attention for this. This is why I am trying to get DVLUP on board. By creating a challenge for this, more developers would join to earn the XP. The winners in this case are the users out there, because this way, their user experience will be improved. I know this should be done by Microsoft. In the meantime, it is up to us developers to improve. That’s why I ask you to vote for my idea case on DVLUP here: [http://www.dvlup.com/Feedback?query=custom+uri+scheme+to+all+apps%21#](http://www.dvlup.com/Feedback?query=custom+uri+scheme+to+all+apps%21# "http://www.dvlup.com/Feedback?query=custom+uri+scheme+to+all+apps%21#") (the first entry in the list is the one to vote).
+Sadly, for a handful of developers it is not as easy to gain some attention for this. This is why I am trying to get DVLUP on board. By creating a challenge for this, more developers would join to earn the XP. The winners in this case are the users out there, because this way, their user experience will be improved. I know this should be done by Microsoft. In the meantime, it is up to us developers to improve. That’s why I ask you to vote for my idea case on DVLUP here: [https://www.dvlup.com/Feedback?query=custom+uri+scheme+to+all+apps%21#](https://www.dvlup.com/Feedback?query=custom+uri+scheme+to+all+apps%21# "https://www.dvlup.com/Feedback?query=custom+uri+scheme+to+all+apps%21#") (the first entry in the list is the one to vote).
 
 There is one reason left why you should add a custom uri scheme to your app. This point is for you, the developer reading this article. You have a free possibility to promote your app across other apps. The most important point: it takes only 5 minutes to add a simple launch uri scheme.
 
-Do you already have a custom uri scheme for your app? Great, then add it to this list: [URI Association Schemes List – Nokia Developer Wiki](http://developer.nokia.com/Community/Wiki/URI_Association_Schemes_List "URI Association Schemes List - Nokia Developer Wiki"). This way, other developers can use them to interact with your app and bring you new users, too.
+Do you already have a custom uri scheme for your app? Great, then add it to this list: [URI Association Schemes List – Nokia Developer Wiki](https://developer.nokia.com/Community/Wiki/URI_Association_Schemes_List "URI Association Schemes List - Nokia Developer Wiki"). This way, other developers can use them to interact with your app and bring you new users, too.
 
 To close this article, I want to show you how to add a simple custom uri launch scheme. I have done this with my app Mix Play &amp; Share recently (update submitted, will add it to the list above as soon as it certified).
 
@@ -70,23 +70,23 @@ Save and close the Document.
 Add a new class to your project. Add the following code in your class:
 
 ``` csharp
-    class UriSchemeMapper : UriMapperBase
+class UriSchemeMapper : UriMapperBase
+{
+    private string tempUri;
+
+    public override Uri MapUri(Uri uri)
     {
-        private string tempUri;
+        tempUri = System.Net.HttpUtility.UrlDecode(uri.ToString());
 
-        public override Uri MapUri(Uri uri)
+        // updated code begins here:
+        if (tempUri.Contains("your-custom-uri-scheme-here"))
         {
-            tempUri = System.Net.HttpUtility.UrlDecode(uri.ToString());
-
-            // updated code begins here:
-            if (tempUri.Contains("your-custom-uri-scheme-here"))
-            {
-                return new Uri("/MainPage.xaml", UriKind.Relative);
-            }
-            //updated code ends here
-            return uri;
+            return new Uri("/MainPage.xaml", UriKind.Relative);
         }
+        //updated code ends here
+        return uri;
     }
+}
 ```
  
 To make your app using this custom uri scheme, you just have to add another line of code after the declaration of your RootFrame in App.xaml.cs:
@@ -98,7 +98,7 @@ RootFrame.UriMapper = new UriSchemeMapper();
  
 That’s all, your app now is able to be launched by other apps!
 
-You can also add more advanced custom uri schemes (up to 10 per app), to read more about it, check MSDN: [http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj206987(v=vs.105).aspx#BKMK\_URIassociations](http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj206987(v=vs.105).aspx#BKMK_URIassociations "http://msdn.microsoft.com/en-us/library/windowsphone/develop/jj206987(v=vs.105).aspx#BKMK_URIassociations")
+You can also add more advanced custom uri schemes (up to 10 per app), to read more about it, check MSDN: [https://msdn.microsoft.com/en-us/library/windowsphone/develop/jj206987(v=vs.105).aspx#BKMK\_URIassociations](https://msdn.microsoft.com/en-us/library/windowsphone/develop/jj206987(v=vs.105).aspx#BKMK_URIassociations "https://msdn.microsoft.com/en-us/library/windowsphone/develop/jj206987(v=vs.105).aspx#BKMK_URIassociations")
 
 I hope after reading this post, you understand why I think it is important to add a custom uri scheme. With the simple code above, you’re done in 5 minutes.
 

@@ -18,7 +18,7 @@ tags:
     - XfQaD
 ---
 
-### How I discovered this [\#XFQaD](https://msicc.net/tag/xfqad/)
+### How I discovered this #XFQaD
 
 When I was reorganizing the application resources on my current side project, I decided to create some thematically divided ResourceDictionary files. This has led me to do a quick research on Xamarin.Forms resource dictionaries.
 
@@ -30,7 +30,8 @@ Until now, I only used this with ResourceDictionary files. Maybe it will be help
 
 Add a new XAML file (sample is still ResourceDictionary) to your project:
 
-<div class="wp-block-image is-style-default"><figure class="aligncenter size-full is-resized">![Add_ResourceDictionary](https://msicc.net/assets/img/2021/11/Add_ResourceDictionary_XAML.png)</figure></div>Delete the code behind file, and add your XAML code. Before hitting the Build button, add this line immediately after the .xml file header:
+![Add_ResourceDictionary](/assets/img/2021/11/Add_ResourceDictionary_XAML.png)
+Delete the code behind file, and add your XAML code. Before hitting the Build button, add this line immediately after the .xml file header:
 
 ``` xml
  <?xaml-comp compile="true" ?>

@@ -21,7 +21,7 @@ tags:
     - wpdev
 ---
 
-As some of you might know, I recently switched to uservoice.com for feedback, support and also FAQ hosting (read more [here](http://msicc.net/?p=3916)). Of course I want to integrate all those features into my app(s) to make the user experience as native as possible.
+As some of you might know, I recently switched to uservoice.com for feedback, support and also FAQ hosting (read more [here]({% post_url 2014-01-06-experiment-using-uservoice-com-for-support-feedback-and-faq %})). Of course I want to integrate all those features into my app(s) to make the user experience as native as possible.
 
 First, you need to generate a new app in uservoice.com. Log into your account, click on ‘Admin Console’, ‘Settings’ and finally ‘Integrations’. Then add your API client, you will have something like this:
 
@@ -41,10 +41,10 @@ First, we need to declare some constants:
  const string ConsumerKey = "<youKey>";
  const string ConsumerSecret = "<yourSecret>";
  //all KB articles:
- const string KnowledgebaseString = "http://<yoursubdomain>.uservoice.com/api/v1/articles.json?client={0}";
+ const string KnowledgebaseString = "https://<yoursubdomain>.uservoice.com/api/v1/articles.json?client={0}";
  //KB topic articles:
  //using sort=oldest ensures that you will get the right order of your articles
- const string KnowledgebaseTopicString = "http://<yousubdomain>.uservoice.com/api/v1/topics/{0}/articles.json?client={1}&sort=oldest";
+ const string KnowledgebaseTopicString = "https://<yousubdomain>.uservoice.com/api/v1/topics/{0}/articles.json?client={1}&sort=oldest";
 
 static string articleJsonString;
 ```
@@ -75,38 +75,38 @@ public async Task<string> GetKBJsonString()
  }
 ```
  
-Of course we want to have a list shown to our users – to display our JSON string in a ListBox, we need to deserialize it. To be able to deserialize it, we need a data class. You can use [json2sharp.com](http://json2sharp.com) to generate the base class or use this one ([download Link](/assets/img/2014/01/KBArticleDataClass.zip "download link")). It fits for both all articles or topic based articles.
+Of course we want to have a list shown to our users – to display our JSON string in a ListBox, we need to deserialize it. To be able to deserialize it, we need a data class. You can use [json2sharp.com](https://json2sharp.com) to generate the base class or use this one ([download Link](/assets/img/2014/01/KBArticleDataClass.zip "download link")). It fits for both all articles or topic based articles.
 
 First, create a ListBox with the corresponding DataTemplate (I am only using question and answer text for this demo).
 
 ``` xml
-             <ListBox x:Name="FAQListBox">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"></RowDefinition>
-                                <RowDefinition Height="Auto"></RowDefinition>
-                            </Grid.RowDefinitions>
-                            <TextBlock Grid.Row="0" x:Name="questionTB" Style="{StaticResource PhoneTextTitle2Style}" Text="{Binding question}" TextWrapping="Wrap"></TextBlock>
-                            <TextBlock Grid.Row="1" x:Name="answerTB" Style="{StaticResource PhoneTextSubtleStyle}" Text="{Binding text}" TextWrapping="Wrap"></TextBlock>
-                        </Grid>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+<ListBox x:Name="FAQListBox">
+<ListBox.ItemTemplate>
+    <DataTemplate>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" x:Name="questionTB" Style="{StaticResource PhoneTextTitle2Style}" Text="{Binding question}" TextWrapping="Wrap"></TextBlock>
+            <TextBlock Grid.Row="1" x:Name="answerTB" Style="{StaticResource PhoneTextSubtleStyle}" Text="{Binding text}" TextWrapping="Wrap"></TextBlock>
+        </Grid>
+    </DataTemplate>
+</ListBox.ItemTemplate>
+</ListBox>
 ```
  
-I am using [JSON.net](http://james.newtonking.com/json) for everything around JSON strings. Here is how to deserialize the JSON string and set the ItemsSource of our Listbox:
+I am using [JSON.net](https://james.newtonking.com/json) for everything around JSON strings. Here is how to deserialize the JSON string and set the ItemsSource of our Listbox:
 
 ``` csharp
-             articleJsonString = await GetKBJsonString();
+articleJsonString = await GetKBJsonString();
 
-            var articlesList = JsonConvert.DeserializeObject<KBArticleDataClass.KBArticleData>(articleJsonString);
+var articlesList = JsonConvert.DeserializeObject<KBArticleDataClass.KBArticleData>(articleJsonString);
 
-            FAQListBox.ItemsSource = articlesList.articles;
+FAQListBox.ItemsSource = articlesList.articles;
 ```
  
-You are now already able to run the project. Here is the result of my test app, displaying the FAQ of my [NFC Toolkit](http://www.windowsphone.com/s?appid=2c33cb7d-c97b-4204-aa8b-1e8712718519) app:
+You are now already able to run the project. Here is the result of my test app, displaying the FAQ of my [NFC Toolkit](https://www.windowsphone.com/s?appid=2c33cb7d-c97b-4204-aa8b-1e8712718519) app:
 
 ![uservoice_listbox_testapp_screenshot](/assets/img/2014/01/uservoice_listbox_testapp_screenshot.png "uservoice_listbox_testapp_screenshot")
 

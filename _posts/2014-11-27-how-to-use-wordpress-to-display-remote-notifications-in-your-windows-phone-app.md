@@ -29,7 +29,7 @@ Fill in the title and your notification and publish the page. Before closing you
 
 ![image](/assets/img/2014/11/image1.png "image")
 
-The next step is to download my WordPress Universal library, which can be downloaded [right here from my Github](https://github.com/MSiccDev/WordPressUniversal/zipball/master). You can add the project directly to your solution or build it and then reference the library you will find in the bin folder of the WordPress Universal project folder. If you want to learn more about the library, visit <http://bit.ly/WordPressUniversal>.
+The next step is to download my WordPress Universal library, which can be downloaded [right here from my Github](https://github.com/MSiccDev/WordPressUniversal/zipball/master). You can add the project directly to your solution or build it and then reference the library you will find in the bin folder of the WordPress Universal project folder. If you want to learn more about the library, visit <https://bit.ly/WordPressUniversal>.
 
 Now that we have everything in place, let’s add the code that does the magic for us:
 

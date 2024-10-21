@@ -38,10 +38,12 @@ This takes some time for *every* image, and Visual Studio seems to be quite busy
 
 ### How to add the assets – step by step
 
-1. right click on the project in Solution Explorer and select ‘*Open Folder in File Explorer*‘ and find the ‘*Assets*‘ folder ![open_folder_in_file_explorer](https://msicc.net/assets/img/2018/08/open_folder_in_file_explorer.png)
+1. right click on the project in Solution Explorer and select ‘*Open Folder in File Explorer*‘ and find the ‘*Assets*‘ folder ![open_folder_in_file_explorer](/assets/img/2018/08/open_folder_in_file_explorer.png)
+
 2. create a new folder in this format: ‘*\[yourassetname\].imageset*‘
 3. add your image to the folder
-4. create a new file with the name `Contents.json` ![add_image_and_contents_file](https://msicc.net/assets/img/2018/08/add_image_and_contents_file.png)
+4. create a new file with the name `Contents.json` ![add_image_and_contents_file](/assets/img/2018/08/add_image_and_contents_file.png)
+
 5. open the file (I use [Notepad++](https://notepad-plus-plus.org/download/v7.5.8.html) for such operations) and add this minimum required `json`to it: 
 ``` json
      {
@@ -74,8 +76,10 @@ This takes some time for *every* image, and Visual Studio seems to be quite busy
       }
     }
     ```
- 6. go back to Visual Studio, right click on the project again and select ‘*Unload Project*‘![unload_project](https://msicc.net/assets/img/2018/08/unload_project.png)
-7. right click again and select ‘*Edit \[yourprojectname\].iOS.csproj*‘ ![edit_ios_csproj](https://msicc.net/assets/img/2018/08/edit_ios_csproj.png)
+ 6. go back to Visual Studio, right click on the project again and select ‘*Unload Project*‘![unload_project](/assets/img/2018/08/unload_project.png)
+
+7. right click again and select ‘*Edit \[yourprojectname\].iOS.csproj*‘ ![edit_ios_csproj](/assets/img/2018/08/edit_ios_csproj.png)
+
 8. find the `ItemGroup` with the Assets
 9. inside the `ItemGroup`, add your `imageset` with these two entries: 
 ``` xml
@@ -90,7 +94,8 @@ This takes some time for *every* image, and Visual Studio seems to be quite busy
  10. close the file and reload the project by selecting it from the context menu in Solution Explorer
 
 If you followed this steps, your assets should be visible immediately:  
-![assets_with_added_imagesets](https://msicc.net/assets/img/2018/08/assets_with_added_imagesets.png)
+![assets_with_added_imagesets](/assets/img/2018/08/assets_with_added_imagesets.png)
+
 
 I did not measure the time exactly, but I felt I was significantly faster by adding all those images that way. Your mileage may vary, depending on the power of your dev machine.
 

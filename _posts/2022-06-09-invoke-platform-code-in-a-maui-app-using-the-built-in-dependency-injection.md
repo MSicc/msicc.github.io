@@ -6,7 +6,7 @@ author: 'Marco Siccardi'
 excerpt: 'I recently started to port my internal MVVM libraries over to .NET MAUI. It did not take long until I reached the point where I needed to invoke platform code. This post is about my experience with that.'
 layout: post
 permalink: /invoke-platform-code-in-a-maui-app-using-the-built-in-dependency-injection/
-image: /assets/img/2022/06/MAUI_DI_Test_Running-scaled.jpeg
+image: /assets/img/2022/06/MAUI_DI_Test_Running.jpeg
 categories:
     - 'Dev Stories'
     - MAUI
@@ -69,7 +69,7 @@ Repeat this for all platforms, and replace the platform’s name accordingly.
 
 ### Using Dependency Injection in MAUI
 
-If you have been following along my past blog posts, you know that I recently switched to the CommunityToolkit MVVM (read more [here](https://msicc.net/using-microsofts-extensions-dependencyinjection-package-in-xamarin-forms-mvvm-applications-part-1/) and [here](https://msicc.net/using-microsofts-extensions-dependencyinjection-package-in-xamarin-forms-mvvm-applications-part-2/)). I already heard that MAUI will get the same DI container built-in, so the choice was obvious. Now let’s have a look how easy we can inject our interface into our ViewModel. Head over to your MauiProgram.cs file and update the CreateMauiApp method:
+If you have been following along my past blog posts, you know that I recently switched to the CommunityToolkit MVVM (read more [here]({% post_url  2022-02-08-using-microsofts-extensions-dependencyinjection-package-in-xamarin-forms-mvvm-applications-part-1 %}) and [here]({% post_url 2022-02-19-using-microsofts-extensions-dependencyinjection-package-in-xamarin-forms-mvvm-applications-part-2 %})). I already heard that MAUI will get the same DI container built-in, so the choice was obvious. Now let’s have a look how easy we can inject our interface into our ViewModel. Head over to your MauiProgram.cs file and update the CreateMauiApp method:
 
 ``` csharp
  	public static MauiApp CreateMauiApp()

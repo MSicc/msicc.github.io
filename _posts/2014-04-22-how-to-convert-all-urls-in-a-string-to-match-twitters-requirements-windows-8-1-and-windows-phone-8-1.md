@@ -93,7 +93,7 @@ Recovering the amount of time I needed for this, I decided to share my solution 
         }
 ```
  
-First, we are detecting links in the string using the above mentioned RegEx expression and collect them in a [MatchCollection](http://msdn.microsoft.com/en-us/library/system.text.regularexpressions.matchcollection(v=vs.110).aspx).
+First, we are detecting links in the string using the above mentioned RegEx expression and collect them in a [MatchCollection](https://msdn.microsoft.com/en-us/library/system.text.regularexpressions.matchcollection(v=vs.110).aspx).
 
 As https urls have a 23 character length on t.co (Twitter’s url shortener), I am generating two new counts – one for https, one for all other urls.
 

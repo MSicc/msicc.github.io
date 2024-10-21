@@ -49,7 +49,8 @@ This interface gets the current installed version of the operating system. The n
 
 We need to implement the service class for each platform. The setup is pretty easy, just add a new class and implement the interface for each platform:
 
-![implement-interface-vs2017](https://msicc.net/assets/img/2017/06/implement-interface-vs2017.png)
+![implement-interface-vs2017](/assets/img/2017/06/implement-interface-vs2017.png)
+
 
 *Tip:* I am using a separate folder for platform implementations and set it to be a namespace provider. This makes it easier to maintain and I keep the same structure in all platform projects.
 

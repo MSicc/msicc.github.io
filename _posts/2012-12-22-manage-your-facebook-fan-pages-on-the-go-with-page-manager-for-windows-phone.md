@@ -37,10 +37,10 @@ What is also important if you manage a page on Facebook, are your Insights. Thes
 
 ![insights](/assets/img/2012/12/insights.png "insights")
 
-Yes, the numbers of my Facebook page are not the best. If you want to help and change that, you can do by liking it [here](http://www.facebook.com/msiccsblog).
+Yes, the numbers of my Facebook page are not the best. If you want to help and change that, you can do by liking it [here](https://www.facebook.com/msiccsblog).
 
 Page Manager for Windows Phone is a really powerful app to keep attention and manage your Facebook page. It is under constant development and will be coming to Windows 8 and receive some Windows Phone 8 features. At the moment the app is running both Windows Phone 7 and 8.
 
 The app has a trial with limited function. I am using it for month now, and I can only tell you that the app is worth every cent (1,49 € / 1,99 $ / £ 1.29). You can download it by scanning or clicking the barcode below:
 
-[![fbmanagerbarcode](/assets/img/2012/12/fbmanagerbarcode.png "fbmanagerbarcode")](http://windowsphone.com/s?appid=918c0ff6-b756-4e4e-9192-1bb4de86192c)
+[![fbmanagerbarcode](/assets/img/2012/12/fbmanagerbarcode.png "fbmanagerbarcode")](https://windowsphone.com/s?appid=918c0ff6-b756-4e4e-9192-1bb4de86192c)

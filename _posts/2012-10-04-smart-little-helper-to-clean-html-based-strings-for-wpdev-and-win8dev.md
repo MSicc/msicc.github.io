@@ -16,7 +16,7 @@ I thought I would share this small little class I created to clean out HTML base
 
 If you use cloud based or internet data, often strings contain “&amp;ndash;” or “&amp;#8211;” instead of their intended letter, like you can see on this image:
 
-![htmlstringuncleaned](/assets/img/2012/10/Screenshot-16_thumb1.png "htmlstringuncleaned")
+![htmlstringuncleaned](/assets/img/2012/10/Screenshot-161.png "htmlstringuncleaned")
 
 The method uses Regex to replace all the wrong signs and clean out all of the unwanted signs. You can also add more to that if you need to replace wrong letters.
 
@@ -77,7 +77,7 @@ As we created a class for this little helper, you can call it from everywhere wi
 
 After calling this method, your string is plain text:
 
-![Screenshot (17)](/assets/img/2012/10/Screenshot-17_thumb1.png "Screenshot (17)")
+![Screenshot (17)](/assets/img/2012/10/Screenshot-171.png "Screenshot (17)")
 
 I hope this post will be helpful for some of you.
 

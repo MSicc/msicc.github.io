@@ -49,7 +49,8 @@ First, install the OpenSSH client on your Windows machine. Proceed as follows:
 
 If you are scrolling down the list of installed features, you should find the entry for the OpenSSH client.
 
-<div class="wp-block-image"><figure class="aligncenter size-large">![](https://msicc.net/assets/img/2019/09/openssh-client-feature-installed.png)</figure></div>*Note: If you are not able to install this feature, it may be the right time to update your Windows installation to the latest version.*
+![](/assets/img/2019/09/openssh-client-feature-installed.png)
+*Note: If you are not able to install this feature, it may be the right time to update your Windows installation to the latest version.*
 
 #### Create your SSH key pair
 
@@ -208,7 +209,7 @@ As you can see, one does not always have to use third-party tools to get things 
 - <https://manpages.ubuntu.com/manpages/trusty/man8/groupadd.8.html>
 - <https://manpages.ubuntu.com/manpages/xenial/man1/chgrp.1.html>
 - <https://manpages.ubuntu.com/manpages/xenial/man8/usermod.8.html>
-- <http://cheatsheetworld.com/programming/unix-linux-cheat-sheet/>
+- <https://cheatsheetworld.com/programming/unix-linux-cheat-sheet/>
 - <https://help.ubuntu.com/community/LinuxFilesystemTreeOverview>
 
 [Title Image Credit (Pixabay)](https://pixabay.com/photos/cyberspace-data-wire-electronic-2784907/)

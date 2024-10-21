@@ -5,7 +5,7 @@ date: '2012-08-29T11:54:58+02:00'
 author: 'Marco Siccardi'
 layout: post
 permalink: /post-200-or-what-exiting-times-we-have-with-microsoft/
-image: /assets/img/2012/08/microsoft_logo_thumb.jpg
+image: /assets/img/2012/08/microsoft_logo.jpg
 categories:
     - Archive
 tags:
@@ -17,7 +17,10 @@ tags:
     - wpdev
 ---
 
-![microsoft_logo](/assets/img/2012/08/microsoft_logo_thumb.jpg "microsoft_logo")I struggled with myself very long on what topic I dedicate this post with the anniversary number 200 and ended up with this article.
+![microsoft_logo](/assets/img/2012/08/microsoft_logo.jpg "microsoft_logo")
+
+
+I struggled with myself very long on what topic I dedicate this post with the anniversary number 200 and ended up with this article.
 
 We all had already a very exiting year with Microsoft. Microsoft is fully in his “reimagine” phase, and the winners of this are we – as users, and as developers.
 
@@ -31,7 +34,7 @@ It is a change in the daily use of your PC, but most of the users that I persona
 
 For Developers it is amazing: no matter what language you are using right now, almost everyone can do Windows 8 apps. No matter if you are a Web Designer, used to Java, C# or C++, your app can be there on Windows 8! And you can even use more than one programming languages in one app.
 
-In March this year I visited the CeBit, a trade fair that is for technology news here in Germany. I was amazed about the things I saw from Microsoft, but Germany is not a big target for the mobile/IT-industry- at least not shortly after the MWC. You can read my report about the CeBit [here](http://msicc.net/?p=1433).
+In March this year I visited the CeBit, a trade fair that is for technology news here in Germany. I was amazed about the things I saw from Microsoft, but Germany is not a big target for the mobile/IT-industry- at least not shortly after the MWC. You can read my report about the CeBit [here]({% post_url 2012-03-10-my-cebit-2012-review %}).
 
 **Windows Phone**
 
@@ -49,7 +52,7 @@ And then there will be SmartGlass. Your Xbox companion – regardless which devi
 
 **Office 2013**
 
-I am also exited about the free-to-test-for-everybody Office 2013 Preview. Microsoft changed the programs into streamed applications. And they are performing very well (even with my slow 2 MBit/s connection). On top Microsoft released One Note MX, a Metro app for Windows 8 for those who use a WinRT tablet only. Get it today via the official [Office 2013 website](http://www.microsoft.com/office/preview/en) (for up to 5 PCs!). Skype integration is coming later this year via an “Office app”. There are also further apps in the Office Beta Store.
+I am also exited about the free-to-test-for-everybody Office 2013 Preview. Microsoft changed the programs into streamed applications. And they are performing very well (even with my slow 2 MBit/s connection). On top Microsoft released One Note MX, a Metro app for Windows 8 for those who use a WinRT tablet only. Get it today via the official [Office 2013 website](https://www.microsoft.com/office/preview/en) (for up to 5 PCs!). Skype integration is coming later this year via an “Office app”. There are also further apps in the Office Beta Store.
 
 **Microsoft Account and connected Websites**
 

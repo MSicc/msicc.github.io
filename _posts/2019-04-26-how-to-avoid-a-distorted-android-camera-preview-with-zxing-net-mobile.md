@@ -36,7 +36,8 @@ If you need to implement QR-scanning into your Xamarin (Forms) app, chances are 
 
 Reality hit me hard when I realized that the preview is totally distorted:
 
-<div class="wp-block-image"><figure class="aligncenter is-resized">![distorted camera preview](https://i2.wp.com/msicc.net/assets/img/2019/04/distorted-camera-preview.png?fit=576%2C1024&ssl=1)</figure></div>Even with that distortion, the library detects the QR code without problems. However, the distortion is not something you want your user to experience. So I started to investigate why this distortion happens. [As I am not the only one experiencing this problem](https://github.com/Redth/ZXing.Net.Mobile/issues/808), I am showing to easily fix that issue and the way that led to the solution (knowing also some beginners follow my blog).
+![distorted camera preview](/assets/img/2019/04/distorted-camera-preview.png)
+Even with that distortion, the library detects the QR code without problems. However, the distortion is not something you want your user to experience. So I started to investigate why this distortion happens. [As I am not the only one experiencing this problem](https://github.com/Redth/ZXing.Net.Mobile/issues/808), I am showing to easily fix that issue and the way that led to the solution (knowing also some beginners follow my blog).
 
 ### Searching the web …
 
@@ -75,7 +76,7 @@ Let’s break it down. This code takes the available resolutions from the (old a
 
 ### Solution/Workaround
 
-The solution to this is pretty easy. Just provide a `<a aria-label="CameraResolutionSelectorDelegate  (opens in a new tab)" href="http://		public delegate CameraResolution CameraResolutionSelectorDelegate (List<CameraResolution> availableResolutions);" rel="noreferrer noopener" target="_blank">CameraResolutionSelectorDelegate</a>` with your code setting up the [ZXingScannerView](https://github.com/Redth/ZXing.Net.Mobile/blob/master/Source/ZXing.Net.Mobile.Forms/ZXingScannerView.cs). First, we need a method that returns a `<a aria-label="CameraResolution (opens in a new tab)" href="https://github.com/Redth/ZXing.Net.Mobile/blob/master/Source/ZXing.Net.Mobile.Core/CameraResolution.cs" rel="noreferrer noopener" target="_blank">CameraResolution</a>` and takes a List of `CameraResolution`, let’s have a look at that one first:
+The solution to this is pretty easy. Just provide a `<a aria-label="CameraResolutionSelectorDelegate  (opens in a new tab)" href="https://		public delegate CameraResolution CameraResolutionSelectorDelegate (List<CameraResolution> availableResolutions);" rel="noreferrer noopener" target="_blank">CameraResolutionSelectorDelegate</a>` with your code setting up the [ZXingScannerView](https://github.com/Redth/ZXing.Net.Mobile/blob/master/Source/ZXing.Net.Mobile.Forms/ZXingScannerView.cs). First, we need a method that returns a `<a aria-label="CameraResolution (opens in a new tab)" href="https://github.com/Redth/ZXing.Net.Mobile/blob/master/Source/ZXing.Net.Mobile.Core/CameraResolution.cs" rel="noreferrer noopener" target="_blank">CameraResolution</a>` and takes a List of `CameraResolution`, let’s have a look at that one first:
 
 ``` csharp
  public CameraResolution SelectLowestResolutionMatchingDisplayAspectRatio(List<CameraResolution> availableResolutions)
@@ -145,7 +146,10 @@ CameraResolutionSelector = DependencyService.Get<IZXingHelper>().CameraResolutio
 
 Now that we have an updated resolution selection mechanism in place, the result is exactly what we expected, without any distortion:
 
-<div class="wp-block-image"><figure class="aligncenter is-resized">![matching camera preview](https://i0.wp.com/msicc.net/assets/img/2019/04/matching-camera-preview.png?fit=576%2C1024&ssl=1)</figure></div>### Remarks
+![matching camera preview](/assets/img/2019/04/matching-camera-preview.png)
+
+
+### Remarks
 
 In case none of the camera resolutions gets selected, the camera preview automatically uses the default resolution. In my tests with three devices, this is always the highest one. The default resolution normally matches the devices aspect ratio. As it is the highest, it will slow down the QR detection, however.
 

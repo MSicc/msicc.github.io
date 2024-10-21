@@ -111,27 +111,27 @@ public CustomAppBarWP8 customappbar;
 
 customappbar = new CustomAppBarWP8();
 
-            customappbar.CustomAppBarBackground = new SolidColorBrush(Colors.Green);
+customappbar.CustomAppBarBackground = new SolidColorBrush(Colors.Green);
 
-            customappbar.CustomAppBarButtonItem1Text.Text = "test 1";
-            customappbar.CustomAppBarButtonItem2Text.Text = "test 2";
-            customappbar.CustomAppBarButtonItem3Text.Text = "test 3";
-            customappbar.CustomAppBarButtonItem4Text.Text = "test 4";
+customappbar.CustomAppBarButtonItem1Text.Text = "test 1";
+customappbar.CustomAppBarButtonItem2Text.Text = "test 2";
+customappbar.CustomAppBarButtonItem3Text.Text = "test 3";
+customappbar.CustomAppBarButtonItem4Text.Text = "test 4";
 
-            customappbar.CustomAppBarRadImageButton1.RestStateImageSource = new BitmapImage(new Uri("Assets/AppBar/microphone.png", UriKind.RelativeOrAbsolute));
-            customappbar.CustomAppBarRadImageButton2.RestStateImageSource = new BitmapImage(new Uri("Assets/AppBar/save.png", UriKind.RelativeOrAbsolute));
-            customappbar.CustomAppBarRadImageButton3.RestStateImageSource = new BitmapImage(new Uri("Assets/AppBar/delete.png", UriKind.RelativeOrAbsolute));
-            customappbar.CustomAppBarRadImageButton4.RestStateImageSource = new BitmapImage(new Uri("Assets/AppBar/questionmark.png", UriKind.RelativeOrAbsolute));
+customappbar.CustomAppBarRadImageButton1.RestStateImageSource = new BitmapImage(new Uri("Assets/AppBar/microphone.png", UriKind.RelativeOrAbsolute));
+customappbar.CustomAppBarRadImageButton2.RestStateImageSource = new BitmapImage(new Uri("Assets/AppBar/save.png", UriKind.RelativeOrAbsolute));
+customappbar.CustomAppBarRadImageButton3.RestStateImageSource = new BitmapImage(new Uri("Assets/AppBar/delete.png", UriKind.RelativeOrAbsolute));
+customappbar.CustomAppBarRadImageButton4.RestStateImageSource = new BitmapImage(new Uri("Assets/AppBar/questionmark.png", UriKind.RelativeOrAbsolute));
 
 //registering the tap events:
 
-            customappbar.CustomAppBarRadImageButton1.Tap += CustomAppBarRadImageButton1_Tap;
-            customappbar.CustomAppBarRadImageButton2.Tap += CustomAppBarRadImageButton2_Tap;
-            customappbar.CustomAppBarRadImageButton3.Tap += CustomAppBarRadImageButton3_Tap;
-            customappbar.CustomAppBarRadImageButton4.Tap += CustomAppBarRadImageButton4_Tap;
+customappbar.CustomAppBarRadImageButton1.Tap += CustomAppBarRadImageButton1_Tap;
+customappbar.CustomAppBarRadImageButton2.Tap += CustomAppBarRadImageButton2_Tap;
+customappbar.CustomAppBarRadImageButton3.Tap += CustomAppBarRadImageButton3_Tap;
+customappbar.CustomAppBarRadImageButton4.Tap += CustomAppBarRadImageButton4_Tap;
 
 //adding the app bar to the dedicated Grid:
-            AppBarGrid.Children.Add(customappbar);
+AppBarGrid.Children.Add(customappbar);
 ```
  
 The standard Application Bar does fading out the text on a button tap, so we need to add this line in every tap event. Otherwise, it would remain open all the time.
@@ -145,7 +145,8 @@ The standard Application Bar does fading out the text on a button tap, so we nee
  
 To get the same result on tapping outside our custom app bar, add the same code to your main Grid’s MouseLeftButtonDown event. This way, you have the same behavior like in the original control.
 
-<span style="text-decoration: underline;">Additional note:</span> I needed to find a quick way to achieve this, that’s why I may have not been using best practices. I also used the RadImageButton Control to speed things up. I will refine this control when I have more time available for it, as well as add a version without Telerik controls and adding the menu items.
+> Additional note: I needed to find a quick way to achieve this, that’s why I may have not been using best practices. I also used the RadImageButton Control to speed things up. I will refine this control when I have more time available for it, as well as add a version without Telerik controls and adding the menu items.
+{: .prompt-warning }
 
 If you have any idea on how to improve this, feel free to left a comment below.
 

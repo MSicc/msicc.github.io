@@ -40,7 +40,10 @@ The second impacting event was the take-over of Twitter by Elon Musk. While he m
 
 At the time of the take-over, I was actively working on my app TwistReader, which was a reader app for Twitter lists. I had already a beta running on TestFlight when things began to turn bad on Twitter. After UniShare (which was in the process of being ported to Android and iOS when it died), I had to take the though decision to let go also this app. I cancelled the domain I bought for the app and shut down all Azure resources already. *If someone wants to continue the project, I am open to talk about it.*
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![TwistReader promotional image](https://msicc.net/assets/img/2022/12/TwistReader_header_temp-1024x659.png)</figure></div>This is now the second time I had to stop an app for social media. Ultimately, I decided I will not develop against any of the social networks from now on (even though I have several ideas to improve my social flow).
+![TwistReader promotional image](/assets/img/2022/12/TwistReader_header_temp.png)
+
+
+This is now the second time I had to stop an app for social media. Ultimately, I decided I will not develop against any of the social networks from now on (even though I have several ideas to improve my social flow).
 
 As we all know, things on Twitter aren’t becoming better. My presence on the bird site serves now solely as a guide to other social media I am active on. I decided to not delete my two main accounts, but to lock them for new followers, and stopped using the service. I am mostly active on [Mastodon](https://mastodon.social/@msicc), followed by [LinkedIn](https://www.linkedin.com/in/msicc/) (although the later one needs some more attention).
 
@@ -48,11 +51,14 @@ As we all know, things on Twitter aren’t becoming better. My presence on the b
 
 Besides all the negative stuff, there were also some good news for all of us space fans. [The NASA finally sent a space-ship to the moon again](https://blogs.nasa.gov/artemis/). They are playing the save game and did an unmanned launch, letting the capsule orbit the Moon and come back to Earth. They made some really awesome photos along the way, and the mission was a full success.
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![orion space-ship with moon and earth ](https://msicc.net/assets/img/2022/12/orion-moon-earth-nasa-1024x768.jpg)<figcaption class="wp-element-caption">[Image by NASA](https://images.nasa.gov/details-art001e000678)</figcaption></figure></div>#### New blog series #CASBAN6
+![orion space-ship with moon and earth ](/assets/img/2022/12/orion-moon-earth-nasa.jpg)
+[Image by NASA](https://images.nasa.gov/details-art001e000678)
+
+#### New blog series #CASBAN6
 
 Besides working on TwistReader, I also started to port [my portfolio website](https://msiccdev.net) away from WordPress to a self written website in ASP.NET Core with Razor pages. The site itself is already published, with links to my apps in the stores, but the news section still needs a blog. I evaluated all the options, like existing CMS plugins and other blogging platforms.
 
-In the end, I opted into learning something new by using some bits of what I already know – and I started my recent [\#CASBAN6](https://msicc.net/casban6-creating-a-serverless-blog-on-azure-with-net-6-new-series/) blog series about creating a serverless blog engine on Azure. This is now my main side project.
+In the end, I opted into learning something new by using some bits of what I already know – and I started my recent [\#CASBAN6]({% post_url 2022-09-05-casban6-creating-a-serverless-blog-on-azure-with-net-6-new-series %}) blog series about creating a serverless blog engine on Azure. This is now my main side project.
 
 #### Other dev stuff
 
@@ -68,11 +74,13 @@ Furthermore, I will use the freed budget to buy a [Jetbrains Ultimate](https://w
 
 If you have been following along for some time, you may know that I only became a non-smoker again (after 25 years of chain-smoking) two years ago. In terms of sports, I took part in three challenges this year (Run4Fun 6,8km, 10km at Winterthur marathon and Kyburglauf 2022 10.3 km (including 425 stairs just at the end of km 10). If you want to follow my running adventures, [you can find me here on Strava](https://www.strava.com/athletes/msicc).
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![Me running the 10 km at Winterthur Marathon 2022](https://msicc.net/assets/img/2022/12/14371731_orig-1024x680.jpg)</figure></div>### Outlook into 2023
+![Me running the 10 km at Winterthur Marathon 2022](/assets/img/2022/12/14371731_orig.jpg)
+
+### Outlook into 2023
 
 Next year, the roller coaster continues to ride. I will start a new role in March as a .NET mobile developer at Galliker Switzerland, which is one of the leading companies in logistics. They have a `Xamarin.Forms` code base and started the transition to `.NET MAUI`. There will be projects where I will have to do API and Web stuff as well, so this new position will help me to move towards my goal of becoming a full stack .NET developer as well. Another plus is that I am free to choose my preferred IDE – which will be most probably RIDER after my recent experiences with it.
 
-Of course, I will continue to with my [\#CASBAN6](https://msicc.net/tag/casban6/) project as well. As I stated in my last post in the series, the Azure functions part is coming up next. I will have some posts on that topic alone, but I will also keep developing it further until the final product is ready to be used in production.
+Of course, I will continue to with my [\#CASBAN6]({{ site.baseurl}}{/tags/casban6/}) project as well. As I stated in my last post in the series, the Azure functions part is coming up next. I will have some posts on that topic alone, but I will also keep developing it further until the final product is ready to be used in production.
 
 Besides that, I will start to port my Fishing Knots app to `.NET MAUI`, which will help me to learn the upgrade process and make the app ready for the future.
 

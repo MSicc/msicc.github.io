@@ -23,7 +23,7 @@ tags:
 
 ![app2app_nfctoolkit](/assets/img/2013/12/app2app_nfctoolkit.png "app2app_nfctoolkit")
 
-If you are following me, you might have noticed that uri schemes actually are playing a big role in my Windows Phone apps. ([read more](http://msicc.net/?p=3834))
+If you are following me, you might have noticed that uri schemes actually are playing a big role in my Windows Phone apps. ([read more]({% post_url 2013-12-08-why-windows-phone-apps-deserve-a-custom-uri-scheme-and-how-to-add-a-simple-launch-uri %}))
 
 NFC Toolkit, one of my main projects, offers now also the possibility to interact with your apps.
 

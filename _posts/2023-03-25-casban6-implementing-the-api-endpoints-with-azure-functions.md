@@ -24,7 +24,7 @@ tags:
     - REST
 ---
 
-[After my last post](https://msicc.net/casban6-function-base-class-and-an-update-to-the-dto-models/), we have the base implementation ready to be used for our endpoints. As we already know, our endpoints will feature the *CRUD* pattern to interact with the endpoints. Please note: the [code on GitHub](https://github.com/MSiccDev/ServerlessBlog) is already a few steps ahead and may look a bit different from what I am posting here (mostly due to the `OpenApi` attributes, but you will be able to follow along).
+[After my last post]({% post_url 2023-01-20-casban6-function-base-class-and-an-update-to-the-dto-models %}), we have the base implementation ready to be used for our endpoints. As we already know, our endpoints will feature the *CRUD* pattern to interact with the endpoints. Please note: the [code on GitHub](https://github.com/MSiccDev/ServerlessBlog) is already a few steps ahead and may look a bit different from what I am posting here (mostly due to the `OpenApi` attributes, but you will be able to follow along).
 
 I will use the `AuthorFunction` to demonstrate the implementation. All other function implementations besides the `BlogFunction` follow the same pattern.
 
@@ -46,7 +46,7 @@ First, we create a new class that derives from our base class. The constructor i
 
 The Create function is obviously responsible for creating a new entry in our database. First, we check if the `blogId` query parameter was specified and if it is parsable as a Guid. This step is the same for all endpoints. If these checks succeed, we are moving on to the next step, in this case deserializing the submitted `Author` DTO.
 
-We are using then the `CreateFrom` mapping extension method to transform the DTO into the `EntityModel.Author` object ([read my post on DTOs and mappings here](https://msicc.net/casban6-the-dtos-and-mappings/)). The latter one can then be added to the context’s authors list and saved. If all goes well, we create a `201 Created` response indicating the direct API url to read the newly created author. In all other cases, we have some error handling in place.
+We are using then the `CreateFrom` mapping extension method to transform the DTO into the `EntityModel.Author` object ([read my post on DTOs and mappings here]({% post_url 2022-12-11-casban6-the-dtos-and-mappings %})). The latter one can then be added to the context’s authors list and saved. If all goes well, we create a `201 Created` response indicating the direct API url to read the newly created author. In all other cases, we have some error handling in place.
 
 ``` csharp
  [Function($"{nameof(AuthorFunction)}_{nameof(Create)}")]

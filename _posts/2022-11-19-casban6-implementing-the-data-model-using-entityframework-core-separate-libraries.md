@@ -54,7 +54,7 @@ The classes also use `ICollection` references for relationships whenever require
 }
 ```
  
-The other classes are implemented similarly to reflect the data model I showed you [in my last post](https://msicc.net/casban6-the-data-model-explained/). You can have a look at the other [class implementations in the GitHub repo (folder: `EntityModel`)](https://github.com/MSiccDev/ServerlessBlog/tree/main/src/EntityModel).
+The other classes are implemented similarly to reflect the data model I showed you [in my last post]({% post_url 2022-09-12-casban6-how-to-set-up-a-local-microsoft-sql-database-on-macos %}). You can have a look at the other [class implementations in the GitHub repo (folder: `EntityModel`)](https://github.com/MSiccDev/ServerlessBlog/tree/main/src/EntityModel).
 
 ### EFCore library
 
@@ -201,7 +201,10 @@ To push the migration you just created to the database, use the `update` command
  
 If all goes well, you should now be able to view your database with the seeded data:
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![database seeded](https://msicc.net/assets/img/2022/11/database_seeded-1024x218.png)</figure></div>### Conclusion
+![database seeded](/assets/img/2022/11/database_seeded.png)
+
+
+### Conclusion
 
 In this post, I showed you how to create the model for the database and their matching `IEntityTypeConfiguration` implementations. We learned how to create a `IDesignTimeDbContextFactory` and how to add migrations and push them to the database. The full [code is on GitHub](https://github.com/MSiccDev/ServerlessBlog) for your further exploration.
 

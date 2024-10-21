@@ -58,7 +58,7 @@ Here is how to set up an Android device for debugging. First thing you need to k
 
 ### Installing drivers
 
-Now our devices are ready to be connected to our PC, where we need to install the corresponding USB drivers. Normally you just need to plug in your Android device, Windows will search for the right driver and install it for you. If you want to install the driver manually, here is a list of OEM driver packages: [http://developer.android.com/tools/extras/oem-usb.html#Drivers](http://developer.android.com/tools/extras/oem-usb.html#Drivers "http://developer.android.com/tools/extras/oem-usb.html#Drivers")
+Now our devices are ready to be connected to our PC, where we need to install the corresponding USB drivers. Normally you just need to plug in your Android device, Windows will search for the right driver and install it for you. If you want to install the driver manually, here is a list of OEM driver packages: [https://developer.android.com/tools/extras/oem-usb.html#Drivers](https://developer.android.com/tools/extras/oem-usb.html#Drivers "https://developer.android.com/tools/extras/oem-usb.html#Drivers")
 
 ### Deploying an App for debugging
 

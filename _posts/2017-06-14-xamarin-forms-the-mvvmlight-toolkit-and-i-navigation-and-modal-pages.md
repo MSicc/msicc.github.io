@@ -28,7 +28,7 @@ tags:
     - 'xamarin forms'
 ---
 
-After showing you the basic [MVVMLight Setup](http://bit.ly/2qEcvnd) I am using as well as [how to combine Xamarin.Forms’ DependencyService with our own Dependecy Injection-mechanism](http://bit.ly/2s1BFjr), this article is all about Navigation and modal pages in Xamarin.Forms.
+After showing you the basic [MVVMLight Setup](https://bit.ly/2qEcvnd) I am using as well as [how to combine Xamarin.Forms’ DependencyService with our own Dependecy Injection-mechanism](https://bit.ly/2s1BFjr), this article is all about Navigation and modal pages in Xamarin.Forms.
 
 ## Some preliminary words
 
@@ -588,7 +588,8 @@ The `XfNavViewModelBase` implements both the `IXfNavigationService` and the `IVi
 
 Now our navigation setup is ready it is time to have a look into how to use it. First we are going to create two pages, one for being shown modal, and one for being navigated to.
 
-![created-pages-snip](https://msicc.net/assets/img/2017/06/created-pages-snip.png)
+![created-pages-snip](/assets/img/2017/06/created-pages-snip.png)
+
 
 Then we’ll need to register and configure our services and pages in the `ViewModelLocator`. Remember the static RegisterServices() method we created in the first post? This is were we will throw the interface registrations in:
 
@@ -606,7 +607,7 @@ Then we’ll need to register and configure our services and pages in the `ViewM
 }
 ```
  
-The method contains already our `IOsVersionService` from [my last blog post](https://msicc.net/xamarin-forms-the-mvvmlight-toolkit-and-i-dependecy-injection/). We are also using DI here for the `IXfNavigationService`, as we need to Configure our page keys as well. First, we are adding static strings as page keys to the ViewModelLocator:
+The method contains already our `IOsVersionService` from [my last blog post]({% post_url 2017-06-02-xamarin-forms-the-mvvmlight-toolkit-and-i-dependecy-injection %}). We are also using DI here for the `IXfNavigationService`, as we need to Configure our page keys as well. First, we are adding static strings as page keys to the ViewModelLocator:
 
 ``` csharp
  public static string ModalPageKey => nameof(ModalPage);
@@ -692,8 +693,8 @@ Remember the page keys we added earlier to the `ViewModelLocator`? We are just s
 
 ``` xml
  <baseCtrl:XfNavContentPage 
-   xmlns="http://xamarin.com/schemas/2014/forms"
-   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+   xmlns="https://xamarin.com/schemas/2014/forms"
+   xmlns:x="https://schemas.microsoft.com/winfx/2009/xaml"
    xmlns:baseCtrl="clr-namespace:XfMvvmLight.BaseControls;assembly=XfMvvmLight"
    x:Class="XfMvvmLight.View.ModalPage" 
    RegisteredPageKey="{Binding CorrespondingViewKey}">
@@ -703,7 +704,7 @@ Remember the page keys we added earlier to the `ViewModelLocator`? We are just s
  
 As the sample pages have a button with back function, we have also a `GoBackCommand` bound to it. Now that’s already all we need to, and if we set a breakpoint in the event handling overrides, it will be hit as soon as the view is about to appear. See the sample working here in action on Android:
 
-![navigation-service-xf-mvvmlight](https://msicc.net/assets/img/2017/06/navigation-service-xf-mvvmlight.gif)
+![navigation-service-xf-mvvmlight](/assets/img/2017/06/navigation-service-xf-mvvmlight.gif)
 
 No we have a fully working and MVVM compliant navigation solution in Xamarin.Forms using the MVVMLight Toolkit. I know there are several other toolkits and helpers floating around, but I like it to have less dependencies. Another advantage of going this route: I am mostly familiar with the setup as I am already used to it from my Windows and Windows Phone applications. Creating this setup for navigation does not take a whole lot of time (the initial setup took me around 3 hours including conception). One can also pack the interfaces and the implementations in a (portable) class library to have all this work only once.
 

@@ -22,13 +22,16 @@ tags:
 
 Every now and then, our IDE’s get some updates. This week, Visual Studio for MacOS got updated once again. After that, there was a separated Download initiated for the Xcode Command Line Tools. Two days later, Visual Studio started to greet me with this little message:
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![Xcode missing message VS Mac](https://msicc.net/assets/img/2021/06/Screenshot-2021-06-05-at-08.39.05-1024x76.png)</figure></div>Of course, I checked first that my installed version of Xcode is still working – it stopped already for me some time ago and I had to reinstall it. As you can see, that was not the case:
+![Xcode missing message VS Mac](/assets/img/2021/06/Screenshot-2021-06-05-at-08.39.05.png)
+Of course, I checked first that my installed version of Xcode is still working – it stopped already for me some time ago and I had to reinstall it. As you can see, that was not the case:
 
-<div class="wp-block-image"><figure class="aligncenter size-large">![Xcode 12.5 about window](https://msicc.net/assets/img/2021/06/Screenshot-2021-06-05-at-08.40.26.png)</figure></div>After doing some research on the web, [others had similar issues](https://docs.microsoft.com/en-us/answers/questions/296951/visual-studio-for-mac-no-sdk-found-at-specified-lo.html). The problem was that the installation of the Xcode CLI tools has overridden the location of Xcode in Preferences – as you can see in the
+![Xcode 12.5 about window](/assets/img/2021/06/Screenshot-2021-06-05-at-08.40.26.png)
+After doing some research on the web, [others had similar issues](https://docs.microsoft.com/en-us/answers/questions/296951/visual-studio-for-mac-no-sdk-found-at-specified-lo.html). The problem was that the installation of the Xcode CLI tools has overridden the location of Xcode in Preferences – as you can see in the
 
 The fix is easy, just paste `/Applications/Xcode.app/` into the location field. Please note that the trailing slash is also important:
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![](https://msicc.net/assets/img/2021/06/Screenshot-2021-06-05-at-08.42.07-1024x299.png)</figure></div>The dialog will immediately verify the existence of Xcode (at least in version 8.9.10). Just hit that restart button and you are once again good to go.
+![](/assets/img/2021/06/Screenshot-2021-06-05-at-08.42.07.png)
+The dialog will immediately verify the existence of Xcode (at least in version 8.9.10). Just hit that restart button and you are once again good to go.
 
 As always, I hope this short post will be helpful for some of you.
 

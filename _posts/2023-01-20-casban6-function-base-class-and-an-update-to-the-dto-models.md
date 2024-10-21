@@ -100,7 +100,7 @@ The blog entity has a similar structure, with some differences in the parameter 
 
 ### Update to the DTO models
 
-While the blog series is ongoing, it still lags a bit behind on what I am currently working on ([you can follow the dev branch on GitHub for an up-to-date view](https://github.com/MSiccDev/ServerlessBlog/tree/dev)). As I am currently working on the administration client for our blog, I started to implement an SDK that can be used by all clients (the blog’s website will also just be a client). [See the original post on DTOs here](https://msicc.net/casban6-the-dtos-and-mappings/).
+While the blog series is ongoing, it still lags a bit behind on what I am currently working on ([you can follow the dev branch on GitHub for an up-to-date view](https://github.com/MSiccDev/ServerlessBlog/tree/dev)). As I am currently working on the administration client for our blog, I started to implement an SDK that can be used by all clients (the blog’s website will also just be a client). [See the original post on DTOs here]({% post_url 2022-12-11-casban6-the-dtos-and-mappings %}).
 
 To be able to create a generic implementation of the calls to the API endpoints, I needed to create also a base class for the DTO models. It is a very simple class, as you can see:
 

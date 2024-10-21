@@ -27,7 +27,7 @@ Let’s have a look at my most special app: TweeCoMinder. TweeCoMinder stands fo
 
 <span style="font-size: xx-large;">To celebrate my personal milestone, </span><span style="font-size: xx-large;">I am making TweeCoMinder free during the Weekend! </span>
 
-Don’t wait, head over to the [Windows Phone Store an download the app for free](http://www.windowsphone.com/s?appid=f05f429c-2f85-447d-b774-6903fda32cd7)!
+Don’t wait, head over to the [Windows Phone Store an download the app for free](https://www.windowsphone.com/s?appid=f05f429c-2f85-447d-b774-6903fda32cd7)!
 
 If you still see the app as paid, it may take some time until the price change is visible for all.
 

@@ -35,7 +35,7 @@ Sure, we can parse and convert it within our app, but that would need (although 
 
 ### How do we manipulate the Date()-string?
 
-I binged a bit and finally found a very helpful page, that explains all about the JavaScript Date() object: [http://www.elated.com/articles/working-with-dates/](http://www.elated.com/articles/working-with-dates/ "http://www.elated.com/articles/working-with-dates/")
+I binged a bit and finally found a very helpful page, that explains all about the JavaScript Date() object: [https://www.elated.com/articles/working-with-dates/](https://www.elated.com/articles/working-with-dates/ "https://www.elated.com/articles/working-with-dates/")
 
 I then started off with the following code:
 
@@ -63,9 +63,8 @@ Error occurred executing query: Error: [Microsoft][SQL Server Native Client 10.0
  
 So we need to add the leading zero before inserting it. Luckily we are able to that very easy. Here is my implementation:
 
-```
- chsarp
- var d = new Date();
+``` chsarp
+var d = new Date();
 var formattedDate = d.getFullYear() + "-" + ('0' + (d.getMonth()+1)).slice(-2) + "-" + ('0' + d.getDate()).slice(-2);
 var formattedTime  = ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2) + ':' + ('0' + d.getSeconds()).slice(-2);
 var checkedDateTime = formattedDate + "T" + t;

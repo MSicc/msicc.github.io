@@ -5,7 +5,7 @@ date: '2012-08-20T07:53:38+02:00'
 author: 'Marco Siccardi'
 layout: post
 permalink: /fishing-knots-update-to-version-1-6-and-some-other-changes/
-image: /assets/img/2012/08/screen1-e1345467493244-480x372.png
+image: /assets/img/2012/08/screen1.png
 categories:
     - Archive
 tags:
@@ -26,7 +26,9 @@ It contains only a few new features:
 
 Here is a short video that demonstrates the new version:
 
-<div class="embed-vimeo" style="text-align: center;"><iframe allowfullscreen="" frameborder="0" height="675" loading="lazy" mozallowfullscreen="" src="https://player.vimeo.com/video/63088212" webkitallowfullscreen="" width="1200"></iframe></div>Breaking changes are coming to “Angelknoten +” and “Nodi della pesca +”.
+[](https://player.vimeo.com/video/63088212)
+
+Breaking changes are coming to “Angelknoten +” and “Nodi della pesca +”.
 
 As I integrated the German and Italian language in Fishing Knots to make it easier for me to maintain the app (one is easier than three), both before mentioned apps will be discontinued.
 

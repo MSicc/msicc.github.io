@@ -21,7 +21,7 @@ tags:
 
 ![bitly_logo](/assets/img/2014/10/bitly_logo.png "bitly_logo")
 
-It was only yesterday when I decided to shorten shared links in [UniShare](http://www.windowsphone.com/s?appid=ee42cb1d-8a68-41c6-9c0c-d3e3fc61d6ea). The reason is not Twitter as suggested by some of my users, but other networks like LinkedIn, that have text length limits as well.
+It was only yesterday when I decided to shorten shared links in [UniShare](https://www.windowsphone.com/s?appid=ee42cb1d-8a68-41c6-9c0c-d3e3fc61d6ea). The reason is not Twitter as suggested by some of my users, but other networks like LinkedIn, that have text length limits as well.
 
 After digging into the Bitly API, I created a little helper that returns the a shorten Bitly-url. In case this is not possible for whatever reason, it returns the long url that was tried to be shortened.
 
@@ -103,10 +103,10 @@ The usage is very simple:
 
 ``` csharp
  BitlyHelper bitly = new BitlyHelper();
-var shorturl = await bitly.GetShortenedUrl("http://yourlongurl.com");
+var shorturl = await bitly.GetShortenedUrl("https://yourlongurl.com");
 ```
  
-If you want more advanced features, you can perform the whole oAuth dance with your users and get some more features into your app ([read more in the API docs](http://dev.bitly.com/get_started.html)). If you just need to shorten the url, this BitlyHelper is all you need.
+If you want more advanced features, you can perform the whole oAuth dance with your users and get some more features into your app ([read more in the API docs](https://dev.bitly.com/get_started.html)). If you just need to shorten the url, this BitlyHelper is all you need.
 
 As always, I hope this is helpful for some of you.
 

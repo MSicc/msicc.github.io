@@ -27,7 +27,7 @@ tags:
     - xamarin
 ---
 
-I am not repeating all the initial explanations why you should use this way of encryption to secure sensible data in your app(s), as I did this already in the post on [how to do that on Android](https://msicc.net/xamarin-android-asymmetric-encryption-without-any-user-input-or-hardcoded-values/).
+I am not repeating all the initial explanations why you should use this way of encryption to secure sensible data in your app(s), as I did this already in the post on [how to do that on Android]({% post_url 2018-04-19-xamarin-android-asymmetric-encryption-without-any-user-input-or-hardcoded-values %}).
 
 ## iOS KeyChain
 

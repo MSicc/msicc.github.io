@@ -5,15 +5,7 @@ date: '2011-06-24T06:50:13+02:00'
 author: 'Marco Siccardi'
 layout: post
 permalink: /my-blog-at-facebook/
-jabber_published:
-    - '1307943742'
-    - '1307943742'
-bitly_url:
-    - 'http://bit.ly/2s2Fe9f'
-bitly_hash:
-    - 2s2Fe9f
-bitly_long_url:
-    - 'https://msicc.net/my-blog-at-facebook/'
+categories:
     - Archive
 ---
 
@@ -21,7 +13,7 @@ Hi everybody,
 
 My blog has now a page on Facebook.
 
-You can like my page here: http://on.fb.me/mJW5ui
+You can like my page here: https://on.fb.me/mJW5ui
 
 Because of the page rules on Facebook, I need a minimum of 25 likes to be able to create a username for my page.
 

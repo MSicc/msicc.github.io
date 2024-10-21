@@ -26,7 +26,7 @@ tags:
 
 Recently, I experimented a bit because I wanted a round button that contains an image that can be used everywhere where I can add a standard button (and not just in the AppBar). I managed to get a simple style out of these experiments (sample at the end of this post).
 
-First, you should check if you have already installed Syncfusion’s free Metro Studio (we will need it later). It is a powerful helper if you need icons, so if you do not have it, go straight ahead and download it here: [http://www.syncfusion.com/downloads/metrostudio](http://www.syncfusion.com/downloads/metrostudio "http://www.syncfusion.com/downloads/metrostudio")
+First, you should check if you have already installed Syncfusion’s free Metro Studio (we will need it later). It is a powerful helper if you need icons, so if you do not have it, go straight ahead and download it here: [https://www.syncfusion.com/downloads/metrostudio](https://www.syncfusion.com/downloads/metrostudio "https://www.syncfusion.com/downloads/metrostudio")
 
 Still here/back? Great! Ok, let’s start. In our project, generate a new button:
 
@@ -67,7 +67,7 @@ Width="{Binding Path=Width, RelativeSource={RelativeSource Mode=TemplatedParent}
  
 This binds the Width and Height properties of our Button to the Style. Now we just need to define the Height and the Width of our Button to make it actually look really round. Setting both to 72 will result in a nice round button.
 
-Like you can imagine, displaying text does not make a lot of sense in this case. Round Buttons should contain an image. You could add one through adding a background, but this will result in a strange looking button when it gets pressed. Also, it does not reflect changes like a color change. To solve this, we are going to add code that is able to draw a shape for us. This is achieved with the [Path Class](http://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.path.aspx) in XAML. The Path class draws lines into a FrameworkElement like a Canvas or a Border.
+Like you can imagine, displaying text does not make a lot of sense in this case. Round Buttons should contain an image. You could add one through adding a background, but this will result in a strange looking button when it gets pressed. Also, it does not reflect changes like a color change. To solve this, we are going to add code that is able to draw a shape for us. This is achieved with the [Path Class](https://msdn.microsoft.com/en-us/library/windows/apps/windows.ui.xaml.shapes.path.aspx) in XAML. The Path class draws lines into a FrameworkElement like a Canvas or a Border.
 
 To enable our Style to work with Path Data, we need to add some code before the ‘Template’ property Setter in our Style:
 
@@ -85,7 +85,7 @@ To enable our Style to work with Path Data, we need to add some code before the 
 </Setter>
 ```
  
-What does this code do? The ContentTemplate allows us to add rich content to our UIElement, the Button. To make it resuable, we are setting it up in our custom button style. The [RenderTransforOrigin](http://msdn.microsoft.com/en-us/library/system.windows.uielement.rendertransformorigin(v=vs.110).aspx) property value of 0.5,0.5 centers our Path drawn shape within the border. However, I found out that some shapes do not look good with that alone. That’s why I adjusted the Margin property together with it. This should fit most icon shapes, but you might adjust this for your own needs.
+What does this code do? The ContentTemplate allows us to add rich content to our UIElement, the Button. To make it resuable, we are setting it up in our custom button style. The [RenderTransforOrigin](https://msdn.microsoft.com/en-us/library/system.windows.uielement.rendertransformorigin(v=vs.110).aspx) property value of 0.5,0.5 centers our Path drawn shape within the border. However, I found out that some shapes do not look good with that alone. That’s why I adjusted the Margin property together with it. This should fit most icon shapes, but you might adjust this for your own needs.
 
 The most important aspects are the Fill property as well as the Data property. Binding the Fill Brush to the Foreground Brush property is necessary to reflect changes like theme changes as well as changes in the VisualState. Only this way it behaves like a native Button. Binding the Data property allows us to enter the Path string into the Content property of a button that uses our Style without any conversion. This makes it very simple to generate a button with our desired icon.
 

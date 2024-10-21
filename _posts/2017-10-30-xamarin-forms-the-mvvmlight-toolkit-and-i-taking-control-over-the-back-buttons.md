@@ -36,7 +36,7 @@ The back button is available on Windows, Android and under certain conditions on
 
 ## Xamarin.Forms – View and ViewModel implementations
 
-Based on the code we have already written in the past posts of this series, we are already able to get events pretty easy into our ViewModel, [utilizing the EventToCommandBehavior approach](https://msicc.net/xamarin-forms-the-mvvmlight-toolkit-and-i-eventtocommandbehavior/). To get them into our ViewModel, we will throw an own created event. You can do so pretty easy by overriding the `OnBackButtonPressed()`method every `Xamarin.Forms` pages come with:
+Based on the code we have already written in the past posts of this series, we are already able to get events pretty easy into our ViewModel, [utilizing the EventToCommandBehavior approach]({% post_url 2017-07-16-xamarin-forms-the-mvvmlight-toolkit-and-i-eventtocommandbehavior %}). To get them into our ViewModel, we will throw an own created event. You can do so pretty easy by overriding the `OnBackButtonPressed()`method every `Xamarin.Forms` pages come with:
 
 ``` csharp
  protected override bool OnBackButtonPressed()
@@ -241,7 +241,7 @@ public override bool OnOptionsItemSelected(IMenuItem item)
  
 The first step is to override the OnPostCreate method. Within the override, we are just setting the toolbar to be the SupportActionBar. If we would not do so, the more important override OnOptionsItemSelected would never get triggered. The back button in the toolbar has the internal resource name ‘Home’ (with a value of 16908332). If this button is hit, I am triggering the hardware back button press handler, which will get code execution routed back into the `Xamarin.Forms`code. By returning true we are telling Android we have handled this on our own. And that’s all we have to do in the Android project.
 
-![taking-over-back-button-android](https://msicc.net/assets/img/2017/10/taking-over-back-button-android-576x1024.jpg)
+![taking-over-back-button-android](/assets/img/2017/10/taking-over-back-button-android.jpg)
 
 ### iOS
 
@@ -326,7 +326,8 @@ The most important thing to note is the button’s `TouchDown`event – which is
 
 The last step is to create an `UIView`container for the button and assign it as a `UIBarButtonItem`to the `UINavigationController` via the `SetLeftBarButtonItem`[method the UINavigationItem provides](https://developer.xamarin.com/api/member/UIKit.UINavigationItem.SetLeftBarButtonItem/p/UIKit.UIBarButtonItem/System.Boolean/). And that’s it, we now also have control over the back button on iOS.
 
-![taking-over-back-button-ios](https://msicc.net/assets/img/2017/10/taking-over-back-button-ios.png)
+![taking-over-back-button-ios](/assets/img/2017/10/taking-over-back-button-ios.png)
+
 
 Lust but not least, we need to handle also the swipe-back-gesture. This can be done the hard way by disabling the gesture completelly:
 

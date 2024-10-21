@@ -21,11 +21,11 @@ tags:
 
 [![We_Are_The_World](/assets/img/2014/11/We_Are_The_World.jpg)](/assets/img/2014/11/We_Are_The_World.jpg)
 
-Last night, [the news were full of the decision of the grand jury in Ferguson (USA)](http://edition.cnn.com/2014/11/24/justice/ferguson-grand-jury/index.html) (because of a young black man that got killed by a white police officer) and the following riots. A lot of discussions took place, be it at work or also on social media. The common bottom line: racism just sucks. I normally avoid such harsh words or decorate them with an asterisk, but today I need to write it out.
+Last night, [the news were full of the decision of the grand jury in Ferguson (USA)](https://edition.cnn.com/2014/11/24/justice/ferguson-grand-jury/index.html) (because of a young black man that got killed by a white police officer) and the following riots. A lot of discussions took place, be it at work or also on social media. The common bottom line: racism just sucks. I normally avoid such harsh words or decorate them with an asterisk, but today I need to write it out.
 
 #### What is racism?
 
-There are two common definitions for [racism](http://www.wolframalpha.com/input/?i=racism):
+There are two common definitions for [racism](https://www.wolframalpha.com/input/?i=racism):
 
 - the prejudice that members of one race are intrinsically superior to members of other races
 - discriminatory or abusive behavior towards members of another race
@@ -50,6 +50,6 @@ Everyone is responsible for his/her behavior. Everyone is responsible to NOT be 
 
 #### Everyone is responsible to be a human.
 
-<http://youtu.be/M9BNoNFKCBI>
+<https://youtu.be/M9BNoNFKCBI>
 
-Image credit: [University of California](http://sociology.ucr.edu/pegsc/images/We_Are_The_World.jpg)
+Image credit: [University of California](https://sociology.ucr.edu/pegsc/images/We_Are_The_World.jpg)

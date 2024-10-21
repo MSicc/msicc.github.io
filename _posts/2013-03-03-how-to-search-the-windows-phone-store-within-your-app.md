@@ -21,9 +21,9 @@ tags:
 
 I am currently working on my NFC app, and I want to make it easier for the end user to search for the AppId which you need for the LaunchApp record. So I thought about a possible solution for this, and of course the easiest way is to search the app.
 
-If you only want to search the Windows Phone Store and let show some search results, there is the [MarketplaceSearchTask](http://msdn.microsoft.com/en-us/library/windowsphone/develop/hh394001(v=vs.105).aspx), which you can call as a launcher. The only problem is, you cannot get any values into your app this way. But I found a way to get the results into my app. This post is about how I did it.
+If you only want to search the Windows Phone Store and let show some search results, there is the [MarketplaceSearchTask](https://msdn.microsoft.com/en-us/library/windowsphone/develop/hh394001(v=vs.105).aspx), which you can call as a launcher. The only problem is, you cannot get any values into your app this way. But I found a way to get the results into my app. This post is about how I did it.
 
-The first thing you will need to add to your project is the [HTMLAgilitypack](http://htmlagilitypack.codeplex.com/). It helps you parsing links from an HTML-based document. Huge thanks to [@AWSOMEDEVSIGNER](https://twitter.com/AWSOMEDEVSIGNER) (follow him!), who helped me to get started with it and understand XPath. Xpath is also important for the HAP to work with Windows Phone. You will need to reference to System.Xml.Xpath.dll, which you will find in
+The first thing you will need to add to your project is the [HTMLAgilitypack](https://htmlagilitypack.codeplex.com/). It helps you parsing links from an HTML-based document. Huge thanks to [@AWSOMEDEVSIGNER](https://twitter.com/AWSOMEDEVSIGNER) (follow him!), who helped me to get started with it and understand XPath. Xpath is also important for the HAP to work with Windows Phone. You will need to reference to System.Xml.Xpath.dll, which you will find in
 
 > %ProgramFiles(x86)%Microsoft SDKsMicrosoft SDKsSilverlightv4.0LibrariesClient or  
 > %ProgramFiles%Microsoft SDKsMicrosoft SDKsSilverlightv4.0LibrariesClient
@@ -66,7 +66,7 @@ First, we need to create the search Uri. The Uri is country dependent like your 
 
 ``` csharp
 string currentLanguage = CultureInfo.CurrentCulture.Name;
-string searchUri = string.Format("http://www.windowsphone.com/{0}/store/search?q={1}", currentLanguage, MPsearchTerm.Text);
+string searchUri = string.Format("https://www.windowsphone.com/{0}/store/search?q={1}", currentLanguage, MPsearchTerm.Text);
 ```
  
 After that, we are using a WebClient to get the HTML-String of the search. I used the WebClient as I want to make it usable on WP7.x and WP8.
@@ -84,8 +84,7 @@ MyMPSearch.DownloadStringAsync(new Uri(searchUri));
  
 In our DownloadStringCompletedEvent we now are parsing the HTML-String. First thing we need to do is to create a HTML-Document that loads our string:
 
-```
- chsarp
+``` chsarp
 //HAP needs a HTML-Document as it is based on Linq/Xpath
 HtmlDocument doc = new HtmlDocument();
 doc.LoadHtml(e.Result);
@@ -93,8 +92,7 @@ doc.LoadHtml(e.Result);
  
 The next step is a bit tricky if you do not know Xpath. You need to got through all the HTML elements to find the one that holds the data you want to parse. In our case it is the class called “medium” within the result table “appList”.
 
-```
-csharp
+```csharp
 var nodeList = doc.DocumentNode.SelectNodes("//table[@class='appList']/tbody/tr/td[@class='medium']/a");
 ```
  

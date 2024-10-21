@@ -5,7 +5,7 @@ date: '2012-11-20T23:05:01+01:00'
 author: 'Marco Siccardi'
 layout: post
 permalink: /meet-steve-at-berlin/
-image: /assets/img/2012/11/WP_001198-672x372.jpg
+image: /assets/img/2012/11/WP_001198.jpg
 categories:
     - Editorials
 tags:

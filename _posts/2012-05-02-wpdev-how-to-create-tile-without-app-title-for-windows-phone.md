@@ -16,7 +16,7 @@ Every App has always a title on its dedicated tile for the Windows Phone start s
 
 Normally, you are setting the appearance of your app within the properties:
 
-[![properties](/assets/img/2012/05/twT2-256x300.jpg "properties")](/assets/img/2012/05/twT2.jpg)
+[![properties](/assets/img/2012/05/twT2.jpg "properties")](/assets/img/2012/05/twT2.jpg)
 
 If you have done this, your logo is displayed, but contains the title string. So how can we delete this?
 
@@ -28,7 +28,8 @@ You need to go to the Application Manifest and edit the XML manually. Go to solu
 
 To edit the title of the start screen, search for the <tokens> section. Within this section, you will find a Title section, which contains the title of your app (as you have set within the properties). Now simply delete the title string.</tokens>
 
-[![TwTTile](/assets/img/2012/05/TwT3-300x200.png "TwTTile")](/assets/img/2012/05/TwT3.png)
+[![TwTTile](/assets/img/2012/05/TwT3.png "TwTTile")](/assets/img/2012/05/TwT3.png)
+
 
 If you now debug your application, you will see that your tile no longer displays the title.
 

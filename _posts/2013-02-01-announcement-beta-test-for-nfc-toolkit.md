@@ -14,7 +14,8 @@ tags:
     - WP8
 ---
 
- ![wp_ss_20130201_0002](/assets/img/2013/02/wp_ss_20130201_00021-277x300.png)
+ ![wp_ss_20130201_0002](/assets/img/2013/02/wp_ss_20130201_00021.png)
+
 
 NFC Toolkit, my latest app project, is ready for a first beta look.
 

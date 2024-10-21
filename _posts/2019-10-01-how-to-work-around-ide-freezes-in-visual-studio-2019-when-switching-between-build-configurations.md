@@ -28,7 +28,8 @@ The workaround is pretty easy, just follow these simple steps:
 - **Unselect ‘Allow parallel project initialization’**
 - Click ‘OK’ and close the solution
 
-<div class="wp-block-image"><figure class="aligncenter size-large">![](https://msicc.net/assets/img/2019/10/paralell-project-init-setting.png)</figure></div>After that, we need to **delete the *.vs* folder** of Visual Studio 2019 within the local solution folder. This folder contains a SQLite DB that corresponds with some behind the scenes stuff for the parallel project initialization (and more).
+![](/assets/img/2019/10/paralell-project-init-setting.png)
+After that, we need to **delete the *.vs* folder** of Visual Studio 2019 within the local solution folder. This folder contains a SQLite DB that corresponds with some behind the scenes stuff for the parallel project initialization (and more).
 
 Now open the solution – switching between Build configurations should now work again.
 

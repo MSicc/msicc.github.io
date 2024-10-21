@@ -33,7 +33,7 @@ tags:
     - 'xamarin forms'
 ---
 
-Caching always has the same job: provide data that is frequently used in very little time. As I mentioned in [my first post of this series](https://msicc.net/xamarin-forms-akavache-and-i-initial-setup-new-series/), Akavache is my first choice because it is fast. It also provides a very easy way to interact with it (once one gets used to [Reactive Extensions](http://introtorx.com/)). The code I am showing here is living in the Forms project, but can also be called from the platform projects thanks to the interface we defined already before.
+Caching always has the same job: provide data that is frequently used in very little time. As I mentioned in [my first post of this series]({% post_url 2018-05-06-xamarin-forms-akavache-and-i-initial-setup-new-series %}), Akavache is my first choice because it is fast. It also provides a very easy way to interact with it (once one gets used to [Reactive Extensions](https://introtorx.com/)). The code I am showing here is living in the Forms project, but can also be called from the platform projects thanks to the interface we defined already before.
 
 ### Enabling async support
 

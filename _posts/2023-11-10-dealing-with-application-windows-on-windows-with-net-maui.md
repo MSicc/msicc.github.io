@@ -26,9 +26,9 @@ As we have done the work for macOS, we can turn our attention now to the Windows
 
 ### Recap
 
-<figure class="wp-block-embed is-type-wp-embed is-provider-msicc-039-s-blog wp-block-embed-msicc-039-s-blog"><div class="wp-block-embed__wrapper">> [Dealing with application windows on macOS with .NET MAUI](https://msicc.net/dealing-with-application-windows-on-macos-with-net-maui/)
+[Dealing with application windows on macOS with .NET MAUI]({% post_url 2023-11-03-dealing-with-application-windows-on-macos-with-net-maui %})
 
-<iframe class="wp-embedded-content" data-secret="dvSwCaUMTC" frameborder="0" height="338" loading="lazy" marginheight="0" marginwidth="0" sandbox="allow-scripts" scrolling="no" security="restricted" src="https://msicc.net/dealing-with-application-windows-on-macos-with-net-maui/embed/#?secret=JqQMcvRyqw#?secret=dvSwCaUMTC" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" title="“Dealing with application windows on macOS with .NET MAUI” — MSicc's Blog" width="600"></iframe></div></figure>In my last post, I showed you how to support multiple windows and handle their size. I introduced you the `IWindowService` to handle windows in an MVVM friendly way and told you some gotchas on macOS.
+In my last post, I showed you how to support multiple windows and handle their size. I introduced you the `IWindowService` to handle windows in an MVVM friendly way and told you some gotchas on macOS.
 
 Let’s dive into the Windows implementation.
 

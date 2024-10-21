@@ -23,7 +23,7 @@ tags:
 
 On my daily job, I am working as a Mobile Hardware Support Agent of a German carrier. Because of that, I know how important a good support for customers (=users) is – and also, a little knowledge base where users can find most probably an answer for their questions.
 
-I want my customers to be satisfied. As an indie developer, I have a little problem: I don’t have a support team that catches all the support questions for me. I need to do this by myself. Until now, I am doing this by using a send-me-a-mail button in my apps. However, due to the fact that I have a 9to5 job and a family besides developing apps, time is a bit limited for me. I searched for some solutions to improve the way I am doing my customer service, and [uservoice](http://uservoice.com/) seems like a good tool to improve my customer service a lot.
+I want my customers to be satisfied. As an indie developer, I have a little problem: I don’t have a support team that catches all the support questions for me. I need to do this by myself. Until now, I am doing this by using a send-me-a-mail button in my apps. However, due to the fact that I have a 9to5 job and a family besides developing apps, time is a bit limited for me. I searched for some solutions to improve the way I am doing my customer service, and [uservoice](https://uservoice.com/) seems like a good tool to improve my customer service a lot.
 
 As you can see at the feature comparison list of uservoice, the free account already allows you to do a lot of things: [https://www.uservoice.com/plans/?ref=top\_pricing](https://www.uservoice.com/plans/?ref=top_pricing "https://www.uservoice.com/plans/?ref=top_pricing"). It is free for one support agent – perfect for an indie developer like me.
 

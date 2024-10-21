@@ -30,7 +30,7 @@ tags:
     - XAML
 ---
 
-Often, we want to/need to know when views throw certain events. However, due to using the MVVM pattern, our application logic is separated from the view. There are several ways to get those events into our ViewModel while keeping it separated from the views. One of those is using an interface, which I showed you already in [my blog post about navigation in Xamarin.Forms with MVVMLight](http://bit.ly/2sA1dof).
+Often, we want to/need to know when views throw certain events. However, due to using the MVVM pattern, our application logic is separated from the view. There are several ways to get those events into our ViewModel while keeping it separated from the views. One of those is using an interface, which I showed you already in [my blog post about navigation in Xamarin.Forms with MVVMLight](https://bit.ly/2sA1dof).
 
 Another way is the good old `EventToCommand `approach. Some of you might have used this approach already in WPF and other .NET applications. `Xamarin.Forms` has them too, this post will show you how to implement it.
 
@@ -48,7 +48,7 @@ The first change we need to make is to derive [Xamarin’s EventToCommandBehavio
 
 The rest of the implementation is basically the same like in the Xamarin sample and works quite well.
 
-To show you a simple sample in Action, we are using the `Appearing` and `Disappearing` events to attach them via the behavior into our `ModalPageViewModel`on the `ModalPage `we integrated before. This way, you won’t need the `IViewEventBrokerService `I showed you in [my post on navigation and modal pages](http://bit.ly/2sA1dof). It is up to you to choose the way you want to go along, both ways are fully respecting the MVVM pattern.
+To show you a simple sample in Action, we are using the `Appearing` and `Disappearing` events to attach them via the behavior into our `ModalPageViewModel`on the `ModalPage `we integrated before. This way, you won’t need the `IViewEventBrokerService `I showed you in [my post on navigation and modal pages](https://bit.ly/2sA1dof). It is up to you to choose the way you want to go along, both ways are fully respecting the MVVM pattern.
 
 ## Implementation
 

@@ -28,7 +28,7 @@ tags:
 
 First, let’s have a look at the lineup of this series once again:
 
-- [Preparing your WordPress (blog/site)](https://msicc.net/sending-push-notifications-to-your-xamarin-app-from-wordpress-with-azure-part-i/)
+- [Preparing your WordPress (blog/site)]({% post_url 2020-02-29-sending-push-notifications-to-your-xamarin-app-from-wordpress-with-azure-part-i %})
 - *Preparing the Azure Function and connect the Webhook (this post)*
 - Preparing the Notification Hub
 - Send the notification to Android
@@ -39,7 +39,9 @@ First, let’s have a look at the lineup of this series once again:
 
 The most simple approach to create a new Azure Function (if you already have an Azure account) is adding a new project to your Xamarin solution:
 
-<div class="wp-block-image is-style-default"><figure class="aligncenter size-full">[![](https://msicc.net/assets/img/2020/03/create_new_azure_function_vs.png)](https://msicc.net/assets/img/2020/03/create_new_azure_function_vs.png)</figure></div>After the project is loaded, double click on the `.csproj` file in the Solution Explorer to open the file for editing it. Make sure you have the following two `PropertyGroup` entries:
+[![](/assets/img/2020/03/create_new_azure_function_vs.png)
+](/assets/img/2020/03/create_new_azure_function_vs.png)
+After the project is loaded, double click on the `.csproj` file in the Solution Explorer to open the file for editing it. Make sure you have the following two `PropertyGroup` entries:
 
 ``` xml
    <PropertyGroup>
@@ -59,7 +61,7 @@ You may notice that I made an all caps comment into the second `PropertyGroup` e
 
 ### Processing the Webhook payload
 
-In order to be able to process the payload ([remember, we are getting a JSON string](https://msicc.net/sending-push-notifications-to-your-xamarin-app-from-wordpress-with-azure-part-i/)) from our WordPress Webhook, we need to deserialize it. Let’s create the class that holds all information about it:
+In order to be able to process the payload ([remember, we are getting a JSON string]({% post_url 2020-02-29-sending-push-notifications-to-your-xamarin-app-from-wordpress-with-azure-part-i %})) from our WordPress Webhook, we need to deserialize it. Let’s create the class that holds all information about it:
 
 ``` csharp
  using Newtonsoft.Json;
@@ -202,13 +204,21 @@ The implementation of the `TriggerPushNotificationAsync` method is not shown in 
 
 One of the reasons I chose to start the `Function` in Visual Studio is its ability to debug it locally. If you don’t have the necessary tools installed, Visual Studio will prompt you to do so. After installing them, you’ll be able to follow along.
 
-<div class="wp-block-image is-style-default"><figure class="aligncenter size-large">[![](https://i1.wp.com/msicc.net/assets/img/2020/03/azure-cli-debug-function-locally.png?fit=1024%2C717&ssl=1)](https://msicc.net/assets/img/2020/03/azure-cli-debug-function-locally.png)</figure></div>Once the service is running, we will be able to test our function. If you haven’t already heard about it, [Postman](https://www.postman.com/downloads/) will be the easiest tool for that. Copy the function url and paste it into the url field in Postman. Next, add a sample JSON payload to the body (settings: raw, JSON) and hit the ‘Send’ button:
+[![](/assets/img/2020/03/azure-cli-debug-function-locally.png)
+](/assets/img/2020/03/azure-cli-debug-function-locally.png)
+Once the service is running, we will be able to test our function. If you haven’t already heard about it, [Postman](https://www.postman.com/downloads/) will be the easiest tool for that. Copy the function url and paste it into the url field in Postman. Next, add a sample JSON payload to the body (settings: raw, JSON) and hit the ‘Send’ button:
 
-<div class="wp-block-image is-style-default"><figure class="aligncenter size-large">[![](https://i2.wp.com/msicc.net/assets/img/2020/03/postman-test-function-localhost.png?fit=1024%2C215&ssl=1)](https://msicc.net/assets/img/2020/03/postman-test-function-localhost.png)</figure></div>If all goes well, Postman will give you a success response:
+[![](/assets/img/2020/03/postman-test-function-localhost.png)
+](/assets/img/2020/03/postman-test-function-localhost.png)
+If all goes well, Postman will give you a success response:
 
-<div class="wp-block-image is-style-default"><figure class="aligncenter size-large">[![](https://i1.wp.com/msicc.net/assets/img/2020/03/postman-function-test-success.png?fit=1024%2C102&ssl=1)](https://msicc.net/assets/img/2020/03/postman-function-test-success.png)</figure></div>The Azure CLI will also write some output:
+[![](/assets/img/2020/03/postman-function-test-success.png)
+](/assets/img/2020/03/postman-function-test-success.png)
+The Azure CLI will also write some output:
 
-<figure class="wp-block-image size-large is-style-default">[![](https://i1.wp.com/msicc.net/assets/img/2020/03/azure-cli-function-trace-success.png?fit=1024%2C375&ssl=1)](https://msicc.net/assets/img/2020/03/azure-cli-function-trace-success.png)</figure>As you can see, all of our log entries were written to the CLI, plus some additional information from Azure itself. Don’t worry for the moment about the anonymous authorization state, this is just because we are running locally. In theory, we could already publish the function to Azure now. As we know that we will extend the `Function` in the next post, however, we will not do this right now.
+<figure class="wp-block-image size-large is-style-default">[![](/assets/img/2020/03/azure-cli-function-trace-success.png)
+](/assets/img/2020/03/azure-cli-function-trace-success.png)
+</figure>As you can see, all of our log entries were written to the CLI, plus some additional information from Azure itself. Don’t worry for the moment about the anonymous authorization state, this is just because we are running locally. In theory, we could already publish the function to Azure now. As we know that we will extend the `Function` in the next post, however, we will not do this right now.
 
 ### Conclusion
 

@@ -125,7 +125,7 @@ As SQLite, which is powering Akavache, is file based, we need to provide a file 
 
 This implementation can be used your Android, iOS and UWP projects within your Xamarin.Forms app. If you are wondering why I do this separately for every platform, you are right. Until now, there is no need to do it that way. The code above would also work solely in your Xamarin.Forms project. Once you are coming to the point where you need encrypted data in your cache, the platform implementations will change on every platform. This will be topic of a future blog post, however.
 
-If you have been reading [my series about MVVMLight](https://msicc.net/?s=Xamarin+Forms%2C+the+MVVMLight+toolkit+and+I), you may guess the next step already. This is how I initialize the platform implementation within my ViewModelLocator:
+If you have been reading my series about MVVMLight, you may guess the next step already. This is how I initialize the platform implementation within my ViewModelLocator:
 
 ``` csharp
  //register:

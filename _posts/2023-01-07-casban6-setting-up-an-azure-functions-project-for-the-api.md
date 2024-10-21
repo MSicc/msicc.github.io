@@ -36,9 +36,11 @@ As you may have noticed, I recently became kind of a fan of [JetBrains’ Rider 
 
 First, make sure you have the Azure plugin installed. Go to the *Settings*, and select *Plugins* on the list at the left-hand side. Search for ‘Azure’ and install the *Azure Toolkit for Rider*. You will need to restart the application.
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![JetBrains Rider Plugin Settings](https://msicc.net/assets/img/2023/01/Screenshot-2023-01-07-at-07.13.02-1024x761.png)</figure></div>Once you have the plugin installed, open your solution and create a new project in it (I made it in a separate folder). Select the *Azure Functions* template on the left.
+![JetBrains Rider Plugin Settings](/assets/img/2023/01/Screenshot-2023-01-07-at-07.13.02.png)
+Once you have the plugin installed, open your solution and create a new project in it (I made it in a separate folder). Select the *Azure Functions* template on the left.
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![JetBrains Rider New Project dialog with Azure Functions selected.](https://msicc.net/assets/img/2023/01/Screenshot-2023-01-07-at-07.06.43-1024x720.png)</figure></div>I named the project `BlogFunctions`. Select the *Isolated worker* runtime option, and as *Framework*, we keep it on .NET 6 for the time being.
+![JetBrains Rider New Project dialog with Azure Functions selected.](/assets/img/2023/01/Screenshot-2023-01-07-at-07.06.43.png)
+I named the project `BlogFunctions`. Select the *Isolated worker* runtime option, and as *Framework*, we keep it on .NET 6 for the time being.
 
 ### NuGet packages and project references
 
@@ -53,7 +55,10 @@ To enable all the functionalities we are going to use and add, we need some NuGe
 
 Please note that I use the latest version that support .NET 6 and not the .NET 7. We also need to reference the projects we already created before, as you can see in this picture:
 
-<div class="wp-block-image"><figure class="aligncenter size-large is-resized">![Project and Package references in the Function app](https://msicc.net/assets/img/2023/01/Screenshot-2023-01-07-at-08.11.02-1024x830.png)</figure></div>### Program.cs
+![Project and Package references in the Function app](/assets/img/2023/01/Screenshot-2023-01-07-at-08.11.02.png)
+
+
+### Program.cs
 
 Now we finally can have a look at our `Program.c`s file. I am [not using top-level statements here](https://learn.microsoft.com/en-us/dotnet/core/tutorials/top-level-templates), but feel free if you want to, the code doesn’t change, just the surroundings.
 

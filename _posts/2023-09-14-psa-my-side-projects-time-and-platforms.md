@@ -46,7 +46,7 @@ I will have a look at each of the projects and their future below.
 
 ## \#CASBAN6
 
-The serverless blog engine series was thought to be a learning series for me and also my followers. The raw blogging engine (database and API) are finished and working (See the [\#CASBAN6](https://msicc.net/tag/casban6/) posts on this blog). The next step would be to create a website for both administering and also consuming the blog.
+The serverless blog engine series was thought to be a learning series for me and also my followers. The raw blogging engine (database and API) are finished and working (See the [\#CASBAN6]({{ site.baseurl }}{/tags/casban6/}) posts on this blog). The next step would be to create a website for both administering and also consuming the blog.
 
 We have learned already a lot, but at this time, I will freeze the project. I do not know when and if it will be continued as of today. I will also shut down the current used Azure resources to save some money.
 

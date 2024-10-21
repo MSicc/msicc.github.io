@@ -22,6 +22,7 @@ tags:
 
 ![WAMS.png](/assets/img/2013/07/WAMS.png)
 
+
 Like I promised, I will share some of the Azure goodness I learned during creating my last app.
 
 This post is all about how to update a specific table entry (like a user’s data) in a Azure SQL table from an Windows Phone app.

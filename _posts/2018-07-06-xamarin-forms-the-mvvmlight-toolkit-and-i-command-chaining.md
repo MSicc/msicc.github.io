@@ -36,8 +36,8 @@ For demo purposes, I created this really simple Xamarin.Forms user control:
 
 ``` xml
  <?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentView xmlns="https://xamarin.com/schemas/2014/forms" 
+             xmlns:x="https://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XfMvvmLight.Controls.CommandChainingDemoControl">
   <ContentView.Content>
       <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
@@ -120,8 +120,8 @@ The final steps are just a few simple ones. We need to connect the <span style="
 ``` xml
  <?xml version="1.0" encoding="utf-8" ?>
 <baseCtrl:XfNavContentPage
-    xmlns:baseCtrl="clr-namespace:XfMvvmLight.BaseControls" xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:baseCtrl="clr-namespace:XfMvvmLight.BaseControls" xmlns="https://xamarin.com/schemas/2014/forms"
+             xmlns:x="https://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ctrl="clr-namespace:XfMvvmLight.Controls;assembly=XfMvvmLight"
              x:Class="XfMvvmLight.View.CommandChainingDemoPage" RegisteredPageKey="{Binding CommandChainingDemoPageKey, Source=Locator}">
     <ContentPage.BindingContext>
@@ -163,6 +163,6 @@ The series’ sample project is updated and available [here on Github](https://g
 
 ---
 
-[all articles of this series](https://msicc.net/?s=Xamarin+Forms%2C+the+MVVMLight+Toolkit+and+I)
+#TODO: all articles of this series
 
 [title image credit](https://pixabay.com/en/chains-crane-industrial-heavy-load-919058/)
