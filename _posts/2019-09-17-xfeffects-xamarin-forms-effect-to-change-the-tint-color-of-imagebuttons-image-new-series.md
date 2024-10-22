@@ -42,7 +42,7 @@ tags:
 
 #### The basics
 
-Effects work in a similar way to Renderers. You implement the definition in the `Xamarin.Forms` project, which attaches it to the control that needs the change. The `PlatformEffect` implementation needs to be exported to be compiled into the application. Like in a Renderer, the platform implementation also supports property changes. In this new series [\#XfEffects]({{ site.url }}/tags/XfEffects/), I am going to show you some `Effects` that have been useful for me.
+Effects work in a similar way to Renderers. You implement the definition in the `Xamarin.Forms` project, which attaches it to the control that needs the change. The `PlatformEffect` implementation needs to be exported to be compiled into the application. Like in a Renderer, the platform implementation also supports property changes. In this new series [\#XfEffects]({{ site.url }}/tags/xfeffects/), I am going to show you some `Effects` that have been useful for me.
 
 #### Effect declaration
 
