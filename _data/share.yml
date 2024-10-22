@@ -51,4 +51,4 @@ platforms:
 
   - type: Email
     icon: "fa-solid fa-envelope"
-    link: "mailto:?subject=TITLE&body=URL"
+    link: "mailto:email@example.com?subject=TITLE&body=URL"

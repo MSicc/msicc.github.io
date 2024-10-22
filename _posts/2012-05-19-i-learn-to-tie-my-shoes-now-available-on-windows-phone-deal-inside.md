@@ -50,7 +50,7 @@ Currently, the app is available for free only via this [marketplace link](https:
 
 Finally, here are some screenshots from the app:
 
-[![](/assets/img/2012/05/Screen-Capture-3_.jpg)](/assets/img/2012/05/Screen-Capture-3.jpg)
+[![](/assets/img/2012/05/Screen-Capture-3.jpg)](/assets/img/2012/05/Screen-Capture-3.jpg)
 [![](/assets/img/2012/05/Screen-Capture-4.jpg)](/assets/img/2012/05/Screen-Capture-4.jpg)
 [![](/assets/img/2012/05/Screen-Capture-5.jpg)](/assets/img/2012/05/Screen-Capture-5.jpg)
 [![](/assets/img/2012/05/Screen-Capture-10.jpg)](/assets/img/2012/05/Screen-Capture-10.jpg)

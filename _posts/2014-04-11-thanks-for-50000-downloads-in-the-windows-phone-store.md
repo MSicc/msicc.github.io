@@ -15,7 +15,7 @@ tags:
     - wpdev
 ---
 
-[![50kdlWPStore](/assets/img/2014/04/50kdlWPStore-300x300.jpg)](/assets/img/2014/04/50kdlWPStore.jpg)
+[![50kdlWPStore](/assets/img/2014/04/50kdlWPStore.jpg)](/assets/img/2014/04/50kdlWPStore.jpg)
 
 It was a journey with a lot ups and downs, but I hit the next Milestone as a Windows Phone Developer: 50,000 downloads across all my apps!
 

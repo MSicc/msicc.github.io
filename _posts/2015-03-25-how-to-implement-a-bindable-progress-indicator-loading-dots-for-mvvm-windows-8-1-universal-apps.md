@@ -204,7 +204,7 @@ In the Loaded event, we are calling again our main method to show the progress i
  
 As we need to reflect changes on the UI thread, I am using the DispatcherHelper of the MvvmLight Toolkit. You can use your own preferred method as well for that. That’s all, If you now test it with setting the IsProgressIndicatorNeeded property in your page directly to ‘True’ in XAML, you will see the loading dots right from the start.
 
-![Screenshot (21)](/assets/img/2015/03/Screenshot-21-300x200.png)
+![Screenshot (21)](/assets/img/2015/03/Screenshot-21.png)
 
 
 Like always, I hope this is helpful for some of you.
