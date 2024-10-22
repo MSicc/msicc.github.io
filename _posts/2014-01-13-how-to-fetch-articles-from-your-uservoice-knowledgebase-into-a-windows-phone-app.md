@@ -75,7 +75,7 @@ public async Task<string> GetKBJsonString()
  }
 ```
  
-Of course we want to have a list shown to our users – to display our JSON string in a ListBox, we need to deserialize it. To be able to deserialize it, we need a data class. You can use [json2sharp.com](https://json2sharp.com) to generate the base class or use this one ([download Link](/assets/img/2014/01/KBArticleDataClass.zip "download link")). It fits for both all articles or topic based articles.
+Of course we want to have a list shown to our users – to display our JSON string in a ListBox, we need to deserialize it. To be able to deserialize it, we need a data class. You can use [json2sharp.com](https://json2sharp.com) to generate the base class or use this one (~~download Link~~). It fits for both all articles or topic based articles.
 
 First, create a ListBox with the corresponding DataTemplate (I am only using question and answer text for this demo).
 

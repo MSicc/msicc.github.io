@@ -90,7 +90,7 @@ private void HandleGetAllTicketsFromUserResponse(IRestResponse restResponse)
 }
 ```
  
-This request is again pretty similar to what we did to get a list of all suggestions. Please find attached my ‘[TicketDataClass](/assets/img/2014/01/TicketDataClass.zip)‘ for easy deserialization.
+This request is again pretty similar to what we did to get a list of all suggestions. ~~Please find attached my TicketDataClass for easy deserialization.~~
 
 Of course, users want to be able to submit new tickets/support requests from our app, too. I will show you how to do that:
 

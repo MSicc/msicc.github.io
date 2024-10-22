@@ -23,7 +23,7 @@ tags:
 
 ![oAuthDance](/assets/img/2014/06/oAuthDance.png "oAuthDance")
 
-I already wrote [how to use the WebAuthenticationBroker (WAB) in a Windows Phone Runtime app]({ post_url 2014-04-19-how-to-use-the-webauthenticationbroker-for-oauth-in-a-windows-phone-runtime-wp8-1-app }). With the need for me to switch back to Silverlight for UniShare, I needed to perform some rewriting of the WAB code.
+I already wrote [how to use the WebAuthenticationBroker (WAB) in a Windows Phone Runtime app]({% post_url 2014-04-19-how-to-use-the-webauthenticationbroker-for-oauth-in-a-windows-phone-runtime-wp8-1-app %}). With the need for me to switch back to Silverlight for UniShare, I needed to perform some rewriting of the WAB code.
 
 The WAB needs some other code to work properly in a Silverlight project, and this post will got through all steps that are needed for this. I will reference to the above blog post where the methods itself are the same. I am just highlighting the changes that are needed in an 8.1 Silverlight project.
 
@@ -52,7 +52,7 @@ If you are upgrading from a WP8 project, you might have to add this event manual
 
 ### Preparing oAuth
 
-I am going to show you the oAuth process of Twitter to demonstrate the usage of the WAB. First, we need again the GetNonce(), GetTimeStamp () and GetSignature(string sigBaseString, string consumerSecretKey, stringoAuthTokenSecret=null) methods [from my former blog post.]({ post_url 2014-04-19-how-to-use-the-webauthenticationbroker-for-oauth-in-a-windows-phone-runtime-wp8-1-app })
+I am going to show you the oAuth process of Twitter to demonstrate the usage of the WAB. First, we need again the GetNonce(), GetTimeStamp () and GetSignature(string sigBaseString, string consumerSecretKey, stringoAuthTokenSecret=null) methods [from my former blog post.]({% post_url 2014-04-19-how-to-use-the-webauthenticationbroker-for-oauth-in-a-windows-phone-runtime-wp8-1-app%})
 
 ### Performing the oAuth process
 
@@ -67,7 +67,7 @@ Add the following code to your “connect to Twitter”- Button event:
                         WebAuthenticationBroker.AuthenticateAndContinue(new Uri(TwitterUrl), new Uri(TwitterCallBackUri));
 ```
  
-Like in a Runtime app, we are getting the request token first (code is also in my [former blog post]({ post_url 2014-04-19-how-to-use-the-webauthenticationbroker-for-oauth-in-a-windows-phone-runtime-wp8-1-app }), once we obtained the request token, we are able to get the oAuth token that enables us to get the final user access tokens.
+Like in a Runtime app, we are getting the request token first (code is also in my [former blog post]({% post_url 2014-04-19-how-to-use-the-webauthenticationbroker-for-oauth-in-a-windows-phone-runtime-wp8-1-app %}), once we obtained the request token, we are able to get the oAuth token that enables us to get the final user access tokens.
 
 Once the user has authenticated our app, we’ll receive the above mentioned oAuth tokens. To use them, add the following code to your OnNavigatedTo event:
 
@@ -95,7 +95,7 @@ Once the user has authenticated our app, we’ll receive the above mentioned oAu
                 }
 ```
  
-The WebAuthenticationResult now holds all values that we need to perform the final actions. To complete the oAuth process on Twitter, you can use the GetTwitterUserNameAsync(string webAuthResultResponseData) method from my [former blog post]({ post_url 2014-04-19-how-to-use-the-webauthenticationbroker-for-oauth-in-a-windows-phone-runtime-wp8-1-app }). If you are not using other methods to control the result of the WAB, don’t forget to set appObject.WABContinuationArgs to null after you finished obtaining all tokens and data from Twitter (or other services).
+The WebAuthenticationResult now holds all values that we need to perform the final actions. To complete the oAuth process on Twitter, you can use the GetTwitterUserNameAsync(string webAuthResultResponseData) method from my [former blog post]({% post_url 2014-04-19-how-to-use-the-webauthenticationbroker-for-oauth-in-a-windows-phone-runtime-wp8-1-app %}). If you are not using other methods to control the result of the WAB, don’t forget to set appObject.WABContinuationArgs to null after you finished obtaining all tokens and data from Twitter (or other services).
 
 As you can see, there are some structural differences in using the WAB when creating a Silverlight app, but we are also able to use a lot of code from my Runtime project. I hope this post is helpful for some of you to get the oAuth dance going.
 

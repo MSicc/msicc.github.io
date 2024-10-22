@@ -230,8 +230,6 @@ else
  
 This way, we are able to make sure that all IAPs are available for a minimum of time and protect our users against store outages.
 
-For your convenience, you can download the whole class right [here](/assets/img/2014/10/IAPHelper.zip "IAPHelper download"). Just replace NAMESPACE with yours and you are good to go.
-
 Note: I know that this approach does not follow the recommended way of Microsoft. It is up to us to deal with bad reviews if something on the store part is not working. This is my approach to avoid negative reviews because of store outages (at least for a limited time). However, like always, I hope this post is helpful for some of you.
 
 Happy coding!

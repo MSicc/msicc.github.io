@@ -23,7 +23,7 @@ tags:
     - XfQaD
 ---
 
-I recently recognized that I have written quite a few “Quick-and-Dirty”-solutions for Xamarin Forms that run well for most scenarios. There is a chance they will not work in all and every scenario, and therefore may need some more work at a later point. I am sharing them to bring the ideas to the community, and often these “QaDs” are enough one needs to solve one particular problem. As they do not fit well into my other series I am writing, I gave them their own tag: [\#XfQaD]({{ site.baseurl }}{/tags/xfqad/}).
+I recently recognized that I have written quite a few “Quick-and-Dirty”-solutions for Xamarin Forms that run well for most scenarios. There is a chance they will not work in all and every scenario, and therefore may need some more work at a later point. I am sharing them to bring the ideas to the community, and often these “QaDs” are enough one needs to solve one particular problem. As they do not fit well into my other series I am writing, I gave them their own tag: [\#XfQaD]({{ site.url }}/tags/xfqad/).
 
 ## The scenario
 

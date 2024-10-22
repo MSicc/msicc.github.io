@@ -110,7 +110,7 @@ Which will result in this nice looking round button with a Windows logo on it:
 
 ![image](/assets/img/2014/10/image5.png "image")
 
-If you run the sample project, you can see that the Button behaves like a native Button with text. Download the sample project [here](/assets/img/2014/10/roundButtonStyle.zip).
+If you run the sample project, you can see that the Button behaves like a native Button with text. ~~Download the sample project here.~~
 
 I am pretty sure this can be improved. I will continue to play around with this, and if I have found enough optimizations, I will write another post about them. Until then, this should help you to get started with your own round button – and the best thing: you can use it like any standard button wherever you want in your Windows (Phone) 8.1 app!
 

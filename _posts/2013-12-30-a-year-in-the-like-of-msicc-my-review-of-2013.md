@@ -31,7 +31,7 @@ Then in April, the first time I had dark clouds hanging deeply in my life, affec
 
 I also started a new series on the WinPhanDev blog – [Why we started developing (WWSDEV).](https://winphandev.com/blog/new-series-why-we-started-with-wpdev-and-win8dev/) We are collecting stories from developers, and posting them over there to motivate other developers and keep the community spirit alive. Just have a look, we have really great stories over there.
 
-In the last days of April/beginning of May, [Iljia](https://twitter.com/AWSOMEDEVSIGNER) engaged me to start using Windows Azure Mobile Services to make an app idea reality: TweeCoMinder was born. It is a very special and unique app, interesting for those that don’t want to miss their special counts on Twitter, supported by real push notifications via WAMS for both Live Tiles and Toast Notifications. I learned a lot during setting up my WAMS for the app, and I did also write some blog posts about that ([AzureDev]({{ site.baseurl }}{/categories/azure/})).
+In the last days of April/beginning of May, [Iljia](https://twitter.com/AWSOMEDEVSIGNER) engaged me to start using Windows Azure Mobile Services to make an app idea reality: TweeCoMinder was born. It is a very special and unique app, interesting for those that don’t want to miss their special counts on Twitter, supported by real push notifications via WAMS for both Live Tiles and Toast Notifications. I learned a lot during setting up my WAMS for the app, and I did also write some blog posts about that ([AzureDev]({{ site.url }}/categories/azure/)).
 
 Because of TweeCoMinder, I stopped developing my NFC app for that time, and did only bug fixing updates to my other apps.
 

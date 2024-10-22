@@ -233,6 +233,7 @@ If you hit the debug button, you should have similar results to these:
 
 ![Screenshot (375)](/assets/img/2014/09/Screenshot-375.png "Screenshot (375)")
 
-For your convenience, I created a small demo project. Download it [here](/assets/img/2014/09/ExtendedSplash.zip).
+
+~~For your convenience, I created a small demo project. Download it here.~~
 
 As always, I hope this blog post is helpful for some of you. If you have questions or feedback, feel free to leave a comment below.

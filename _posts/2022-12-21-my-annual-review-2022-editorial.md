@@ -80,7 +80,7 @@ If you have been following along for some time, you may know that I only became 
 
 Next year, the roller coaster continues to ride. I will start a new role in March as a .NET mobile developer at Galliker Switzerland, which is one of the leading companies in logistics. They have a `Xamarin.Forms` code base and started the transition to `.NET MAUI`. There will be projects where I will have to do API and Web stuff as well, so this new position will help me to move towards my goal of becoming a full stack .NET developer as well. Another plus is that I am free to choose my preferred IDE – which will be most probably RIDER after my recent experiences with it.
 
-Of course, I will continue to with my [\#CASBAN6]({{ site.baseurl}}{/tags/casban6/}) project as well. As I stated in my last post in the series, the Azure functions part is coming up next. I will have some posts on that topic alone, but I will also keep developing it further until the final product is ready to be used in production.
+Of course, I will continue to with my [\#CASBAN6]({{ site.url}}/tags/casban6/) project as well. As I stated in my last post in the series, the Azure functions part is coming up next. I will have some posts on that topic alone, but I will also keep developing it further until the final product is ready to be used in production.
 
 Besides that, I will start to port my Fishing Knots app to `.NET MAUI`, which will help me to learn the upgrade process and make the app ready for the future.
 

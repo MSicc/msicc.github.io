@@ -26,7 +26,7 @@ tags:
     - XAML
 ---
 
-Like promised [in my first post about photo capturing]( "How to capture a photo in your Windows Phone 8.1 Runtime app–Part I: the preview of the photo to capture"), I will provide some common modification scenarios when using the MediaCapture API. This is what this post is about.
+Like promised [in my first post about photo capturing]({% post_url 2014-11-14-how-to-capture-a-photo-in-your-windows-phone-8-1-runtime-apppart-i-the-preview-of-the-photo-to-capture %}), I will provide some common modification scenarios when using the MediaCapture API. This is what this post is about.
 
 #### Choosing a camera
 
@@ -35,34 +35,34 @@ If you read my first post, you probably remember that the MediaCapture API autom
 The cameras are listed in the Panels in the [Windows.Devices.Enumeration Namespace](https://msdn.microsoft.com/de-de/library/windows/apps/windows.devices.enumeration.aspx). This namespace contains all “devices” that are connected to the phone and has different properties to detect the correct panel. We are going to use the [DeviceClass](https://msdn.microsoft.com/de-de/library/windows/apps/windows.devices.enumeration.deviceclass.aspx) to detect all video capture devices (which are normally also the photo capture devices on Windows Phone, but can be different on a PC/Tablet). As we want to switch between Front and Back, we are also detecting the [EnclosureLocation](https://msdn.microsoft.com/de-de/library/windows/apps/windows.devices.enumeration.enclosurelocation.aspx). Here is how I implemented it:
 
 ``` csharp
-         private static async Task<DeviceInformation> GetCameraID(Windows.Devices.Enumeration.Panel camera)
-        {
-            DeviceInformation deviceID = (await DeviceInformation.FindAllAsync(DeviceClass.VideoCapture))
-                .FirstOrDefault(x => x.EnclosureLocation != null && x.EnclosureLocation.Panel == camera);
+    private static async Task<DeviceInformation> GetCameraID(Windows.Devices.Enumeration.Panel camera)
+{
+    DeviceInformation deviceID = (await DeviceInformation.FindAllAsync(DeviceClass.VideoCapture))
+        .FirstOrDefault(x => x.EnclosureLocation != null && x.EnclosureLocation.Panel == camera);
 
-            return deviceID;
-        }
+    return deviceID;
+}
 ```
  
 To make this Task actually useful, we are also updating the InitializePreview() method from the first part:
 
 ``` csharp
-         private async void InitializePreview()
-        {
-            captureManager = new MediaCapture();
+private async void InitializePreview()
+{
+    captureManager = new MediaCapture();
 
-            var cameraID = await GetCameraID(Windows.Devices.Enumeration.Panel.Back);
+    var cameraID = await GetCameraID(Windows.Devices.Enumeration.Panel.Back);
 
-            await captureManager.InitializeAsync(new MediaCaptureInitializationSettings
-            {
-                StreamingCaptureMode = StreamingCaptureMode.Video,
-                PhotoCaptureSource = PhotoCaptureSource.Photo,
-                AudioDeviceId = string.Empty,
-                VideoDeviceId = cameraID.Id,
-            });
+    await captureManager.InitializeAsync(new MediaCaptureInitializationSettings
+    {
+        StreamingCaptureMode = StreamingCaptureMode.Video,
+        PhotoCaptureSource = PhotoCaptureSource.Photo,
+        AudioDeviceId = string.Empty,
+        VideoDeviceId = cameraID.Id,
+    });
 
-            StartPreview();
-        }
+    StartPreview();
+}
 ```
  
 In this case, we selected the back camera. To make the MediaCapture API actually use this device, we need to generate a new instance of [MediaCaptureInitializationSettings](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.capture.mediacaptureinitializationsettings.aspx), where we select the cameras Id as VideDeviceId. If you now start capturing, this is an exemplary result:
@@ -103,58 +103,58 @@ My way to do this is to calculate the screen ratio, and return an enumeration va
 And this is my helper to match the screen format (which is always wide screen on Windows Phone):
 
 ``` csharp
-         private CameraResolutionFormat MatchScreenFormat(Size resolution)
-        {
-            CameraResolutionFormat result = CameraResolutionFormat.Unknown;
+private CameraResolutionFormat MatchScreenFormat(Size resolution)
+{
+    CameraResolutionFormat result = CameraResolutionFormat.Unknown;
 
-            double relation = Math.Max(resolution.Width, resolution.Height) / Math.Min(resolution.Width, resolution.Height);
-            if (Math.Abs(relation - (4.0 / 3.0)) < 0.01)
-            {
-                result = CameraResolutionFormat.FourByThree;
-            }
-            else if (Math.Abs(relation - (16.0 / 9.0)) < 0.01)
-            {
-                result = CameraResolutionFormat.SixteenByNine;
-            }
+    double relation = Math.Max(resolution.Width, resolution.Height) / Math.Min(resolution.Width, resolution.Height);
+    if (Math.Abs(relation - (4.0 / 3.0)) < 0.01)
+    {
+        result = CameraResolutionFormat.FourByThree;
+    }
+    else if (Math.Abs(relation - (16.0 / 9.0)) < 0.01)
+    {
+        result = CameraResolutionFormat.SixteenByNine;
+    }
 
-            return result;
-        }
+    return result;
+}
 ```
  
 We could easily extend the calculation to 15:9, too. However, as the most camera resolutions are 4:3 or 16:9, this makes no sense in our use case (as 15:9 is still a widescreen format). The next thing we need to add is another helper to get the highest possible resolution for our photo and the preview. We are achieving this by generating a new object of type [VideoEncodingProperties](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.mediaproperties.videoencodingproperties.aspx):
 
 ``` csharp
-         private VideoEncodingProperties maxResolution()
+private VideoEncodingProperties maxResolution()
+{
+    VideoEncodingProperties resolutionMax = null;
+
+    //get all photo properties
+    var resolutions = captureManager.VideoDeviceController.GetAvailableMediaStreamProperties(MediaStreamType.Photo);
+
+    //generate new list to work with
+    List<VideoEncodingProperties> vidProps = new List<VideoEncodingProperties>();
+
+    //add only those properties that are 16:9 to our own list
+    for (var i = 0; i < resolutions.Count; i++)
+    {
+        VideoEncodingProperties res = (VideoEncodingProperties)resolutions[i];
+
+        if (MatchScreenFormat(new Size(res.Width, res.Height)) != CameraResolutionFormat.FourByThree)
         {
-            VideoEncodingProperties resolutionMax = null;
-
-            //get all photo properties
-            var resolutions = captureManager.VideoDeviceController.GetAvailableMediaStreamProperties(MediaStreamType.Photo);
-
-            //generate new list to work with
-            List<VideoEncodingProperties> vidProps = new List<VideoEncodingProperties>();
-
-            //add only those properties that are 16:9 to our own list
-            for (var i = 0; i < resolutions.Count; i++)
-            {
-                VideoEncodingProperties res = (VideoEncodingProperties)resolutions[i];
-
-                if (MatchScreenFormat(new Size(res.Width, res.Height)) != CameraResolutionFormat.FourByThree)
-                {
-                    vidProps.Add(res);
-                }
-            }
-
-            //order the list, and select the highest resolution that fits our limit
-            if (vidProps.Count != 0)
-            {
-                vidProps = vidProps.OrderByDescending(r => r.Width).ToList();
-
-                resolutionMax = vidProps.Where(r => r.Width < 2600).First();                
-            }
-
-            return resolutionMax;
+            vidProps.Add(res);
         }
+    }
+
+    //order the list, and select the highest resolution that fits our limit
+    if (vidProps.Count != 0)
+    {
+        vidProps = vidProps.OrderByDescending(r => r.Width).ToList();
+
+        resolutionMax = vidProps.Where(r => r.Width < 2600).First();                
+    }
+
+    return resolutionMax;
+}
 ```
  
 What I am doing here: I read all available VideoEncodingProperties for the MediaStreamType Photo. As I mentioned before, we need only wide screen resolution for Windows Phone, that’s why I add only those that have not a 4:3 ratio to my list. Then I am using LINQ to order the list and select the highest resolution from that list.
@@ -168,22 +168,22 @@ Using this helper is also very easy, done with one line of code before starting 
 This way, we are able to respect any resolution limits that we might face while developing our app, while keeping the photo quality as high as possible.
 
 ``` csharp
-         private CameraResolutionFormat MatchScreenFormat(Size resolution)
-        {
-            CameraResolutionFormat result = CameraResolutionFormat.Unknown;
+private CameraResolutionFormat MatchScreenFormat(Size resolution)
+{
+    CameraResolutionFormat result = CameraResolutionFormat.Unknown;
 
-            double relation = Math.Max(resolution.Width, resolution.Height) / Math.Min(resolution.Width, resolution.Height);
-            if (Math.Abs(relation - (4.0 / 3.0)) < 0.01)
-            {
-                result = CameraResolutionFormat.FourByThree;
-            }
-            else if (Math.Abs(relation - (16.0 / 9.0)) < 0.01)
-            {
-                result = CameraResolutionFormat.SixteenByNine;
-            }
+    double relation = Math.Max(resolution.Width, resolution.Height) / Math.Min(resolution.Width, resolution.Height);
+    if (Math.Abs(relation - (4.0 / 3.0)) < 0.01)
+    {
+        result = CameraResolutionFormat.FourByThree;
+    }
+    else if (Math.Abs(relation - (16.0 / 9.0)) < 0.01)
+    {
+        result = CameraResolutionFormat.SixteenByNine;
+    }
 
-            return result;
-        }
+    return result;
+}
 ```
  
 #### Focus
@@ -203,31 +203,31 @@ Notice that as with any slider, you need to follow the order: Set Maximum first,
 Ok, enough of whining. Let’s have a look at my solution. First, we need to generate a small helper that allows us to adjust the focus based on the slider values:
 
 ``` csharp
-         private async void SetFocus(uint? focusValue = null)
+private async void SetFocus(uint? focusValue = null)
+{
+    //try catch used to avoid app crash at startup when no CaptureElement is active
+    try
+    {
+        //setting default value
+        if (!focusValue.HasValue)
         {
-            //try catch used to avoid app crash at startup when no CaptureElement is active
-            try
-            {
-                //setting default value
-                if (!focusValue.HasValue)
-                {
-                    focusValue = 500;
-                }
-
-                //check if the devices camera supports focus control
-                if (captureManager.VideoDeviceController.FocusControl.Supported)
-                {
-                    //disable flash assist for focus control
-                    captureManager.VideoDeviceController.FlashControl.AssistantLightEnabled = false;
-
-                    //configure the FocusControl to manual mode
-                    captureManager.VideoDeviceController.FocusControl.Configure(new FocusSettings() { Mode = FocusMode.Manual, Value = focusValue, DisableDriverFallback = true });
-                    //update the focus on our MediaCapture
-                    await captureManager.VideoDeviceController.FocusControl.FocusAsync();
-                }
-            }
-            catch { }
+            focusValue = 500;
         }
+
+        //check if the devices camera supports focus control
+        if (captureManager.VideoDeviceController.FocusControl.Supported)
+        {
+            //disable flash assist for focus control
+            captureManager.VideoDeviceController.FlashControl.AssistantLightEnabled = false;
+
+            //configure the FocusControl to manual mode
+            captureManager.VideoDeviceController.FocusControl.Configure(new FocusSettings() { Mode = FocusMode.Manual, Value = focusValue, DisableDriverFallback = true });
+            //update the focus on our MediaCapture
+            await captureManager.VideoDeviceController.FocusControl.FocusAsync();
+        }
+    }
+    catch { }
+}
 ```
  
 This methods checks if the current camera supports Focus, and sets its value according to the slider. The AssistantLight is disabled in this case. Its default is enabled (true).
@@ -237,19 +237,19 @@ To add the possibility to adjust the focus, we need to configure our own FocusSe
 The next step is to hook up to changes in the slider values within the *FocusValueSlider\_ValueChanged* event:
 
 ``` csharp
-         private void FocusValueSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
-        {
-            try
-            {
-                //convert double e.NewValue to uint and call SetFocus()
-                uint focus = Convert.ToUInt32(e.NewValue);
-                SetFocus(focus);
-            }
-            catch 
-            {
-                
-            }
-        }
+private void FocusValueSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+{
+    try
+    {
+        //convert double e.NewValue to uint and call SetFocus()
+        uint focus = Convert.ToUInt32(e.NewValue);
+        SetFocus(focus);
+    }
+    catch 
+    {
+        
+    }
+}
 ```
  
 Now every move of the slider will change the focus of the preview and of course also of the captured photo (which we will learn more about in the third post of this series). To initialize our Focus correctly with the value of 500 we set in XAML, just call SetFocus(); before you start the preview. Here is the result:

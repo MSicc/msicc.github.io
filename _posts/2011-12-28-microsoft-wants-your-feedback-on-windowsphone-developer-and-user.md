@@ -43,7 +43,7 @@ So if you are a developer, head over to the marketplace and [download](https://w
 
 # Let´s have a look at the consumer part of the feedback program:
 
-[Here](Here) you can have a look on the page for the consumer feedback. The App for consumer looks very similar to the developer feedback app, as you can see on this shots:
+Here you can have a look on the page for the consumer feedback. The App for consumer looks very similar to the developer feedback app, as you can see on this shots:
 
 ![Screen Capture (15)](/assets/img/2011/12/Screen-Capture-151.jpg "Screen Capture (15)") ![Screen Capture (19)](/assets/img/2011/12/Screen-Capture-19.jpg "Screen Capture (19)") ![Screen Capture (23)](/assets/img/2011/12/Screen-Capture-23.jpg "Screen Capture (23)")![Screen Capture (25)](/assets/img/2011/12/Screen-Capture-25.jpg "Screen Capture (25)") ![Screen Capture (27)](/assets/img/2011/12/Screen-Capture-27.jpg "Screen Capture (27)") ![Screen Capture (34)](/assets/img/2011/12/Screen-Capture-34.jpg "Screen Capture (34)")
 

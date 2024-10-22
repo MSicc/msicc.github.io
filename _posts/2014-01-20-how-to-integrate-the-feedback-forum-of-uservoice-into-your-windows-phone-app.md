@@ -55,7 +55,7 @@ In our response handler, we are able to deserialize our List of suggestions (bes
 }
 ```
  
-To get the SuggestionsDataClass items, just go to json2csharp.com and pass in the json string we received with response.Content or download it from here: [SuggestionsDataClass](/assets/img/2014/01/SuggestionsDataClass.zip "SuggestionsDataClass download link").
+To get the SuggestionsDataClass items, just go to json2csharp.com and pass in the json string we received with response.Content ~~or download it from here: ~~ .
 
 Now let’s have a look on how to submit a new idea on behalf of our user. To submit an idea, we are using the POST method after we authenticated our user again with the uservoice API:
 

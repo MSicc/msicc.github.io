@@ -200,8 +200,6 @@ One word to the second switch statement I am using. The image element needs to b
 
 In my implementation, I added also some possible ArgumentNullExceptions to make it easy to find any usage errors.
 
-For your convenience, I attached the source file. Just swap out the namespace with yours. [Download](/assets/img/2015/02/LocalToastHelper.zip)
-
 The usage of the class is pretty simple:
 
 ``` csharp

@@ -34,7 +34,7 @@ Let’s dive into it. Unlike the Windows WebAuthenticationBroker, the Phone vers
 
 But we are able to get it working, no worries. First, we need the so called ContinuationManager. This class brings the user back to the app where the fun begun.
 
-You can download the complete class from [here](/assets/img/2014/04/ContinuationManager.zip) (it is a 1:1 copy from the official MSDN reference). The only thing you need to do is to add your app’s Namespace into it.
+~~You can download the complete class from here~~ (it is a 1:1 copy from the official MSDN reference). The only thing you need to do is to add your app’s Namespace into it.
 
 The next step we need to do: some modifications at the App.xaml.cs file.
 

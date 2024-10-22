@@ -33,8 +33,6 @@ Back in September then, I opened up my Twitter app and the first tweet I read wa
 
 ![image](/assets/img/2014/12/image.png "image")
 
-<script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
-
 I opened the attached document and read the job description. As an self-thought developer, I first was about to close it and put it aside as “read and done”.
 
 Due to the head count freeze at Telefónica after acquiring e-Plus from KPN, there are no chances to become a real full time developer within Telefónica for the next time. But that is what I want to do. After reopening the document and reading it again, I decided to get in contact with Roman Mueller ([who I knew from Twitter already](https://twitter.com/Roman_D_Mueller)).

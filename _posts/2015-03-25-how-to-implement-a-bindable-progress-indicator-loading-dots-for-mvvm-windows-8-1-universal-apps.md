@@ -211,4 +211,4 @@ Like always, I hope this is helpful for some of you.
 
 Happy coding!
 
-[Download Sample project](/assets/img/2015/03/MvvmUniversalProgressIndicator.zip)
+~~Download Sample project~~

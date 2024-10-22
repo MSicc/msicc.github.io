@@ -15,7 +15,7 @@ The old standard IPv4 has to be replaced, as there are no more free slots.
 
 Sites like Google, Facebook and Yahoo! are joining this test.
 
-Also Microsoft participates with [Bing](www.bing.com) and [Xbox.com](https://www.xbox.com/).
+Also Microsoft participates with [Bing]https://www.bing.com) and [Xbox.com](https://www.xbox.com/).
 
 Learn more about this day on the site of [the ISOC (Internet Society)](https://isoc.org/wp/worldipv6day/participants/).
 

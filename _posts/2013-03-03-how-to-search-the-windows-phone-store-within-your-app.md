@@ -126,6 +126,6 @@ foreach(var node in nodeList)
  
 As you can see, we need to perform some String operations, but this is the easiest way I got the result I want – within my app. As always I hope this will be helpful for some of you.
 
-You can download full working sample here: [MarketplaceSearch.zip](/assets/img/2013/03/MarketplaceSearch.zip)
+~~You can download full working sample here: MarketplaceSearch.zip~~ 
 
 Happy coding!

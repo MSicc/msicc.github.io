@@ -19,7 +19,7 @@ tags:
     - xamarinmonth
 ---
 
-If you haven’t heard about the [\#XamarinMonth](#XamarinMonth) before, you should either click on the hashtag or read Luis’ [blog post](https://luismts.com/code-snippetss-xamarin-month/ "Code Snippets Xamarin Month") where he introduces the topic. At the end of his post, you will also find a link to all the contributions.
+If you haven’t heard about the [\#XamarinMonth]({{ site.url}}/tags/xamarinmonth) before, you should either click on the hashtag or read Luis’ [blog post](https://luismts.com/code-snippetss-xamarin-month/ "Code Snippets Xamarin Month") where he introduces the topic. At the end of his post, you will also find a link to all the contributions.
 
 ### Why Code Snippets?
 

@@ -35,7 +35,7 @@ You know FollowFriday on Twitter? Whit this small app it is easier than ever to 
 **Follorep (free)**
 
 [![Follorep](/assets/img/2013/01/Follorep.png)
-](e2fabdc6-3de4-4353-b3f3-dc4ac457219a)
+](https://www.windowsphone.com/s?appid=e2fabdc6-3de4-4353-b3f3-dc4ac457219a)
 
 Want to know who is following you and who has unfollowed you? No problem, Follorep is here for the rescue! Track your account status, and easily follow/unfollow tweeps with a few taps on your Windows Phone screen. The app ist currently available for free.
 
@@ -56,7 +56,7 @@ With Cumulotweetus you can create so called “Tweet clouds” from your timelin
 **Facebook (free)**
 
 [![fb](/assets/img/2013/01/fb.png)
-](82a23635-5bd9-df11-a844-00237de2db9e)
+](https://www.windowsphone.com/s?appid=82a23635-5bd9-df11-a844-00237de2db9e)
 
 As on all other OS platforms, the “official” Facebook app is kind of disappointing. You can do a lot of things there, like reading your news feed, check in to places, view upcoming events or accept and send friend requests. The two reasons why I use the app are because the Facebook integration enables not all the features the app has and with Windows Phone 8, you can get a personalized Locksreen, which looks pretty nice (especially with the photos from my WinPhan friends).
 

@@ -289,13 +289,17 @@ As with getting the right camera solution, I generated an Enumeration that holds
 ```
  
 
-<p>Again, we need to apply raw pixels to achieve the best results here (I just pasted those lines in for this sample). To calculate the correct values for our Border, we need the scale factor between the screen and the preview resolution we used (which is the scaleFactorVisualHeight double).  Before we’re calculating the border values, we are setting the Width to resolution’s Height (we rotated, remember?) and calculate the matching 15:9 Height.</p>
-<p>The Border values are based on the Width and Height of the cropped image, but scaled down by scaleFactorVisualHeight’s value and converted in raw pixel. The Margin positions the border accordingly on top of the preview element.</p>
-<p>This is the result of above mentioned code (screenshot of preview left, captured photo right):</p>
-<p><img alt="15by9Photo" border="0" decoding="async" height="415" loading="lazy" src="/assets/img/2014/11/15by9Photo.png" style="background-image: none; float: none; padding-top: 0px; padding-left: 0px; margin: 0px auto; display: block; padding-right: 0px; border: 0px;" title="15by9Photo" width="500"></img></p>
-<p>That’s all you need to know to get started with basic photo capturing from within your Windows Phone 8.1 Runtime app. Of course, there are also other modifications that you can apply, and I mentioned already most of the classes that lead you to the matching methods and properties (click on the links to get to the documentation)</p>
-<p>By the way, most of the code can be adapted in a Windows 8.1 app as well (with some differences, of course).</p>
-<h4 id="sample-project">Sample project</h4>
-<p>As promised, you can <a href="/assets/img/2014/11/MediaCaptureWithPreviewElement.zip" rel="noopener noreferrer" target="_blank">download the sample here</a>. It contains all code snippets I showed you and is able to run as you build and deploy it.</p>
-<p>As always, feedback is welcome and I hope this post is helpful for some of  you.</p>
-<p>Until the next time, happy coding!</p>
+Again, we need to apply raw pixels to achieve the best results here (I just pasted those lines in for this sample). To calculate the correct values for our Border, we need the scale factor between the screen and the preview resolution we used (which is the scaleFactorVisualHeight double).  Before we’re calculating the border values, we are setting the Width to resolution’s Height (we rotated, remember?) and calculate the matching 15:9 Height.
+
+The Border values are based on the Width and Height of the cropped image, but scaled down by scaleFactorVisualHeight’s value and converted in raw pixel. The Margin positions the border accordingly on top of the preview element.
+
+his is the result of above mentioned code (screenshot of preview left, captured photo right):
+
+![](/assets/img/2014/11/15by9Photo.png)
+
+That’s all you need to know to get started with basic photo capturing from within your Windows Phone 8.1 Runtime app. Of course, there are also other modifications that you can apply, and I mentioned already most of the classes that lead you to the matching methods and properties (click on the links to get to the documentation)
+
+By the way, most of the code can be adapted in a Windows 8.1 app as well (with some differences, of course).
+
+
+Until the next time, happy coding!

@@ -93,6 +93,6 @@ On top of that, I added an uri scheme that allows a plain launch of NFC Toolkit:
  "nfctoolkit:home"
 ```
  
-I updated my custom uri scheme test app as well for you. Download it here: [CustomUriSchemeTestApp](/assets/img/2013/12/CustomUriSchemeTestApp1.zip)
+I updated my custom uri scheme test app as well for you. ~~Download it here: CustomUriSchemeTestApp~~
 
 Happy coding everyone!

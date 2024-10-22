@@ -31,7 +31,7 @@ tags:
 
 ## The problem
 
-`Xamarin.Forms.Label`has a common set of properties we can use to configure how our text is shown. However, it does miss a property to limit the maximum of text lines and a proper indication of eventually truncated text. Knowing that UWP, Android and iOS have working and easy-to-use implementations on their platform controls used for the `Xamarin.Forms.Label`, there is only one solution to the problem: exposing a custom control and its platform renderers. That’s what we are going to do in this [\#XfQaD]({{ site.baseurl }}{/tags/xfqad/})
+`Xamarin.Forms.Label`has a common set of properties we can use to configure how our text is shown. However, it does miss a property to limit the maximum of text lines and a proper indication of eventually truncated text. Knowing that UWP, Android and iOS have working and easy-to-use implementations on their platform controls used for the `Xamarin.Forms.Label`, there is only one solution to the problem: exposing a custom control and its platform renderers. That’s what we are going to do in this [\#XfQaD]({{ site.url }}/tags/xfqad/)
 
 ### XfMaxLines Label implementation
 
