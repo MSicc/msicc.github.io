@@ -23,7 +23,7 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
+url: "https://msicc.net"
 
 github:
   username: msicc # change to your GitHub username
@@ -35,7 +35,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Marco Siccardi
-  email: info@msicc.net # change to your email address
+  email: msiccdev@hotmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     # - https://twitter.com/msicc # change to your Twitter homepage
@@ -43,11 +43,16 @@ social:
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     - https://www.linkedin.com/in/msicc
+    - https://stackoverflow.com/users/859078/msicc
+    - https://dotnet.social/@MSicc
+    - https://bsky.app/profile/msicc.bsky.social
+    - https://pixelfed.social/@Msicc1
+    - https://www.instagram.com/msicc1/
 
 # Site Verification Settings
 webmaster_verifications:
-  google: # fill in your Google verification code
-  bing: # fill in your Bing verification code
+  google: fqiDNJbqNqstw5gC3oNLkelQacdSlNfbpFbqFGiuXmw # fill in your Google verification code
+  bing: 85941C44A4E9A2AE53563144D6E64BF2 # fill in your Bing verification code
   alexa: # fill in your Alexa verification code
   yandex: # fill in your Yandex verification code
   baidu: # fill in your Baidu verification code
@@ -59,7 +64,7 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: # fill in your Google Analytics ID
+    id: G-S42Q46MQZP # fill in your Google Analytics ID
   goatcounter:
     id: # fill in your GoatCounter ID
   umami:
